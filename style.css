@@ -319,6 +319,22 @@
     font-size: 24px;
     transition: var(--transition-1);
   }
+  .topnav input[type=text] {
+    float: right;
+    padding: 3px;
+    margin-top: 8px;
+    margin-right: 10px;
+    border: none;
+    font-size: 10px;
+    color:black;
+    width: 5px;
+  }
+  .topnav input[type=text] {
+    border: 1px solid rgb(15, 1, 1);  
+  }
+  input{
+    width:20%;
+  }
   .navbar {
     position: fixed;
     top: 0;
