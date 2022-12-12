@@ -1,0 +1,30 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding:0;
+}
+.items{
+    background-color: rgb(244, 212, 29);
+}
+.navbar ul{
+    display:flex;
+    font-family: 'Bree Serif', serif;
+}
+.navbar ul a li{
+    list-style: none;
+    padding:10px;
+    font-size: 1.3rem;
+}
+.navbar ul a{
+    color: rgb(0, 0, 0);
+    display: block;
+    padding: 3px 22px;
+    border-radius: 20px;
+    text-decoration: none;
+}
+.navbar ul a li:hover{
+    color: black;
+    background-color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
