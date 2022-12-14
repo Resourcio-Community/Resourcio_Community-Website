@@ -17,7 +17,7 @@ body {
 }
 .box {
   width: 400px;
-  height:450px;
+  height:300px;
   background-color: transparent;
   text-align: center;
   box-sizing: border-box;
@@ -40,16 +40,16 @@ body {
 .box p {
   font-size: 16px;
   font-weight: 400;
-  line-height: 30px;
+  line-height: 15px;
   color: #7a7a7a;
-  padding-top: 15px;
+  padding-top: 8px;
 }
 .box button {
   width: 180px;
   height: 55px;
   border-radius: 40px;
   border: none;
-  margin-left: 20px;
+  margin-left: 0px;
   color: #fff;
   font-weight: bolder;
   background-color: #fe4c1c;
@@ -61,8 +61,8 @@ body {
   position: absolute;
   overflow: hidden;
   padding: 1px;
-  top: 480px;
-  left: 65px;
+  top: 320px;
+  left: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -87,7 +87,7 @@ body {
 }
 .box:hover button {
   position: absolute;
-  top: 420px;
+  top: 280px;
   left: 65px;
   transition: 0.5s;
   visibility: visible;
