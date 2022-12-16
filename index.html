@@ -1,16 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Resourcio Community: All resources in a single website for engineering students.</title>
   <meta name="title" content="Resourcio Community: All resources in a single website for engineering students">
-  <meta name="description" content="This is an resource webpage for all engineering students in the field of software engineering">
+  <meta name="description"
+    content="This is an resource webpage for all engineering students in the field of software engineering">
   <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"> -->
+  <!-- <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.slim.min.js"></script> -->
+  <!-- <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script> -->
+  <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script> -->
   <link
     href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700;800&family=Poppins:wght@400;500&display=swap"
     rel="stylesheet">
@@ -20,55 +26,35 @@
   <link rel="preload" as="image" href="Images/hero-shape-1.svg">
   <link rel="preload" as="image" href="Images/hero-shape-2.png">
 </head>
-<body id="top">
-  <header class="header" data-header>
-    <div class="container">
-      <a href="#" class="logo">
-        <img src="Images/Resourcio_community_logo.jpeg" style="border:4px solid black;" width="60px" height="20px" alt="EduWeb logo">
-      </a>
-      <nav class="navbar" data-navbar>
-        <div class="wrapper">
-          <a href="#" class="logo">
-            <img src="Images/Resourcio_community_logo.jpeg" width="60px" height="20px" alt="EduWeb logo">
-          </a>
-          <button class="nav-close-btn" aria-label="close menu" data-nav-toggler>
-            <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
-          </button>
-        </div>
-        <ul class="navbar-list">
-          <li class="navbar-item">
-            <a href="#home" class="navbar-link" data-nav-link>Home</a>
-          </li>
-          <li class="navbar-item">
-            <a href="#about" class="navbar-link" data-nav-link>About</a>
-          </li>
-          <li class="navbar-item">
-            <a href="resource.html" target="_blank" class="navbar-link" data-nav-link>Resources</a>
-          </li>
-          <li class="navbar-item">
-            <a href="#pages" class="navbar-link" data-nav-link>Pages</a>
-          </li>
-          <li class="navbar-item">
-            <a href="#contact" class="navbar-link" data-nav-link>Contact Us</a>
-          </li>
-        </ul>
-      </nav>
-      <div class="header-actions">
-        <button class="header-action-btn" aria-label="toggle search" title="Search">
-          <ion-icon name="search-outline" aria-hidden="true"></ion-icon>
-        </button>
-        <input type="text" placeholder="Search..">
-        <a href="#" class="btn has-before">
-          <span class="span">Try for free</span>
-          <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
-        </a>
-        <button class="header-action-btn" aria-label="open menu" data-nav-toggler>
-          <ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
-        </button>
-      </div>
-      <div class="overlay" data-nav-toggler data-overlay></div>
+
+<body>
+  <nav class="navbar">
+  <!-- LOGO -->
+    <div class="logo">RC</div>
+    <!-- NAVIGATION MENU -->
+    <ul class="nav-links">
+    <!-- USING CHECKBOX HACK -->
+    <input type="checkbox" id="checkbox_toggle" />
+    <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+    <!-- NAVIGATION MENUS -->
+    <div class="menu">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About Us</a></li>
+    <li class="services">
+    <a href="#Pages">Pages</a>
+    <!-- DROPDOWN MENU -->
+    <ul class="dropdown">
+    <li><a href="/">Hackathon</a></li>
+    <li><a href="/">Programming Languages</a></li>
+    <li><a href="/">Web Development</a></li>
+    <li><a href="/">Android Development</a></li>
+    </ul>
+    </li>
+   <li><a href="resource.html">Resources</a></li>
+   <li><a href="#contact">Contact Us</a></li>
     </div>
-  </header>
+    </ul>
+  </nav>
   <main>
     <article>
       <section class="section hero has-bg-image" id="home" aria-label="home"
@@ -79,7 +65,8 @@
               The Best Website for students to <span class="span">Search</span> for Software Resources.
             </h1>
             <p class="hero-text">
-              Hello future engineers! Welcome to Resourcio Community!! A one stop hub for all your resources and queries regarding different software languages.
+              Hello future engineers! Welcome to Resourcio Community!! A one stop hub for all your resources and queries
+              regarding different software languages.
             </p>
             <a href="#" class="btn has-before">
               <span class="span">Find Resources</span>
@@ -111,14 +98,15 @@
             <li>
               <div class="category-card" style="--color: 170, 75%, 41%">
                 <div class="card-icon">
-                  <img src="Images/category-1.svg" width="40" height="40" loading="lazy"
-                    alt="Online Degree Programs" class="img">
+                  <img src="Images/category-1.svg" width="40" height="40" loading="lazy" alt="Online Degree Programs"
+                    class="img">
                 </div>
                 <h3 class="h3">
                   <a href="#" class="card-title">Web Development Resources</a>
                 </h3>
                 <p class="card-text">
-                  Here you can get all information about Web Development Languages including both FrontEnd and BackEnd Resources.
+                  Here you can get all information about Web Development Languages including both FrontEnd and BackEnd
+                  Resources.
                 </p>
                 <span class="card-badge">7 Courses</span>
               </div>
@@ -126,8 +114,8 @@
             <li>
               <div class="category-card" style="--color: 351, 83%, 61%">
                 <div class="card-icon">
-                  <img src="Images/category-2.svg" width="40" height="40" loading="lazy"
-                    alt="Non-Degree Programs" class="img">
+                  <img src="Images/category-2.svg" width="40" height="40" loading="lazy" alt="Non-Degree Programs"
+                    class="img">
                 </div>
                 <h3 class="h3">
                   <a href="#" class="card-title">Android Development Resources</a>
@@ -141,14 +129,15 @@
             <li>
               <div class="category-card" style="--color: 229, 75%, 58%">
                 <div class="card-icon">
-                  <img src="Images/category-3.svg" width="40" height="40" loading="lazy"
-                    alt="Off-Campus Programs" class="img">
+                  <img src="Images/category-3.svg" width="40" height="40" loading="lazy" alt="Off-Campus Programs"
+                    class="img">
                 </div>
                 <h3 class="h3">
                   <a href="#" class="card-title">Competitive Programming Resources</a>
                 </h3>
                 <p class="card-text">
-                  Here you can get all information about Competitive Programming resources like DSA and many other topics.
+                  Here you can get all information about Competitive Programming resources like DSA and many other
+                  topics.
                 </p>
                 <span class="card-badge">8 Courses</span>
               </div>
@@ -156,8 +145,8 @@
             <li>
               <div class="category-card" style="--color: 42, 94%, 55%">
                 <div class="card-icon">
-                  <img src="Images/category-4.svg" width="40" height="40" loading="lazy"
-                    alt="Hybrid Distance Programs" class="img">
+                  <img src="Images/category-4.svg" width="40" height="40" loading="lazy" alt="Hybrid Distance Programs"
+                    class="img">
                 </div>
                 <h3 class="h3">
                   <a href="#" class="card-title">CyberSecurity Resources</a>
@@ -191,7 +180,9 @@
               A group of enthusiastic <span class="span">Engineers keen to</span> help their fellow Engineers.
             </h2>
             <p class="section-text">
-              Through Resourcio we have tried to bring in different resources related to software development and other different fields related to software enginnering. We want to provide students a single platform where they can find all new resources and they dont need to browse the web extensively for learning them.
+              Through Resourcio we have tried to bring in different resources related to software development and other
+              different fields related to software enginnering. We want to provide students a single platform where they
+              can find all new resources and they dont need to browse the web extensively for learning them.
             </p>
             <ul class="about-list">
               <li class="about-item">
@@ -212,8 +203,7 @@
           </div>
         </div>
       </section>
-      <section class="video has-bg-image" aria-label="video"
-        style="background-image: url('Images/video-bg.png')">
+      <section class="video has-bg-image" aria-label="video" style="background-image: url('Images/video-bg.png')">
         <div class="container">
           <div class="video-card">
             <div class="video-banner img-holder has-after" style="--width: ; --height: ;">
@@ -357,8 +347,7 @@
               </div>
             </li>
           </ul>
-          <img src="Images/blog-shape.png" width="186" height="186" loading="lazy" alt=""
-            class="shape blog-shape">
+          <img src="Images/blog-shape.png" width="186" height="186" loading="lazy" alt="" class="shape blog-shape">
         </div>
       </section>
     </article>
@@ -368,7 +357,8 @@
       <div class="container grid-list">
         <div class="footer-brand">
           <a href="#" class="logo">
-            <img src="Images/Resourcio_community_logo.jpeg" style="border:4px solid rgb(255, 255, 255);" width="162" height="50" alt="EduWeb logo">
+            <img src="Images/Resourcio_community_logo.jpeg" style="border:4px solid rgb(255, 255, 255);" width="162"
+              height="50" alt="EduWeb logo">
           </a>
           <p class="footer-brand-text">
             Lorem ipsum dolor amet consecto adi pisicing elit sed eiusm tempor incidid unt labore dolore.
@@ -489,4 +479,5 @@
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
+
 </html>
