@@ -38,13 +38,14 @@ body {
   font-weight: 700;
   letter-spacing: 2px;
 }
-.box p {
+/* .box p {
   font-size: 16px;
   font-weight: 400;
   line-height: 15px;
   color: #7a7a7a;
   padding-top: 8px;
-}
+  display: block;
+} */
 .box button {
   width: 180px;
   height: 55px;
@@ -104,11 +105,8 @@ img {
   width: 100px;
   height: 100px;
 }
-.c{
-  display: flex;
-}
 a{
-  text-decoration-line: none;
+  /* text-decoration-line: none; */
   text-decoration: none;
   color: #fff;
 }
