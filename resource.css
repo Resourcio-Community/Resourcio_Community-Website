@@ -109,7 +109,6 @@ img {
 }
 a{
   text-decoration-line: none;
+  text-decoration: none;
   color: #fff;
-  background-color:palevioletred;
-
 }
