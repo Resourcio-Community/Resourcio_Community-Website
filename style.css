@@ -484,21 +484,30 @@ input[type="checkbox"] {
 /*-----------------------------------*\
     #CATEGORY
   \*-----------------------------------*/
-  /*.android{
+  .android{
     font-size: 19px;
   }
+  .and{
+    font-size: 29px;
+  }
   .web{
-    font-size: 32px;
+    font-size: 29px;
+  }
+  .webd{
+    font-size: 19px;
   }
   .cp{
-    font-size: 32px;
+    font-size: 38px;
+  }
+  .com{
+    font-size: 16px;
   }
   .cyber{
     font-size: 20px;
   }
   .cyb{
-    font-size: 35px;
-  }*/
+    font-size: 36px;
+  }
 .category .section-subtitle {
   color: var(--radical-red);
 }
