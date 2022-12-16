@@ -297,7 +297,7 @@ li {
   background-color: teal;
 
   color: rgb(255, 255, 255);
-  
+  height: 80px;
 }
 
 .nav-links a {
