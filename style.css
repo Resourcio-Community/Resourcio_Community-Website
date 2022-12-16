@@ -484,7 +484,21 @@ input[type="checkbox"] {
 /*-----------------------------------*\
     #CATEGORY
   \*-----------------------------------*/
-
+  /*.android{
+    font-size: 19px;
+  }
+  .web{
+    font-size: 32px;
+  }
+  .cp{
+    font-size: 32px;
+  }
+  .cyber{
+    font-size: 20px;
+  }
+  .cyb{
+    font-size: 35px;
+  }*/
 .category .section-subtitle {
   color: var(--radical-red);
 }
@@ -535,6 +549,8 @@ input[type="checkbox"] {
   margin-inline: auto;
   border-radius: var(--radius-5);
 }
+
+
 /*-----------------------------------*\
     #ABOUT
   \*-----------------------------------*/
@@ -787,7 +803,12 @@ input[type="checkbox"] {
 /*-----------------------------------*\
     #STATS
   \*-----------------------------------*/
-
+.m1{
+  font-size: 35px;
+}
+.slc{
+  text-emphasis:bold;
+}
 .stats-card {
   text-align: center;
   padding: 25px;

@@ -104,3 +104,12 @@ img {
   width: 100px;
   height: 100px;
 }
+.c{
+  display: flex;
+}
+a{
+  text-decoration-line: none;
+  color: #fff;
+  background-color:palevioletred;
+
+}
