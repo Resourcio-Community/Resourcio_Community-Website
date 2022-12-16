@@ -97,11 +97,6 @@ button {
   border: none;
   font: inherit;
 }
-
-input {
-  
-}
-
 button {
   cursor: pointer;
 }
@@ -982,9 +977,13 @@ input[type="checkbox"] {
 }
 
 .social-link {
+  
   font-size: 20px;
 }
-
+.social-link:hover{
+  color:white;
+  font-size: 21px;
+}
 .footer-bottom {
   border-block-start: 1px solid var(--eerie-black-1);
   padding-block: 30px;
