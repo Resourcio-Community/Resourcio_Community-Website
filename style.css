@@ -78,11 +78,6 @@
   padding: 0;
   box-sizing: border-box;
 }
-
-li {
-  list-style: none;
-}
-
 a,
 img,
 span,
@@ -92,12 +87,6 @@ button,
 ion-icon {
   display: block;
 }
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
 img {
   height: auto;
 }
@@ -296,7 +285,6 @@ body {
 a {
   text-decoration: none;
 }
-
 li {
   list-style: none;
 }
@@ -1384,7 +1372,7 @@ input[type="checkbox"] {
       transform: translateY(0);
     }
   }
-
+/* 
   .navbar,
   .navbar.active {
     all: unset;
@@ -1407,7 +1395,7 @@ input[type="checkbox"] {
 
   .header .btn {
     margin-inline-end: 0;
-  }
+  } */
 
   /**
      * HERO
