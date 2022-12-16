@@ -116,7 +116,7 @@ address {
 
 html {
   font-family: var(--ff-poppins);
-  font-size: 10px;
+  font-size: 12px;
   scroll-behavior: smooth;
 }
 
