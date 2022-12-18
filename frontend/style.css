@@ -124,7 +124,7 @@ body {
   line-height: 1.75;
 }
 
-::selection{
+::selection {
   color: none;
   background: none;
 }
@@ -134,7 +134,7 @@ body {
 }
 
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 8px;
 }
 
 ::-webkit-scrollbar-track {
@@ -249,15 +249,43 @@ body {
 
 .img-holder {
   aspect-ratio: var(--width) / var(--height);
-  background-color: var(--light-gray);
   overflow: hidden;
   display: flex;
+  backdrop-filter: blur(1px);
+  border-radius: 30px;
 }
 
-.img-cover {
+.impLinks {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.impLinks a:hover{
+  transform: scale(1.1);
+  transition: transform 300ms ease-in;
+}
+
+.left {
+  justify-content: flex-end;
+  transform: translateY(-15px);
+}
+
+.right {
+  justify-content: flex-start;
+  transform: translateY(15px);
+}
+
+.impLinks ion-icon {
+  font-size: 3rem;
+  cursor: pointer;
+  z-index: 100;
+}
+
+#img-cover {
   width: 100%;
   height: 100%;
   object-fit: contain;
+  border-radius: 40px;
 }
 
 .section-subtitle {
@@ -335,12 +363,12 @@ li {
   padding: 5px 14px;
 }
 
-.services{
+.services {
   position: relative;
   cursor: pointer;
 }
 
-.dropdown{
+/* .dropdown{
   display: none;
   position: absolute;
   background: teal;
@@ -358,7 +386,7 @@ li {
 .services:hover > .dropdown li:hover{
   border-radius: 15px;
   color: black;
-}
+} */
 
 /*RESPONSIVE NAVBAR MENU STARTS*/
 /* CHECKBOX HACK */
@@ -386,7 +414,7 @@ input[type="checkbox"] {
     z-index: 10;
   }
 
-  .menu li{
+  .menu li {
     transform: translateY(-150%);
   }
 
@@ -400,7 +428,7 @@ input[type="checkbox"] {
     margin-top: 12px;
   }
 
-  input[type="checkbox"]:checked + body{
+  input[type="checkbox"]:checked+body {
     overflow: hidden;
   }
 
@@ -411,7 +439,7 @@ input[type="checkbox"] {
     justify-content: center;
   }
 
-  .hideOverflow{
+  .hideOverflow {
     overflow: hidden;
   }
 

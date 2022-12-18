@@ -1,9 +1,8 @@
 'use strict'
 
 
-/**
- * add event on element
- */
+/* add event on element */
+
 
 const addEventOnElem = (elem, type, callback) => {
   if (elem.length > 1) {
@@ -16,32 +15,24 @@ const addEventOnElem = (elem, type, callback) => {
 }
 
 
-
-/**
- * navbar toggle
- */
-
 const navbar = document.querySelector(".navbar")
 const navTogglers = document.getElementById("checkbox_toggle")
 const navLinks = document.querySelectorAll("[data-nav-link]")
 
 
+/* back-to-top button active when scroll down to 400px */
 
-
-/**
- * header active when scroll down to 200px
-*/
 const backTopBtn = document.querySelector("[data-back-top-btn]")
 
 const activeElem = () => {
-  if (window.scrollY > 200) {
+  if (window.scrollY > 400) {
     backTopBtn.classList.add("active")
   } else {
     backTopBtn.classList.remove("active")
   }
 }
-
 addEventOnElem(window, "scroll", activeElem)
+
 
 
 document.querySelector('.hamburger').addEventListener('click', () => {
