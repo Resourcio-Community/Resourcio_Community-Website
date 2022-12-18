@@ -122,3 +122,19 @@ a {
   text-decoration: none;
   color: #fff;
 }
+
+@media (min-width:360px)
+{
+.box{
+  margin-bottom: 100px;
+}
+.ai{
+  margin-bottom: 180px;
+}
+.cyb{
+margin-bottom: 140px;
+}
+.lang{
+  margin-bottom: 20px;
+}
+}
