@@ -251,12 +251,13 @@ body {
   aspect-ratio: var(--width) / var(--height);
   background-color: var(--light-gray);
   overflow: hidden;
+  display: flex;
 }
 
 .img-cover {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .section-subtitle {
@@ -973,6 +974,7 @@ input[type="checkbox"] {
 
 .footer-link {
   transition: var(--transition-1);
+  color: rgb(200, 187, 187);
 }
 
 .footer-link:is(:hover, :focus) {
@@ -1015,13 +1017,14 @@ input[type="checkbox"] {
 }
 
 .social-link {
-
-  font-size: 20px;
+  font-size: 25px;
+  color: lightyellow;
 }
 
 .social-link:hover {
   color: white;
-  font-size: 21px;
+  transform: scale(1.1);
+  transition: all 200ms ease-in;
 }
 
 .footer-bottom {
@@ -1231,8 +1234,8 @@ input[type="checkbox"] {
   .hero-shape-1 {
     display: block;
     position: absolute;
-    bottom: -40px;
-    left: -10px;
+    bottom: -70px;
+    left: -50px;
   }
 
   /**
