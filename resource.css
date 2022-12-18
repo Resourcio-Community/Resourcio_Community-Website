@@ -4,6 +4,7 @@
   margin: 5px 5px 5px 5px;
   font-family: "poppins", sans-serif;
 }
+
 body {
   width: 100%;
   height: 100vh;
@@ -16,6 +17,7 @@ body {
   /* background-repeat: no-repeat; */
   background-size: contain;
 }
+
 .box {
   width: 300px;
   height: 300px;
@@ -29,15 +31,18 @@ body {
   cursor: pointer;
   position: relative;
 }
+
 .box:hover {
   box-shadow: 0px 0px 25px #999999;
   background-color: #fff;
 }
+
 .box h2 {
   font-size: 22px;
   font-weight: 700;
   letter-spacing: 2px;
 }
+
 /* .box p {
   font-size: 16px;
   font-weight: 400;
@@ -70,6 +75,7 @@ body {
   align-items: center;
   visibility: hidden;
 }
+
 .box button:before {
   content: "";
   position: absolute;
@@ -81,12 +87,15 @@ body {
   bottom: 0;
   background: linear-gradient(to left, rgb(255 255 255 / 25%), transparent);
 }
+
 .box button:hover {
   box-shadow: none;
 }
+
 .box button:hover:before {
   left: 70%;
 }
+
 .box:hover button {
   position: absolute;
   top: 280px;
@@ -94,6 +103,7 @@ body {
   transition: 0.5s;
   visibility: visible;
 }
+
 .box ion-icon {
   background-color: #fff;
   padding: 10px;
@@ -101,11 +111,13 @@ body {
   color: #fe4c1c;
   margin-left: 10px;
 }
+
 img {
   width: 100px;
   height: 100px;
 }
-a{
+
+a {
   /* text-decoration-line: none; */
   text-decoration: none;
   color: #fff;

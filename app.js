@@ -1,18 +1,17 @@
-'use strict';
-
+'use strict'
 
 
 /**
  * add event on element
  */
 
-const addEventOnElem = function (elem, type, callback) {
+const addEventOnElem = (elem, type, callback) => {
   if (elem.length > 1) {
     for (let i = 0; i < elem.length; i++) {
-      elem[i].addEventListener(type, callback);
+      elem[i].addEventListener(type, callback)
     }
   } else {
-    elem.addEventListener(type, callback);
+    elem.addEventListener(type, callback)
   }
 }
 
@@ -22,42 +21,43 @@ const addEventOnElem = function (elem, type, callback) {
  * navbar toggle
  */
 
-const navbar = document.querySelector("[data-navbar]");
-const navTogglers = document.querySelectorAll("[data-nav-toggler]");
-const navLinks = document.querySelectorAll("[data-nav-link]");
-const overlay = document.querySelector("[data-overlay]");
+const navbar = document.querySelector(".navbar")
+const navTogglers = document.getElementById("checkbox_toggle")
+const navLinks = document.querySelectorAll("[data-nav-link]")
 
-const toggleNavbar = function () {
-  navbar.classList.toggle("active");
-  overlay.classList.toggle("active");
-}
-
-addEventOnElem(navTogglers, "click", toggleNavbar);
-
-const closeNavbar = function () {
-  navbar.classList.remove("active");
-  overlay.classList.remove("active");
-}
-
-addEventOnElem(navLinks, "click", closeNavbar);
 
 
 
 /**
- * header active when scroll down to 100px
- */
+ * header active when scroll down to 200px
+*/
+const backTopBtn = document.querySelector("[data-back-top-btn]")
 
-const header = document.querySelector("[data-header]");
-const backTopBtn = document.querySelector("[data-back-top-btn]");
-
-const activeElem = function () {
-  if (window.scrollY > 100) {
-    header.classList.add("active");
-    backTopBtn.classList.add("active");
+const activeElem = () => {
+  if (window.scrollY > 200) {
+    backTopBtn.classList.add("active")
   } else {
-    header.classList.remove("active");
-    backTopBtn.classList.remove("active");
+    backTopBtn.classList.remove("active")
   }
 }
 
-addEventOnElem(window, "scroll", activeElem);
+addEventOnElem(window, "scroll", activeElem)
+
+
+document.querySelector('.hamburger').addEventListener('click', () => {
+  document.body.classList.toggle('hideOverflow')
+
+  navLinks.forEach((navLink) => {
+    navLink.addEventListener('click', () => {
+      if (navLink.innerText === 'Home') {
+        window.location.reload()
+      }
+      else {
+        navTogglers.checked = false
+        document.body.classList.remove('hideOverflow')
+      }
+    })
+  })
+})
+
+

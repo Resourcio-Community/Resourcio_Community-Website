@@ -1,343 +1,384 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Resourcio Community: All resources in a single website for engineering students.</title>
-  <meta name="title" content="Resourcio Community: All resources in a single website for engineering students">
-  <meta name="description"
-    content="This is an resource webpage for all engineering students in the field of software engineering">
-  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700;800&family=Poppins:wght@400;500&display=swap"
-    rel="stylesheet">
-  <link rel="preload" as="image" href="Images/hero-bg.svg">
-  <link rel="preload" as="image" href="Images/hero-banner-1.jpg">
-  <link rel="preload" as="image" href="Images/hero-banner-2.jpg">
-  <!-- <link rel="preload" as="image" href="Images/hero-shape-1.svg"> -->
-  <link rel="preload" as="image" href="Images/hero-shape-2.png">
-</head>
-<body>
-  <nav class="navbar">
-  <!-- LOGO -->
-    <div><img src="Images\rc_com.png" href="#home" alt="Community Logo" height="100px" width="100px" style="cursor:pointer"></div>
-    <!-- NAVIGATION MENU -->
-    <ul class="nav-links">
-    <!-- USING CHECKBOX HACK -->
-    <input type="checkbox" id="checkbox_toggle" />
-    <label for="checkbox_toggle" class="hamburger">&#9776;</label>
-    <!-- NAVIGATION MENUS -->
-    <div class="menu">
-    <li><a href="#home">Home</a></li>
-    <li><a href="#about">About Us</a></li>
-    <!-- <li class="services">
-    <a href="#Pages">Pages</a>
-    <ul class="dropdown">
-    <li><a href="/">Cyber Security</a></li>
-    <li><a href="proglang.html" target="_blank">Programming Languages</a></li>
-    <li><a href="/">AI/ML</a></li>
-    <li><a href="/">Blockchain Technology</a></li>
-    <li><a href="/">DevOps</a></li>
-    </ul>
-    </li> -->
-   <li><a href="resource.html" target="_blank">Resources</a></li>
-   <li><a href="#contact">Contact Us</a></li>
-   <li><a href="#">Log In/Sign Up</a></li>
-    </div>
-    </ul>
-  </nav>
-  <main>
-    <article>
-      <section class="section hero has-bg-image" id="home" aria-label="home"
-        style="background-image: url('Images/hero-bg.svg')">
-        <div class="container">
-          <div class="hero-content">
-            <h1 class="h1 section-title" style="font-size:57px">
-              The Best Website for students to <span class="span">Search</span> for Software Resources.
-            </h1>
-            <p class="hero-text">
-              Hello future engineers!<br> Welcome to <b>Resourcio Community</b>!! A one stop hub for all your resources and queries
-              regarding different software languages.
-            </p>
-            <a href="resource.html" target="_blank" class="btn has-before">
-              <span class="span">Find Resources</span>
-              <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
-            </a>
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resourcio Community: All resources in a single website for engineering students.</title>
+    <meta name="title" content="Resourcio Community: All resources in a single website for engineering students">
+    <meta name="description"
+      content="This is an resource webpage for all engineering students in the field of software engineering">
+    <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="Images/RC.png" type="image/png" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700;800&family=Poppins:wght@400;500&display=swap"
+      rel="stylesheet" />
+    <link rel="preload" as="image" href="Images/hero-bg.svg" />
+    <link rel="preload" as="image" href="Images/hero-banner-1.jpg" />
+    <link rel="preload" as="image" href="Images/hero-banner-2.jpg" />
+    <!-- <link rel="preload" as="image" href="Images/hero-shape-1.svg"> -->
+    <link rel="preload" as="image" href="Images/hero-shape-2.png" />
+  </head>
+
+  <body>
+    <nav class="navbar">
+      <!-- LOGO -->
+      <div>
+        <img src="Images\rc_com.png" href="#home" alt="Community Logo" height="100px" width="100px"
+          style="cursor:pointer">
+      </div>
+      <!-- NAVIGATION MENU -->
+      <ul class="nav-links">
+        <!-- USING CHECKBOX HACK -->
+        <input type="checkbox" id="checkbox_toggle" />
+        <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+        <!-- NAVIGATION MENUS -->
+        <div class="menu">
+          <li data-nav-link><a href="#">Home</a></li>
+          <li data-nav-link><a href="#about">About Us</a></li>
+          <!-- <li class="services" data-nav-link>Pages
+            <ul class="dropdown">
+              <li><a href="#">Cyber Security</a></li>
+              <li><a href="proglang.html" target="_blank">Programming Languages</a></li>
+              <li><a href="#">AI/ML</a></li>
+              <li><a href="#">Blockchain Technology</a></li>
+              <li><a href="#">DevOps</a></li>
+            </ul>
+          </li> -->
+          <li data-nav-link><a href="resource.html" target="_blank">Resources</a></li>
+          <li data-nav-link><a href="#contact">Contact Us</a></li>
+          <li data-nav-link><a href="#">Log In/Sign Up</a></li>
+        </div>
+      </ul>
+    </nav>
+
+    <main>
+      <article>
+
+        <section class="section hero has-bg-image" id="home" aria-label="home"
+          style="background-image: url('Images/hero-bg.svg')">
+          <div class="container">
+            <div class="hero-content">
+              <h1 class="h1 section-title" style="font-size:57px">
+                The Best Website for students to <span class="span">Search</span> for Software Resources.
+              </h1>
+              <p class="hero-text">
+                Hello future engineers!<br> Welcome to <b>Resourcio Community</b>!! A one stop hub for all your
+                resources and queries
+                regarding different software languages.
+              </p>
+              <a href="resource.html" target="_blank" class="btn has-before">
+                <span class="span">Find Resources</span>
+                <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+              </a>
+            </div>
+            <figure class="hero-banner">
+              <div class="img-holder one" style="--width: 270; --height: 300;">
+                <img src="Images/hero-banner-1.jpg" width="270" height="300" alt="hero banner" class="img-cover">
+              </div>
+              <div class="img-holder two" style="--width: 240; --height: 370;">
+                <img src="Images/hero-banner-2.jpg" width="240" height="370" alt="hero banner" class="img-cover">
+              </div>
+              <img src="Images/Email_logo.svg" width="340" height="490" alt="email-icon" class="shape hero-shape-1">
+              <img src="Images/hero-shape-2.png" width="622" height="551" alt="hero shape" class="shape hero-shape-2">
+            </figure>
           </div>
-          <figure class="hero-banner">
-            <div class="img-holder one" style="--width: 270; --height: 300;">
-              <img src="Images/hero-banner-1.jpg" width="270" height="300" alt="hero banner" class="img-cover">
-            </div>
-            <div class="img-holder two" style="--width: 240; --height: 370;">
-              <img src="Images/hero-banner-2.jpg" width="240" height="370" alt="hero banner" class="img-cover">
-            </div>
-            <img src="Images/Email_logo.svg" width="340" height="490" alt="email-icon" class="shape hero-shape-1">
-            <img src="Images/hero-shape-2.png" width="622" height="551" alt="hero shape" class="shape hero-shape-2">
-          </figure>
-        </div>
-      </section>
-      <section class="section category" aria-label="category">
-        <div class="container">
-          <p class="section-subtitle">Categories</p>
-          <h2 class="h2 section-title">
-            Online <span class="span">Resources</span> For Remote Learning.
-          </h2>
-          <p class="section-text">
-            Here are the different resouces:
-          </p>
-          <ul class="grid-list">
-            <li>
-              <div class="category-card" style="--color: 170, 75%, 41%">
-                <div class="card-icon">
-                  <img src="Images/category-1.svg" width="40" height="40" loading="lazy" alt="Online Degree Programs"
-                    class="img">
-                </div>
-                <h3 class="h3">
-                  <a href="#" class="card-title web">Web Development Resources</a>
-                </h3>
-                <p class="card-text web">
-                <span class="webd">Here you can get all information about Web Development Languages including both FrontEnd and BackEnd
-                  Resources.</span>
-                </p>
-                 <span class="card-badge"></span> 
+        </section>
+
+
+        <section class="section category" aria-label="category">
+          <div class="container">
+            <p class="section-subtitle">Categories</p>
+            <h2 class="h2 section-title">
+              Online <span class="span">Resources</span> For Remote Learning.
+            </h2>
+            <p class="section-text">
+              Here are the different resouces:
+            </p>
+            <ul class="grid-list">
+              <li>
+                <a href="webdev.html">
+                  <div class="category-card" style="--color: 170, 75%, 41%">
+                    <div class="card-icon">
+                      <img src="Images/category-1.svg" width="40" height="40" loading="lazy"
+                        alt="Online Degree Programs" class="img">
+                    </div>
+                    <h3 class="h3">
+                      <p class="card-title web">Web Development Resources</p>
+                    </h3>
+                    <p class="card-text web">
+                      <span class="webd">Here you can get all information about Web Development Languages including both
+                        FrontEnd and BackEnd
+                        Resources.</span>
+                    </p>
+                    <span class="card-badge"></span>
+                  </div>
+                </a>
+              </li>
+
+              <li>
+                <a href="#">
+                  <div class="category-card" style="--color: 351, 83%, 61%">
+                    <div class="card-icon">
+                      <img src="Images/category-2.svg" width="40" height="40" loading="lazy" alt="Non-Degree Programs"
+                        class="img">
+                    </div>
+                    <h3 class="h3">
+                      <p class="card-title and">Android Development Resources</p>
+                    </h3>
+                    <p class="card-text">
+                      <span class="android"> Here you can get all information about Android Development Languages like
+                        Flutter, Swift etc.</span>
+                    </p>
+                    <span class="card-badge"></span>
+                  </div>
+                </a>
+              </li>
+
+              <li>
+                <a href="#">
+                  <div class="category-card" style="--color: 229, 75%, 58%">
+                    <div class="card-icon">
+                      <img src="Images/category-3.svg" width="40" height="40" loading="lazy" alt="Off-Campus Programs"
+                        class="img">
+                    </div>
+                    <h3 class="h3">
+                      <p class="card-title cp">Competitive Programming Resources</p>
+                    </h3>
+                    <p class="card-text ">
+                      <span class="com"> Here you can get all information about Competitive Programming resources like
+                        DSA
+                        and many other </span>
+                      topics.
+                    </p>
+                    <span class="card-badge"></span>
+                  </div>
+                </a>
+              </li>
+
+              <li>
+                <a href="#">
+                  <div class="category-card" style="--color: 42, 94%, 55%">
+                    <div class="card-icon">
+                      <img src="Images/category-4.svg" width="40" height="40" loading="lazy"
+                        alt="Hybrid Distance Programs" class="img">
+                    </div>
+                    <h3 class="h3">
+                      <p class="card-title cyb">CyberSecurity Resources</p>
+                    </h3>
+                    <p class="card-text">
+                      <span class="cyber"> Here you can get all information about Cyber Security Resources including
+                        networking and many others.</span>
+                    </p>
+                    <span class="card-badge"></span>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+
+        <section class="section about" id="about" aria-label="about">
+          <div class="container">
+            <figure class="about-banner">
+              <div class="img-holder" style="--width: 520; --height: 370;">
+                <img src="Images/Ayishik.jpeg" width="520" height="370" loading="lazy" alt="about banner"
+                  class="img-cover">
               </div>
-            </li>
-            <li>
-              <div class="category-card" style="--color: 351, 83%, 61%">
-                <div class="card-icon">
-                  <img src="Images/category-2.svg" width="40" height="40" loading="lazy" alt="Non-Degree Programs"
-                    class="img">
-                </div>
-                <h3 class="h3">
-                  <a href="#" class="card-title and">Android Development Resources</a>
-                </h3>
-                <p class="card-text">
-                 <span class="android"> Here you can get all information about Android Development Languages like Flutter, Swift etc.</span>
-                </p>
-                 <span class="card-badge"></span> 
-              </div>
-            </li>
-            <li>
-              <div class="category-card" style="--color: 229, 75%, 58%">
-                <div class="card-icon">
-                  <img src="Images/category-3.svg" width="40" height="40" loading="lazy" alt="Off-Campus Programs"
-                    class="img">
-                </div>
-                <h3 class="h3">
-                  <a href="#" class="card-title cp">Competitive Programming Resources</a>
-                </h3>
-                <p class="card-text ">
-                 <span class="com"> Here you can get all information about Competitive Programming resources like DSA and many other  </span>
-                  topics.
-                </p>
-                <span class="card-badge"></span> 
-              </div>
-            </li>
-            <li>
-              <div class="category-card" style="--color: 42, 94%, 55%">
-                <div class="card-icon">
-                  <img src="Images/category-4.svg" width="40" height="40" loading="lazy" alt="Hybrid Distance Programs"
-                    class="img">
-                </div>
-                <h3 class="h3">
-                  <a href="#" class="card-title cyb">CyberSecurity Resources</a>
-                </h3>
-                <p class="card-text">
-                 <span class="cyber"> Here you can get all information about Cyber Security Resources including networking and many others.</span>
-                </p>
-                <span class="card-badge"></span>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </section>
-      <section class="section about" id="about" aria-label="about">
-        <div class="container">
-          <figure class="about-banner">
-            <div class="img-holder" style="--width: 520; --height: 370;">
-              <img src="Images/Ayishik.jpeg" width="520" height="370" loading="lazy" alt="about banner"
-                class="img-cover">
-            </div>
-            <!-- <img src="" width="360" height="420" loading="lazy" alt="lol"
+              <!-- <img src="" width="360" height="420" loading="lazy" alt="lol"
               class="shape about-shape-1">
             <img src="" width="371" height="220" loading="lazy" alt="lol1"
               class="shape about-shape-2"> -->
-            <img src="Images/about-shape-3.png" width="722" height="528" loading="lazy" alt="lol2"
-              class="shape about-shape-3">
-          </figure>
-          <div class="about-content">
-            <p class="section-subtitle">About Us</p>
-            <h2 class="h2 section-title">
-              A group of enthusiastic <span class="span">Engineers keen to</span> help their fellow Engineers.
-            </h2>
-            <p class="section-text">
-              Through Resourcio we have tried to bring in different resources related to software development and other
-              different fields related to software enginnering. We want to provide students a single platform where they
-              can find all new resources and they dont need to browse the web extensively for learning them.
-            </p>
-            <ul class="about-list">
-              <li class="about-item">
-                <ion-icon name="checkmark-done-outline" aria-hidden="true"></ion-icon>
-                <span class="span">Free Resources</span>
+              <img src="Images/about-shape-3.png" width="722" height="528" loading="lazy" alt="lol2"
+                class="shape about-shape-3">
+            </figure>
+            <div class="about-content">
+              <p class="section-subtitle">About Us</p>
+              <h2 class="h2 section-title">
+                A group of enthusiastic <span class="span">Engineers keen to</span> help their fellow Engineers.
+              </h2>
+              <p class="section-text">
+                Through Resourcio we have tried to bring in different resources related to software development and
+                other
+                different fields related to software enginnering. We want to provide students a single platform where
+                they
+                can find all new resources and they dont need to browse the web extensively for learning them.
+              </p>
+              <ul class="about-list">
+                <li class="about-item">
+                  <ion-icon name="checkmark-done-outline" aria-hidden="true"></ion-icon>
+                  <span class="span">Free Resources</span>
+                </li>
+                <li class="about-item">
+                  <ion-icon name="checkmark-done-outline" aria-hidden="true"></ion-icon>
+                  <span class="span">Maximum topics covered Extensively</span>
+                </li>
+                <li class="about-item">
+                  <ion-icon name="checkmark-done-outline" aria-hidden="true"></ion-icon>
+                  <span class="span">All in single platform</span>
+                </li>
+              </ul>
+              <img src="Images/about-shape-4.svg" width="100" height="100" loading="lazy" alt=""
+                class="shape about-shape-4">
+            </div>
+          </div>
+        </section>
+
+
+        <section class="video has-bg-image" aria-label="video" style="background-image: url('Images/video-bg.png')">
+          <div class="container">
+            <div class="video-card">
+              <div class="video-banner img-holder has-after" style="--width: ; --height: ;">
+                <img src="" width="970" height="550" loading="lazy" alt="video banner" class="img-cover">
+                <button class="play-btn" aria-label="play video">
+                  <ion-icon name="play" aria-hidden="true"></ion-icon>
+                </button>
+              </div>
+              <img src="Images/video-shape-1.png" width="1089" height="605" loading="lazy" alt=""
+                class="shape video-shape-1">
+              <img src="Images/video-shape-2.png" width="158" height="174" loading="lazy" alt=""
+                class="shape video-shape-2">
+            </div>
+          </div>
+        </section>
+
+
+        <section class="section stats" aria-label="stats">
+          <div class="container">
+            <ul class="grid-list">
+              <li>
+                <div class="stats-card" style="--color: 170, 75%, 41%">
+                  <h3 class="card-title">50+</h3>
+                  <p class="card-text">Software Languages Covered</p>
+                </div>
               </li>
-              <li class="about-item">
-                <ion-icon name="checkmark-done-outline" aria-hidden="true"></ion-icon>
-                <span class="span">Maximum topics covered Extensively</span>
+              <li>
+                <div class="stats-card" style="--color: 351, 83%, 61%">
+                  <h3 class="card-title">100+</h3>
+                  <p class="card-text"><span class="m1">Resources Added</p></span></p>
+                </div>
               </li>
-              <li class="about-item">
-                <ion-icon name="checkmark-done-outline" aria-hidden="true"></ion-icon>
-                <span class="span">All in single platform</span>
+              <li>
+                <div class="stats-card" style="--color: 260, 100%, 67%">
+                  <h3 class="card-title">5+</h3>
+                  <p class="card-text"><span class="m1">Servers Included</span></p>
+                </div>
+              </li>
+              <li>
+                <div class="stats-card" style="--color: 42, 94%, 55%">
+                  <h3 class="card-title">100+</h3>
+                  <p class="card-text"><span class="m1">Members Visited</span></p>
+                </div>
               </li>
             </ul>
-            <img src="Images/about-shape-4.svg" width="100" height="100" loading="lazy" alt=""
-              class="shape about-shape-4">
           </div>
-        </div>
-      </section>
-      <section class="video has-bg-image" aria-label="video" style="background-image: url('Images/video-bg.png')">
-        <div class="container">
-          <div class="video-card">
-            <div class="video-banner img-holder has-after" style="--width: ; --height: ;">
-              <img src="" width="970" height="550" loading="lazy" alt="video banner"
-                class="img-cover">
-              <button class="play-btn" aria-label="play video">
-                <ion-icon name="play" aria-hidden="true"></ion-icon>
-              </button>
+        </section>
+
+
+        <section class="section blog has-bg-image" id="contact" aria-label="contact"
+          style="background-image: url('Images/blog-bg.svg')">
+          <div class="container">
+            <p class="section-subtitle">Contact Us</p>
+            <h2 class="h2 section-title">Get in touch with us</h2>
+            <ul class="grid-list">
+              <li>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+      </article>
+    </main>
+
+    <footer class="footer" style="background-image: url('Images/footer-bg.png')">
+      <div class="footer-top section">
+        <div class="container grid-list">
+          <div class="footer-brand">
+            <a href="#" class="logo">
+              <img src="Images/Resourcio_community_logo.jpeg" style="border:4px solid rgb(234, 255, 2);" width="162"
+                height="50" alt="EduWeb logo">
+            </a>
+            <p class="footer-brand-text">
+              Thank You for visiting our website. Wishing you a very happy day ahead.
+            </p>
+            <div class="wrapper">
+              <span class="span">WhatsApp:</span>
+              <a href="https://chat.whatsapp.com/Km6AX9di04ZLIpFEcXTiNK" target="_blank" class="footer-link">Click
+                Here</a>
             </div>
-            <img src="Images/video-shape-1.png" width="1089" height="605" loading="lazy" alt=""
-              class="shape video-shape-1">
-            <img src="Images/video-shape-2.png" width="158" height="174" loading="lazy" alt=""
-              class="shape video-shape-2">
+            <div class="wrapper">
+              <span class="span">Email:</span>
+              <a href="mailto:resourciocommunity22@gmail.com" target="_blank"
+                class="footer-link">resourciocommunity22@gmail.com</a>
+            </div>
           </div>
-        </div>
-      </section>
-      <section class="section stats" aria-label="stats">
-        <div class="container">
-          <ul class="grid-list">
-            <li>
-              <div class="stats-card" style="--color: 170, 75%, 41%">
-                <h3 class="card-title">50+</h3>
-                <p class="card-text" >Software Languages Covered</p>
-              </div>
-            </li>
-            <li>
-              <div class="stats-card" style="--color: 351, 83%, 61%">
-                <h3 class="card-title">100+</h3>
-                <p class="card-text"><span class="m1">Resources Added</p></span></p>
-              </div>
-            </li>
-            <li>
-              <div class="stats-card" style="--color: 260, 100%, 67%">
-                <h3 class="card-title">5+</h3>
-                <p class="card-text"><span class="m1">Servers Included</span></p>
-              </div>
-            </li>
-            <li>
-              <div class="stats-card" style="--color: 42, 94%, 55%">
-                <h3 class="card-title">100+</h3>
-                <p class="card-text"><span class="m1">Members Visited</span></p>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </section>
-      <section class="section blog has-bg-image" id="contact" aria-label="contact"
-        style="background-image: url('Images/blog-bg.svg')">
-        <div class="container">
-          <p class="section-subtitle">Contact Us</p>
-          <h2 class="h2 section-title">Get in touch with us</h2>
-          <ul class="grid-list">
-            <li>
-            </li>
-          </ul>
-        </div>
-      </section>
-    </article>
-  </main>
-  <footer class="footer" style="background-image: url('Images/footer-bg.png')">
-    <div class="footer-top section">
-      <div class="container grid-list">
-        <div class="footer-brand">
-          <a href="#" class="logo">
-            <img src="Images/Resourcio_community_logo.jpeg" style="border:4px solid rgb(234, 255, 2);" width="162"
-              height="50" alt="EduWeb logo">
-          </a>
-          <p class="footer-brand-text">
-            Thank You for visiting our website. Wishing you a very happy day ahead.
-          </p>
-          <div class="wrapper">
-            <span class="span">WhatsApp:</span>
-            <a href="https://chat.whatsapp.com/Km6AX9di04ZLIpFEcXTiNK" target="_blank" class="footer-link">Click Here</a>
+          <div class="footer-list">
+            <p class="footer-list-title">Contacts</p>
+            <p class="footer-list-text">
+              Enter your email address to register to our newsletter subscription
+            </p>
+            <form action="" class="newsletter-form">
+              <input type="email" name="email_address" placeholder="Your email" required class="input-field" autocomplete="off">
+              <button type="submit" class="btn has-before">
+                <span class="span">Subscribe</span>
+                <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+              </button>
+            </form>
+            <ul class="social-list">
+              <li>
+                <a href="https://lnkd.in/ez_CeQjY" target="_blank" class="social-link">
+                  <ion-icon name="logo-facebook"></ion-icon>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.linkedin.com/company/resourcio-community2022/" target="_blank" class="social-link">
+                  <ion-icon name="logo-linkedin"></ion-icon>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.instagram.com/resourciocommunity22/" target="_blank" class="social-link">
+                  <ion-icon name="logo-instagram"></ion-icon>
+                </a>
+              </li>
+              <li>
+                <a href="https://twitter.com/ResourcioC" target="_blank" class="social-link">
+                  <ion-icon name="logo-twitter"></ion-icon>
+                </a>
+              </li>
+              <li>
+                <a href="https://lnkd.in/eg4dTQGu" target="_blank" class="social-link">
+                  <ion-icon name="logo-github"></ion-icon>
+                </a>
+              </li>
+              <li>
+                <a href="https://lnkd.in/eGnFvfSp" target="_blank" class="social-link">
+                  <ion-icon name="logo-discord"></ion-icon>
+                </a>
+              </li>
+            </ul>
           </div>
-          <div class="wrapper">
-            <span class="span">Email:</span>
-            <a href="mailto:resourciocommunity22@gmail.com" target="_blank" class="footer-link">resourciocommunity22@gmail.com</a>
-          </div>
-          </div>
-        <div class="footer-list">
-          <p class="footer-list-title">Contacts</p>
-          <p class="footer-list-text">
-            Enter your email address to register to our newsletter subscription
-          </p>
-          <form action="" class="newsletter-form">
-            <input type="email" name="email_address" placeholder="Your email" required class="input-field">
-            <button type="submit" class="btn has-before">
-              <span class="span">Subscribe</span>
-              <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
-            </button>
-          </form>
-          <ul class="social-list">
-            <li>
-              <a href="https://lnkd.in/ez_CeQjY" target="_blank" class="social-link">
-                <ion-icon name="logo-facebook"></ion-icon>
-              </a>
-            </li>
-            <li>
-              <a href="https://www.linkedin.com/company/resourcio-community2022/" target="_blank" class="social-link">
-                <ion-icon name="logo-linkedin"></ion-icon>
-              </a>
-            </li>
-            <li>
-              <a href="https://www.instagram.com/resourciocommunity22/" target="_blank" class="social-link">
-                <ion-icon name="logo-instagram"></ion-icon>
-              </a>
-            </li>
-            <li>
-              <a href="https://twitter.com/ResourcioC" target="_blank" class="social-link">
-                <ion-icon name="logo-twitter"></ion-icon>
-              </a>
-            </li>
-            <li>
-              <a href="https://lnkd.in/eg4dTQGu" target="_blank" class="social-link">
-                <ion-icon name="logo-github"></ion-icon>
-              </a>
-            </li>
-            <li>
-              <a href="https://lnkd.in/eGnFvfSp" target="_blank" class="social-link">
-                <ion-icon name="logo-discord"></ion-icon>
-              </a>
-            </li>
-          </ul>
         </div>
       </div>
-    </div>
-    <div class="footer-bottom">
-      <div class="container">
-        <p class="copyright">
-          Copyright &#169; 2022 All Rights Reserved <a href="#" class="copyright-link">Resourcio Community</a>
-        </p>
+      <div class="footer-bottom">
+        <div class="container">
+          <p class="copyright">
+            Copyright &copy; 2022 All Rights Reserved <a href="#" class="copyright-link">Resourcio Community</a>
+          </p>
+        </div>
       </div>
-    </div>
-  </footer>
-  <a href="#top" class="back-top-btn" aria-label="back top top" data-back-top-btn>
-    <ion-icon name="chevron-up" aria-hidden="true"></ion-icon>
-  </a>
-  <script src="app.js" defer></script>
-  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-</body>
+    </footer>
+    <a href="#" class="back-top-btn" aria-label="back top top" data-back-top-btn>
+      <ion-icon name="chevron-up" aria-hidden="true"></ion-icon>
+    </a>
+
+    <script src="app.js" defer></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  </body>
+
 </html>
