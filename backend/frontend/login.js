@@ -19,9 +19,8 @@ loginButton.addEventListener('click', handleLogin)
 async function handleLogin(e) {
   e.preventDefault()
 
-  const res = await fetch("http://localhost:8383/api/auth/login", {
+  const res = await fetch('/api/auth/login', {
     method: "POST",
-    mode: "no-cors",
     body: JSON.stringify({
       email: loginEmail.value,
       password: loginPassword.value

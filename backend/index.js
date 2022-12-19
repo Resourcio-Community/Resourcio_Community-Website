@@ -7,6 +7,7 @@ const authRoute = require('./routes/auth')
 dotenv.config()
 
 mongoose.set('strictQuery', true)
+app.use(express.static('frontend'))
 app.use(express.json())
 
 
