@@ -261,8 +261,23 @@ body {
   gap: 30px;
 }
 .impLinks a:hover{
-  transform: scale(1.1);
+  transform: scale(1.05);
   transition: transform 300ms ease-in;
+}
+
+.about-name{
+  display: none;
+  position: relative;
+  font-size: 1.7rem;
+  color: #357df9;
+}
+
+.about-name .top{
+  
+}
+
+.about-name .bottom{
+
 }
 
 .left {
@@ -362,31 +377,6 @@ li {
 .menu li {
   padding: 5px 14px;
 }
-
-.services {
-  position: relative;
-  cursor: pointer;
-}
-
-/* .dropdown{
-  display: none;
-  position: absolute;
-  background: teal;
-  width: 300px;
-  border-radius: 15px;
-  z-index: 10;
-  top: 42px;
-  left: 0;
-}
-
-.services:hover > .dropdown{
-  display: block;
-}
-
-.services:hover > .dropdown li:hover{
-  border-radius: 15px;
-  color: black;
-} */
 
 /*RESPONSIVE NAVBAR MENU STARTS*/
 /* CHECKBOX HACK */
@@ -601,6 +591,11 @@ input[type="checkbox"] {
 .about .container {
   display: grid;
   gap: 30px;
+}
+
+.about-info{
+  display: flex;
+  flex-direction: column;
 }
 
 .about-banner {

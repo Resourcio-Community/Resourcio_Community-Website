@@ -11,6 +11,11 @@ input {
   font-family: "Poppins", sans-serif;
 }
 
+::selection{
+  color: none;
+  background-color: none;
+}
+
 .container {
   position: relative;
   width: 100%;
@@ -91,9 +96,10 @@ form.sign-in-form {
   background: none;
   outline:none;
   border: none;
+  border-radius: 0 50px 50px 0;
   line-height: 1;
   font-weight: 600;
-  font-size: 1.1rem;
+  font-size: 1rem;
   color: #333;
 }
 
@@ -101,6 +107,7 @@ form.sign-in-form {
   color: #aaa;
   font-weight: 500;
 }
+
 
 /* .social-text {
   padding: 0.7rem 0;

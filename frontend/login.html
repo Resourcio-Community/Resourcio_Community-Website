@@ -18,34 +18,34 @@
             <h2 class="title">Sign in</h2>
             <div class="input-field">
               <i class="fas fa-envelope"></i>
-              <input type="text" placeholder="Email" autofocus />
+              <input type="email" id="login-email" placeholder="Email" autofocus />
             </div>
             <div class="input-field">
               <i class="fas fa-lock"></i>
-              <input type="password" placeholder="Password" />
+              <input type="password" id="login-password" placeholder="Password" />
             </div>
-            <button type="submit" class="btn solid">Login</button>
+            <button id="login-btn" class="btn solid" type="submit">Login</button>
           </form>
 
-          <form class="sign-up-form" method="post">
+          <form class="sign-up-form">
             <h2 class="title">Sign up</h2>
             <div class="input-field">
               <i class="fab fa-adn"></i>
-              <input type="text" placeholder="Name" autofocus />
+              <input type="text" id="signup-name" placeholder="Name" autofocus autocomplete="off"/>
             </div>
             <div class="input-field">
               <i class="fas fa-user"></i>
-              <input type="text" placeholder="Username" />
+              <input type="text" id="signup-username" placeholder="Username" autocomplete="off"/>
             </div>
             <div class="input-field">
               <i class="fas fa-envelope"></i>
-              <input type="email" placeholder="Email" />
+              <input type="email" id="signup-email" placeholder="Email" autocomplete="off"/>
             </div>
             <div class="input-field">
               <i class="fas fa-lock"></i>
-              <input type="password" placeholder="Password" />
+              <input type="password" id="signup-password" placeholder="Password" />
             </div>
-            <button type="submit" class="btn">Sign up</button>
+            <button id="signup-btn" class="btn">Sign up</button>
           </form>
 
         </div>
@@ -61,7 +61,7 @@
               Sign up
             </button>
           </div>
-          <img src="img/log.svg" class="image" alt="" />
+          <div></div>
         </div>
         <div class="panel right-panel">
           <div class="content">
@@ -73,7 +73,7 @@
               Sign in
             </button>
           </div>
-          <img src="img/register.svg" class="image" alt="" />
+          <div></div>
         </div>
       </div>
     </div>
