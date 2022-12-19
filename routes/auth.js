@@ -7,12 +7,14 @@ const app = express()
 
 // REGISTER
 app.post('/register', async (req, res) => {
+    const { name, username, email, password } = req.body
+
     const newUser = new User({
-        name: req.body.name,
-        username: req.body.username,
-        email: req.body.email,
+        name: name,
+        username: username,
+        email: email,
         password: CryptoJS.AES.encrypt(
-            req.body.password.toString(),
+            password,
             process.env.SECRET_KEY
         ).toString()
     })
