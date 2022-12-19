@@ -89,7 +89,7 @@ form.sign-in-form {
 
 .input-field input {
   background: none;
-  outline: none;
+  outline:none;
   border: none;
   line-height: 1;
   font-weight: 600;
