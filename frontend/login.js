@@ -19,27 +19,36 @@ sign_in_btn.addEventListener('click', () => {
   container.classList.remove("sign-up-mode")
 })
 
-// loginButton.addEventListener('click', handleLogin)
 
 
-// async function handleLogin(e) {
-//   e.preventDefault()
+loginButton.addEventListener('click', async (e) => {
+  e.preventDefault()
+  const email = loginEmail.value
+  const password = loginPassword.value
 
-//   const res = await fetch('/api/auth/login', {
-//     method: "POST",
-//     body: JSON.stringify({
-//       email: loginEmail.value,
-//       password: loginPassword.value
-//     })
-//   })
+  try {
+    const res = await fetch('/api/auth/login', {
+      method: "POST",
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        email: email,
+        password: password
+      })
+    })
 
-//   const data = await res.json()
-//   console.log(data)
-// }
+    const data = await res.json()
+    console.log(data)
+  }
+  catch (err) {
+    console.log(err)
+  }
+})
 
 
 
-const handleSignup = async (e) => {
+signupButton.addEventListener('click', async (e) => {
   e.preventDefault()
   const name = signupName.value
   const username = signupUsername.value
@@ -60,11 +69,10 @@ const handleSignup = async (e) => {
       })
     })
 
-    const data = await res.data()
+    const data = await res.json()
     console.log(data.status)
   }
   catch (err) {
     console.log(err)
   }
-}
-signupButton.addEventListener('click', handleSignup)
+})

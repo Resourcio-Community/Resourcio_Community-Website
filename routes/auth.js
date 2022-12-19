@@ -1,7 +1,6 @@
 const express = require('express')
 const User = require('../models/User')
 const CryptoJS = require('crypto-js')
-const jwt = require('jsonwebtoken')
 
 const app = express()
 
@@ -31,8 +30,10 @@ app.post('/register', async (req, res) => {
 
 // LOGIN
 app.post('/login', async (req, res) => {
+    const { email } = req.body
+
     try {
-        const user = await User.findOne({ email: req.body.email })
+        const user = await User.findOne({ email: email })
         if (!user) {
             return res.status(401).json('User not found!')
         }
