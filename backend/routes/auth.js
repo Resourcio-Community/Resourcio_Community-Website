@@ -19,7 +19,7 @@ app.post('/register', async (req, res) => {
 
     try {
         const user = await newUser.save()
-        res.status(201).json(user)
+        res.status(201).json({ user, status: 'User created successfully' })
     }
     catch (error) {
         res.status(500).json(error.message)
@@ -42,7 +42,7 @@ app.post('/login', async (req, res) => {
             return res.status(401).json('Wrong Password!')
         }
 
-        const { password, _id, ...info } = user._doc
+        const { password, _id, createdAt, updatedAt, __v, ...info } = user._doc
 
         res.status(200).json({ ...info })
         res.end()
