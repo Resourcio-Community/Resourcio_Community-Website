@@ -9,6 +9,13 @@ const signupUsername = document.querySelector("#signup-username")
 const signupEmail = document.querySelector("#signup-email")
 const signupPassword = document.querySelector("#signup-password")
 const signupButton = document.querySelector("#signup-btn")
+const userCreated = document.querySelector('.usercreated')
+const errorMsg = document.querySelector('.error_message')
+const Name = document.querySelector('#name')
+const username = document.querySelector('#username')
+const email = document.querySelector('#email')
+const password = document.querySelector('#password')
+const eyes = document.querySelectorAll('.password i')
 
 
 sign_up_btn.addEventListener('click', () => {
@@ -23,8 +30,6 @@ sign_in_btn.addEventListener('click', () => {
 
 loginButton.addEventListener('click', async (e) => {
   e.preventDefault()
-  const email = loginEmail.value
-  const password = loginPassword.value
 
   try {
     const res = await fetch('/api/auth/login', {
@@ -33,13 +38,21 @@ loginButton.addEventListener('click', async (e) => {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({
-        email: email,
-        password: password
+        email: loginEmail.value,
+        password: loginPassword.value
       })
     })
 
     const data = await res.json()
-    console.log(data)
+    
+    if (res.status === 401) {
+      errorMsg.innerText = data
+      errorMsg.style.display = 'block'
+    }
+    else if (res.status === 200) {
+      localStorage.setItem('user', JSON.stringify(data))
+      window.location.href = '/'
+    }
   }
   catch (err) {
     console.log(err)
@@ -50,10 +63,6 @@ loginButton.addEventListener('click', async (e) => {
 
 signupButton.addEventListener('click', async (e) => {
   e.preventDefault()
-  const name = signupName.value
-  const username = signupUsername.value
-  const email = signupEmail.value
-  const password = signupPassword.value
 
   try {
     const res = await fetch('/api/auth/register', {
@@ -62,22 +71,36 @@ signupButton.addEventListener('click', async (e) => {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({
-        name: name,
-        username: username,
-        email: email,
-        password: password
+        name: signupName.value,
+        username: signupUsername.value,
+        email: signupEmail.value,
+        password: signupPassword.value
       })
     })
 
     const data = await res.json()
     if (res.status === 201) {
-      console.log(data.status)
+      userCreated.innerText = data.status
+      userCreated.style.display = 'block'
     }
     else {
-      console.log(data)
+      Name.innerText = data.name || ''
+      username.innerText = data.username || ''
+      email.innerText = data.email || ''
+      password.innerText = data.password || ''
     }
   }
   catch (err) {
     console.log(err)
   }
+})
+
+
+
+/* Hide and show password */
+eyes.forEach((eye) => {
+  eye.addEventListener('click', () => {
+    loginPassword.type === 'password' ? loginPassword.type = 'text' : loginPassword.type = 'password'
+    signupPassword.type === 'password' ? signupPassword.type = 'text' : signupPassword.type = 'password'
+  })
 })

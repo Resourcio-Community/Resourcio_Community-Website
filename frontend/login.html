@@ -16,12 +16,13 @@
         <div class="signin-signup">
           <form class="sign-in-form">
             <h2 class="title">Sign in</h2>
+            <div class="error_message"></div>
             <div class="input-field">
               <i class="fas fa-envelope"></i>
               <input type="email" id="login-email" placeholder="Email" spellcheck="false" autofocus required />
             </div>
-            <div class="input-field">
-              <i class="fas fa-lock"></i>
+            <div class="input-field password">
+              <i class="fas fa-eye"></i>
               <input type="password" id="login-password" placeholder="Password" required />
             </div>
             <button id="login-btn" class="btn solid" type="submit">Login</button>
@@ -29,21 +30,29 @@
 
           <form class="sign-up-form">
             <h2 class="title">Sign up</h2>
+            <div class="usercreated"></div>
             <div class="input-field">
               <i class="fab fa-adn"></i>
-              <input type="text" id="signup-name" placeholder="Name" autofocus autocomplete="off" spellcheck="false" required/>
+              <input type="text" id="signup-name" placeholder="Name" autofocus autocomplete="off" spellcheck="false"
+                required />
+              <div class="errormsg" id="name"></div>
             </div>
             <div class="input-field">
               <i class="fas fa-user"></i>
-              <input type="text" id="signup-username" placeholder="Username" autocomplete="off" spellcheck="false" required />
+              <input type="text" id="signup-username" placeholder="Username" autocomplete="off" spellcheck="false"
+                required />
+              <div class="errormsg" id="username"></div>
             </div>
             <div class="input-field">
               <i class="fas fa-envelope"></i>
-              <input type="email" id="signup-email" placeholder="Email" autocomplete="off" spellcheck="false" required />
+              <input type="email" id="signup-email" placeholder="Email" autocomplete="off" spellcheck="false"
+                required />
+              <div class="errormsg" id="email"></div>
             </div>
-            <div class="input-field">
-              <i class="fas fa-lock"></i>
+            <div class="input-field password">
+              <i class="fas fa-eye"></i>
               <input type="password" id="signup-password" placeholder="Password" required />
+              <div class="errormsg" id="password"></div>
             </div>
             <button id="signup-btn" class="btn" type="submit">Sign up</button>
           </form>
