@@ -260,24 +260,17 @@ body {
   flex-direction: column;
   gap: 30px;
 }
-.impLinks a:hover{
+
+.impLinks a:hover {
   transform: scale(1.05);
   transition: transform 300ms ease-in;
 }
 
-.about-name{
+.about-name {
   display: none;
   position: relative;
   font-size: 1.7rem;
   color: #357df9;
-}
-
-.about-name .top{
-  
-}
-
-.about-name .bottom{
-
 }
 
 .left {
@@ -457,6 +450,7 @@ input[type="checkbox"] {
 }
 
 .hero .container {
+  transform: translateY(-120px);
   display: grid;
   gap: 40px;
 }
@@ -593,7 +587,7 @@ input[type="checkbox"] {
   gap: 30px;
 }
 
-.about-info{
+.about-info {
   display: flex;
   flex-direction: column;
 }
@@ -1064,9 +1058,7 @@ input[type="checkbox"] {
   display: inline-block;
 }
 
-/*-----------------------------------*\
-    #BACK TO TOP
-  \*-----------------------------------*/
+/* BACK TO TOP */
 .back-top-btn {
   position: fixed;
   bottom: 40px;
@@ -1087,6 +1079,10 @@ input[type="checkbox"] {
   opacity: 1;
   pointer-events: all;
 }
+
+/* ----------------------------- */
+
+
 
 /*-----------------------------------*\
     #MEDIA QUERIES
@@ -1292,6 +1288,7 @@ input[type="checkbox"] {
   .footer-list:last-child {
     grid-column: auto;
   }
+
 
   .newsletter-form .btn {
     padding-block: 10px;
