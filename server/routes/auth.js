@@ -23,7 +23,11 @@ app.post('/register', async (req, res) => {
         res.status(201).json({ user, status: 'User created successfully' })
     }
     catch (error) {
-        res.status(500).json(error.message)
+        let message = {}
+        Object.entries(error.errors).forEach(([key, val]) => {
+            message = { ...message, [key]: val.message }
+        })
+        res.status(500).json(message)
     }
 })
 
