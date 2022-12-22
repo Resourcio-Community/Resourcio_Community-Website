@@ -1,12 +1,9 @@
-.section {
-    background-image: url('../../Images/hero-bg.svg');
-}
-
 .hero {
     padding-block-start: calc(var(--section-padding) + 80px);
 }
 
 .hero .container {
+    transform: translateY(-120px);
     display: grid;
     gap: 40px;
 }

@@ -19,11 +19,11 @@ const Navbar = () => {
                 <input type="checkbox" id="checkbox_toggle" onClick={hidebodyOverflow}/>
                 <label htmlFor="checkbox_toggle" className="hamburger">&#9776;</label>
                 <div className="menu">
-                    <li ref={navData}><Link to='/' className='navlink'>Home</Link></li>
-                    <li ref={navData}>About Us</li>
-                    <li ref={navData}><Link to='/resources' className='navlink'>Resources</Link></li>
-                    <li ref={navData}>Contact Us</li>
-                    <li ref={navData}><Link to='/login' className='navlink'>Sign in</Link></li>
+                    <li><Link to='/' className='navlink'>Home</Link></li>
+                    <li>About Us</li>
+                    <li><Link to='/resources' className='navlink'>Resources</Link></li>
+                    <li>Contact Us</li>
+                    <li><Link to='/login' className='navlink'>Sign in</Link></li>
                 </div>
             </ul>
         </nav>

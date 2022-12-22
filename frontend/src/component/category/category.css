@@ -1,0 +1,46 @@
+.category-card {
+    background-color: hsla(var(--color), 0.1);
+    padding: 50px 30px;
+    text-align: center;
+    border-radius: var(--radius-5);
+}
+
+.category-card::after {
+    transition: 0.5s;
+}
+
+.category-card:hover {
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+}
+
+.category-card .card-icon {
+    background-color: hsla(var(--color), 0.1);
+    width: 80px;
+    height: 80px;
+    display: grid;
+    place-items: center;
+    border-radius: var(--radius-circle);
+    margin-inline: auto;
+    margin-block-end: 30px;
+}
+
+.category-card .card-title{
+    font-size: 29px;
+}
+
+.category-card .card-text {
+    color: var(--eerie-black-1);
+    font-size: 19px;
+    margin-block: 15px 25px;
+}
+
+.category-card .card-badge {
+    background-color: hsla(var(--color), 0.1);
+    color: hsl(var(--color));
+    font-size: var(--fs-5);
+    font-weight: var(--fw-500);
+    padding: 2px 18px;
+    max-width: max-content;
+    margin-inline: auto;
+    border-radius: var(--radius-5);
+}

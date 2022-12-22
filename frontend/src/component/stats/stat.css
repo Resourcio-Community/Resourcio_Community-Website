@@ -1,0 +1,27 @@
+.stats-card {
+    background-color: hsla(var(--color), 0.1);
+    text-align: center;
+    padding: 25px;
+    border-radius: var(--radius-10);
+}
+
+.stats-card :is(.card-title, .card-text) {
+    font-family: var(--ff-league_spartan);
+}
+
+.stats-card .card-title {
+    color: hsl(var(--color));
+    font-size: var(--fs-2);
+    line-height: 1.1;
+}
+
+.stats-card .card-text {
+    color: var(--eerie-black-1);
+    text-transform: uppercase;
+}
+
+@media (min-width: 575px){
+    .stats-card{
+        padding: 40px 30px;
+    }
+}

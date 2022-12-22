@@ -51,14 +51,6 @@
   --cubic-out: cubic-bezier(0.33, 0.85, 0.4, 0.96);
 }
 
-*,
-*::before,
-*::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 a,
 img,
 span,
@@ -79,14 +71,12 @@ ion-icon {
 
 html {
   font-family: var(--ff-poppins);
-  font-size: 12px;
   scroll-behavior: smooth;
 }
 
 body {
   background-color: var(--white);
-  color: var(--gray-web);
-  font-size: 2rem;
+  /* color: var(--gray-web); */
   line-height: 1.75;
 }
 
@@ -251,10 +241,10 @@ button {
   gap: 30px;
 }
 
-.category-card,
+/* .category-card,
 .stats-card {
   background-color: hsla(var(--color), 0.1);
-}
+} */
 
 .link {
   text-decoration: none;
