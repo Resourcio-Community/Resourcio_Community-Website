@@ -1,10 +1,10 @@
 import './stat.css'
 
-const Stat = ({ style, cardTitle, cardText }) => {
+const Stat = ({ style, fontSize, cardTitle, cardText }) => {
     return (
-        <div class="stats-card" style={{ "--color": `${style}` }}>
-            <h3 class="card-title">{cardTitle}</h3>
-            <p class="card-text">{cardText}</p>
+        <div className="stats-card" style={{ "--color": `${style}` }}>
+            <h3 className="card-title">{cardTitle}</h3>
+            <p className="card-text"><span style={{"fontSize": `${fontSize}px`}}>{cardText}</span></p>
         </div>
     )
 }

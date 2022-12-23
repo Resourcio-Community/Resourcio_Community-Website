@@ -25,6 +25,8 @@
 }
 
 .category-card .card-title{
+    font-weight: var(--fw-600);
+    margin-bottom: 20px;
     font-size: 29px;
 }
 

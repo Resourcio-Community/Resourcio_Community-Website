@@ -23,13 +23,13 @@
 
   --ff-league_spartan: "League Spartan", sans-serif;
   --ff-poppins: "Poppins", sans-serif;
-  --fs-1: 4.2rem;
-  --fs-2: 3.2rem;
-  --fs-3: 2.3rem;
-  --fs-4: 1.8rem;
-  --fs-5: 1.5rem;
-  --fs-6: 1.4rem;
-  --fs-7: 1.3rem;
+  --fs-1: 3.1rem;
+  --fs-2: 2.4rem;
+  --fs-3: 1.7rem;
+  --fs-4: 1.35rem;
+  --fs-5: 1.125rem;
+  --fs-6: 1rem;
+  --fs-7: 0.9rem;
   --fw-500: 500;
   --fw-600: 600;
 
@@ -52,17 +52,20 @@
 }
 
 a,
-img,
 span,
 data,
 input,
-button,
 ion-icon {
   display: block;
 }
 
-a{
+a {
+  color: #fff;
   text-decoration: none;
+}
+
+li {
+  list-style: none;
 }
 
 ion-icon {
@@ -76,7 +79,6 @@ html {
 
 body {
   background-color: var(--white);
-  /* color: var(--gray-web); */
   line-height: 1.75;
 }
 
@@ -110,8 +112,8 @@ button {
   cursor: pointer;
 }
 
-/* REUSED STYLES */
 
+/* REUSED STYLES */
 .container {
   padding-inline: 15px;
 }
@@ -160,6 +162,7 @@ button {
 .section-title {
   --color: var(--radical-red);
   text-align: center;
+  line-height: 1.2;
 }
 
 .section-title .span {
@@ -210,16 +213,9 @@ button {
   aspect-ratio: var(--width) / var(--height);
   overflow: hidden;
   display: flex;
-  backdrop-filter: blur(1px);
   border-radius: 30px;
 }
 
-#img-cover {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  border-radius: 40px;
-}
 
 .section-subtitle {
   font-size: var(--fs-5);
@@ -241,17 +237,15 @@ button {
   gap: 30px;
 }
 
-/* .category-card,
-.stats-card {
-  background-color: hsla(var(--color), 0.1);
-} */
-
 .link {
   text-decoration: none;
 }
 
-:is(.course, .blog) .section-title {
-  margin-block-end: 40px;
+#img-cover {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 40px;
 }
 
 @media(max-width:768px) {

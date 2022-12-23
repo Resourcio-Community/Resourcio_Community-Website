@@ -1,0 +1,10 @@
+.proglang {
+    width: 98%;
+    height: 100vh;
+    padding: 5px;
+    margin: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    background-image: url('../../Images/arr.png');
+    background-size: 100vh;
+}

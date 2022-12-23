@@ -1,20 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
-
 .resources {
-    width: 100%;
+    width: 98%;
     height: 100vh;
     padding: 5px;
-    margin: 5px 5px 5px 5px;
+    margin: 5px;
     display: flex;
     flex-wrap: wrap;
-    box-sizing: border-box;
-    /* align-items: center; */
-    /* justify-content: center; */
-    background-color: #de9700;
     background: url(../../Images/arr.png);
-    /* background-repeat: no-repeat; */
     background-size: contain;
-    font-family: "poppins", sans-serif;
 }
 
 .box {
@@ -42,14 +34,6 @@
     letter-spacing: 2px;
 }
 
-/* .box p {
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 15px;
-    color: #7a7a7a;
-    padding-top: 8px;
-    display: block;
-  } */
 .box button {
     width: 180px;
     height: 55px;
@@ -111,14 +95,13 @@
     margin-left: 10px;
 }
 
-img {
+.image {
     width: 100px;
     height: 100px;
 }
 
 a {
     text-decoration: none;
-    color: #fff;
 }
 
 @media (min-width:360px) {

@@ -1,11 +1,9 @@
 import logo from '../../Images/rc_com.png'
 import './navbar.css'
 import { Link } from 'react-router-dom'
-import { useRef } from 'react'
+
 
 const Navbar = () => {
-    const navData = useRef()
-
     const hidebodyOverflow = () => {
         document.body.classList.toggle('hideOverflow')
     }
@@ -19,11 +17,11 @@ const Navbar = () => {
                 <input type="checkbox" id="checkbox_toggle" onClick={hidebodyOverflow}/>
                 <label htmlFor="checkbox_toggle" className="hamburger">&#9776;</label>
                 <div className="menu">
-                    <li><Link to='/' className='navlink'>Home</Link></li>
-                    <li>About Us</li>
-                    <li><Link to='/resources' className='navlink'>Resources</Link></li>
-                    <li>Contact Us</li>
-                    <li><Link to='/login' className='navlink'>Sign in</Link></li>
+                    <li><Link to='/'>Home</Link></li>
+                    <li><a href='#about'>About Us</a></li>
+                    <li><Link to='/resources' target='_blank'>Resources</Link></li>
+                    <li><a href='#contact'>Contact Us</a></li>
+                    <li><Link to='/login'>Sign in</Link></li>
                 </div>
             </ul>
         </nav>

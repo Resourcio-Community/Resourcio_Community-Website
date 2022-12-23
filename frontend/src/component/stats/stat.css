@@ -16,6 +16,7 @@
 }
 
 .stats-card .card-text {
+    font-size: 1.5rem;
     color: var(--eerie-black-1);
     text-transform: uppercase;
 }
@@ -23,5 +24,11 @@
 @media (min-width: 575px){
     .stats-card{
         padding: 40px 30px;
+    }
+}
+
+@media (max-width: 769px){
+    .stats-card{
+        height: 250px;
     }
 }

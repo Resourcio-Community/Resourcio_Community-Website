@@ -10,7 +10,11 @@ li {
     padding: 20px;
     background-color: teal;
     color: rgb(255, 255, 255);
-    height: 90px;
+    height: 95px;
+}
+
+.navbar img{
+    margin-top: 12px;
 }
 
 /* NAVBAR MENU */
@@ -32,11 +36,6 @@ li {
 
 input[type="checkbox"] {
     display: none;
-}
-
-.navlink{
-    color: inherit;
-    text-decoration: none;
 }
 
 /*HAMBURGER MENU*/

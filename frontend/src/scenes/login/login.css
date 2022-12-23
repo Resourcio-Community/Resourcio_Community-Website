@@ -33,7 +33,7 @@ input {
   z-index: 5;
 }
 
-form {
+.form {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -286,7 +286,7 @@ form.sign-in-form {
     left: 50%;
   }
 
-  .panels-logincontainer {
+  .panels-container {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 2fr 1fr;
   }
@@ -328,7 +328,7 @@ form.sign-in-form {
     font-size: 0.7rem;
   }
 
-  .logincontainer:before {
+  .logincontainer::before {
     width: 1500px;
     height: 1500px;
     transform: translateX(-50%);
@@ -339,7 +339,7 @@ form.sign-in-form {
     transition: 2s ease-in-out;
   }
 
-  .logincontainer.sign-up-mode:before {
+  .logincontainer.sign-up-mode::before {
     transform: translate(-50%, 100%);
     bottom: 32%;
     right: initial;
@@ -366,7 +366,7 @@ form.sign-in-form {
 
 
 @media (max-width: 570px) {
-  form {
+  .form {
     padding: 0 1.5rem;
   }
 
@@ -378,12 +378,12 @@ form.sign-in-form {
     padding: 1.5rem;
   }
 
-  .logincontainer:before {
+  .logincontainer::before {
     bottom: 72%;
     left: 50%;
   }
 
-  .logincontainer.sign-up-mode:before {
+  .logincontainer.sign-up-mode::before {
     bottom: 28%;
     left: 50%;
   }

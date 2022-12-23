@@ -26,7 +26,7 @@ const Login = () => {
 
             <div className="forms-container">
                 <div className="signin-signup">
-                    <form className="sign-in-form">
+                    <form className="form sign-in-form">
                         <h2 className="title">Sign in</h2>
                         <div className="error_message"></div>
                         <div className="input-field">
@@ -40,7 +40,7 @@ const Login = () => {
                         <button className="loginpage-btn" type="submit">Login</button>
                     </form>
 
-                    <form className="sign-up-form">
+                    <form className="form sign-up-form">
                         <h2 className="title">Sign up</h2>
                         <div className="usercreated"></div>
                         <div className="input-field">

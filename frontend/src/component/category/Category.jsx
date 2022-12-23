@@ -4,7 +4,7 @@ const Category = ({ style, image, cardTitle, cardText }) => {
     return (
         <div className="category-card" style={{ "--color": `${style}` }}>
             <div className="card-icon">
-                <img src={image} width="40" height="40" loading="lazy" alt="About gate exams" className="img" />
+                <img src={image} width={40} height={40} loading="lazy" alt="About gate exams" />
             </div>
             <h3 className="h3">
                 <p className="card-title">{cardTitle}</p>
