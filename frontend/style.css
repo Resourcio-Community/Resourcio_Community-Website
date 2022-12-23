@@ -692,104 +692,6 @@ input[type="checkbox"] {
   text-transform: uppercase;
 }
 
-/*-----------------------------------*\
-    #BLOG
-  \*-----------------------------------*/
-
-.blog-card .card-banner {
-  border-radius: var(--radius-10);
-}
-
-.blog-card .card-banner .img-cover {
-  transition: var(--transition-2);
-}
-
-.blog-card .card-banner::after {
-  inset: 0;
-  background-color: var(--black_50);
-  opacity: 0;
-  transition: var(--transition-1);
-}
-
-.blog-card:is(:hover, :focus-within) .card-banner .img-cover {
-  transform: scale(1.1);
-}
-
-.blog-card:is(:hover, :focus-within) .card-banner::after {
-  opacity: 1;
-}
-
-.blog-card .card-content {
-  position: relative;
-  margin-inline: 15px;
-  background-color: var(--white);
-  padding: 20px;
-  border-radius: var(--radius-10);
-  box-shadow: var(--shadow-3);
-  margin-block-start: -100px;
-  z-index: 1;
-}
-
-.blog-card .card-btn {
-  position: absolute;
-  top: -40px;
-  right: 30px;
-  background-color: var(--kappel);
-  color: var(--white);
-  font-size: 20px;
-  padding: 20px;
-  border-radius: var(--radius-circle);
-  transition: var(--transition-1);
-  opacity: 0;
-}
-
-.blog-card .card-btn:is(:hover, :focus) {
-  background-color: var(--radical-red);
-}
-
-.blog-card:is(:hover, :focus-within) .card-btn {
-  opacity: 1;
-  transform: translateY(10px);
-}
-
-.blog-card :is(.card-meta-item, .card-text, .card-subtitle) {
-  font-size: var(--fs-5);
-}
-
-.blog-card .card-subtitle {
-  text-transform: uppercase;
-}
-
-.blog-card .card-title {
-  margin-block: 10px 15px;
-  transition: var(--transition-1);
-}
-
-.blog-card .card-title:is(:hover, :focus) {
-  color: var(--kappel);
-}
-
-.blog-card :is(.card-meta-list, .card-meta-item) {
-  display: flex;
-}
-
-.blog-card .card-meta-list {
-  flex-wrap: wrap;
-  gap: 10px 20px;
-  margin-block-end: 20px;
-}
-
-.blog-card .card-meta-item {
-  gap: 10px;
-  align-items: center;
-  color: var(--eerie-black-1);
-}
-
-.blog-card .card-meta-item ion-icon {
-  color: var(--kappel);
-  font-size: 18px;
-  --ionicon-stroke-width: 40px;
-}
 
 /*-----------------------------------*\
     #FOOTER
@@ -1301,14 +1203,5 @@ input[type="checkbox"] {
     top: -80px;
     right: 120px;
     z-index: 1;
-  }
-
-  /**
-     * BLOG
-     */
-
-  .blog-shape {
-    top: 0;
-    left: 0;
   }
 }
