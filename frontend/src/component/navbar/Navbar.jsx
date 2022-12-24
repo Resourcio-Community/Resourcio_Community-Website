@@ -14,14 +14,14 @@ const Navbar = () => {
                 <img src={logo} alt="Community Logo" height="100" width="100" />
             </div>
             <ul className="nav-links">
-                <input type="checkbox" id="checkbox_toggle" onClick={hidebodyOverflow}/>
+                <input type="checkbox" id="checkbox_toggle" onClick={hidebodyOverflow} />
                 <label htmlFor="checkbox_toggle" className="hamburger">&#9776;</label>
                 <div className="menu">
-                    <li><Link to='/'>Home</Link></li>
-                    <li><a href='#about'>About Us</a></li>
-                    <li><Link to='/resources' target='_blank'>Resources</Link></li>
-                    <li><a href='#contact'>Contact Us</a></li>
-                    <li><Link to='/login'>Sign in</Link></li>
+                    <Link to='/'><li>Home</li></Link>
+                    <a href='#about'><li>About Us</li></a>
+                    <Link to='/resources' target='_blank'><li>Resources</li></Link>
+                    <a href='#contact'><li>Contact Us</li></a>
+                    <Link to='/login'><li>Sign in</li></Link>
                 </div>
             </ul>
         </nav>

@@ -1,6 +1,7 @@
 const express = require('express')
 const User = require('../models/User')
 const CryptoJS = require('crypto-js')
+const jwt = require('jsonwebtoken')
 
 const app = express()
 
@@ -49,9 +50,15 @@ app.post('/login', async (req, res) => {
             return res.status(401).json('Wrong Password!')
         }
 
+        const accessToken = jwt.sign(
+            { id: user._id },
+            process.env.SECRET_KEY,
+            { expiresIn: '5d' }
+        )
+
         const { password, _id, createdAt, updatedAt, __v, ...info } = user._doc
 
-        res.status(200).json({ ...info })
+        res.status(200).json({ ...info, accessToken })
         res.end()
     }
     catch (error) {
