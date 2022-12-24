@@ -23,6 +23,7 @@ import Footer from '../../component/footer/Footer'
 import './home.css'
 import { Link } from 'react-router-dom'
 import { useRef } from 'react'
+import { Helmet } from 'react-helmet'
 
 
 const Home = () => {
@@ -38,6 +39,10 @@ const Home = () => {
 
   return (
     <>
+      <Helmet>
+        <title>Resourcio Community</title>
+      </Helmet>
+
       <Navbar />
 
       <main>
@@ -55,7 +60,7 @@ const Home = () => {
                   resources and queries
                   regarding different software languages.
                 </p>
-                <Link to='/resources' target='_blank' className='link btn has-before'>
+                <Link to='/resources' className='link btn has-before'>
                   <span>Find Resources</span>
                   <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
                 </Link>
@@ -93,30 +98,30 @@ const Home = () => {
                 </li>
 
                 <li>
-                    <Category
-                      image={category2}
-                      cardTitle="Development Resources"
-                      cardText="Here you can get all information and valuable resources about development at free-of-cost"
-                      style="351, 83%, 61%"
-                    />
+                  <Category
+                    image={category2}
+                    cardTitle="Development Resources"
+                    cardText="Here you can get all information and valuable resources about development at free-of-cost"
+                    style="351, 83%, 61%"
+                  />
                 </li>
 
                 <li>
-                    <Category
-                      image={category3}
-                      cardTitle="Open Source Universe"
-                      cardText="Here you can get all information about how and where to start open source contributions"
-                      style="229, 75%, 58%"
-                    />
+                  <Category
+                    image={category3}
+                    cardTitle="Open Source Universe"
+                    cardText="Here you can get all information about how and where to start open source contributions"
+                    style="229, 75%, 58%"
+                  />
                 </li>
 
                 <li>
-                    <Category
-                      image={category4}
-                      cardTitle="About Hackathons"
-                      cardText="Here you can get all information and news about upcoming Hackathons"
-                      style="42, 94%, 55%"
-                    />
+                  <Category
+                    image={category4}
+                    cardTitle="About Hackathons"
+                    cardText="Here you can get all information and news about upcoming Hackathons"
+                    style="42, 94%, 55%"
+                  />
                 </li>
               </ul>
             </div>

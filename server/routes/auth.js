@@ -40,14 +40,14 @@ app.post('/login', async (req, res) => {
     try {
         const user = await User.findOne({ email: email })
         if (!user) {
-            return res.status(401).json('User not found!')
+            return res.status(401).json('User not found')
         }
 
         const decrypted = CryptoJS.AES.decrypt(user.password, process.env.SECRET_KEY)
         const originalPassword = decrypted.toString(CryptoJS.enc.Utf8)
 
         if (originalPassword !== req.body.password) {
-            return res.status(401).json('Wrong Password!')
+            return res.status(401).json('Wrong Password')
         }
 
         const accessToken = jwt.sign(

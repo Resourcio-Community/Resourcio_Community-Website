@@ -247,9 +247,3 @@ button {
   object-fit: contain;
   border-radius: 40px;
 }
-
-@media(max-width:768px) {
-  .hideOverflow {
-    overflow: hidden;
-  }
-}

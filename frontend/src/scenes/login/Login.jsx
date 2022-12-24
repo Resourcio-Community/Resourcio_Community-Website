@@ -3,11 +3,14 @@ import { Helmet } from 'react-helmet'
 import axios from 'axios'
 import './login.css'
 import { AuthContext } from '../../authContext/AuthContext'
-import { login } from '../../authContext/apiCalls'
-import { useLocation } from 'react-router-dom'
+import { loginFailure, loginStart, loginSuccess } from '../../authContext/AuthActions'
 
 
 const Login = () => {
+    const axiosInstance = axios.create({
+        baseURL: process.env.REACT_APP_API_URL
+    })
+
     const loginRef = useRef()
     const gotoSignup = () => {
         loginRef.current.classList.add("sign-up-mode")
@@ -35,8 +38,12 @@ const Login = () => {
         if (password !== '') {
             setSignupPasswordRequired(false)
             try {
-                const res = await axios.post('/auth/register', { name, username, email, password })
+                const res = await axiosInstance.post('/auth/register', { name, username, email, password })
                 setSignupRes(res)
+                
+                setTimeout(() => {
+                    window.location.href = '/'
+                }, 3000)
             }
             catch (err) {
                 setSignupRes(err.response)
@@ -48,12 +55,28 @@ const Login = () => {
     }
 
 
-    const [loginPasswordRequired, setLoginPasswordRequired] = useState(false)
+    /* API CALL */
     const [loginRes, setLoginRes] = useState({})
+    const login = async (user, dispatch) => {
+        dispatch(loginStart())
+
+        try {
+            const res = await axiosInstance.post('/auth/login', user)
+            dispatch(loginSuccess(res.data))
+        }
+        catch (err) {
+            setLoginRes(err.response)
+            dispatch(loginFailure())
+        }
+    }
+    /* --------------------------------------------------------- */
+
+
+    const [loginPasswordRequired, setLoginPasswordRequired] = useState(false)
     const [loginEmail, setLoginEmail] = useState('')
     const [loginPassword, setLoginPassword] = useState('')
     const { dispatch } = useContext(AuthContext)
-    
+
     const handleLogin = async (e) => {
         e.preventDefault()
 
@@ -78,10 +101,12 @@ const Login = () => {
                 <div className="signin-signup">
                     <form className="form sign-in-form">
                         <h2 className="title">Sign in</h2>
-                        <div className="error_message"></div>
+                        {loginRes.status === 401 &&
+                            <div className="error_message">{loginRes.data}</div>
+                        }
                         <div className="input-field">
                             <i className="fas fa-envelope"></i>
-                            <input type="email" placeholder="Email" spellCheck="false" autoFocus required onChange={(e) => setLoginEmail(e.target.value)} />
+                            <input type="email" placeholder="Email" spellCheck="false" required autoComplete='on' onChange={(e) => setLoginEmail(e.target.value)} />
                         </div>
                         <div className="input-field password">
                             <i className="fas fa-eye" onClick={changeInputType}></i>
@@ -100,7 +125,7 @@ const Login = () => {
                         }
                         <div className="input-field">
                             <i className="fab fa-adn"></i>
-                            <input type="text" placeholder="Name" autoFocus autoComplete="off" spellCheck="false" onChange={(e) => setName(e.target.value)} />
+                            <input type="text" placeholder="Name" autoComplete="off" spellCheck="false" onChange={(e) => setName(e.target.value)} />
                             {signupRes.status === 500 &&
                                 <div className="errormsg">
                                     {signupRes.data.name || undefined}

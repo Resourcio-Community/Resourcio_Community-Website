@@ -143,8 +143,9 @@
 }
 
 .impLinks a:hover {
-    transform: scale(1.05);
-    transition: transform 300ms ease-in;
+    transform: scale(1.04);
+    color: #375273;
+    transition: transform 350ms ease-in;
 }
 
 .left {

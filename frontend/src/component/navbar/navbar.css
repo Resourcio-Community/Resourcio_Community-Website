@@ -13,13 +13,14 @@ li {
     height: 95px;
 }
 
-.navbar img{
+.navbar img {
     margin-top: 12px;
 }
 
 /* NAVBAR MENU */
 .menu {
     display: flex;
+    align-items: center;
     gap: 1em;
     font-size: 18px;
 }
@@ -68,6 +69,10 @@ input[type="checkbox"] {
         transition: 0.3s ease;
     }
 
+    /* input[type="checkbox"]:checked+body {
+        overflow: hidden;
+    } */
+
     input[type="checkbox"]:checked~.menu {
         display: flex;
         flex-direction: column;
@@ -76,7 +81,29 @@ input[type="checkbox"] {
         position: fixed;
     }
 
+    .hideOverflow {
+        overflow: hidden;
+    }
+
     .hamburger {
         display: block;
     }
+
+    #userlogout{
+        margin-top: 30px;
+    }
+}
+
+.logout {
+    display: flex;
+    align-items: center;
+}
+
+#logout {
+    font-size: 0.96rem;
+    border-radius: 10px;
+    color: whitesmoke;
+    padding: 10px;
+    overflow: hidden;
+    cursor: pointer;
 }

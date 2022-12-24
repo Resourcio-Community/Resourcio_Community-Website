@@ -4,11 +4,13 @@ const mongoose = require('mongoose')
 const dotenv = require('dotenv')
 const bodyParser = require('body-parser')
 const authRoute = require('./routes/auth')
+const cors = require('cors')
 
 dotenv.config()
 
 mongoose.set('strictQuery', true)
 app.use(bodyParser.urlencoded({ extended: true }))
+app.use(cors())
 app.use(express.json())
 app.use('/api/auth', authRoute)
 

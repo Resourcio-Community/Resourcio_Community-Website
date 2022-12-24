@@ -17,13 +17,13 @@ const App = () => {
           <Home />
         </Route>
         <Route path='/resources'>
-          <Resources />
+          {user ? <Resources /> : <Redirect to='/login' />}
         </Route>
         <Route path='/proglang'>
-          <Proglang />
+          {user ? <Proglang /> : <Redirect to='/login' />}
         </Route>
         <Route path='/login'>
-          <Login />
+          {!user ? <Login /> : <Redirect to='/' />}
         </Route>
       </Switch>
     </Router>
