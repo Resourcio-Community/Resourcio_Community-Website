@@ -84,47 +84,39 @@ const Home = () => {
               </p>
               <ul className="grid-list">
                 <li>
-                  <a href="#">
-                    <Category
-                      image={category1}
-                      cardTitle="GATE Exam Resources"
-                      cardText="Here you can get all information and valuable resources about GATE exam at free-of-cost"
-                      style="170, 75%, 41%"
-                    />
-                  </a>
+                  <Category
+                    image={category1}
+                    cardTitle="CP Resources"
+                    cardText="Here you can get all information and valuable resources about competetive programming at free-of-cost"
+                    style="170, 75%, 41%"
+                  />
                 </li>
 
                 <li>
-                  <a href="#">
                     <Category
                       image={category2}
-                      cardTitle="CAT Exam Resources"
-                      cardText="Here you can get all information and valuable resources about CAT exam at free-of-cost"
+                      cardTitle="Development Resources"
+                      cardText="Here you can get all information and valuable resources about development at free-of-cost"
                       style="351, 83%, 61%"
                     />
-                  </a>
                 </li>
 
                 <li>
-                  <a href="#">
                     <Category
                       image={category3}
                       cardTitle="Open Source Universe"
                       cardText="Here you can get all information about how and where to start open source contributions"
                       style="229, 75%, 58%"
                     />
-                  </a>
                 </li>
 
                 <li>
-                  <a href="#">
                     <Category
                       image={category4}
                       cardTitle="About Hackathons"
                       cardText="Here you can get all information and news about upcoming Hackathons"
                       style="42, 94%, 55%"
                     />
-                  </a>
                 </li>
               </ul>
             </div>

@@ -4,6 +4,8 @@ import axios from 'axios'
 import './login.css'
 import { AuthContext } from '../../authContext/AuthContext'
 import { login } from '../../authContext/apiCalls'
+import { useLocation } from 'react-router-dom'
+
 
 const Login = () => {
     const loginRef = useRef()
@@ -47,25 +49,23 @@ const Login = () => {
 
 
     const [loginPasswordRequired, setLoginPasswordRequired] = useState(false)
+    const [loginRes, setLoginRes] = useState({})
     const [loginEmail, setLoginEmail] = useState('')
     const [loginPassword, setLoginPassword] = useState('')
     const { dispatch } = useContext(AuthContext)
+    
     const handleLogin = async (e) => {
         e.preventDefault()
 
         if (loginPassword !== '') {
-            try {
-                setLoginPasswordRequired(false)
-                await axios.post('/auth/login', { email: loginEmail, password: loginPassword })
-            }
-            catch (err) {
-                console.log(err)
-            }
+            setLoginPasswordRequired(false)
+            login({ email: loginEmail, password: loginPassword }, dispatch)
         }
         else {
             setLoginPasswordRequired(true)
         }
     }
+
 
 
     return (
