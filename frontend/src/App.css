@@ -80,6 +80,7 @@ html {
 body {
   background-color: var(--white);
   line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
 }
 
 ::selection {

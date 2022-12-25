@@ -1,123 +1,27 @@
 .resources {
-    width: 98%;
-    height: 100vh;
-    padding: 5px;
-    margin: 5px;
-    display: flex;
-    flex-wrap: wrap;
-    background: url(../../Images/arr.png);
-    background-size: contain;
+    min-height: 100vh;
+    line-height: 1.5;
+    background: url('../../Images//arr.png');
+    background-repeat: repeat-y;
 }
 
-.box {
-    width: 300px;
-    height: 300px;
-    background-color: transparent;
-    text-align: center;
-    box-sizing: border-box;
-    padding: 30px;
-    border-radius: 20px;
-    transition: 0.5s;
-    margin-right: 67px;
-    cursor: pointer;
-    position: relative;
+.card_container{
+    padding: 20px;
+    margin: 2rem auto;
+    max-width: calc(100% - 80px);
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 2rem;
 }
 
-.box:hover {
-    box-shadow: 0px 0px 25px #999999;
-    background-color: #fff;
-}
-
-.box h2 {
-    font-size: 22px;
-    font-weight: 700;
-    letter-spacing: 2px;
-}
-
-.box button {
-    width: 180px;
-    height: 55px;
-    border-radius: 40px;
-    border: none;
-    margin-left: 0px;
-    color: #fff;
-    font-weight: bolder;
-    background-color: #fe4c1c;
-    font-size: 18px;
-    border: 1px solid #fe4c1c;
-    cursor: pointer;
-    box-shadow: 12px 12px 20px 0 rgb(254 76 28 / 30%);
-    transition: 0.5s;
-    position: absolute;
-    overflow: hidden;
-    padding: 1px;
-    top: 320px;
-    left: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    visibility: hidden;
-}
-
-.box button:before {
-    content: "";
-    position: absolute;
-    width: 70%;
-    height: 55px;
-    top: 0;
-    transition: 0.8s;
-    left: -150%;
-    bottom: 0;
-    background: linear-gradient(to left, rgb(255 255 255 / 25%), transparent);
-}
-
-.box button:hover {
-    box-shadow: none;
-}
-
-.box button:hover:before {
-    left: 70%;
-}
-
-.box:hover button {
-    position: absolute;
-    top: 280px;
-    left: 65px;
-    transition: 0.5s;
-    visibility: visible;
-}
-
-.box ion-icon {
-    background-color: #fff;
-    padding: 10px;
-    border-radius: 50%;
-    color: #fe4c1c;
-    margin-left: 10px;
-}
-
-.image {
-    width: 100px;
-    height: 100px;
-}
-
-a {
-    text-decoration: none;
-}
-
-@media (min-width:360px) {
-    .box {
-        margin-bottom: 100px;
+@media screen and (max-width: 768px){
+    .card_container{
+        max-width: 608px;
     }
+}
 
-    .ai {
-        margin-bottom: 180px;
-    }
-
-    .cyb {
-        margin-bottom: 140px;
-    }
-
-    .lang {
-        margin-bottom: 20px;
+@media screen and (min-width: 1280px){
+    .card_container{
+        max-width: 1156px;
     }
 }
