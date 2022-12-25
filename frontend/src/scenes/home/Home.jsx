@@ -15,11 +15,17 @@ import shape1 from '../../Images/video-shape-1.png'
 import shape2 from '../../Images/video-shape-2.png'
 import blogBg from '../../Images/blog-bg.svg'
 /* ----------------------------------------------------*/
+import sayan from '../../Images/Sayan.jpeg'
+import koustav from '../../Images/Koustav.jpeg'
+import snehadrita from '../../Images/Snehadrita.jpeg'
+import gunjan from '../../Images/Gunjan.jpeg'
+
 
 import Navbar from "../../component/navbar/Navbar"
 import Category from '../../component/category/Category'
 import Stat from '../../component/stats/Stat'
 import Footer from '../../component/footer/Footer'
+import ContactCard from '../../component/contactCard/ContactCard'
 import './home.css'
 import { Link } from 'react-router-dom'
 import { useRef } from 'react'
@@ -242,6 +248,15 @@ const Home = () => {
               <p className="section-subtitle" style={{ "color": "var(--gray-web)" }}>Contact Us</p>
               <h2 className="h2 section-title">Get in touch with us</h2>
               <ul className="grid-list">
+
+                <li className="dev_card">
+                  <ContactCard
+                    image={sayan}
+                    name='Sayan Mukherjee'
+                    role='Developer'
+                    linkedIn='https://www.linkedin.com/in/sayan-mukherjee-975175229/'
+                  />
+                </li>
 
               </ul>
             </div>

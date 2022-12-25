@@ -5,7 +5,6 @@ import aiml from '../../Images/ai-ml.png'
 import cyber from '../../Images/Cyber_security.jpeg'
 import prog from '../../Images/programming_languages.png'
 import devops from '../../Images/devops.png'
-import blockchain from '../../Images/blockchain.jpg'
 import web3 from '../../Images/web3.png'
 /* ------------------------------------------- */
 import './resources.css'
@@ -58,15 +57,9 @@ const Resources = () => {
           href='https://github.com/Resourcio-Community/Devops-resources'
         />
         <ResourceCard
-          image={blockchain}
-          title='Blockchain Technology'
-          content='A blockchain is a type of distributed ledger technology (DLT) that consists of growing lists of records, called blocks, that are securely linked together using cryptography.Each block contains a cryptographic hash of the previous block, a timestamp, and transaction data. The timestamp proves that the transaction data existed when the block was created.'
-          href='https://github.com/Resourcio-Community/Blockchain-resources-and-web3'
-        />
-        <ResourceCard
           image={web3}
-          title='Web3'
-          content='Web3 is an idea for a new iteration of the World Wide Web which incorporates concepts such as decentralization, blockchain technologies, and token-based economics.'
+          title='Web3 & Blockchain'
+          content='A blockchain is a type of distributed ledger technology (DLT) that consists of growing lists of records, called blocks, that are securely linked together using cryptography.Each block contains a cryptographic hash of the previous block, a timestamp, and transaction data. The timestamp proves that the transaction data existed when the block was created.'
           href='https://github.com/Resourcio-Community/Blockchain-resources-and-web3'
         />
       </div>

@@ -1,0 +1,30 @@
+.contact_card {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.dev_image {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    margin-bottom: 18px;
+}
+
+.dev_role {
+    color: gray;
+}
+
+.dev_profile {
+    margin-top: 25px;
+    font-size: 0.9rem;
+    border: 1px solid #b1b6c0;
+    padding: 8px 16px;
+    color: #357dcf;
+    border-radius: 8px;
+}
+
+.dev_profile:hover {
+    background: rgb(249, 227, 227);
+    transition: 150ms ease;
+}
