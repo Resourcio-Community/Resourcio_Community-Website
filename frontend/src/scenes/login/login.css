@@ -145,6 +145,14 @@ form.sign-in-form {
   transition: 0.5s;
 }
 
+.loginpage-btn:disabled{
+  background: #78b4fc;
+  cursor: wait;
+}
+.loginpage-btn:disabled:hover{
+  background: #78b4fc;
+}
+
 .loginpage-btn:hover {
   background: #4d84e2;
 }

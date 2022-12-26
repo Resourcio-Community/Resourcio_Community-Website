@@ -19,11 +19,12 @@ const Login = () => {
         loginRef.current.classList.remove("sign-up-mode")
     }
 
-
+    const [btnDisabled, setBtnDisabled] = useState(false)
     const [hideshowPassword, setHideShowPassword] = useState(false)
     const changeInputType = () => {
         setHideShowPassword(!hideshowPassword)
     }
+
 
     const [signupPasswordRequired, setSignupPasswordRequired] = useState(false)
     const [signupRes, setSignupRes] = useState({})
@@ -40,7 +41,7 @@ const Login = () => {
             try {
                 const res = await axiosInstance.post('/auth/register', { name, username, email, password })
                 setSignupRes(res)
-                
+
                 setTimeout(() => {
                     window.location.href = '/'
                 }, 3000)
@@ -57,6 +58,7 @@ const Login = () => {
 
     /* API CALL */
     const [loginRes, setLoginRes] = useState({})
+    const [resReceived, setResReceived] = useState()
     const login = async (user, dispatch) => {
         dispatch(loginStart())
 
@@ -67,6 +69,10 @@ const Login = () => {
         catch (err) {
             setLoginRes(err.response)
             dispatch(loginFailure())
+        }
+        finally {
+            setResReceived(true)
+            setBtnDisabled(false)
         }
     }
     /* --------------------------------------------------------- */
@@ -79,9 +85,11 @@ const Login = () => {
 
     const handleLogin = async (e) => {
         e.preventDefault()
+        setResReceived(false)
 
         if (loginPassword !== '') {
             setLoginPasswordRequired(false)
+            setBtnDisabled(true)
             login({ email: loginEmail, password: loginPassword }, dispatch)
         }
         else {
@@ -115,7 +123,7 @@ const Login = () => {
                                 {loginPasswordRequired ? 'Fill out Password' : undefined}
                             </div>
                         </div>
-                        <button className="loginpage-btn" type="submit" onClick={handleLogin}>Login</button>
+                        <button className="loginpage-btn" type="submit" onClick={handleLogin} disabled={btnDisabled}>Login</button>
                     </form>
 
                     <form className="form sign-up-form">
@@ -157,7 +165,7 @@ const Login = () => {
                                 {signupPasswordRequired ? 'Enter Password' : undefined}
                             </div>
                         </div>
-                        <button className="loginpage-btn" type="submit" onClick={handleSignup}>Sign up</button>
+                        <button className="loginpage-btn" type="submit" onClick={handleSignup} disabled={btnDisabled}>Sign up</button>
                     </form>
 
                 </div>

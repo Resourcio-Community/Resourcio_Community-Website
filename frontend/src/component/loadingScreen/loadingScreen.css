@@ -1,0 +1,22 @@
+.loading_screen{
+    width: 100%;
+    min-height: 100vh;
+    background-color: #dfe1eb6b;
+    animation: sildedown 1s linear;
+}
+
+@keyframes sildedown{
+    0%{
+        transform: translateY(-100vh);
+    }
+}
+
+.loading_image{
+    position: absolute;
+    width: 280px;
+    height: 280px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+}
