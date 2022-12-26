@@ -4,7 +4,7 @@ import cpp from '../../Images/ISO_C++_Logo.svg.png'
 import python from '../../Images/python.png'
 import java from '../../Images/java-logo-vert-blk.png'
 import csharp from '../../Images/C-Sharp.png'
-import rust from '../../Images/Rust_programming_language_black_logo.svg.png'
+import rust from '../../Images/Rust.png'
 import R from '../../Images/r.jpg'
 import go from '../../Images/golang.png'
 /* ---------------------------------------- */

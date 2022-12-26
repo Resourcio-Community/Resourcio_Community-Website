@@ -16,9 +16,6 @@ import shape2 from '../../Images/video-shape-2.png'
 import blogBg from '../../Images/blog-bg.svg'
 /* ----------------------------------------------------*/
 import sayan from '../../Images/Sayan.jpeg'
-import koustav from '../../Images/Koustav.jpeg'
-import snehadrita from '../../Images/Snehadrita.jpeg'
-import gunjan from '../../Images/Gunjan.jpeg'
 
 
 import Navbar from "../../component/navbar/Navbar"
