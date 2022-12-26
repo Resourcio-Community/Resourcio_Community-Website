@@ -1,6 +1,6 @@
 /* IMAGES IMPORT */
 import Email from '../../Images/Email_logo.svg'
-import Clipart from '../../Images/501-5017607_programmer-png-clipart-computer-programming-software-programmer-cartoon.png'
+import Clipart from '../../Images/cartoon.png'
 import heroImage from '../../Images/hero-bg.svg'
 import Artboard from '../../Images/_Artboardcomp.webp'
 import category1 from '../../Images/category-1.svg'
