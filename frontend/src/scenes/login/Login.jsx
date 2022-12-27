@@ -62,8 +62,6 @@ const Login = () => {
             setSignupPasswordRequired(true)
         }
     }
-    console.log(signupRes)
-
 
     /* API CALL */
     const [loginRes, setLoginRes] = useState({})
