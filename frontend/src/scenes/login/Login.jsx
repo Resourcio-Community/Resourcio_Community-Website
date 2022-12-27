@@ -48,7 +48,7 @@ const Login = () => {
 
                 setTimeout(() => {
                     window.location.href = '/'
-                }, 3000)
+                }, 1500)
             }
             catch (err) {
                 setSignupRes(err.response)
