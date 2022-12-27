@@ -2,6 +2,7 @@ import { useContext, useRef, useState } from 'react'
 import { Helmet } from 'react-helmet'
 import axios from 'axios'
 import './login.css'
+import Loader from '../../component/loader/Loader'
 import { AuthContext } from '../../authContext/AuthContext'
 import { loginFailure, loginStart, loginSuccess } from '../../authContext/AuthActions'
 
@@ -32,12 +33,15 @@ const Login = () => {
     const [username, setUsername] = useState('')
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
+    const [signupResReceived, setSignupResReceived] = useState()
 
     const handleSignup = async (e) => {
         e.preventDefault()
 
         if (password !== '') {
             setSignupPasswordRequired(false)
+            setSignupResReceived(false)
+            setBtnDisabled(true)
             try {
                 const res = await axiosInstance.post('/auth/register', { name, username, email, password })
                 setSignupRes(res)
@@ -49,16 +53,21 @@ const Login = () => {
             catch (err) {
                 setSignupRes(err.response)
             }
+            finally {
+                setSignupResReceived(true)
+                setBtnDisabled(false)
+            }
         }
         else {
             setSignupPasswordRequired(true)
         }
     }
+    console.log(signupRes)
 
 
     /* API CALL */
     const [loginRes, setLoginRes] = useState({})
-    const [resReceived, setResReceived] = useState()
+    const [loginresReceived, setLoginResReceived] = useState()
     const login = async (user, dispatch) => {
         dispatch(loginStart())
 
@@ -71,7 +80,7 @@ const Login = () => {
             dispatch(loginFailure())
         }
         finally {
-            setResReceived(true)
+            setLoginResReceived(true)
             setBtnDisabled(false)
         }
     }
@@ -85,10 +94,10 @@ const Login = () => {
 
     const handleLogin = async (e) => {
         e.preventDefault()
-        setResReceived(false)
 
         if (loginPassword !== '') {
             setLoginPasswordRequired(false)
+            setLoginResReceived(false)
             setBtnDisabled(true)
             login({ email: loginEmail, password: loginPassword }, dispatch)
         }
@@ -109,7 +118,8 @@ const Login = () => {
                 <div className="signin-signup">
                     <form className="form sign-in-form">
                         <h2 className="title">Sign in</h2>
-                        {loginRes.status === 401 &&
+                        {loginresReceived === false && <Loader />}
+                        {loginRes.status === 401 && loginresReceived === true &&
                             <div className="error_message">{loginRes.data}</div>
                         }
                         <div className="input-field">
@@ -128,6 +138,7 @@ const Login = () => {
 
                     <form className="form sign-up-form">
                         <h2 className="title">Sign up</h2>
+                        {signupResReceived === false && <Loader />}
                         {signupRes.status === 201 &&
                             <div className="usercreated">{signupRes.data.status}</div>
                         }

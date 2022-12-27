@@ -147,7 +147,7 @@ form.sign-in-form {
 
 .loginpage-btn:disabled{
   background: #78b4fc;
-  cursor: wait;
+  cursor: default;
 }
 .loginpage-btn:disabled:hover{
   background: #78b4fc;
