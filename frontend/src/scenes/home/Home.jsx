@@ -171,11 +171,11 @@ const Home = () => {
                   </li>
                   <li className="about-item">
                     <ion-icon name="checkmark-done-outline" aria-hidden="true"></ion-icon>
-                    <span className="span">Maximum topics covered Extensively</span>
+                    <span className="span">Maximum topics covered</span>
                   </li>
                   <li className="about-item">
                     <ion-icon name="checkmark-done-outline" aria-hidden="true"></ion-icon>
-                    <span className="span">All in single platform</span>
+                    <span className="span">All in a single platform</span>
                   </li>
                 </ul>
                 <img src={shape4} width={100} height={100} loading="lazy" alt=""
@@ -206,7 +206,7 @@ const Home = () => {
               <ul className="grid-list">
                 <li>
                   <Stat
-                    cardTitle="50+"
+                    cardTitle="20+"
                     cardText="Software Languages Covered"
                     style="170, 75%, 41%"
                   />
