@@ -16,8 +16,12 @@ import shape2 from '../../Images/video-shape-2.png'
 import blogBg from '../../Images/blog-bg.svg'
 /* ----------------------------------------------------*/
 import sayan from '../../Images/Sayan.jpeg'
-
-
+import koustav from '../../Images/Koustav.jpeg'
+import gunjan from '../../Images/Gunjan.jpeg'
+import ishani from '../../Images/Ishani.jpg'
+import snehadrita from '../../Images/Snehadrita.jpeg'
+import purbali from '../../Images/Purbali.jpeg'
+/*------------------------------------------------------*/
 import Navbar from "../../component/navbar/Navbar"
 import Category from '../../component/category/Category'
 import Stat from '../../component/stats/Stat'
@@ -250,8 +254,42 @@ const Home = () => {
                   <ContactCard
                     image={sayan}
                     name='Sayan Mukherjee'
-                    role='Developer'
                     linkedIn='https://www.linkedin.com/in/sayan-mukherjee-975175229/'
+                  />
+                </li>
+                <li className="dev_card">
+                  <ContactCard
+                    image={koustav}
+                    name='Koustav Chatterjee'
+                    linkedIn='https://www.linkedin.com/in/koustav-chatterjee-9b060b226/'
+                  />
+                </li>
+                <li className="dev_card">
+                  <ContactCard
+                    image={gunjan}
+                    name='Gunjan Saha'
+                    linkedIn='https://www.linkedin.com/in/gunjansaha55/'
+                  />
+                </li>
+                <li className="dev_card">
+                  <ContactCard
+                    image={ishani}
+                    name='Ishani Roy'
+                    linkedIn='https://www.linkedin.com/in/ishani-roy-7a9187250/'
+                  />
+                </li>
+                <li className="dev_card">
+                  <ContactCard
+                    image={snehadrita}
+                    name='Snehadrita Seth'
+                    linkedIn='https://www.linkedin.com/in/snehadrita-seth-6240821a9/'
+                  />
+                </li>
+                <li className="dev_card">
+                  <ContactCard
+                    image={purbali}
+                    name='Purbali Sadhukhan'
+                    linkedIn='https://www.linkedin.com/in/purbali-sadhukhan-30591a235/'
                   />
                 </li>
 
