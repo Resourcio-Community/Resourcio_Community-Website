@@ -43,7 +43,7 @@ const Login = () => {
             setSignupResReceived(false)
             setBtnDisabled(true)
             try {
-                const res = await axiosInstance.post('/auth/register', { name, username, email, password })
+                const res = await axiosInstance.post('/api/auth/register', { name, username, email, password })
                 setSignupRes(res)
 
                 setTimeout(() => {
@@ -70,7 +70,7 @@ const Login = () => {
         dispatch(loginStart())
 
         try {
-            const res = await axiosInstance.post('/auth/login', user)
+            const res = await axiosInstance.post('/api/auth/login', user)
             dispatch(loginSuccess(res.data))
         }
         catch (err) {
