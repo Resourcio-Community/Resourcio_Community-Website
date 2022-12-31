@@ -1,6 +1,6 @@
 .proglang {
     min-height: 100vh;
     line-height: 1.5;
-    background: url('../../Images//arr.png');
+    background: rgba(0, 0, 0, 0.8);
     background-repeat: repeat-y;
 }
