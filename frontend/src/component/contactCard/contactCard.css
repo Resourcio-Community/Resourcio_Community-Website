@@ -9,6 +9,7 @@
     height: 180px;
     border-radius: 50%;
     margin-bottom: 18px;
+    object-fit: cover;
 }
 
 .dev_role {

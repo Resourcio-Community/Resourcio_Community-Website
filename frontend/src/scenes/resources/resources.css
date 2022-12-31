@@ -1,17 +1,18 @@
 .resources {
     min-height: 100vh;
     line-height: 1.5;
-    background: url('../../Images//arr.png');
+    background: url('https://images.unsplash.com/photo-1655720855348-a5eeeddd1bc4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8'),  rgba(0, 0, 0, 0.8);
     background-repeat: repeat-y;
+    /* background: rgba(0, 0, 0, 0.8); */
 }
 
 .card_container{
-    padding: 20px;
-    margin: 2rem auto;
+    padding: 30px;
+    margin: 0rem auto;
     max-width: calc(100% - 80px);
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-    gap: 2rem;
+    gap: 3rem;
 }
 
 @media screen and (max-width: 768px){
