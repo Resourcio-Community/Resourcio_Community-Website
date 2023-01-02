@@ -51,7 +51,7 @@ const Proglang = () => {
           content='C# is a general-purpose, high-level multi-paradigm programming language.'
           href='https://github.com/Resourcio-Community/C_Sharp-Resources'
         />
-        <ResourceCard
+        {/* <ResourceCard
           image={rust}
           title='Rust'
           content='Rust is a multi-paradigm, general-purpose programming language.'
@@ -68,7 +68,7 @@ const Proglang = () => {
           title='Go'
           content='Go is an open source programming language that makes it simple to build secure, scalable systems.'
           href='https://github.com/Resourcio-Community/Go-lang-resources'
-        />
+        /> */}
       </div>
     </div>
   )

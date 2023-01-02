@@ -254,6 +254,7 @@ const Home = () => {
                   <ContactCard
                     image={sayan}
                     name='Sayan Mukherjee'
+                    role='Developer'
                     linkedIn='https://www.linkedin.com/in/sayan-mukherjee-975175229/'
                   />
                 </li>
@@ -261,6 +262,7 @@ const Home = () => {
                   <ContactCard
                     image={koustav}
                     name='Koustav Chatterjee'
+                    role='Developer'
                     linkedIn='https://www.linkedin.com/in/koustav-chatterjee-9b060b226/'
                   />
                 </li>
@@ -268,6 +270,7 @@ const Home = () => {
                   <ContactCard
                     image={gunjan}
                     name='Gunjan Saha'
+                    role='Social Media Handler'
                     linkedIn='https://www.linkedin.com/in/gunjansaha55/'
                   />
                 </li>
@@ -275,6 +278,7 @@ const Home = () => {
                   <ContactCard
                     image={ishani}
                     name='Ishani Roy'
+                    role='Social Media Handler'
                     linkedIn='https://www.linkedin.com/in/ishani-roy-7a9187250/'
                   />
                 </li>
@@ -282,6 +286,7 @@ const Home = () => {
                   <ContactCard
                     image={snehadrita}
                     name='Snehadrita Seth'
+                    role='Designer'
                     linkedIn='https://www.linkedin.com/in/snehadrita-seth-6240821a9/'
                   />
                 </li>
@@ -289,6 +294,7 @@ const Home = () => {
                   <ContactCard
                     image={purbali}
                     name='Purbali Sadhukhan'
+                    role='Designer'
                     linkedIn='https://www.linkedin.com/in/purbali-sadhukhan-30591a235/'
                   />
                 </li>
