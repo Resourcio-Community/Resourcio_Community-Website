@@ -28,12 +28,12 @@
 
 .hero-banner .img-holder.one {
     border-top-right-radius: 70px;
-    border-bottom-left-radius: 110px;
+    border-bottom-left-radius: 80px;
 }
 
 .hero-banner .img-holder.two {
     border-top-left-radius: 50px;
-    border-bottom-right-radius: 90px;
+    border-bottom-right-radius: 50px;
 }
 
 .back-top-btn {
@@ -288,16 +288,12 @@
         z-index: 1;
     }
 
-    .hero-banner .img-holder {
-        max-width: max-content;
-    }
-
     .hero-banner .img-holder.one {
         justify-self: flex-end;
     }
 
     .hero-banner .img-holder.two {
-        margin-block-start: 100px;
+        margin-block-start: 50px;
     }
 
     .hero-shape-1 {

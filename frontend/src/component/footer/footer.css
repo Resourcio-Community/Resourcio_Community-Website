@@ -3,14 +3,19 @@
     background-color: var(--eerie-black-2);
     color: var(--gray-x-11);
     font-size: var(--fs-5);
+    width: 100%;
+}
+
+.footer-top{
+    width: 100%;
+}
+
+.container .grid-list{
+    max-width: 90%;
 }
 
 .footer-brand-text {
     margin-block: 20px;
-}
-
-.footer-brand {
-    margin-right: 50px;
 }
 
 .footer-brand .wrapper {
@@ -151,3 +156,4 @@
         flex-direction: row;
     }
 }
+

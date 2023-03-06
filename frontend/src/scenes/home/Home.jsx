@@ -14,6 +14,8 @@ import videoBg from '../../Images/video-bg.png'
 import shape1 from '../../Images/video-shape-1.png'
 import shape2 from '../../Images/video-shape-2.png'
 import blogBg from '../../Images/blog-bg.svg'
+import svg1 from '../../Images/1.gif'
+import svg2 from '../../Images/2.gif'
 /* ----------------------------------------------------*/
 import sayan from '../../Images/Sayan.jpeg'
 import koustav from '../../Images/Koustav.jpeg'
@@ -55,8 +57,7 @@ const Home = () => {
       <main>
         <article>
 
-          <section className="section hero has-bg-image" aria-label="home"
-            style={{ "backgroundImage": `url(${heroImage})` }}>
+          <section className="section hero has-bg-image" aria-label="home">
             <div className="container">
               <div className="hero-content">
                 <h1 className="h1 section-title" style={{ "fontSize": "50px" }}>
@@ -74,12 +75,11 @@ const Home = () => {
               </div>
               <figure className="hero-banner">
                 <div className="img-holder one" style={{ "--width": "270", "--height": "300" }}>
-                  <img src={Artboard} width="270" height="300" alt="hero banner" className="img-cover" />
+                  <img src={svg1} width="270" height="300" alt="hero banner" className="img-cover" />
                 </div>
-                <div className="img-holder two" style={{ "--width": "240", "--height": "370" }}>
-                  <img src={Clipart} width="240" height="370" alt="hero banner" className="img-cover" />
+                <div className="img-holder two" style={{ "--width": "270", "--height": "370" }}>
+                  <img src={svg2} width="250" height="350" alt="hero banner" className="img-cover" />
                 </div>
-                <img src={Email} width="340" height="170" alt="email-icon" className="shape hero-shape-1" />
               </figure>
             </div>
           </section>
@@ -137,7 +137,7 @@ const Home = () => {
 
           <section className="section about" id='about' aria-label="about">
             <div className="container">
-              <figure className="about-banner">
+              {/* <figure className="about-banner">
                 <div className="img-holder" style={{ "--width": "520", "--height": "370" }}>
                   <div className="impLinks left">
                     <a href="https://github.com/Soumyajit2825" target="_blank"><ion-icon
@@ -155,7 +155,7 @@ const Home = () => {
                   </div>
                 </div>
                 <img src={shape3} width={722} height={528} loading="lazy" className="shape about-shape-3" />
-              </figure>
+              </figure> */}
               <div className="about-content">
                 <p className="section-subtitle" style={{ "color": "var(--gray-web)" }}>About Us</p>
                 <h3 className="h2 section-title">
@@ -189,7 +189,7 @@ const Home = () => {
           </section>
 
 
-          <section className="video has-bg-image" aria-label="video" style={{ "backgroundImage": `url(${videoBg})` }}>
+          {/* <section className="video has-bg-image" aria-label="video" style={{ "backgroundImage": `url(${videoBg})` }}>
             <div className="container">
               <div className="video-card">
                 <div className="video-banner img-holder has-after">
@@ -202,7 +202,7 @@ const Home = () => {
                 <img src={shape2} width={158} height={174} loading="lazy" className="shape video-shape-2" />
               </div>
             </div>
-          </section>
+          </section> */}
 
 
           <section className="section stats" aria-label="stats">

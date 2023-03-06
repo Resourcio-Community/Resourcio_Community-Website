@@ -5,7 +5,7 @@ import './footer.css'
 
 const Footer = () => {
     return (
-        <footer className="footer" style={{ "backgroundImage": `url(${footerBg})` }}>
+        <footer className="footer" style={{ "backgroundImage": `url(${footerBg})`}}>
             <div className="footer-top section">
                 <div className="container grid-list">
                     <div className="footer-brand">
