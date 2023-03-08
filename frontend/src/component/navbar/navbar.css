@@ -107,9 +107,3 @@ input[type="checkbox"] {
     overflow: hidden;
     cursor: pointer;
 }
-
-@media (max-width: 446px){
-    .navbar{
-        width: 100vw;
-    }
-}

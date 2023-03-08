@@ -1,21 +1,15 @@
 /* IMAGES IMPORT */
-import Email from '../../Images/Email_logo.svg'
-import Clipart from '../../Images/cartoon.png'
-import heroImage from '../../Images/hero-bg.svg'
-import Artboard from '../../Images/_Artboardcomp.webp'
 import category1 from '../../Images/category-1.svg'
 import category2 from '../../Images/category-2.svg'
 import category3 from '../../Images/category-3.svg'
 import category4 from '../../Images/category-4.svg'
-import aboutImg from '../../Images/Soumya_Ayishik.jpeg'
-import shape3 from '../../Images/about-shape-3.png'
 import shape4 from '../../Images/about-shape-4.svg'
 import videoBg from '../../Images/video-bg.png'
-import shape1 from '../../Images/video-shape-1.png'
 import shape2 from '../../Images/video-shape-2.png'
 import blogBg from '../../Images/blog-bg.svg'
 import svg1 from '../../Images/1.gif'
 import svg2 from '../../Images/2.gif'
+import video from '../../Images/video.mp4'
 /* ----------------------------------------------------*/
 import sayan from '../../Images/Sayan.jpeg'
 import koustav from '../../Images/Koustav.jpeg'
@@ -24,6 +18,7 @@ import ishani from '../../Images/Ishani.jpg'
 import snehadrita from '../../Images/Snehadrita.jpeg'
 import purbali from '../../Images/Purbali.jpeg'
 /*------------------------------------------------------*/
+
 import Navbar from "../../component/navbar/Navbar"
 import Category from '../../component/category/Category'
 import Stat from '../../component/stats/Stat'
@@ -33,9 +28,11 @@ import './home.css'
 import { Link } from 'react-router-dom'
 import { useRef } from 'react'
 import { Helmet } from 'react-helmet'
+import { useInView } from 'react-intersection-observer'
 
 
 const Home = () => {
+
   const backtopRef = useRef()
   window.addEventListener('scroll', () => {
     if (window.scrollY > 400) {
@@ -45,6 +42,7 @@ const Home = () => {
     }
   })
 
+  const { ref: playRef, inView } = useInView()
 
   return (
     <>
@@ -137,25 +135,6 @@ const Home = () => {
 
           <section className="section about" id='about' aria-label="about">
             <div className="container">
-              {/* <figure className="about-banner">
-                <div className="img-holder" style={{ "--width": "520", "--height": "370" }}>
-                  <div className="impLinks left">
-                    <a href="https://github.com/Soumyajit2825" target="_blank"><ion-icon
-                      name="logo-github"></ion-icon></a>
-                    <a href="https://www.linkedin.com/in/soumyajit-mondal-a0692b234/" target="_blank"><ion-icon
-                      name="logo-linkedin"></ion-icon></a>
-                  </div>
-                  <div className="about-info" style={{ "--width": "422", "--height": "422" }}>
-                    <img src={aboutImg} loading="lazy" alt="about banner" id="img-cover" />
-                  </div>
-                  <div className="impLinks right">
-                    <a href="https://github.com/AyishikD" target="_blank"><ion-icon name="logo-github"></ion-icon></a>
-                    <a href="https://www.linkedin.com/in/ayishik-das-35a67a1a5/" target="_blank"><ion-icon
-                      name="logo-linkedin"></ion-icon></a>
-                  </div>
-                </div>
-                <img src={shape3} width={722} height={528} loading="lazy" className="shape about-shape-3" />
-              </figure> */}
               <div className="about-content">
                 <p className="section-subtitle" style={{ "color": "var(--gray-web)" }}>About Us</p>
                 <h3 className="h2 section-title">
@@ -189,20 +168,22 @@ const Home = () => {
           </section>
 
 
-          {/* <section className="video has-bg-image" aria-label="video" style={{ "backgroundImage": `url(${videoBg})` }}>
+          <section className="video has-bg-image" aria-label="video" style={{ "backgroundImage": `url(${videoBg})` }}>
             <div className="container">
               <div className="video-card">
-                <div className="video-banner img-holder has-after">
-                  <img src="" width={970} height={450} loading="lazy" alt="video banner" className="img-cover" />
-                  <button className="play-btn" aria-label="play video">
-                    <ion-icon name="play" aria-hidden="true"></ion-icon>
-                  </button>
+                <div className="video-banner img-holder">
+                  <video
+                    src={video}
+                    autoPlay
+                    width={900}
+                    height={475}
+                    ref={playRef}
+                  />
                 </div>
-                <img src={shape1} width={1089} height={605} loading="lazy" className="shape video-shape-1" />
                 <img src={shape2} width={158} height={174} loading="lazy" className="shape video-shape-2" />
               </div>
             </div>
-          </section> */}
+          </section>
 
 
           <section className="section stats" aria-label="stats">
