@@ -7,7 +7,7 @@ const Footer = () => {
     return (
         <footer className="footer" style={{ "backgroundImage": `url(${footerBg})`}}>
             <div className="footer-top section">
-                <div className="container grid-list">
+                <div className="container">
                     <div className="footer-brand">
                         <img src={communityLogo} style={{ "border": "4px solid rgb(234, 255, 2)" }} width={162} alt="EduWeb logo" />
                         <p className="footer-brand-text">
@@ -20,7 +20,7 @@ const Footer = () => {
                             </a>
                         </div>
                         <div className="wrapper">
-                            <span className="span">Email:</span>
+                            <span className="span span-1">Email:</span>
                             <a href="mailto:resourciocommunity22@gmail.com" target="_blank"
                                 className="footer-link">
                                 resourciocommunity22@gmail.com

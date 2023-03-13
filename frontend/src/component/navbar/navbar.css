@@ -11,6 +11,7 @@ li {
     background: #3682f3;
     color: rgb(255, 255, 255);
     height: 95px;
+    min-width: 365px;
 }
 
 .navbar img {
@@ -57,6 +58,7 @@ input[type="checkbox"] {
         width: 100vw;
         min-height: 100%;
         z-index: 10;
+        min-width: 365px;
     }
 
     .menu li {

@@ -180,7 +180,7 @@ const Home = () => {
             <div className="container">
               <div className="video-card">
                 <div className="video-banner img-holder">
-                  <video ref={playRef} width={900} height={475} preload='auto'>
+                  <video ref={playRef} width={850} loop>
                     <source src={video} type="video/mp4" />
                   </video>
                 </div>

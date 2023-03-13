@@ -4,9 +4,10 @@
     color: var(--gray-x-11);
     font-size: var(--fs-5);
     width: 100%;
+    min-width: 365px;
 }
 
-.footer-top{
+.footer-top {
     width: 100%;
 }
 
@@ -21,6 +22,10 @@
 
 .footer-brand .wrapper .span {
     font-weight: var(--fw-500);
+}
+
+.footer-brand .wrapper:last-child {
+    margin-bottom: 20px;
 }
 
 .footer-link {
@@ -144,12 +149,13 @@
 
 @media (min-width: 992px) {
 
-    .footer .grid-list {
-        grid-template-columns: 1fr 0.6fr 0.6fr 1.2fr;
-    }
-
     .footer-top .container {
         flex-direction: row;
     }
 }
 
+@media(max-width: 407px) {
+    .footer-brand .wrapper .span.span-1 {
+        display: none;
+    }
+}
