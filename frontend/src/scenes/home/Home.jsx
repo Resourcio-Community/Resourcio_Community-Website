@@ -29,20 +29,28 @@ import { Link } from 'react-router-dom'
 import { useRef } from 'react'
 import { Helmet } from 'react-helmet'
 import { useInView } from 'react-intersection-observer'
+import { useEffect } from 'react'
 
 
 const Home = () => {
 
-  const backtopRef = useRef()
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 400) {
-      backtopRef.current.classList.add("active")
-    } else {
-      backtopRef.current.classList.remove("active")
-    }
-  })
+  const backtopRef = useRef(null)
+  const { ref: playRef, inView, entry } = useInView({ threshold: 0.6 })
+  useEffect(() => {
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 400) {
+        backtopRef.current.classList.add("active")
+      } else {
+        backtopRef.current.classList.remove("active")
+      }
+    })
 
-  const { ref: playRef, inView } = useInView()
+    if (entry !== undefined) {
+      entry.target.volume = 0.3
+      inView ? entry.target.play() : entry.target.pause()
+    }
+  }, [entry, backtopRef])
+
 
   return (
     <>
@@ -172,13 +180,9 @@ const Home = () => {
             <div className="container">
               <div className="video-card">
                 <div className="video-banner img-holder">
-                  <video
-                    src={video}
-                    autoPlay
-                    width={900}
-                    height={475}
-                    ref={playRef}
-                  />
+                  <video ref={playRef} width={900} height={475} preload='auto'>
+                    <source src={video} type="video/mp4" />
+                  </video>
                 </div>
                 <img src={shape2} width={158} height={174} loading="lazy" className="shape video-shape-2" />
               </div>
@@ -295,5 +299,8 @@ const Home = () => {
     </>
   )
 }
+
+
+
 
 export default Home
