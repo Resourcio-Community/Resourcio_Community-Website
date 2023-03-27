@@ -34,22 +34,25 @@ import { useEffect } from 'react'
 
 const Home = () => {
 
-  const backtopRef = useRef(null)
-  const { ref: playRef, inView, entry } = useInView({ threshold: 0.6 })
-  useEffect(() => {
-    window.addEventListener('scroll', () => {
+  const backtopRef = useRef()
+  window.addEventListener('scroll', () => {
+    if (backtopRef.current !== null) {
       if (window.scrollY > 400) {
         backtopRef.current.classList.add("active")
       } else {
         backtopRef.current.classList.remove("active")
       }
-    })
+    }
+  })
 
+  const { ref: playRef, inView, entry } = useInView({ threshold: 0.6 })
+  useEffect(() => {
     if (entry !== undefined) {
-      entry.target.volume = 0.3
+      entry.target.muted = true
+      // entry.target.volume = 0.3
       inView ? entry.target.play() : entry.target.pause()
     }
-  }, [entry, backtopRef])
+  }, [entry])
 
 
   return (
