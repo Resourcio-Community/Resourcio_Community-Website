@@ -4,11 +4,10 @@ import category2 from '../../Images/category-2.svg'
 import category3 from '../../Images/category-3.svg'
 import category4 from '../../Images/category-4.svg'
 import shape4 from '../../Images/about-shape-4.svg'
+import heroBg from '../../Images/Background.png'
 import videoBg from '../../Images/video-bg.png'
 import shape2 from '../../Images/video-shape-2.png'
 import blogBg from '../../Images/blog-bg.svg'
-import svg1 from '../../Images/1.gif'
-import svg2 from '../../Images/2.gif'
 import video from '../../Images/video.mp4'
 /* ----------------------------------------------------*/
 import sayan from '../../Images/Sayan.jpeg'
@@ -24,6 +23,8 @@ import Category from '../../component/category/Category'
 import Stat from '../../component/stats/Stat'
 import Footer from '../../component/footer/Footer'
 import ContactCard from '../../component/contactCard/ContactCard'
+import Notice from '../../component/notice/Notice'
+import { UpcomingEvents } from '../../Data/notice'
 import './home.css'
 import { Link } from 'react-router-dom'
 import { useRef } from 'react'
@@ -66,7 +67,7 @@ const Home = () => {
       <main>
         <article>
 
-          <section className="section hero has-bg-image" aria-label="home">
+          <section className="section hero has-bg-image" aria-label="home" style={{ "backgroundImage": `url(${heroBg})` }}>
             <div className="container">
               <div className="hero-content">
                 <h1 className="h1 section-title" style={{ "fontSize": "50px" }}>
@@ -82,14 +83,18 @@ const Home = () => {
                   <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
                 </Link>
               </div>
-              <figure className="hero-banner">
-                <div className="img-holder one" style={{ "--width": "270", "--height": "300" }}>
-                  <img src={svg1} width="270" height="300" alt="hero banner" className="img-cover" />
+              <div className="hero-banner">
+                <div className="noticeboard">
+                  {UpcomingEvents.map((event) => (
+                    <Notice
+                      key={event.id}
+                      notice={event.event}
+                      link={event.link}
+                    />
+                  ))}
+                  <marquee behaviour='scroll' scrollamount='4'>Upcoming events</marquee>
                 </div>
-                <div className="img-holder two" style={{ "--width": "270", "--height": "370" }}>
-                  <img src={svg2} width="250" height="350" alt="hero banner" className="img-cover" />
-                </div>
-              </figure>
+              </div>
             </div>
           </section>
 
@@ -135,7 +140,7 @@ const Home = () => {
                   <Category
                     image={category4}
                     cardTitle="About Hackathons"
-                    cardText="Here you can get all information and news about upcoming Hackathons"
+                    cardText="Here you can get all relevant information and news about upcoming Hackathons"
                     style="42, 94%, 55%"
                   />
                 </li>
