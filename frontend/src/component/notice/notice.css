@@ -27,13 +27,14 @@
             #1e73fd);
     background-size: 200% 100%;
     background-position: 100% 0;
-    transition: all 0.24s ease-in;
+    transition: all 0.25s ease-in;
 }
 
 .know-more{
     position: absolute;
-    display: none;
+    opacity: 0;
     color: white;
+    transition: opacity 0.25s ease-in;
 }
 
 .notice-holder:hover {
@@ -42,7 +43,6 @@
 }
 
 .notice-holder:hover > .know-more{
-    font-size: var(--fs-6);
-    display: block;
+    opacity: 1;
 }
 
