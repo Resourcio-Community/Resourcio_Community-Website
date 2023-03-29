@@ -8,8 +8,8 @@ li {
     align-items: center;
     justify-content: space-between;
     padding: 20px;
-    background: #1e73fd;
-    color: rgb(255, 255, 255);
+    /* background: transparent; */
+    /* color: rgb(255, 255, 255); */
     height: 99px;
     min-width: 365px;
 }
@@ -27,13 +27,15 @@ li {
 }
 
 .menu li:hover {
-    background-color: #357dcf;
+    /* background-color: #357dcf; */
+    background: rgb(249, 227, 227);
     border-radius: 5px;
     transition: 0.3s ease;
 }
 
 .menu li {
     padding: 5px 14px;
+    color: black;
 }
 
 input[type="checkbox"] {
