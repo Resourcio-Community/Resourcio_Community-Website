@@ -8,8 +8,6 @@ li {
     align-items: center;
     justify-content: space-between;
     padding: 20px;
-    /* background: transparent; */
-    /* color: rgb(255, 255, 255); */
     height: 99px;
     min-width: 365px;
 }
@@ -27,7 +25,6 @@ li {
 }
 
 .menu li:hover {
-    /* background-color: #357dcf; */
     background: rgb(249, 227, 227);
     border-radius: 5px;
     transition: 0.3s ease;
@@ -53,7 +50,7 @@ input[type="checkbox"] {
 @media (max-width: 768px) {
     .menu {
         display: none;
-        background-color: teal;
+        background-color: white;
         position: absolute;
         top: 90px;
         left: 0;
@@ -69,8 +66,8 @@ input[type="checkbox"] {
 
     .menu li:hover {
         display: inline-block;
-        background-color: #4c9e9e;
         transition: 0.3s ease;
+        background: rgb(249, 227, 227);
     }
 
     /* input[type="checkbox"]:checked+body {

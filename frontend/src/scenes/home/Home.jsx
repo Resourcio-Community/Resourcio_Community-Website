@@ -309,14 +309,6 @@ const Home = () => {
                     linkedIn='https://www.linkedin.com/in/purbali-sadhukhan-30591a235/'
                   />
                 </li>
-                <li className="dev_card">
-                  <ContactCard
-                    image={purbali}
-                    name='Purbali Sadhukhan'
-                    role='Social Media Handler'
-                    linkedIn='https://www.linkedin.com/in/purbali-sadhukhan-30591a235/'
-                  />
-                </li>
 
               </ul>
             </div>

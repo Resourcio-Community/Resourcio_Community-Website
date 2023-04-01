@@ -80,7 +80,7 @@ const Footer = () => {
             <div className="footer-bottom">
                 <div className="container">
                     <p className="copyright">
-                        Copyright &copy; 2022 All Rights Reserved <span className="copyright-link">Resourcio Community</span>
+                        Copyright &copy; 2023 All Rights Reserved <span className="copyright-link">Resourcio Community</span>
                     </p>
                 </div>
             </div>
