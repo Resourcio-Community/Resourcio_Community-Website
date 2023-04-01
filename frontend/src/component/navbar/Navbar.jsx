@@ -23,7 +23,7 @@ const Navbar = () => {
     return (
         <nav className="navbar">
             <div>
-                <img src={logo} alt="Community Logo" height="100" width="100" />
+                <img src={logo} className='community_logo' alt="Community Logo" height="100" width="100" />
             </div>
             <ul className="nav-links">
                 <input type="checkbox" id="checkbox_toggle" onClick={hidebodyOverflow} ref={checkboxRef} />
@@ -38,7 +38,7 @@ const Navbar = () => {
                         : (
                             <li onClick={() => dispatch(logout())} id='userlogout'>
                                 <div className="logout">
-                                    <img src={userLogo} width={35} style={{ "borderRadius": "50%", "marginBottom": "12px" }} />
+                                    <img src={userLogo} width={35} style={{ "borderRadius": "50%" }} />
                                     <span id='logout'>Logout</span>
                                 </div>
                             </li>
