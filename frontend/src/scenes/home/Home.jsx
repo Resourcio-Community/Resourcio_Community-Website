@@ -18,6 +18,7 @@ import purbali from '../../Images/Purbali New.jpeg'
 import soumya from '../../Images/Soumya New.jpeg'
 import ayishik from '../../Images/Ayishik New.jpg'
 import gunjan from '../../Images/Gunjan.jpeg'
+import rohit from '../../Images/Rohit New.jpeg'
 /*------------------------------------------------------*/
 
 import Navbar from "../../component/navbar/Navbar"
@@ -307,6 +308,14 @@ const Home = () => {
                     name='Purbali Sadhukhan'
                     role='Social Media Handler'
                     linkedIn='https://www.linkedin.com/in/purbali-sadhukhan-30591a235/'
+                  />
+                </li>
+                <li className="dev_card">
+                  <ContactCard
+                    image={rohit}
+                    name='Rohit Chakrabarti'
+                    role='Marketing'
+                    linkedIn='https://www.linkedin.com/in/rohit-chakrabarti-04b981230/'
                   />
                 </li>
 
