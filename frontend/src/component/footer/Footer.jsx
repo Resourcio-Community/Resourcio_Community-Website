@@ -30,7 +30,7 @@ const Footer = () => {
                         <div className="wrapper">
                             <ul className="social-list">
                                 <li>
-                                    <a href="https://lnkd.in/ez_CeQjY" target="_blank" className="social-link">
+                                    <a href="https://www.facebook.com/profile.php?id=100088472180461" target="_blank" className="social-link">
                                         <ion-icon name="logo-facebook"></ion-icon>
                                     </a>
                                 </li>
@@ -50,12 +50,12 @@ const Footer = () => {
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="https://lnkd.in/eg4dTQGu" target="_blank" className="social-link">
+                                    <a href="https://github.com/Resourcio-Community" target="_blank" className="social-link">
                                         <ion-icon name="logo-github"></ion-icon>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="https://lnkd.in/eGnFvfSp" target="_blank" className="social-link">
+                                    <a href="https://discord.gg/j2cMDF6Dtx" target="_blank" className="social-link">
                                         <ion-icon name="logo-discord"></ion-icon>
                                     </a>
                                 </li>
@@ -73,9 +73,7 @@ const Footer = () => {
                             <button type="submit" className="btn has-before">
                                 <span className="span">Subscribe</span>
                                 <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
-                            </button>
-                        </form> */}
-
+                            </button> </form> */}
                     </div>
                 </div>
             </div>

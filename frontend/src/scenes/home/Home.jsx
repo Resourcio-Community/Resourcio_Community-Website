@@ -11,11 +11,13 @@ import blogBg from '../../Images/blog-bg.svg'
 import video from '../../Images/video.mp4'
 /* ----------------------------------------------------*/
 import sayan from '../../Images/Sayan.jpeg'
-import koustav from '../../Images/Koustav.jpeg'
-import gunjan from '../../Images/Gunjan.jpeg'
+import koustav from '../../Images/Koustav New.jpeg'
 import ishani from '../../Images/Ishani.jpg'
 import snehadrita from '../../Images/Snehadrita.jpeg'
-import purbali from '../../Images/Purbali.jpeg'
+import purbali from '../../Images/Purbali New.jpeg'
+import soumya from '../../Images/Soumya New.jpeg'
+import ayishik from '../../Images/Ayishik New.jpg'
+import gunjan from '../../Images/Gunjan.jpeg'
 /*------------------------------------------------------*/
 
 import Navbar from "../../component/navbar/Navbar"
@@ -245,9 +247,25 @@ const Home = () => {
 
                 <li className="dev_card">
                   <ContactCard
+                    image={soumya}
+                    name='Soumyajit Mondal'
+                    role='Owner & Developer'
+                    linkedIn='https://www.linkedin.com/in/soumyajit-mondal-a0692b234/'
+                  />
+                </li>
+                <li className="dev_card">
+                  <ContactCard
+                    image={ayishik}
+                    name='Ayishik Das'
+                    role='Co-Owner & Marketing'
+                    linkedIn='https://www.linkedin.com/in/ayishik-das-35a67a1a5/'
+                  />
+                </li>
+                <li className="dev_card">
+                  <ContactCard
                     image={sayan}
                     name='Sayan Mukherjee'
-                    role='Developer'
+                    role='Content Writer'
                     linkedIn='https://www.linkedin.com/in/sayan-mukherjee-975175229/'
                   />
                 </li>
@@ -255,15 +273,23 @@ const Home = () => {
                   <ContactCard
                     image={koustav}
                     name='Koustav Chatterjee'
-                    role='Developer'
+                    role='Social Media Handler'
                     linkedIn='https://www.linkedin.com/in/koustav-chatterjee-9b060b226/'
+                  />
+                </li>
+                <li className="dev_card">
+                  <ContactCard
+                    image={snehadrita}
+                    name='Snehadrita Seth'
+                    role='Designer'
+                    linkedIn='https://www.linkedin.com/in/snehadrita-seth-6240821a9/'
                   />
                 </li>
                 <li className="dev_card">
                   <ContactCard
                     image={gunjan}
                     name='Gunjan Saha'
-                    role='Social Media Handler'
+                    role='Designer'
                     linkedIn='https://www.linkedin.com/in/gunjansaha55/'
                   />
                 </li>
@@ -277,17 +303,17 @@ const Home = () => {
                 </li>
                 <li className="dev_card">
                   <ContactCard
-                    image={snehadrita}
-                    name='Snehadrita Seth'
-                    role='Designer'
-                    linkedIn='https://www.linkedin.com/in/snehadrita-seth-6240821a9/'
+                    image={purbali}
+                    name='Purbali Sadhukhan'
+                    role='Social Media Handler'
+                    linkedIn='https://www.linkedin.com/in/purbali-sadhukhan-30591a235/'
                   />
                 </li>
                 <li className="dev_card">
                   <ContactCard
                     image={purbali}
                     name='Purbali Sadhukhan'
-                    role='Designer'
+                    role='Social Media Handler'
                     linkedIn='https://www.linkedin.com/in/purbali-sadhukhan-30591a235/'
                   />
                 </li>
