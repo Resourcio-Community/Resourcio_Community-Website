@@ -54,6 +54,10 @@ main {
     font-size: calc(0.9*var(--fs-7));
 }
 
+.noevents{
+    font-size: 13px;
+    color: gray;
+}
 
 .back-top-btn {
     position: fixed;

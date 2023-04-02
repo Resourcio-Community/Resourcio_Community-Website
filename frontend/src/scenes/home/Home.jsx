@@ -87,15 +87,25 @@ const Home = () => {
                 </Link>
               </div>
               <div className="hero-banner">
-                <div className="noticeboard">
-                  {UpcomingEvents.map((event) => (
-                    <Notice
-                      key={event.id}
-                      notice={event.event}
-                      link={event.link}
-                    />
-                  ))}
-                  <marquee behaviour='scroll' scrollamount='4'>Upcoming events</marquee>
+                <div className="noticeboard"
+                  style={{
+                    alignItems: UpcomingEvents.length === 0 ? 'center' : '',
+                    justifyContent: UpcomingEvents.length === 0 ? 'center' : '',
+                  }}
+                >
+                  {UpcomingEvents.length !== 0 ?
+                    UpcomingEvents.map((event) => (
+                      <>
+                        <Notice
+                          key={event.id}
+                          notice={event.event}
+                          link={event.link}
+                        />
+                        <marquee behaviour='scroll' scrollamount='4'>Upcoming events</marquee>
+                      </>
+                    )) :
+                    <span className='noevents'>No events to show</span>
+                  }
                 </div>
               </div>
             </div>
