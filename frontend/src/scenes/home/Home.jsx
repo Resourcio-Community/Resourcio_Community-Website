@@ -27,16 +27,29 @@ import Stat from '../../component/stats/Stat'
 import Footer from '../../component/footer/Footer'
 import ContactCard from '../../component/contactCard/ContactCard'
 import Notice from '../../component/notice/Notice'
-import { UpcomingEvents } from '../../Data/notice'
 import './home.css'
 import { Link } from 'react-router-dom'
-import { useRef } from 'react'
+import { useRef, useState, useEffect } from 'react'
 import { Helmet } from 'react-helmet'
 import { useInView } from 'react-intersection-observer'
-import { useEffect } from 'react'
+import axios from 'axios'
+
+
+axios.defaults.baseURL = process.env.REACT_APP_API_URL
 
 
 const Home = () => {
+  const [upcomingEvents, setUpcomingEvents] = useState([])
+
+  /** API call for all the events */
+  const fetchEvents = async () => {
+    const { data } = await axios.get('/event/getevents')
+    setUpcomingEvents(data)
+  }
+  useEffect(() => {
+    fetchEvents()
+  }, [])
+
 
   const backtopRef = useRef()
   window.addEventListener('scroll', () => {
@@ -53,7 +66,6 @@ const Home = () => {
   useEffect(() => {
     if (entry !== undefined) {
       entry.target.muted = true
-      // entry.target.volume = 0.3
       inView ? entry.target.play() : entry.target.pause()
     }
   }, [entry])
@@ -89,23 +101,21 @@ const Home = () => {
               <div className="hero-banner">
                 <div className="noticeboard"
                   style={{
-                    alignItems: UpcomingEvents.length === 0 ? 'center' : '',
-                    justifyContent: UpcomingEvents.length === 0 ? 'center' : '',
+                    alignItems: upcomingEvents.length === 0 ? 'center' : '',
+                    justifyContent: upcomingEvents.length === 0 ? 'center' : '',
                   }}
                 >
-                  {UpcomingEvents.length !== 0 ?
-                    UpcomingEvents.map((event) => (
-                      <>
-                        <Notice
-                          key={event.id}
-                          notice={event.event}
-                          link={event.link}
-                        />
-                        <marquee behaviour='scroll' scrollamount='4'>Upcoming events</marquee>
-                      </>
+                  {upcomingEvents.length > 0 ?
+                    upcomingEvents.map((event) => (
+                      <Notice
+                        key={event._id}
+                        notice={event.event}
+                        link={event.link}
+                      />
                     )) :
                     <span className='noevents'>No events to show</span>
                   }
+                  {upcomingEvents.length > 0 && <marquee behaviour='scroll' scrollamount='4'>Upcoming events</marquee>}
                 </div>
               </div>
             </div>
