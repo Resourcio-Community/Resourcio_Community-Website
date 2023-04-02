@@ -22,8 +22,15 @@ const Navbar = () => {
 
     return (
         <nav className="navbar">
-            <div>
-                <img src={logo} className='community_logo' alt="Community Logo" height="100" width="100" />
+            <div className='community_logo' style={
+                {
+                    display: 'grid',
+                    placeItems: 'center',
+                    marginLeft: '-20px',
+                    marginTop: '4px'
+                }
+            }>
+                <img src={logo} height="100" width="100" />
             </div>
             <ul className="nav-links">
                 <input type="checkbox" id="checkbox_toggle" onClick={hidebodyOverflow} ref={checkboxRef} />

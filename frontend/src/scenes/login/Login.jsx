@@ -7,10 +7,9 @@ import { AuthContext } from '../../authContext/AuthContext'
 import { loginFailure, loginStart, loginSuccess } from '../../authContext/AuthActions'
 
 
+axios.defaults.baseURL = process.env.REACT_APP_API_URL
+
 const Login = () => {
-    const axiosInstance = axios.create({
-        baseURL: process.env.REACT_APP_API_URL
-    })
 
     const loginRef = useRef()
     const gotoSignup = () => {
@@ -43,7 +42,7 @@ const Login = () => {
             setSignupResReceived(false)
             setBtnDisabled(true)
             try {
-                const res = await axiosInstance.post('/auth/register', { name, username, email, password })
+                const res = await axios.post('/auth/register', { name, username, email, password })
                 setSignupRes(res)
 
                 setTimeout(() => {
@@ -70,7 +69,7 @@ const Login = () => {
         dispatch(loginStart())
 
         try {
-            const res = await axiosInstance.post('/auth/login', user)
+            const res = await axios.post('/auth/login', user)
             dispatch(loginSuccess(res.data))
         }
         catch (err) {

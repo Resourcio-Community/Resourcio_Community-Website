@@ -8,13 +8,8 @@ li {
     align-items: center;
     justify-content: space-between;
     padding: 20px;
-    height: 99px;
+    height: 100px;
     min-width: 365px;
-}
-
-.community_logo {
-    margin-top: 12px;
-    margin-left: -15px;
 }
 
 /* NAVBAR MENU */

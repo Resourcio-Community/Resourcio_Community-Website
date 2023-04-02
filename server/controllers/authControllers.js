@@ -33,10 +33,9 @@ export async function register (req, res) {
 
 // LOGIN
 export async function login (req, res) {
-    const { email } = req.body
 
     try {
-        const user = await User.findOne({ email: email })
+        const user = await User.findOne({ email: req.body.email })
         if (!user) {
             return res.status(401).json('User not found')
         }
@@ -48,13 +47,17 @@ export async function login (req, res) {
             return res.status(401).json('Wrong Password')
         }
 
+        /* Create JWT token */
         const accessToken = jwt.sign(
-            { id: user._id },
+            {
+                userId: user._id,
+                username: user.username
+            },
             process.env.SECRET_KEY,
             { expiresIn: '5d' }
         )
 
-        const { password, _id, createdAt, updatedAt, __v, ...info } = user._doc
+        const { name, email, password, _id, createdAt, updatedAt, __v, ...info } = user._doc
 
         res.status(200).json({ ...info, accessToken })
         res.end()
