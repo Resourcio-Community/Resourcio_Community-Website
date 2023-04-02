@@ -29,6 +29,7 @@ export const registerMail = async (req, res) => {
     var email = {
         body: {
             name: username,
+            signature: false,
             intro: text || 'Hey there, way to Resourcio Community',
             outro: "Don't hesitate to ask, we'd love to help."
         }

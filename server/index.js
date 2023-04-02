@@ -6,6 +6,7 @@ import dotenv from 'dotenv'
 
 
 import { router as authRouter } from './router/authRoute.js'
+import { router as eventRouter } from './router/eventRoute.js'
 
 
 
@@ -21,6 +22,7 @@ app.use(morgan('tiny'))
 
 
 app.use('/api/auth', authRouter)
+app.use('/api/event', eventRouter)
 
 
 
