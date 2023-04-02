@@ -1,12 +1,10 @@
-const express = require('express')
-const User = require('../models/User')
-const CryptoJS = require('crypto-js')
-const jwt = require('jsonwebtoken')
+import CryptoJS from 'crypto-js'
+import jwt from 'jsonwebtoken'
+import User from '../models/User.js'
 
-const app = express()
 
 // REGISTER
-app.post('/register', async (req, res) => {
+export async function register (req, res) {
     const { name, username, email, password } = req.body
 
     const newUser = new User({
@@ -30,11 +28,11 @@ app.post('/register', async (req, res) => {
         })
         res.status(500).json(message)
     }
-})
+}
 
 
 // LOGIN
-app.post('/login', async (req, res) => {
+export async function login (req, res) {
     const { email } = req.body
 
     try {
@@ -64,8 +62,4 @@ app.post('/login', async (req, res) => {
     catch (error) {
         res.status(500).json(error)
     }
-})
-
-
-
-module.exports = app
+}

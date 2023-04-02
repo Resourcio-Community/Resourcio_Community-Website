@@ -1,18 +1,27 @@
-const express = require('express')
+import express from 'express'
+import cors from 'cors'
+import morgan from 'morgan'
+import mongoose from 'mongoose'
+import dotenv from 'dotenv'
+
+
+import { router as authRouter } from './router/authRoute.js'
+
+
+
 const app = express()
-const mongoose = require('mongoose')
-const dotenv = require('dotenv')
-const bodyParser = require('body-parser')
-const authRoute = require('./routes/auth')
-const cors = require('cors')
 
 dotenv.config()
-
 mongoose.set('strictQuery', true)
-app.use(bodyParser.urlencoded({ extended: true }))
-app.use(cors())
 app.use(express.json())
-app.use('/api/auth', authRoute)
+app.use(cors())
+app.use(morgan('tiny'))
+
+
+
+
+app.use('/api/auth', authRouter)
+
 
 
 const port = process.env.PORT || 3000
@@ -26,6 +35,6 @@ mongoose.connect(process.env.MONGO_URL, {
             console.log(`Server connected: ${port}`)
         })
     })
-    .catch((error) =>{
-    console.log(error.message)
-})
+    .catch((error) => {
+        console.log(error.message)
+    })
