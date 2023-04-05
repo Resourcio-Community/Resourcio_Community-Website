@@ -43,7 +43,8 @@
     padding: 12px 20px;
     font-weight: 500;
     border-radius: 20px;
-    background: #2e75c6;
+    background: #3c89e0;
+    cursor: pointer;
 }
 
 .resource-button:hover {

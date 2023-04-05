@@ -11,14 +11,14 @@ import blogBg from '../../Images/blog-bg.svg'
 import video from '../../Images/video.mp4'
 /* ----------------------------------------------------*/
 import sayan from '../../Images/Sayan.jpeg'
-import koustav from '../../Images/Koustav New.jpeg'
+import koustav from '../../Images/Koustav.jpeg'
 import ishani from '../../Images/Ishani.jpg'
 import snehadrita from '../../Images/Snehadrita.jpeg'
-import purbali from '../../Images/Purbali New.jpeg'
-import soumya from '../../Images/Soumya New.jpeg'
-import ayishik from '../../Images/Ayishik New.jpg'
+import purbali from '../../Images/Purbali.jpeg'
+import soumya from '../../Images/Soumya.jpeg'
+import ayishik from '../../Images/Ayishik.jpg'
 import gunjan from '../../Images/Gunjan.jpeg'
-import rohit from '../../Images/Rohit New.jpeg'
+import rohit from '../../Images/Rohit.jpeg'
 /*------------------------------------------------------*/
 
 import Navbar from "../../component/navbar/Navbar"

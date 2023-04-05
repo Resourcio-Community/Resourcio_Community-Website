@@ -31,7 +31,7 @@ const App = () => {
             <Home />
           </Route>
           <Route path='/resources'>
-            {user ? <Resources /> : <Redirect to='/login' />}
+            <Resources />
           </Route>
           <Route path='/proglang'>
             {user ? <Proglang /> : <Redirect to='/login' />}
