@@ -40,6 +40,7 @@ input[type="checkbox"] {
     display: none;
     font-size: 24px;
     user-select: none;
+    cursor: pointer;
 }
 
 /* APPLYING MEDIA QUERIES */
@@ -48,7 +49,7 @@ input[type="checkbox"] {
         display: none;
         background-color: white;
         position: absolute;
-        top: 90px;
+        top: 95px;
         left: 0;
         width: 100vw;
         min-height: 100%;
@@ -73,7 +74,6 @@ input[type="checkbox"] {
     input[type="checkbox"]:checked~.menu {
         display: flex;
         flex-direction: column;
-        align-items: center;
         justify-content: center;
         position: fixed;
     }

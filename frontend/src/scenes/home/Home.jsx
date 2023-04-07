@@ -27,6 +27,7 @@ import Stat from '../../component/stats/Stat'
 import Footer from '../../component/footer/Footer'
 import ContactCard from '../../component/contactCard/ContactCard'
 import Notice from '../../component/notice/Notice'
+import Spinner from '../../component/spinner/Spinner'
 import './home.css'
 import { Link } from 'react-router-dom'
 import { useRef, useState, useEffect } from 'react'
@@ -40,11 +41,21 @@ axios.defaults.baseURL = process.env.REACT_APP_API_URL
 
 const Home = () => {
   const [upcomingEvents, setUpcomingEvents] = useState([])
+  const [loading, setLoading] = useState(false)
 
   /** API call for all the events */
   const fetchEvents = async () => {
-    const { data } = await axios.get('/event/getevents')
-    setUpcomingEvents(data)
+    try {
+      setLoading(true)
+      const { data } = await axios.get('/event/getevents')
+      setUpcomingEvents(data)
+    }
+    catch (error) {
+      throw error
+    }
+    finally {
+      setLoading(false)
+    }
   }
   useEffect(() => {
     fetchEvents()
@@ -105,7 +116,7 @@ const Home = () => {
                     justifyContent: upcomingEvents.length === 0 ? 'center' : '',
                   }}
                 >
-                  {upcomingEvents.length > 0 ?
+                  {loading ? <Spinner /> : upcomingEvents.length > 0 ?
                     upcomingEvents.map((event) => (
                       <Notice
                         key={event._id}
@@ -113,7 +124,7 @@ const Home = () => {
                         link={event.link}
                       />
                     )) :
-                    <span className='noevents'>No events to show</span>
+                    !loading && <span className='noevents'>No events to show</span>
                   }
                   {upcomingEvents.length > 0 && <marquee behaviour='scroll' scrollamount='4'>Upcoming events</marquee>}
                 </div>
