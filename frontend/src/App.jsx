@@ -4,7 +4,7 @@ import Resources from "./scenes/resources/Resources"
 import Proglang from './scenes/proglang/Proglang'
 import Login from './scenes/login/Login'
 import LoadingScreen from './component/loadingScreen/LoadingScreen'
-import { BrowserRouter as Router, Route, Switch, Redirect } from "react-router-dom"
+import { Route, Switch, Redirect } from "react-router-dom"
 import { useContext, useEffect, useState } from 'react'
 import { AuthContext } from './authContext/AuthContext'
 
@@ -19,28 +19,26 @@ const App = () => {
   }, [])
 
 
-  
+
   const { user } = useContext(AuthContext)
   return (
     loading ?
       <LoadingScreen />
       :
-      <Router>
-        <Switch>
-          <Route exact path='/'>
-            <Home />
-          </Route>
-          <Route path='/resources'>
-            <Resources />
-          </Route>
-          <Route path='/proglang'>
-            {user ? <Proglang /> : <Redirect to='/login' />}
-          </Route>
-          <Route path='/login'>
-            {!user ? <Login /> : <Redirect to='/' />}
-          </Route>
-        </Switch>
-      </Router >
+      <Switch>
+        <Route exact path='/'>
+          <Home />
+        </Route>
+        <Route path='/resources'>
+          <Resources />
+        </Route>
+        <Route path='/proglang'>
+          {user ? <Proglang /> : <Redirect to='/login' />}
+        </Route>
+        <Route path='/login'>
+          {!user ? <Login /> : <Redirect to='/' />}
+        </Route>
+      </Switch>
   )
 }
 

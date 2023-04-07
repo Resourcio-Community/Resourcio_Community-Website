@@ -75,7 +75,7 @@ export async function login(req, res) {
             { expiresIn: '4d' }
         )
 
-        const { name, email, password, _id, createdAt, updatedAt, __v, ...info } = user._doc
+        const { _id, name, email, password, isAdmin, createdAt, updatedAt, __v, ...info } = user._doc
 
         res.status(200).json({ ...info, accessToken })
         res.end()
