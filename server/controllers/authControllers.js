@@ -69,7 +69,7 @@ export async function login(req, res) {
         const accessToken = jwt.sign(
             {
                 userId: user._id,
-                username: user.cd 
+                username: user.username
             },
             process.env.SECRET_KEY,
             { expiresIn: '4d' }
