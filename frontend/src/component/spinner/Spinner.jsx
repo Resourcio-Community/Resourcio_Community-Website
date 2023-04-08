@@ -1,9 +1,9 @@
 import './spinner.css'
 
-const Spinner = () => {
+const Spinner = ({ width, height }) => {
     return (
         <div className="spinner-container">
-            <div className="loading-spinner">
+            <div className="loading-spinner" style={{ width: `${width}`, height: `${height}`}}>
             </div>
         </div>
     )

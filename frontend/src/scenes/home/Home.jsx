@@ -116,7 +116,7 @@ const Home = () => {
                     justifyContent: upcomingEvents.length === 0 ? 'center' : '',
                   }}
                 >
-                  {loading ? <Spinner /> : upcomingEvents.length > 0 ?
+                  {loading ? <Spinner width='20px' height='20px' /> : upcomingEvents.length > 0 ?
                     upcomingEvents.map((event) => (
                       <Notice
                         key={event._id}

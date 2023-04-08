@@ -1,5 +1,6 @@
 import './App.css'
 import LoadingScreen from './component/loadingScreen/LoadingScreen'
+import Spinner from './component/spinner/Spinner'
 import logo from './Images/LOGO.webp'
 import { Route, Switch, Redirect } from "react-router-dom"
 import { useContext, useEffect, useState, lazy, Suspense } from 'react'
@@ -28,7 +29,7 @@ const App = () => {
     loading ?
       <LoadingScreen img={logo} />
       :
-      <Suspense>
+      <Suspense fallback={<Spinner width='40px' height='40px' />}>
         <Switch>
           <Route exact path='/'>
             <Home />
