@@ -1,12 +1,15 @@
 import './App.css'
-import Home from "./scenes/home/Home"
-import Resources from "./scenes/resources/Resources"
-import Proglang from './scenes/proglang/Proglang'
-import Login from './scenes/login/Login'
 import LoadingScreen from './component/loadingScreen/LoadingScreen'
+import logo from './Images/LOGO.webp'
 import { Route, Switch, Redirect } from "react-router-dom"
-import { useContext, useEffect, useState } from 'react'
+import { useContext, useEffect, useState, lazy, Suspense } from 'react'
 import { AuthContext } from './authContext/AuthContext'
+
+
+const Home = lazy(() => import('./scenes/home/Home'))
+const Resources = lazy(() => import('./scenes/resources/Resources'))
+const Proglang = lazy(() => import('./scenes/proglang/Proglang'))
+const Login = lazy(() => import('./scenes/login/Login'))
 
 
 const App = () => {
@@ -23,22 +26,24 @@ const App = () => {
   const { user } = useContext(AuthContext)
   return (
     loading ?
-      <LoadingScreen />
+      <LoadingScreen img={logo} />
       :
-      <Switch>
-        <Route exact path='/'>
-          <Home />
-        </Route>
-        <Route path='/resources'>
-          <Resources />
-        </Route>
-        <Route path='/proglang'>
-          {user ? <Proglang /> : <Redirect to='/login' />}
-        </Route>
-        <Route path='/login'>
-          {!user ? <Login /> : <Redirect to='/' />}
-        </Route>
-      </Switch>
+      <Suspense>
+        <Switch>
+          <Route exact path='/'>
+            <Home />
+          </Route>
+          <Route path='/resources'>
+            <Resources />
+          </Route>
+          <Route path='/proglang'>
+            {user ? <Proglang /> : <Redirect to='/login' />}
+          </Route>
+          <Route path='/login'>
+            {!user ? <Login /> : <Redirect to='/' />}
+          </Route>
+        </Switch>
+      </Suspense>
   )
 }
 

@@ -1,6 +1,27 @@
 .proglang {
     min-height: 100vh;
     line-height: 1.5;
-    background: rgba(0, 0, 0, 0.8);
     background-repeat: repeat-y;
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.card_container {
+    padding: 30px;
+    margin: 0rem auto;
+    max-width: calc(100% - 80px);
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 3rem;
+}
+
+@media screen and (max-width: 768px) {
+    .card_container {
+        max-width: 608px;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .card_container {
+        max-width: 1156px;
+    }
 }
