@@ -11,6 +11,7 @@ const Home = lazy(() => import('./scenes/home/Home'))
 const Resources = lazy(() => import('./scenes/resources/Resources'))
 const Proglang = lazy(() => import('./scenes/proglang/Proglang'))
 const Login = lazy(() => import('./scenes/login/Login'))
+const NotFound = lazy(() => import('./component/404_Not Found/NotFound'))
 
 
 const App = () => {
@@ -29,22 +30,25 @@ const App = () => {
     // loading ?
     //   <LoadingScreen img={logo} />
     //   :
-      <Suspense fallback={<Spinner width='40px' height='40px' />}>
-        <Switch>
-          <Route exact path='/'>
-            <Home />
-          </Route>
-          <Route path='/resources'>
-            <Resources />
-          </Route>
-          <Route path='/proglang'>
-            {user ? <Proglang /> : <Redirect to='/login' />}
-          </Route>
-          <Route path='/login'>
-            {!user ? <Login /> : <Redirect to='/' />}
-          </Route>
-        </Switch>
-      </Suspense>
+    <Suspense fallback={<Spinner width='40px' height='40px' />}>
+      <Switch>
+        <Route exact path='/'>
+          <Home />
+        </Route>
+        <Route exact path='/resources'>
+          <Resources />
+        </Route>
+        <Route exact path='/proglang'>
+          {user ? <Proglang /> : <Redirect to='/login' />}
+        </Route>
+        <Route exact path='/login'>
+          {!user ? <Login /> : <Redirect to='/' />}
+        </Route>
+        <Route path='*'>
+          <NotFound />
+        </Route>
+      </Switch>
+    </Suspense>
   )
 }
 
