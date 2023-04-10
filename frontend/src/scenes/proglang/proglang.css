@@ -1,5 +1,6 @@
 .proglang {
     min-height: 100vh;
+    min-width: 365px;
     line-height: 1.5;
     background-repeat: repeat-y;
     background: rgba(0, 0, 0, 0.8);

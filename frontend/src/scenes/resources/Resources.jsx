@@ -1,6 +1,6 @@
 /* -------------------------------------------- */
 import webdev from '../../Images/web-dev.jpg'
-import appdev from '../../Images/android-app-development.jpg'
+import appdev from '../../Images/android-app.jpg'
 import aiml from '../../Images/ai-ml.png'
 import cyber from '../../Images/Cyber_security.jpeg'
 import prog from '../../Images/programming_languages.png'

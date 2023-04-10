@@ -1,11 +1,9 @@
 /* ----------------------------------------- */
-import c from '../../Images/c.png'
-import cpp from '../../Images/ISO_C++_Logo.svg.png'
+import c from '../../Images/C.jpg'
 import python from '../../Images/python.png'
-import java from '../../Images/java-logo-vert-blk.png'
-import csharp from '../../Images/C-Sharp.png'
-import rust from '../../Images/Rust.png'
-import R from '../../Images/r.jpg'
+import java from '../../Images/java.jpg'
+import cpp from '../../Images/C++.jpeg'
+import csharp from '../../Images/Csharp.jpeg'
 import go from '../../Images/golang.png'
 /* ---------------------------------------- */
 import './proglang.css'
@@ -52,18 +50,6 @@ const Proglang = () => {
           href='https://github.com/Resourcio-Community/C_Sharp-Resources'
         />
         {/* <ResourceCard
-          image={rust}
-          title='Rust'
-          content='Rust is a multi-paradigm, general-purpose programming language.'
-          href='https://github.com/Resourcio-Community/Rust-resources'
-        />
-        <ResourceCard
-          image={R}
-          title='R'
-          content='R is a programming language for statistical computing and graphics supported by the R Core Team and the R Foundation for Statistical Computing.'
-          href='https://github.com/Resourcio-Community/R-resources'
-        />
-        <ResourceCard
           image={go}
           title='Go'
           content='Go is an open source programming language that makes it simple to build secure, scalable systems.'

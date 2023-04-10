@@ -9,19 +9,33 @@
 }
 
 .box_img {
-    margin: 0;
-    padding: 0;
+    height: 220px;
     overflow: hidden;
+    display: grid;
+    place-items: center;
+    background: #151515;
+    border-top: 3px solid #ff1717;
+    border-left: 4px solid #ff1717;
+    border-right: 4px solid #ff1717;
+    border-radius: 15px 15px 0 0;
 }
 
-.box_img img {
-    width: 100%;
+.box_img .image {
+    width: 200px;
     height: 200px;
-    border-radius: 20px 20px 0 0;
+    margin-top: 4px;
+    border-radius: 50%;
+    object-fit: fill;
+    z-index: 2;
+    border: 3px solid #40e0d0;
+}
+
+.image:hover {
+    border: 6px solid #24ffe9;
 }
 
 .box_content {
-    padding: 2rem;
+    padding: 1.3rem 1.3rem 2rem 1.3rem;
 }
 
 .box_content .resource-title {
@@ -53,7 +67,7 @@
 }
 
 @media screen and (min-width:768px) {
-    .box_card{
+    .box_card {
         display: grid;
         grid-template-rows: 220px 1fr;
     }

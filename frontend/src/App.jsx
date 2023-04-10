@@ -14,21 +14,21 @@ const Login = lazy(() => import('./scenes/login/Login'))
 
 
 const App = () => {
-  const [loading, setLoading] = useState(false)
-  useEffect(() => {
-    setLoading(true)
-    setTimeout(() => {
-      setLoading(false)
-    }, 1000)
-  }, [])
+  // const [loading, setLoading] = useState(false)
+  // useEffect(() => {
+  //   setLoading(true)
+  //   setTimeout(() => {
+  //     setLoading(false)
+  //   }, 1000)
+  // }, [])
 
 
 
   const { user } = useContext(AuthContext)
   return (
-    loading ?
-      <LoadingScreen img={logo} />
-      :
+    // loading ?
+    //   <LoadingScreen img={logo} />
+    //   :
       <Suspense fallback={<Spinner width='40px' height='40px' />}>
         <Switch>
           <Route exact path='/'>
