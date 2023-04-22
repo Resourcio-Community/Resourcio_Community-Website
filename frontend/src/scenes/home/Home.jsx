@@ -18,7 +18,7 @@ import purbali from '../../Images/Purbali.jpeg'
 import soumya from '../../Images/Soumya.jpeg'
 import ayishik from '../../Images/Ayishik.jpg'
 import gunjan from '../../Images/Gunjan.jpeg'
-import rohit from '../../Images/Rohit.jpeg'
+import snigdha from '../../Images/Snigdha.jpeg'
 /*------------------------------------------------------*/
 
 import Navbar from "../../component/navbar/Navbar"
@@ -244,7 +244,7 @@ const Home = () => {
                 </li>
                 <li>
                   <Stat
-                    cardTitle="100+"
+                    cardTitle="200+"
                     cardText="Resources Added"
                     style="351, 83%, 61%"
                     fontSize="35"
@@ -252,7 +252,7 @@ const Home = () => {
                 </li>
                 <li>
                   <Stat
-                    cardTitle="5+"
+                    cardTitle="10+"
                     cardText="Servers Included"
                     style="260, 100%, 67%"
                     fontSize="35"
@@ -260,7 +260,7 @@ const Home = () => {
                 </li>
                 <li>
                   <Stat
-                    cardTitle="100+"
+                    cardTitle="1000+"
                     cardText="Members Visited"
                     style="42, 94%, 55%"
                     fontSize="35"
@@ -343,10 +343,10 @@ const Home = () => {
                 </li>
                 <li className="dev_card">
                   <ContactCard
-                    image={rohit}
-                    name='Rohit Chakrabarti'
-                    role='Marketing'
-                    linkedIn='https://www.linkedin.com/in/rohit-chakrabarti-04b981230/'
+                    image={snigdha}
+                    name='Snigdha Kundu'
+                    role='Designer & Social Media Handler'
+                    linkedIn='https://www.linkedin.com/in/snigdha-kundu-2b4862254/'
                   />
                 </li>
 
