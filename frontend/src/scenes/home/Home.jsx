@@ -12,7 +12,7 @@ import video from '../../Images/video.mp4'
 /* ----------------------------------------------------*/
 import sayan from '../../Images/Sayan.jpeg'
 import koustav from '../../Images/Koustav.jpeg'
-import ishani from '../../Images/Ishani.jpg'
+import rohit from '../../Images/Rohit.jpeg'
 import snehadrita from '../../Images/Snehadrita.jpeg'
 import purbali from '../../Images/Purbali.jpeg'
 import soumya from '../../Images/Soumya.jpeg'
@@ -327,10 +327,10 @@ const Home = () => {
                 </li>
                 <li className="dev_card">
                   <ContactCard
-                    image={ishani}
-                    name='Ishani Roy'
-                    role='Social Media Handler'
-                    linkedIn='https://www.linkedin.com/in/ishani-roy-7a9187250/'
+                    image={rohit}
+                    name='Rohit Chakrabarti'
+                    role='Designer & Marketing'
+                    linkedIn='https://www.linkedin.com/in/rohit-chakrabarti-04b981230//'
                   />
                 </li>
                 <li className="dev_card">
