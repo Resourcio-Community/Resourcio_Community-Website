@@ -2,12 +2,12 @@
     width: 100%;
     min-height: 100vh;
     background-color: #dfe1eb6b;
-    animation: sildedown 1s linear;
+    animation: silderight 1s linear;
 }
 
-@keyframes sildedown{
+@keyframes silderight{
     0%{
-        transform: translateY(-100vh);
+        transform: translateX(-100vw);
     }
 }
 

@@ -34,6 +34,8 @@ import { useRef, useState, useEffect } from 'react'
 import { Helmet } from 'react-helmet'
 import { useInView } from 'react-intersection-observer'
 import axios from 'axios'
+import { lazy, Suspense } from 'react'
+const LoadingScreen = lazy(() => import('../../component/loadingScreen/LoadingScreen'))
 
 
 axios.defaults.baseURL = process.env.REACT_APP_API_URL
@@ -41,6 +43,7 @@ axios.defaults.baseURL = process.env.REACT_APP_API_URL
 
 const Home = () => {
   const [upcomingEvents, setUpcomingEvents] = useState([])
+  const [pageLoading, setPageLoading] = useState(true)
   const [loading, setLoading] = useState(false)
 
   /** API call for all the events */
@@ -59,6 +62,10 @@ const Home = () => {
   }
   useEffect(() => {
     fetchEvents()
+
+    setTimeout(() => {
+      setPageLoading(false)
+    }, 1000)
   }, [])
 
 
@@ -66,9 +73,9 @@ const Home = () => {
   window.addEventListener('scroll', () => {
     if (backtopRef.current !== null) {
       if (window.scrollY > 400) {
-        backtopRef.current.classList.add("active")
+        backtopRef.current?.classList.add("active")
       } else {
-        backtopRef.current.classList.remove("active")
+        backtopRef.current?.classList.remove("active")
       }
     }
   })
@@ -82,154 +89,161 @@ const Home = () => {
   }, [entry])
 
 
+
+
+
   return (
-    <>
-      <Helmet>
-        <title>Resourcio Community</title>
-      </Helmet>
+    pageLoading ?
+      <Suspense fallback={<Spinner width='40px' height='40px' />}>
+        <LoadingScreen />
+      </Suspense>
+      : <>
+        <Helmet>
+          <title>Resourcio Community</title>
+        </Helmet>
 
-      <Navbar />
+        <Navbar />
 
-      <main>
-        <article>
+        <main>
+          <article>
 
-          <section className="section hero has-bg-image" aria-label="home" style={{ "backgroundImage": `url(${heroBg})` }}>
-            <div className="container">
-              <div className="hero-content">
-                <h1 className="h1 section-title" style={{ "fontSize": "50px" }}>
-                  The Best Website for students to <span className="span">Search</span> for Software Resources.
-                </h1>
-                <p className="hero-text">
-                  Hello future engineers!<br />Welcome to <b>Resourcio Community</b>!! A one stop hub for all your
-                  resources and queries
-                  regarding different software languages.
-                </p>
-                <Link to='/resources' className='link btn has-before'>
-                  <span>Find Resources</span>
-                  <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
-                </Link>
-              </div>
-              <div className="hero-banner">
-                <div className="noticeboard"
-                  style={{
-                    alignItems: upcomingEvents.length === 0 ? 'center' : '',
-                    justifyContent: upcomingEvents.length === 0 ? 'center' : '',
-                  }}
-                >
-                  {loading ? <Spinner width='20px' height='20px' /> : upcomingEvents.length > 0 ?
-                    upcomingEvents.map((event) => (
-                      <Notice
-                        key={event._id}
-                        notice={event.event}
-                        link={event.link}
-                      />
-                    )) :
-                    !loading && <span className='noevents'>No events to show</span>
-                  }
-                  {upcomingEvents.length > 0 && <marquee behaviour='scroll' scrollamount='4'>Upcoming events</marquee>}
+            <section className="section hero has-bg-image" aria-label="home" style={{ "backgroundImage": `url(${heroBg})` }}>
+              <div className="container">
+                <div className="hero-content">
+                  <h1 className="h1 section-title" style={{ "fontSize": "50px" }}>
+                    The Best Website for students to <span className="span">Search</span> for Software Resources.
+                  </h1>
+                  <p className="hero-text">
+                    Hello future engineers!<br />Welcome to <b>Resourcio Community</b>!! A one stop hub for all your
+                    resources and queries
+                    regarding different software languages.
+                  </p>
+                  <Link to='/resources' className='link btn has-before'>
+                    <span>Find Resources</span>
+                    <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+                  </Link>
+                </div>
+                <div className="hero-banner">
+                  <div className="noticeboard"
+                    style={{
+                      alignItems: upcomingEvents.length === 0 ? 'center' : '',
+                      justifyContent: upcomingEvents.length === 0 ? 'center' : '',
+                    }}
+                  >
+                    {loading ? <Spinner width='20px' height='20px' /> : upcomingEvents.length > 0 ?
+                      upcomingEvents.map((event) => (
+                        <Notice
+                          key={event._id}
+                          notice={event.event}
+                          link={event.link}
+                        />
+                      )) :
+                      !loading && <span className='noevents'>No events to show</span>
+                    }
+                    {upcomingEvents.length > 0 && <marquee behaviour='scroll' scrollamount='4'>Upcoming events</marquee>}
+                  </div>
                 </div>
               </div>
-            </div>
-          </section>
+            </section>
 
 
-          <section className="section category" aria-label="category">
-            <div className="container">
-              <p className="section-subtitle">Categories</p>
-              <h2 className="h2 section-title">
-                Online <span className="span">Resources</span> For Remote Learning.
-              </h2>
-              <p className="section-text">
-                Here are the different resouces:
-              </p>
-              <ul className="grid-list">
-                <li>
-                  <Category
-                    image={category1}
-                    cardTitle="CP Resources"
-                    cardText="Here you can get all information and valuable resources about competetive programming at free-of-cost"
-                    style="170, 75%, 41%"
-                  />
-                </li>
-
-                <li>
-                  <Category
-                    image={category2}
-                    cardTitle="Development Resources"
-                    cardText="Here you can get all information and valuable resources about development at free-of-cost"
-                    style="351, 83%, 61%"
-                  />
-                </li>
-
-                <li>
-                  <Category
-                    image={category3}
-                    cardTitle="Open Source Universe"
-                    cardText="Here you can get all information about how and where to start open source contributions"
-                    style="229, 75%, 58%"
-                  />
-                </li>
-
-                <li>
-                  <Category
-                    image={category4}
-                    cardTitle="About Hackathons"
-                    cardText="Here you can get all relevant information and news about upcoming Hackathons"
-                    style="42, 94%, 55%"
-                  />
-                </li>
-              </ul>
-            </div>
-          </section>
-
-
-          <section className="section about" id='about' aria-label="about">
-            <div className="container">
-              <div className="about-content">
-                <p className="section-subtitle" style={{ "color": "var(--gray-web)" }}>About Us</p>
-                <h3 className="h2 section-title">
-                  A group of enthusiastic <span className="span">Engineers keen to</span> help their fellow Engineers.
-                </h3>
-                <p className="section-text" style={{ "color": "var(--gray-web)" }}>
-                  Through Resourcio we have tried to bring in different resources related to software development and
-                  other
-                  different fields related to software enginnering in a single place. We want to provide students a single platform where
-                  they
-                  can find all new resources and they dont need to browse the web extensively for learning them.
+            <section className="section category" aria-label="category">
+              <div className="container">
+                <p className="section-subtitle">Categories</p>
+                <h2 className="h2 section-title">
+                  Online <span className="span">Resources</span> For Remote Learning.
+                </h2>
+                <p className="section-text">
+                  Here are the different resouces:
                 </p>
-                <ul className="about-list" style={{ "fontSize": "1.5rem" }}>
-                  <li className="about-item">
-                    <ion-icon name="checkmark-done-outline" aria-hidden="true"></ion-icon>
-                    <span className="span">Free Resources</span>
+                <ul className="grid-list">
+                  <li>
+                    <Category
+                      image={category1}
+                      cardTitle="CP Resources"
+                      cardText="Here you can get all information and valuable resources about competetive programming at free-of-cost"
+                      style="170, 75%, 41%"
+                    />
                   </li>
-                  <li className="about-item">
-                    <ion-icon name="checkmark-done-outline" aria-hidden="true"></ion-icon>
-                    <span className="span">Maximum topics covered</span>
+
+                  <li>
+                    <Category
+                      image={category2}
+                      cardTitle="Development Resources"
+                      cardText="Here you can get all information and valuable resources about development at free-of-cost"
+                      style="351, 83%, 61%"
+                    />
                   </li>
-                  <li className="about-item">
-                    <ion-icon name="checkmark-done-outline" aria-hidden="true"></ion-icon>
-                    <span className="span">All in a single platform</span>
+
+                  <li>
+                    <Category
+                      image={category3}
+                      cardTitle="Open Source Universe"
+                      cardText="Here you can get all information about how and where to start open source contributions"
+                      style="229, 75%, 58%"
+                    />
+                  </li>
+
+                  <li>
+                    <Category
+                      image={category4}
+                      cardTitle="About Hackathons"
+                      cardText="Here you can get all relevant information and news about upcoming Hackathons"
+                      style="42, 94%, 55%"
+                    />
                   </li>
                 </ul>
-                <img src={shape4} width={100} height={100} loading="lazy" alt=""
-                  className="shape about-shape-4" />
               </div>
-            </div>
-          </section>
+            </section>
 
 
-          <section className="video has-bg-image" aria-label="video" style={{ "backgroundImage": `url(${videoBg})` }}>
-            <div className="container">
-              <div className="video-card">
-                <div className="video-banner img-holder">
-                  <video ref={playRef} width={850} loop>
-                    <source src={video} type="video/mp4" />
-                  </video>
+            <section className="section about" id='about' aria-label="about">
+              <div className="container">
+                <div className="about-content">
+                  <p className="section-subtitle" style={{ "color": "var(--gray-web)" }}>About Us</p>
+                  <h3 className="h2 section-title">
+                    A group of enthusiastic <span className="span">Engineers keen to</span> help their fellow Engineers.
+                  </h3>
+                  <p className="section-text" style={{ "color": "var(--gray-web)" }}>
+                    Through Resourcio we have tried to bring in different resources related to software development and
+                    other
+                    different fields related to software enginnering in a single place. We want to provide students a single platform where
+                    they
+                    can find all new resources and they dont need to browse the web extensively for learning them.
+                  </p>
+                  <ul className="about-list" style={{ "fontSize": "1.5rem" }}>
+                    <li className="about-item">
+                      <ion-icon name="checkmark-done-outline" aria-hidden="true"></ion-icon>
+                      <span className="span">Free Resources</span>
+                    </li>
+                    <li className="about-item">
+                      <ion-icon name="checkmark-done-outline" aria-hidden="true"></ion-icon>
+                      <span className="span">Maximum topics covered</span>
+                    </li>
+                    <li className="about-item">
+                      <ion-icon name="checkmark-done-outline" aria-hidden="true"></ion-icon>
+                      <span className="span">All in a single platform</span>
+                    </li>
+                  </ul>
+                  <img src={shape4} width={100} height={100} loading="lazy" alt=""
+                    className="shape about-shape-4" />
                 </div>
-                <img src={shape2} width={158} height={174} loading="lazy" className="shape video-shape-2" />
               </div>
-            </div>
-          </section>
+            </section>
+
+
+            <section className="video has-bg-image" aria-label="video" style={{ "backgroundImage": `url(${videoBg})` }}>
+              <div className="container">
+                <div className="video-card">
+                  <div className="video-banner img-holder">
+                    <video ref={playRef} width={850} loop>
+                      <source src={video} type="video/mp4" />
+                    </video>
+                  </div>
+                  <img src={shape2} width={158} height={174} loading="lazy" className="shape video-shape-2" />
+                </div>
+              </div>
+            </section>
 
 
           <section className="section stats" aria-label="stats">
@@ -244,7 +258,7 @@ const Home = () => {
                 </li>
                 <li>
                   <Stat
-                    cardTitle="200+"
+                    cardTitle="100+"
                     cardText="Resources Added"
                     style="351, 83%, 61%"
                     fontSize="35"
@@ -252,7 +266,7 @@ const Home = () => {
                 </li>
                 <li>
                   <Stat
-                    cardTitle="10+"
+                    cardTitle="5+"
                     cardText="Servers Included"
                     style="260, 100%, 67%"
                     fontSize="35"
@@ -260,7 +274,7 @@ const Home = () => {
                 </li>
                 <li>
                   <Stat
-                    cardTitle="1000+"
+                    cardTitle="100+"
                     cardText="Members Visited"
                     style="42, 94%, 55%"
                     fontSize="35"
@@ -271,11 +285,11 @@ const Home = () => {
           </section>
 
 
-          <section className="section blog has-bg-image" id="contact" aria-label="contact" style={{ "backgroundImage": `url(${blogBg})` }}>
-            <div className="container">
-              <p className="section-subtitle" style={{ "color": "var(--gray-web)" }}>Contact Us</p>
-              <h2 className="h2 section-title">Get in touch with us</h2>
-              <ul className="grid-list">
+            <section className="section blog has-bg-image" id="contact" aria-label="contact" style={{ "backgroundImage": `url(${blogBg})` }}>
+              <div className="container">
+                <p className="section-subtitle" style={{ "color": "var(--gray-web)" }}>Contact Us</p>
+                <h2 className="h2 section-title">Get in touch with us</h2>
+                <ul className="grid-list">
 
                 <li className="dev_card">
                   <ContactCard
@@ -327,10 +341,10 @@ const Home = () => {
                 </li>
                 <li className="dev_card">
                   <ContactCard
-                    image={rohit}
-                    name='Rohit Chakrabarti'
-                    role='Designer & Marketing'
-                    linkedIn='https://www.linkedin.com/in/rohit-chakrabarti-04b981230//'
+                    image={ishani}
+                    name='Ishani Roy'
+                    role='Social Media Handler'
+                    linkedIn='https://www.linkedin.com/in/ishani-roy-7a9187250/'
                   />
                 </li>
                 <li className="dev_card">
@@ -343,26 +357,26 @@ const Home = () => {
                 </li>
                 <li className="dev_card">
                   <ContactCard
-                    image={snigdha}
-                    name='Snigdha Kundu'
-                    role='Designer & Social Media Handler'
-                    linkedIn='https://www.linkedin.com/in/snigdha-kundu-2b4862254/'
+                    image={rohit}
+                    name='Rohit Chakrabarti'
+                    role='Marketing'
+                    linkedIn='https://www.linkedin.com/in/rohit-chakrabarti-04b981230/'
                   />
                 </li>
 
-              </ul>
-            </div>
-          </section>
+                </ul>
+              </div>
+            </section>
 
-        </article >
-      </main >
+          </article >
+        </main >
 
-      <Footer />
+        <Footer />
 
-      <a href="#" className="back-top-btn" aria-label="back top top" ref={backtopRef}>
-        <ion-icon name="chevron-up" aria-hidden="true"></ion-icon>
-      </a>
-    </>
+        <a href="#" className="back-top-btn" aria-label="back top top" ref={backtopRef}>
+          <ion-icon name="chevron-up" aria-hidden="true"></ion-icon>
+        </a>
+      </>
   )
 }
 

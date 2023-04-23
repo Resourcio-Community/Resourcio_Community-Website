@@ -1,11 +1,11 @@
 import './loadingScreen.css'
 import logo from '../../Images/LOGO.webp'
 
-const LoadingScreen = ({ img }) => {
+const LoadingScreen = () => {
     return (
         <>
             <div className='loading_screen'></div>
-            <img src={img} className='loading_image' />
+            <img src={logo} className='loading_image' />
         </>
     )
 }
