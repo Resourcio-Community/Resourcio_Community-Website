@@ -258,7 +258,7 @@ const Home = () => {
                 </li>
                 <li>
                   <Stat
-                    cardTitle="100+"
+                    cardTitle="200+"
                     cardText="Resources Added"
                     style="351, 83%, 61%"
                     fontSize="35"
@@ -266,7 +266,7 @@ const Home = () => {
                 </li>
                 <li>
                   <Stat
-                    cardTitle="5+"
+                    cardTitle="10+"
                     cardText="Servers Included"
                     style="260, 100%, 67%"
                     fontSize="35"
@@ -274,7 +274,7 @@ const Home = () => {
                 </li>
                 <li>
                   <Stat
-                    cardTitle="100+"
+                    cardTitle="1000+"
                     cardText="Members Visited"
                     style="42, 94%, 55%"
                     fontSize="35"
@@ -341,10 +341,10 @@ const Home = () => {
                 </li>
                 <li className="dev_card">
                   <ContactCard
-                    image={ishani}
-                    name='Ishani Roy'
-                    role='Social Media Handler'
-                    linkedIn='https://www.linkedin.com/in/ishani-roy-7a9187250/'
+                    image={rohit}
+                    name='Rohit Chakrabarti'
+                    role='Designer & Marketing'
+                    linkedIn='https://www.linkedin.com/in/rohit-chakrabarti-04b981230/'
                   />
                 </li>
                 <li className="dev_card">
@@ -357,10 +357,10 @@ const Home = () => {
                 </li>
                 <li className="dev_card">
                   <ContactCard
-                    image={rohit}
-                    name='Rohit Chakrabarti'
-                    role='Marketing'
-                    linkedIn='https://www.linkedin.com/in/rohit-chakrabarti-04b981230/'
+                    image={snigdha}
+                    name='Snigdha Kundu'
+                    role='Designer & Social Media Handler'
+                    linkedIn='https://www.linkedin.com/in/snigdha-kundu-2b4862254/'
                   />
                 </li>
 
