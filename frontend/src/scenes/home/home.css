@@ -148,6 +148,7 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
+    user-select: none;
 }
 
 .swiper-container {
@@ -169,8 +170,8 @@ iframe {
     cursor: pointer;
 }
 
-.navigation-btn::selection{
-    background-color: none;
+.navigation-btns:focus{
+    background: none;
 }
 
 .navigation-btn {
