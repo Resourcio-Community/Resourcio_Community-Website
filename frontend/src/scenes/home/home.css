@@ -169,6 +169,10 @@ iframe {
     cursor: pointer;
 }
 
+.navigation-btn::selection{
+    background-color: none;
+}
+
 .navigation-btn {
     padding: 10px;
     transition: all 0.1s ease-in;
