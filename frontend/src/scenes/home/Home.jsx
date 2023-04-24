@@ -49,7 +49,6 @@ const Home = () => {
   const [pastEvents, setPastEvents] = useState([])
   const [pageLoading, setPageLoading] = useState(false)
   const [loading, setLoading] = useState(false)
-  const [width, setWidth] = useState(window.innerWidth)
 
 
   /** API call for all the events */
@@ -104,14 +103,6 @@ const Home = () => {
     entry.target.muted = true
     inView ? entry.target.play() : entry.target.pause()
   }
-
-
-  useEffect(() => {
-    window.addEventListener('resize', () => {
-      setWidth(window.innerWidth)
-    })
-
-  }, [])
 
 
 
@@ -264,7 +255,6 @@ const Home = () => {
                       nextEl: '.next',
                       clickable: true
                     }}
-                    pagination={ width <= 600 ? true : false}
                     modules={[Navigation, Pagination, EffectCoverflow]}
                     className='swiper-container'
                   >
@@ -274,16 +264,14 @@ const Home = () => {
                       </SwiperSlide>
                     ))}
                   </Swiper>
-                  {width > 600 &&
-                    <div className='navigation-btns'>
-                      <div className='navigation-btn prev'>
-                        <ion-icon name="arrow-back-outline"></ion-icon>
-                      </div>
-                      <div className='navigation-btn next'>
-                        <ion-icon name="arrow-forward-outline"></ion-icon>
-                      </div>
+                  <div className='navigation-btns'>
+                    <div className='navigation-btn prev'>
+                      <ion-icon name="arrow-back-outline"></ion-icon>
                     </div>
-                  }
+                    <div className='navigation-btn next'>
+                      <ion-icon name="arrow-forward-outline"></ion-icon>
+                    </div>
+                  </div>
                 </div>
               </div>
             </section>
