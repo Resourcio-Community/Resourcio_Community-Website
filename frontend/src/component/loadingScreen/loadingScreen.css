@@ -2,14 +2,8 @@
     width: 100%;
     min-height: 100vh;
     background-color: #dfe1eb6b;
-    animation: silderight 1s linear;
 }
 
-@keyframes silderight{
-    0%{
-        transform: translateX(-100vw);
-    }
-}
 
 .loading_image{
     position: absolute;
@@ -19,4 +13,16 @@
     left: 50%;
     transform: translate(-50%, -50%);
     border-radius: 50%;
+    opacity: 0.9;
+    animation: keepBlinking 1s alternate infinite;
+}
+
+
+@keyframes keepBlinking{
+    0%{
+        opacity: 0.7;
+    }
+    100%{
+        opacity: 0.9;
+    }
 }

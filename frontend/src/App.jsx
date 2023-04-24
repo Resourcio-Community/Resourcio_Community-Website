@@ -1,4 +1,5 @@
 import './App.css'
+import axios from 'axios'
 import Spinner from './component/spinner/Spinner'
 import { Route, Switch, Redirect } from "react-router-dom"
 import { useContext, lazy, Suspense } from 'react'
@@ -10,6 +11,9 @@ const Resources = lazy(() => import('./scenes/resources/Resources'))
 const Proglang = lazy(() => import('./scenes/proglang/Proglang'))
 const Login = lazy(() => import('./scenes/login/Login'))
 const NotFound = lazy(() => import('./component/404_Not Found/NotFound'))
+
+
+axios.defaults.baseURL = process.env.REACT_APP_API_URL
 
 
 const App = () => {

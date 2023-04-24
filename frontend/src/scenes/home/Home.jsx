@@ -28,23 +28,28 @@ import Footer from '../../component/footer/Footer'
 import ContactCard from '../../component/contactCard/ContactCard'
 import Notice from '../../component/notice/Notice'
 import Spinner from '../../component/spinner/Spinner'
+import LoadingScreen from '../../component/loadingScreen/LoadingScreen'
 import './home.css'
 import { Link } from 'react-router-dom'
 import { useRef, useState, useEffect } from 'react'
 import { Helmet } from 'react-helmet'
 import { useInView } from 'react-intersection-observer'
 import axios from 'axios'
-import { lazy, Suspense } from 'react'
-const LoadingScreen = lazy(() => import('../../component/loadingScreen/LoadingScreen'))
+import { Swiper, SwiperSlide } from 'swiper/react'
+import "swiper/css"
+import "swiper/css/effect-coverflow"
+import "swiper/css/navigation"
+import "swiper/css/pagination"
+import { EffectCoverflow, Pagination, Navigation } from 'swiper'
 
-
-axios.defaults.baseURL = process.env.REACT_APP_API_URL
 
 
 const Home = () => {
   const [upcomingEvents, setUpcomingEvents] = useState([])
-  const [pageLoading, setPageLoading] = useState(true)
+  const [pastEvents, setPastEvents] = useState([])
+  const [pageLoading, setPageLoading] = useState(false)
   const [loading, setLoading] = useState(false)
+
 
   /** API call for all the events */
   const fetchEvents = async () => {
@@ -60,12 +65,25 @@ const Home = () => {
       setLoading(false)
     }
   }
+
+  const fetchPastEvents = async () => {
+    try {
+      setPageLoading(true)
+      const { data } = await axios.get('/event/getpastevents')
+      setPastEvents(data)
+    }
+    catch (error) {
+      throw error
+    }
+    finally {
+      setPageLoading(false)
+    }
+  }
+
+
   useEffect(() => {
     fetchEvents()
-
-    setTimeout(() => {
-      setPageLoading(false)
-    }, 1000)
+    fetchPastEvents()
   }, [])
 
 
@@ -93,10 +111,7 @@ const Home = () => {
 
 
   return (
-    pageLoading ?
-      <Suspense fallback={<Spinner width='40px' height='40px' />}>
-        <LoadingScreen />
-      </Suspense>
+    pageLoading ? <LoadingScreen />
       : <>
         <Helmet>
           <title>Resourcio Community</title>
@@ -228,6 +243,41 @@ const Home = () => {
                   <img src={shape4} width={100} height={100} loading="lazy" alt=""
                     className="shape about-shape-4" />
                 </div>
+
+                <div className="past-videos">
+                  <span>Past events</span>
+                  <Swiper
+                    effect={'coverflow'}
+                    // loop={true}
+                    coverflowEffect={{
+                      rotate: 0,
+                      stretch: 0,
+                      depth: 90,
+                      modifier: 2.1
+                    }}
+                    navigation={{
+                      prevEl: '.prev',
+                      nextEl: '.next',
+                      clickable: true
+                    }}
+                    modules={[Navigation, Pagination, EffectCoverflow]}
+                    className='swiper-container'
+                  >
+                    {pastEvents.map((event) => (
+                      <SwiperSlide key={event?._id}>
+                        <iframe src={event?.eventLink} width='450' height='300' title='YouTube video player' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' allowFullScreen></iframe>
+                      </SwiperSlide>
+                    ))}
+                  </Swiper>
+                  <div className='navigation-btns'>
+                    <div className='navigation-btn prev'>
+                      <ion-icon name="arrow-back-outline"></ion-icon>
+                    </div>
+                    <div className='navigation-btn next'>
+                      <ion-icon name="arrow-forward-outline"></ion-icon>
+                    </div>
+                  </div>
+                </div>
               </div>
             </section>
 
@@ -246,43 +296,43 @@ const Home = () => {
             </section>
 
 
-          <section className="section stats" aria-label="stats">
-            <div className="container">
-              <ul className="grid-list">
-                <li>
-                  <Stat
-                    cardTitle="20+"
-                    cardText="Software Languages Covered"
-                    style="170, 75%, 41%"
-                  />
-                </li>
-                <li>
-                  <Stat
-                    cardTitle="200+"
-                    cardText="Resources Added"
-                    style="351, 83%, 61%"
-                    fontSize="35"
-                  />
-                </li>
-                <li>
-                  <Stat
-                    cardTitle="10+"
-                    cardText="Servers Included"
-                    style="260, 100%, 67%"
-                    fontSize="35"
-                  />
-                </li>
-                <li>
-                  <Stat
-                    cardTitle="1000+"
-                    cardText="Members Visited"
-                    style="42, 94%, 55%"
-                    fontSize="35"
-                  />
-                </li>
-              </ul>
-            </div>
-          </section>
+            <section className="section stats" aria-label="stats">
+              <div className="container">
+                <ul className="grid-list">
+                  <li>
+                    <Stat
+                      cardTitle="20+"
+                      cardText="Software Languages Covered"
+                      style="170, 75%, 41%"
+                    />
+                  </li>
+                  <li>
+                    <Stat
+                      cardTitle="200+"
+                      cardText="Resources Added"
+                      style="351, 83%, 61%"
+                      fontSize="35"
+                    />
+                  </li>
+                  <li>
+                    <Stat
+                      cardTitle="10+"
+                      cardText="Servers Included"
+                      style="260, 100%, 67%"
+                      fontSize="35"
+                    />
+                  </li>
+                  <li>
+                    <Stat
+                      cardTitle="1000+"
+                      cardText="Members Visited"
+                      style="42, 94%, 55%"
+                      fontSize="35"
+                    />
+                  </li>
+                </ul>
+              </div>
+            </section>
 
 
             <section className="section blog has-bg-image" id="contact" aria-label="contact" style={{ "backgroundImage": `url(${blogBg})` }}>
@@ -291,78 +341,78 @@ const Home = () => {
                 <h2 className="h2 section-title">Get in touch with us</h2>
                 <ul className="grid-list">
 
-                <li className="dev_card">
-                  <ContactCard
-                    image={soumya}
-                    name='Soumyajit Mondal'
-                    role='Owner & Developer'
-                    linkedIn='https://www.linkedin.com/in/soumyajit-mondal-a0692b234/'
-                  />
-                </li>
-                <li className="dev_card">
-                  <ContactCard
-                    image={ayishik}
-                    name='Ayishik Das'
-                    role='Co-Owner & Marketing'
-                    linkedIn='https://www.linkedin.com/in/ayishik-das-35a67a1a5/'
-                  />
-                </li>
-                <li className="dev_card">
-                  <ContactCard
-                    image={sayan}
-                    name='Sayan Mukherjee'
-                    role='Content Writer'
-                    linkedIn='https://www.linkedin.com/in/sayan-mukherjee-975175229/'
-                  />
-                </li>
-                <li className="dev_card">
-                  <ContactCard
-                    image={koustav}
-                    name='Koustav Chatterjee'
-                    role='Social Media Handler'
-                    linkedIn='https://www.linkedin.com/in/koustav-chatterjee-9b060b226/'
-                  />
-                </li>
-                <li className="dev_card">
-                  <ContactCard
-                    image={snehadrita}
-                    name='Snehadrita Seth'
-                    role='Designer'
-                    linkedIn='https://www.linkedin.com/in/snehadrita-seth-6240821a9/'
-                  />
-                </li>
-                <li className="dev_card">
-                  <ContactCard
-                    image={gunjan}
-                    name='Gunjan Saha'
-                    role='Designer'
-                    linkedIn='https://www.linkedin.com/in/gunjansaha55/'
-                  />
-                </li>
-                <li className="dev_card">
-                  <ContactCard
-                    image={rohit}
-                    name='Rohit Chakrabarti'
-                    role='Designer & Marketing'
-                    linkedIn='https://www.linkedin.com/in/rohit-chakrabarti-04b981230/'
-                  />
-                </li>
-                <li className="dev_card">
-                  <ContactCard
-                    image={purbali}
-                    name='Purbali Sadhukhan'
-                    role='Social Media Handler'
-                    linkedIn='https://www.linkedin.com/in/purbali-sadhukhan-30591a235/'
-                  />
-                </li>
-                <li className="dev_card">
-                  <ContactCard
-                    image={snigdha}
-                    name='Snigdha Kundu'
-                    role='Designer & Social Media Handler'
-                    linkedIn='https://www.linkedin.com/in/snigdha-kundu-2b4862254/'
-                  />
-                </li>
+                  <li className="dev_card">
+                    <ContactCard
+                      image={soumya}
+                      name='Soumyajit Mondal'
+                      role='Owner & Developer'
+                      linkedIn='https://www.linkedin.com/in/soumyajit-mondal-a0692b234/'
+                    />
+                  </li>
+                  <li className="dev_card">
+                    <ContactCard
+                      image={ayishik}
+                      name='Ayishik Das'
+                      role='Co-Owner & Marketing'
+                      linkedIn='https://www.linkedin.com/in/ayishik-das-35a67a1a5/'
+                    />
+                  </li>
+                  <li className="dev_card">
+                    <ContactCard
+                      image={sayan}
+                      name='Sayan Mukherjee'
+                      role='Content Writer'
+                      linkedIn='https://www.linkedin.com/in/sayan-mukherjee-975175229/'
+                    />
+                  </li>
+                  <li className="dev_card">
+                    <ContactCard
+                      image={koustav}
+                      name='Koustav Chatterjee'
+                      role='Social Media Handler'
+                      linkedIn='https://www.linkedin.com/in/koustav-chatterjee-9b060b226/'
+                    />
+                  </li>
+                  <li className="dev_card">
+                    <ContactCard
+                      image={snehadrita}
+                      name='Snehadrita Seth'
+                      role='Designer'
+                      linkedIn='https://www.linkedin.com/in/snehadrita-seth-6240821a9/'
+                    />
+                  </li>
+                  <li className="dev_card">
+                    <ContactCard
+                      image={gunjan}
+                      name='Gunjan Saha'
+                      role='Designer'
+                      linkedIn='https://www.linkedin.com/in/gunjansaha55/'
+                    />
+                  </li>
+                  <li className="dev_card">
+                    <ContactCard
+                      image={rohit}
+                      name='Rohit Chakrabarti'
+                      role='Designer & Marketing'
+                      linkedIn='https://www.linkedin.com/in/rohit-chakrabarti-04b981230/'
+                    />
+                  </li>
+                  <li className="dev_card">
+                    <ContactCard
+                      image={purbali}
+                      name='Purbali Sadhukhan'
+                      role='Social Media Handler'
+                      linkedIn='https://www.linkedin.com/in/purbali-sadhukhan-30591a235/'
+                    />
+                  </li>
+                  <li className="dev_card">
+                    <ContactCard
+                      image={snigdha}
+                      name='Snigdha Kundu'
+                      role='Designer & Social Media Handler'
+                      linkedIn='https://www.linkedin.com/in/snigdha-kundu-2b4862254/'
+                    />
+                  </li>
 
                 </ul>
               </div>
@@ -376,6 +426,27 @@ const Home = () => {
         <a href="#" className="back-top-btn" aria-label="back top top" ref={backtopRef}>
           <ion-icon name="chevron-up" aria-hidden="true"></ion-icon>
         </a>
+
+
+
+
+
+        <style>
+          {`
+            .swiper-slide {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              flex-direction: column;
+            }
+            .swiper-slide-shadow-left {
+              display: none;
+            }
+            .swiper-slide-shadow-right {
+              display: none;
+            }
+          `}
+        </style>
       </>
   )
 }

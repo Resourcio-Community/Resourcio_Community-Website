@@ -7,7 +7,6 @@ import { AuthContext } from '../../authContext/AuthContext'
 import { loginFailure, loginStart, loginSuccess } from '../../authContext/AuthActions'
 
 
-axios.defaults.baseURL = process.env.REACT_APP_API_URL
 
 const Login = () => {
 

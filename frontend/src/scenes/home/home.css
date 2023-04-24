@@ -54,7 +54,7 @@ main {
     font-size: calc(0.9*var(--fs-7));
 }
 
-.noevents{
+.noevents {
     font-size: 13px;
     color: gray;
 }
@@ -328,7 +328,7 @@ main {
     }
 
     .video-banner {
-        max-width: 70%;
+        max-width: 69%;
         margin-inline: auto;
     }
 
@@ -411,4 +411,36 @@ main {
     video {
         height: 200px;
     }
+}
+
+.past-videos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.swiper-container {
+    width: 550px;
+    height: 350px;
+}
+
+iframe{
+    border-radius: 15px;
+}
+
+.navigation-btns{
+    display: flex;
+    gap: 10px;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.navigation-btn{
+    padding: 10px;
+    transition: all 0.1s ease-in;
+    border-radius: 50%;
+}
+
+.navigation-btn:hover{
+    background-color: hsl(170, 75%, 55%);
 }
