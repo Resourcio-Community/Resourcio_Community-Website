@@ -245,15 +245,14 @@ const Home = () => {
                 </div>
 
                 <div className="past-videos">
-                  <span>Past events</span>
+                  <span>Past workshops</span>
                   <Swiper
                     effect={'coverflow'}
-                    // loop={true}
                     coverflowEffect={{
                       rotate: 0,
                       stretch: 0,
-                      depth: 90,
-                      modifier: 2.1
+                      depth: 130,
+                      modifier: 2.2
                     }}
                     navigation={{
                       prevEl: '.prev',
@@ -265,7 +264,7 @@ const Home = () => {
                   >
                     {pastEvents.map((event) => (
                       <SwiperSlide key={event?._id}>
-                        <iframe src={event?.eventLink} width='450' height='300' title='YouTube video player' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' allowFullScreen></iframe>
+                        <iframe src={event?.eventLink} title='YouTube video player' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share;' loading='eager' allowFullScreen></iframe>
                       </SwiperSlide>
                     ))}
                   </Swiper>
@@ -438,6 +437,7 @@ const Home = () => {
               align-items: center;
               justify-content: center;
               flex-direction: column;
+              backdrop-filter: blur(2.5px);
             }
             .swiper-slide-shadow-left {
               display: none;
