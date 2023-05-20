@@ -1,4 +1,10 @@
-# <p align="center"> Resourcio Community </p>
+<div align="center">
+ <kbd><img src="frontend/src/Images/LOGO.png" width="100" height="100"/></kbd>
+</div>
+<h1 align="center"> Resourcio Community </h1>
+<br>
+
+
 
  <div align="center">
  <p>
@@ -18,6 +24,7 @@
 ![GitHub closed pull requests](https://img.shields.io/github/issues-pr-closed/Resourcio-Community/Resourcio_Community-Website)
  </p>
  </div>
+ <br>
 
 ## One stop hub for all Engineers
 
@@ -37,9 +44,9 @@
 
 ## Screenshots
 
-![Home-Page1](https://github.com/Resourcio-Community/Resourcio_Community-Website/assets/100519291/d5cd42ca-a93e-4e55-8df9-7a3a819ac609)
-![Home-Page2](https://github.com/Resourcio-Community/Resourcio_Community-Website/assets/100519291/de041a8e-384b-4e6d-9464-dd6192eec2f0)
-![Home-Page3](https://github.com/Resourcio-Community/Resourcio_Community-Website/assets/100519291/66727891-944a-4561-aaf2-d7d2df961cbb)
+![Home-Page](https://github.com/Resourcio-Community/Resourcio_Community-Website/assets/100519291/d5cd42ca-a93e-4e55-8df9-7a3a819ac609)
+![Category-Page](https://github.com/Resourcio-Community/Resourcio_Community-Website/assets/100519291/de041a8e-384b-4e6d-9464-dd6192eec2f0)
+![About-Page](https://github.com/Resourcio-Community/Resourcio_Community-Website/assets/100519291/66727891-944a-4561-aaf2-d7d2df961cbb)
 
 <h2>Getting Involved</h2>
 <p>We welcome contributions from the community and are always looking for ways to improve Resourcio Community. Here's how you can get involved:</p>
@@ -58,12 +65,16 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## To Setup this project in your local environment
 - Clone repo to you local system 
 ``` bash
-git clone https://github.com/arnab2001/Coinverse.git
+git clone https://github.com/Resourcio-Community/Resourcio_Community-Website.git
 ```
-- Add .env file ( example is given in the .envDEMO)
-- go to https://rapidapi.com/Coinranking/api/coinranking1 and https://rapidapi.com/microsoft-azure-org-microsoft-cognitive-services/api/bing-news-search1 
-- subscribe to both of them 
-- take rapdi api key from there and put it in your .env file 
+- Navigate to frontend
+``` bash
+cd frontend
+```
+- Add .env.local file (example is given in the .env.example) [API url is given below]
+```
+https://rc-backend.vercel.app/api
+```
 - run  
 ```bash
 npm install
@@ -85,11 +96,6 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
 ### `npm run build`
 
@@ -137,21 +143,8 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/a
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 
-## Contributors
-
-<br>
-<div>
-<h1 align="center">
- <b>Thanks to these amazing people
-<h1>
-<a href="https://github.com/arnab2001/Coinverse/contributors">
-  <img src="https://contrib.rocks/image?repo=arnab2001/Coinverse&&max=817" />
-</a>
-</div>
 <br>
 <div align="center">
 <h3>Show some ❤️ by starring this awesome repository!</h3>
