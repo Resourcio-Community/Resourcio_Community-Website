@@ -51,7 +51,7 @@
 <h2>Getting Involved</h2>
 <p>We welcome contributions from the community and are always looking for ways to improve Resourcio Community. Here's how you can get involved:</p>
 <h3>Contribute code</h3>
-<p>If you have experience with React and would like to contribute code to the project, please follow the guidelines in the <a href="https://github.com/Resourcio-Community/Resourcio_Community-Website/CONTRIBUTING.md">CONTRIBUTING.md</a> file. Your contributions are greatly appreciated!</p>
+<p>If you have experience with React and would like to contribute code to the project, please follow the guidelines in the <a href="https://github.com/Resourcio-Community/Resourcio_Community-Website/blob/GSSOC23/CONTRIBUTING.md">CONTRIBUTING.md</a> file. Your contributions are greatly appreciated!</p>
 <h3>Report bugs and suggest features</h3>
 <p>If you find any bugs or have ideas for new features, please open an issue in the <a href="https://github.com/Resourcio-Community/Resourcio_Community-Website/issues">Issues</a> section of the repository. Make sure to check if the issue has already been reported before creating a new one.</p>
 <h3>Ask for help</h3>
