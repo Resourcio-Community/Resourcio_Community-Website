@@ -28,14 +28,14 @@
 
 ## One stop hub for all Engineers
 
-## 📌Key Features :-
+## 📌Key Features :
 - All software related resources in one single place
 - Interactive Sessions
 - News and updates of upcoming Hackathons & Open Sources Programs
 - 50+ resources added
 - Open Source Community
 
-## 💻Tech Stacks used :- 
+## 💻Tech Stacks used :
 - React JS
 - JavaScript
 - Node.js
@@ -58,7 +58,7 @@
 <p>If you need help with anything related to the React App, feel free to open an issue in the <a href="https://github.com/Resourcio-Community/Resourcio_Community-Website/issues">Issues</a> section or reach out to the repository owner or a collaborator for assistance.</p>
 <p>We are excited to see what you can bring to the React App and can't wait to see your contributions!</p>
 
-# Getting Started with Coinverse( Create-React-App )
+# Getting Started with Resourcio_Community-Website
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -79,11 +79,11 @@ https://rc-backend.vercel.app/api
 ```bash
 npm install
 ```
-- then run  
+- Then run  
 ```bash 
 npm start
 ```
-- good to go!
+- Good to go!
 
 ### Available Scripts
 
