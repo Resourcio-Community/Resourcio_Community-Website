@@ -120,11 +120,11 @@ const Login = () => {
                         }
                         <div className="input-field">
                             <i className="fas fa-envelope"></i>
-                            <input type="email" placeholder="Email" spellCheck="false" required autoComplete='on' onChange={(e) => setLoginEmail(e.target.value)} />
+                            <input type="email" placeholder="Email" spellCheck="false" required autoComplete='on' onChange={(e) => setLoginEmail(e.target.value.trim())} />
                         </div>
                         <div className="input-field password">
                             <i className="fas fa-eye" onClick={changeInputType}></i>
-                            <input type={!hideshowPassword ? 'password' : 'text'} placeholder="Password" required onChange={(e) => setLoginPassword(e.target.value)} />
+                            <input type={!hideshowPassword ? 'password' : 'text'} placeholder="Password" required onChange={(e) => setLoginPassword(e.target.value.trim())} />
                             <div className="errormsg">
                                 {loginPasswordRequired ? 'Fill out Password' : undefined}
                             </div>
@@ -140,7 +140,7 @@ const Login = () => {
                         }
                         <div className="input-field">
                             <i className="fab fa-adn"></i>
-                            <input type="text" placeholder="Name" autoComplete="off" spellCheck="false" onChange={(e) => setName(e.target.value)} />
+                            <input type="text" placeholder="Name" autoComplete="off" spellCheck="false" onChange={(e) => setName(e.target.value.trim())} />
                             {signupRes.status === 500 &&
                                 <div className="errormsg">
                                     {signupRes.data.name || undefined}
@@ -149,7 +149,7 @@ const Login = () => {
                         </div>
                         <div className="input-field">
                             <i className="fas fa-user"></i>
-                            <input type="text" placeholder="Username" autoComplete="off" spellCheck="false" required onChange={(e) => setUsername(e.target.value)} />
+                            <input type="text" placeholder="Username" autoComplete="off" spellCheck="false" required onChange={(e) => setUsername(e.target.value.trim())} />
                             {signupRes.status === 500 &&
                                 <div className="errormsg">
                                     {signupRes.data.username || undefined}
@@ -158,7 +158,7 @@ const Login = () => {
                         </div>
                         <div className="input-field">
                             <i className="fas fa-envelope"></i>
-                            <input type="email" placeholder="Email" autoComplete="off" spellCheck="false" required onChange={(e) => setEmail(e.target.value)} />
+                            <input type="email" placeholder="Email" autoComplete="off" spellCheck="false" required onChange={(e) => setEmail(e.target.value.trim())} />
                             {signupRes.status === 500 &&
                                 <div className="errormsg">
                                     {signupRes.data.email || undefined}
@@ -167,7 +167,7 @@ const Login = () => {
                         </div>
                         <div className="input-field password">
                             <i className="fas fa-eye" onClick={changeInputType}></i>
-                            <input type={!hideshowPassword ? 'password' : 'text'} placeholder="Password" required onChange={(e) => setPassword(e.target.value)} />
+                            <input type={!hideshowPassword ? 'password' : 'text'} placeholder="Password" required onChange={(e) => setPassword(e.target.value.trim())} />
                             <div className="errormsg">
                                 {signupPasswordRequired ? 'Enter Password' : undefined}
                             </div>
