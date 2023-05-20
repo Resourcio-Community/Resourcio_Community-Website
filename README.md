@@ -37,19 +37,18 @@
 
 ## Screenshots
 
- ![home-page](https://drive.google.com/file/d/1isEM8nHWxkXqBybszEYJ_UQ57FGypA7N/view?usp=sh)
- ![price-chart](https://user-images.githubusercontent.com/86073340/224627337-271151fe-6e2f-4c3f-ac6c-e91c8cee704e.png)
-<!-- ![image](https://user-images.githubusercontent.com/63441472/216687966-b76c340b-3719-4a28-ac4e-6c9cd9e4990e.png) -->
-
+![Home-Page1](https://github.com/Resourcio-Community/Resourcio_Community-Website/assets/100519291/d5cd42ca-a93e-4e55-8df9-7a3a819ac609)
+![Home-Page2](https://github.com/Resourcio-Community/Resourcio_Community-Website/assets/100519291/de041a8e-384b-4e6d-9464-dd6192eec2f0)
+![Home-Page3](https://github.com/Resourcio-Community/Resourcio_Community-Website/assets/100519291/66727891-944a-4561-aaf2-d7d2df961cbb)
 
 <h2>Getting Involved</h2>
-<p>We welcome contributions from the community and are always looking for ways to improve the Coinverse. Here's how you can get involved:</p>
+<p>We welcome contributions from the community and are always looking for ways to improve Resourcio Community. Here's how you can get involved:</p>
 <h3>Contribute code</h3>
-<p>If you have experience with React and would like to contribute code to the project, please follow the guidelines in the <a href="https://github.com/ arnab2001/Coinverse/blob/master/CONTRIBUTING.md">CONTRIBUTING.md</a> file. Your contributions are greatly appreciated!</p>
+<p>If you have experience with React and would like to contribute code to the project, please follow the guidelines in the <a href="https://github.com/Resourcio-Community/Resourcio_Community-Website/CONTRIBUTING.md">CONTRIBUTING.md</a> file. Your contributions are greatly appreciated!</p>
 <h3>Report bugs and suggest features</h3>
-<p>If you find any bugs or have ideas for new features, please open an issue in the <a href="https://github.com/arnab2001/Coinverse/issues">Issues</a> section of the repository. Make sure to check if the issue has already been reported before creating a new one.</p>
+<p>If you find any bugs or have ideas for new features, please open an issue in the <a href="https://github.com/Resourcio-Community/Resourcio_Community-Website/issues">Issues</a> section of the repository. Make sure to check if the issue has already been reported before creating a new one.</p>
 <h3>Ask for help</h3>
-<p>If you need help with anything related to the React App, feel free to open an issue in the <a href="https://github.com/arnab2001/Coinverse/issues">Issues</a> section or reach out to the repository owner or a collaborator for assistance.</p>
+<p>If you need help with anything related to the React App, feel free to open an issue in the <a href="https://github.com/Resourcio-Community/Resourcio_Community-Website/issues">Issues</a> section or reach out to the repository owner or a collaborator for assistance.</p>
 <p>We are excited to see what you can bring to the React App and can't wait to see your contributions!</p>
 
 # Getting Started with Coinverse( Create-React-App )
