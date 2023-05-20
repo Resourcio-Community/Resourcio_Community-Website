@@ -15,6 +15,8 @@ const Footer = () => {
                         <p className="footer-brand-text">
                             Thank You for visiting our website. Wishing you a very happy day ahead.
                         </p>
+                    </div>
+                    <div className="socials">
                         <div className="wrapper">
                             <img src={whatsapp} height={45} width={45} />
                             <a href="https://chat.whatsapp.com/Km6AX9di04ZLIpFEcXTiNK" target="_blank" className="footer-link">
@@ -24,10 +26,10 @@ const Footer = () => {
                         <div className="wrapper">
                             <img src={gmail} className='wrapper-1' height={30} width={30} />
                             <a href="mailto:resourciocommunity22@gmail.com" target="_blank" className="footer-link">
-                                resourciocommunity22@gmail.com
+                                Gmail
                             </a>
                         </div>
-                        <div className="wrapper">
+                        <div className='wrapper social-icons'>
                             <ul className="social-list">
                                 <li>
                                     <a href="https://www.facebook.com/profile.php?id=100088472180461" target="_blank" className="social-link">
@@ -62,6 +64,7 @@ const Footer = () => {
                             </ul>
                         </div>
                     </div>
+
                     <div className="footer-list">
                         {/* <p className="footer-list-title">Contacts</p>
                         <p className="footer-list-text">
@@ -78,11 +81,9 @@ const Footer = () => {
                 </div>
             </div>
             <div className="footer-bottom">
-                <div className="container">
                     <p className="copyright">
                         Copyright &copy; 2023 All Rights Reserved <span className="copyright-link">Resourcio Community</span>
                     </p>
-                </div>
             </div>
         </footer>
     )
