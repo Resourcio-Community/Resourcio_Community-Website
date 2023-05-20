@@ -63,9 +63,10 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## To Setup this project in your local environment
+- Fork this repo
 - Clone repo to you local system 
 ``` bash
-git clone https://github.com/Resourcio-Community/Resourcio_Community-Website.git
+git clone https://github.com/<your-name>/Resourcio_Community-Website.git
 ```
 - Navigate to frontend
 ``` bash
