@@ -69,14 +69,26 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ``` bash
 git clone https://github.com/<your-name>/Resourcio_Community-Website.git
 ```
+- Navigate to Project folder
+``` bash
+cd Resourcio_Community-Website
+```
 - Navigate to frontend
 ``` bash
 cd frontend
 ```
-- Add .env.local file (example is given in the .env.example) [API url is given below]
+- Add ```.env.local``` file using Visual Studio Code or any other IDE (example is given in the ```.env.example```) [API url is given below]
 ```
 https://rc-backend.vercel.app/api
 ```
+
+- You can add the ```.env.local``` using Terminal as well by pasting the same API url (Alternative to GUI)
+```bash
+touch .env.local
+vi .env.local
+```
+Press "I" to insert, then paste URL and save using ```ESC, then :wq + Enter```
+
 - run  
 ```bash
 npm install
