@@ -3,6 +3,7 @@
     text-align: center;
     padding: 25px;
     border-radius: var(--radius-10);
+    height: 100%;
 }
 
 .stats-card :is(.card-title, .card-text) {
