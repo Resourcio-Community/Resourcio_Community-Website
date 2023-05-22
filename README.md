@@ -25,10 +25,11 @@
  </p>
  </div>
  <br>
+
+ # One stop hub for all Engineers
 <!-- TOC -->
 
 ## Table of Contents
-- [One stop hub for all Engineers](#one-stop-hub-for-all-engineers)
 - [Key Features 📌](#key-features-)
 - [Tech Stacks used 💻](#tech-stacks-used-)
 - [Screenshots](#screenshots)
@@ -46,7 +47,7 @@
 <!-- /TOC -->
 
 
-## One stop hub for all Engineers
+
 
 ## Key Features 📌:
 - All software related resources in one single place
