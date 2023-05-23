@@ -38,7 +38,7 @@ const Navbar = () => {
             </div>
             <ul className="nav-links">
                 <input type="checkbox" id="checkbox_toggle" onClick={hidebodyOverflow} ref={checkboxRef} />
-                <label htmlFor="checkbox_toggle" className="hamburger" dangerouslySetInnerHTML={{ __html: labelText}}></label>
+                <label htmlFor="checkbox_toggle"style={{fontSize: labelText==="&times;"?"35px":"24px"}} className="hamburger" dangerouslySetInnerHTML={{ __html: labelText}}></label>
                 <div className="menu">
                     <Link to='/'><li onClick={removeOverflow}>Home</li></Link>
                     <a href='#about'><li onClick={removeOverflow}>About Us</li></a>
