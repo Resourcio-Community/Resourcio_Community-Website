@@ -297,7 +297,7 @@ const Home = () => {
                   <li>
                     <Stat 
                       cardTitle="20"
-                      cardText="Software Lanuages Covered"
+                      cardText="Software Languages Covered"
                       style="170, 75%, 41%"
                     />
                   </li>
