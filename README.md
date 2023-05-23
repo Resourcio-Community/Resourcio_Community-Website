@@ -19,7 +19,7 @@
 ![GitHub repo size](https://img.shields.io/github/repo-size/Resourcio-Community/Resourcio_Community-Website)
 ![Github](https://img.shields.io/github/license/Resourcio-Community/Resourcio_Community-Website)
 ![GitHub issues](https://img.shields.io/github/issues/Resourcio-Community/Resourcio_Community-Website)
-![GitHub closed issues](https://img.shields.io/github/issues-closed-raw/Resourcio-Community/Resourcio_Community-Website)
+![GitHub closed issues](https://img.shields.io/github/issues-closed/Resourcio-Community/Resourcio_Community-Website)
 ![GitHub pull requests](https://img.shields.io/github/issues-pr/Resourcio-Community/Resourcio_Community-Website)
 ![GitHub closed pull requests](https://img.shields.io/github/issues-pr-closed/Resourcio-Community/Resourcio_Community-Website)
  </p>
