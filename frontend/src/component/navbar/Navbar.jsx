@@ -16,6 +16,7 @@ const Navbar = () => {
     }
     const checkboxRef = useRef()
     const removeOverflow = () => {
+
         checkboxRef.current.checked = false
         document.body.classList.remove('hideOverflow')
         setLabelText("&#9776;")

@@ -14,10 +14,13 @@ import os from '../../Images/open_source.png'
 import './resources.css'
 import { Helmet } from 'react-helmet'
 import ResourceCard from '../../component/resourceCard/ResourceCard'
+import Navbar from '../../component/navbar/Navbar'
 
 
 const Resources = () => {
   return (
+    <>  
+        <Navbar/>
     <div className='resources'>
       <Helmet>
         <title>Resources</title>
@@ -92,6 +95,7 @@ const Resources = () => {
         />
       </div>
     </div>
+    </>
   )
 }
 export default Resources
