@@ -66,7 +66,7 @@ input[type="checkbox"] {
 .community_logo {
     display: grid;
     place-items: center;
-    margin-left: 20px;
+    margin-left: 10px;
     margin-top: 10px;
 }
 

@@ -7,7 +7,7 @@ main {
 }
 
 .hero .container {
-    transform: translateY(-120px);
+    transform: translateY(-60px);
     display: grid;
     gap: 40px;
 }
