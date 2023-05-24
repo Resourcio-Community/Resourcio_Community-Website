@@ -2,12 +2,29 @@ import logo from '../../Images/rc_com.png'
 import userLogo from '../../Images/user-logo.jpg'
 import './navbar.css'
 import { Link } from 'react-router-dom'
-import { useContext, useRef, useState } from 'react'
+import { useEffect, useContext, useRef, useState } from 'react'
 import { AuthContext } from '../../authContext/AuthContext'
 import { logout } from '../../authContext/AuthActions'
 
 
 const Navbar = () => {
+
+    const [navbar, setNavbar] = useState(false)
+    const changeBackground = () => {
+        console.log(window.scrollY)
+        if (window.scrollY >= 10) {
+            setNavbar(true)
+        } else {
+            setNavbar(false)
+        }
+    }
+    useEffect(() => {
+        changeBackground()
+        window.addEventListener("scroll", changeBackground)
+    })
+
+
+
     const [labelText, setLabelText] = useState('&#9776;')
     const hidebodyOverflow = (e) => {
         document.body.classList.toggle('hideOverflow')
@@ -25,16 +42,9 @@ const Navbar = () => {
     const { user, dispatch } = useContext(AuthContext)
 
     return (
-        <nav className="navbar">
-            <div className='community_logo' style={
-                {
-                    display: 'grid',
-                    placeItems: 'center',
-                    marginLeft: '-20px',
-                    marginTop: '4px'
-                }
-            }>
-                <img src={logo} height="100" width="100" />
+        <nav className={navbar ? "navbar" : "navbar_scroll"}>
+            <div className='community_logo'>
+                <a href='#'><img src={logo} height="100" width="100" /></a>
             </div>
             <ul className="nav-links">
                 <input type="checkbox" id="checkbox_toggle" onClick={hidebodyOverflow} ref={checkboxRef} />

@@ -3,7 +3,7 @@ main {
 }
 
 .hero {
-    padding-block-start: calc(var(--section-padding) + 80px);
+    padding-block-start: calc(var(--section-padding) + 187px);
 }
 
 .hero .container {
@@ -170,7 +170,7 @@ iframe {
     cursor: pointer;
 }
 
-.navigation-btns:focus{
+.navigation-btns:focus {
     background: none;
 }
 
@@ -276,7 +276,7 @@ iframe {
     }
 
     .hero {
-        padding-block-start: calc(var(--section-padding) + 90px);
+        padding-block-start: calc(var(--section-padding) + 187px);
     }
 
     .hero .container {
