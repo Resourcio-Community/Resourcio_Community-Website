@@ -14,14 +14,26 @@ import os from '../../Images/open_source.png'
 import './resources.css'
 import { Helmet } from 'react-helmet'
 import ResourceCard from '../../component/resourceCard/ResourceCard'
-
+import {useHistory} from "react-router-dom"
 
 const Resources = () => {
+
+  const history = useHistory();
+
   return (
     <div className='resources'>
       <Helmet>
         <title>Resources</title>
       </Helmet>
+
+     
+      <div className="resources-head">
+        <div className="resources_wave"></div>
+        <div className="resources_wave"></div>
+        <div className="resources_wave"></div>
+      </div>
+
+      <div className="resources_h1"><h1>RESOURCES</h1></div>
 
       <div className="card_container">
         <ResourceCard
@@ -90,6 +102,10 @@ const Resources = () => {
           content='Open source is a term that originally referred to open source software (OSS).OSS is software that is distributed with its source code, making it available for use, modification, and distribution with its original rights. Source code is the part of software that most computer users don’t ever see; it’s the code computer programmers manipulate to control how a program or application behaves. Programmers who have access to source code can change a program by adding to it, changing it, or fixing parts of it that aren’t working properly.'
           href='https://discord.gg/bDk4ntUguh'
         />
+      </div>
+
+      <div className="back_button">
+        <button onClick={() => history.push("/")}>Back</button>
       </div>
     </div>
   )
