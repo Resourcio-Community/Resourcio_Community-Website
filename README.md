@@ -43,8 +43,7 @@
     <li><a href="#screenshots">Screenshots</a></li>
     <li><a href="#getting-involved">Getting Involved</a></li>
     <li><a href="#contribute-code">Contributing</a></li>
-    <li><a href="#getting-started-with-resourcio_community-website">Getting Started</a></li>
-    <li><a href="#to-setup-this-project-in-your-local-environment">Set Up</a></li>
+    <li><a href="#getting-started-with-resourcio_community-website">Set Up</a></li>
     <li><a href="#learn-more">Learn More</a></li>
     <li><a href="#connect">Conect With US</a></li>
   </ol>
