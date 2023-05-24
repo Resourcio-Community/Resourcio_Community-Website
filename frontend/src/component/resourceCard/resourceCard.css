@@ -2,10 +2,12 @@
     background: white;
     border-radius: 20px;
     transition: 0.3s;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    transition: all 300 ease-in-out;
 }
 
 .box_card:hover {
-    box-shadow: 0 4px 20px 0 rgba(34, 68, 123, 0.2);
+    transform: scale(1.05);
 }
 
 .box_img {

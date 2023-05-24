@@ -23,6 +23,15 @@ const Resources = () => {
         <title>Resources</title>
       </Helmet>
 
+     
+      <div className="resources-head">
+        <div className="resources_wave"></div>
+        <div className="resources_wave"></div>
+        <div className="resources_wave"></div>
+      </div>
+
+      <div className="resources_h1"><h1>RESOURCES</h1></div>
+
       <div className="card_container">
         <ResourceCard
           image={webdev}
