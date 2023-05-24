@@ -38,7 +38,7 @@
   - [Report bugs and suggest features](#report-bugs-and-suggest-features)
   - [Ask for help](#ask-for-help)
 - [Getting Started with Resourcio_Community-Website](#getting-started-with-resourcio_community-website)
-  - [Setup project in your local environment](#setup-project-in-your-local-environment)
+  - [Setup project in your local environment](#to-setup-this-project-in-your-local-environment)
   - [Available Scripts](#available-scripts)
 - [Learn More](#learn-more)
 - [Support](#support)
