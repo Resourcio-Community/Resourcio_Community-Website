@@ -99,6 +99,30 @@
     gap: 3.5rem;
 }
 
+.back_button {
+   display: flex;
+   align-items: center;
+   justify-content: center; 
+   width: 100%;
+   padding: 2rem;
+}
+
+.back_button button {
+    padding: 20px 30px;
+    border-radius: 5px;
+    width: 150px;
+    font-size: 1.2rem;
+    background-image: linear-gradient(-90deg,
+    hsl(151, 58%, 46%) 0%,
+    hsl(170, 75%, 41%) 100%);
+    transition: all 300 ease-in-out;
+    border:none;
+}
+
+.back_button button:hover {
+    transform: scale(1.05);
+}
+
 @media screen and (max-width: 768px){
     .card_container{
         max-width: 608px;
