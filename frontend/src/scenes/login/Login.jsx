@@ -7,6 +7,7 @@ import { AuthContext } from '../../authContext/AuthContext'
 import { loginFailure, loginStart, loginSuccess } from '../../authContext/AuthActions'
 import { Link } from 'react-router-dom'
 
+import HomeRoundedIcon from '@mui/icons-material/HomeRounded';
 
 const Login = () => {
     const loginRef = useRef()
@@ -33,7 +34,7 @@ const Login = () => {
 
     const handleSignup = async (e) => {
         e.preventDefault()
-        
+
         if (password.length >= 6) {
             setValidatePassword(true)
             setSignupResReceived(false)
@@ -230,8 +231,14 @@ const Login = () => {
                 </div>
             </div>
 
+
+
+
             <div className="panels-container">
                 <div className="panel left-panel">
+                    <div className='back_to_home'>
+                        <Link to='/'><HomeRoundedIcon style={{ height: 30, width: 30, touchAction: true }} /></Link>
+                    </div>
                     <div className="content">
                         <h3>New here ?</h3>
                         <p>Join with us</p>
@@ -241,13 +248,22 @@ const Login = () => {
                         >
                             Sign up
                         </button>
-                        <p style={{ borderBottom: "solid 2px white", paddingBottom: 0 }}><Link to='/'>&#129046; back to home page</Link></p>
+
                     </div>
                     <div></div>
                     <div></div>
                 </div>
+
+
+
+
                 <div className="panel right-panel">
+
+                    <div className='back_to_home_login'>
+                        <Link to='/'><HomeRoundedIcon style={{ height: 30, width: 30, touchAction: true }} /></Link>
+                    </div>
                     <div className="content">
+
                         <h3>One of us ?</h3>
                         <p>Already have an account</p>
                         <button
@@ -256,7 +272,6 @@ const Login = () => {
                         >
                             Sign in
                         </button>
-                        <p style={{ borderBottom: "solid 2px white", paddingBottom: 0 }}><Link to='/'>&#129046; back to home page</Link></p>
                     </div>
                     <div></div>
                 </div>
