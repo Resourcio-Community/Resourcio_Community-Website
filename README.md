@@ -27,22 +27,28 @@
  <br>
 
  # One stop hub for all Engineers
-<!-- TOC -->
+ 
+ 
+<!-- Table of Contents -->
 
-## Table of Contents
-- [Key Features 📌](#key-features-)
-- [Tech Stacks used 💻](#tech-stacks-used-)
-- [Screenshots](#screenshots)
-- [Getting Involved](#getting-involved)
-  - [Contribute code](#contribute-code)
-  - [Report bugs and suggest features](#report-bugs-and-suggest-features)
-  - [Ask for help](#ask-for-help)
-- [Getting Started with Resourcio_Community-Website](#getting-started-with-resourcio_community-website)
-  - [Setup project in your local environment](#to-setup-this-project-in-your-local-environment)
-  - [Available Scripts](#available-scripts)
-- [Learn More](#learn-more)
-- [Connect](#connect)
-
+<details>
+  <summary>Table of Contents</summary>
+  <ol>
+    <li>
+      <a href="#key-features-">Key Features 📌</a>
+      <ul>
+        <li><a href="#tech-stacks-used-">Tech Stacks used 💻</a></li>
+      </ul>
+    </li>
+    <li><a href="#screenshots">Screenshots</a></li>
+    <li><a href="#getting-involved">Getting Involved</a></li>
+    <li><a href="#contribute-code">Contributing</a></li>
+    <li><a href="#getting-started-with-resourcio_community-website">Getting Started</a></li>
+    <li><a href="#to-setup-this-project-in-your-local-environment">Set Up</a></li>
+    <li><a href="#learn-more">Learn More</a></li>
+    <li><a href="#connect">Conect With US</a></li>
+  </ol>
+</details>
 
 <!-- /TOC -->
 
