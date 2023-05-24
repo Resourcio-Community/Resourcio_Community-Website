@@ -58,7 +58,6 @@ const Navbar = () => {
                     dangerouslySetInnerHTML={{ __html: labelText }}>
                 </label>
                 <div className="menu">
-                    <Link to='/'><li onClick={removeOverflow}>Home</li></Link>
                     <a href='#about'><li onClick={removeOverflow}>About Us</li></a>
                     <Link to='/resources'><li onClick={removeOverflow}>Resources</li></Link>
                     <a href='#contact'><li onClick={removeOverflow}>Contact Us</li></a>
