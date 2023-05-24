@@ -191,5 +191,5 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 ### Support
 
-<h3>Show some ❤️ by 🌟 this awesome repository!</h3>
+<h3 align="center">Show some ❤️ by 🌟 this awesome repository!</h3>
 
