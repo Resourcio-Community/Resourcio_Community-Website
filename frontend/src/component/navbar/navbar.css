@@ -10,6 +10,26 @@ li {
     padding: 20px;
     height: 100px;
     min-width: 365px;
+    width: 100%;
+    position: fixed;
+    background: rgba(255, 255, 255, 0.65);
+    backdrop-filter: blur(18.5px);
+
+    z-index: 10;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.navbar_scroll {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    height: 100px;
+    min-width: 365px;
+    width: 100%;
+    background-color: white;
+    z-index: 10;
+    position: fixed;
 }
 
 /* NAVBAR MENU */
@@ -43,8 +63,26 @@ input[type="checkbox"] {
     cursor: pointer;
 }
 
+.community_logo {
+    display: grid;
+    place-items: center;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
 /* APPLYING MEDIA QUERIES */
 @media (max-width: 768px) {
+
+
+    .community_logo {
+        margin-left: -10px;
+        margin-top: 10px;
+    }
+
+    .navbar {
+        background-color: white;
+    }
+
     .menu {
         display: none;
         background-color: white;
@@ -52,6 +90,7 @@ input[type="checkbox"] {
         top: 95px;
         left: 0;
         width: 100vw;
+        height: 100vh;
         min-height: 100%;
         z-index: 10;
         min-width: 365px;
@@ -86,7 +125,7 @@ input[type="checkbox"] {
         display: block;
     }
 
-    #userlogout{
+    #userlogout {
         margin-top: 30px;
     }
 }
