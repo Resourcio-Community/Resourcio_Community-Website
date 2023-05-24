@@ -8,10 +8,10 @@ import { logout } from '../../authContext/AuthActions'
 
 
 const Navbar = () => {
-    const [labelText,setLabelText]=useState('&#9776');
+    const [labelText, setLabelText] = useState('&#9776;')
     const hidebodyOverflow = (e) => {
         document.body.classList.toggle('hideOverflow')
-        if(checkboxRef.current.checked===false)setLabelText("&#9776;")
+        if (!checkboxRef.current.checked) setLabelText("&#9776;")
         else setLabelText("&times;")
     }
     const checkboxRef = useRef()
@@ -38,7 +38,15 @@ const Navbar = () => {
             </div>
             <ul className="nav-links">
                 <input type="checkbox" id="checkbox_toggle" onClick={hidebodyOverflow} ref={checkboxRef} />
-                <label htmlFor="checkbox_toggle"style={{fontSize: labelText==="&times;"?"35px":"24px"}} className="hamburger" dangerouslySetInnerHTML={{ __html: labelText}}></label>
+                <label
+                    htmlFor="checkbox_toggle"
+                    style={{
+                        fontSize: labelText === "&times;" ? "35px" : "24px",
+                        color: labelText === "&times;" ? 'red' : undefined
+                    }}
+                    className="hamburger"
+                    dangerouslySetInnerHTML={{ __html: labelText }}>
+                </label>
                 <div className="menu">
                     <Link to='/'><li onClick={removeOverflow}>Home</li></Link>
                     <a href='#about'><li onClick={removeOverflow}>About Us</li></a>

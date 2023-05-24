@@ -5,8 +5,7 @@ import './login.css'
 import Loader from '../../component/loader/Loader'
 import { AuthContext } from '../../authContext/AuthContext'
 import { loginFailure, loginStart, loginSuccess } from '../../authContext/AuthActions'
-import { Link } from 'react-router-dom/cjs/react-router-dom.min'
-import Navbar from '../../component/navbar/Navbar'
+import { Link } from 'react-router-dom'
 
 
 
@@ -194,7 +193,7 @@ const Login = () => {
                         >
                             Sign up
                         </button>
-                        <p style={{borderBottom:"solid 2px white",paddingBottom:0}}><Link to='/'>&#129044; back to home page</Link></p>
+                        <p style={{ borderBottom: "solid 2px white", paddingBottom: 0 }}><Link to='/'>&#129044; back to home page</Link></p>
                     </div>
                     <div></div>
                     <div></div>
@@ -211,7 +210,7 @@ const Login = () => {
                         >
                             Sign in
                         </button>
-                        <p style={{borderBottom:"solid 2px white",paddingBottom:0}}><Link to='/'>&#129046; back to home page</Link></p>
+                        <p style={{ borderBottom: "solid 2px white", paddingBottom:0 }}><Link to='/'>&#129046; back to home page</Link></p>
                     </div>
                     <div></div>
                 </div>
