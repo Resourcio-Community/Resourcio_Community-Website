@@ -6,6 +6,10 @@ main {
     padding-block-start: calc(var(--section-padding) + 187px);
 }
 
+.section-title {
+  font-size: 50px;
+}
+
 .hero .container {
     transform: translateY(-60px);
     display: grid;
@@ -468,4 +472,12 @@ iframe {
     video {
         height: 200px;
     }
+}
+@media (max-width: 475px) {
+  .section-title {
+    font-size: 35px;
+  }
+  .span {
+    font-size: 40px;
+  }
 }
