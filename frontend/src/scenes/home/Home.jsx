@@ -295,15 +295,15 @@ const Home = () => {
               <div className="container">
                 <ul className="grid-list">
                   <li>
-                    <Stat
-                      cardTitle="20+"
+                    <Stat 
+                      cardTitle="20"
                       cardText="Software Languages Covered"
                       style="170, 75%, 41%"
                     />
                   </li>
                   <li>
                     <Stat
-                      cardTitle="200+"
+                      cardTitle="200"
                       cardText="Resources Added"
                       style="351, 83%, 61%"
                       fontSize="35"
@@ -311,7 +311,7 @@ const Home = () => {
                   </li>
                   <li>
                     <Stat
-                      cardTitle="10+"
+                      cardTitle="10"
                       cardText="Servers Included"
                       style="260, 100%, 67%"
                       fontSize="35"
@@ -319,7 +319,7 @@ const Home = () => {
                   </li>
                   <li>
                     <Stat
-                      cardTitle="1000+"
+                      cardTitle="1000"
                       cardText="Members Visited"
                       style="42, 94%, 55%"
                       fontSize="35"

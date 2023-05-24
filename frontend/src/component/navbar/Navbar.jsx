@@ -2,19 +2,23 @@ import logo from '../../Images/rc_com.png'
 import userLogo from '../../Images/user-logo.jpg'
 import './navbar.css'
 import { Link } from 'react-router-dom'
-import { useContext, useRef } from 'react'
+import { useContext, useRef, useState } from 'react'
 import { AuthContext } from '../../authContext/AuthContext'
 import { logout } from '../../authContext/AuthActions'
 
 
 const Navbar = () => {
+    const [labelText, setLabelText] = useState('&#9776;')
     const hidebodyOverflow = (e) => {
         document.body.classList.toggle('hideOverflow')
+        if (!checkboxRef.current.checked) setLabelText("&#9776;")
+        else setLabelText("&times;")
     }
     const checkboxRef = useRef()
     const removeOverflow = () => {
         checkboxRef.current.checked = false
         document.body.classList.remove('hideOverflow')
+        setLabelText("&#9776;")
     }
 
 
@@ -34,7 +38,15 @@ const Navbar = () => {
             </div>
             <ul className="nav-links">
                 <input type="checkbox" id="checkbox_toggle" onClick={hidebodyOverflow} ref={checkboxRef} />
-                <label htmlFor="checkbox_toggle" className="hamburger">&#9776;</label>
+                <label
+                    htmlFor="checkbox_toggle"
+                    style={{
+                        fontSize: labelText === "&times;" ? "35px" : "24px",
+                        color: labelText === "&times;" ? 'red' : undefined
+                    }}
+                    className="hamburger"
+                    dangerouslySetInnerHTML={{ __html: labelText }}>
+                </label>
                 <div className="menu">
                     <Link to='/'><li onClick={removeOverflow}>Home</li></Link>
                     <a href='#about'><li onClick={removeOverflow}>About Us</li></a>

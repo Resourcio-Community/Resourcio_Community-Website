@@ -38,7 +38,7 @@ input[type="checkbox"] {
 /*HAMBURGER MENU*/
 .hamburger {
     display: none;
-    font-size: 24px;
+    /* font-size: 30px; */
     user-select: none;
     cursor: pointer;
 }

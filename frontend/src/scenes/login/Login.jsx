@@ -1,14 +1,12 @@
-import { useContext, useRef, useState } from "react";
-import { Helmet } from "react-helmet";
-import axios from "axios";
-import "./login.css";
-import Loader from "../../component/loader/Loader";
-import { AuthContext } from "../../authContext/AuthContext";
-import {
-  loginFailure,
-  loginStart,
-  loginSuccess,
-} from "../../authContext/AuthActions";
+import { useContext, useRef, useState } from 'react'
+import { Helmet } from 'react-helmet'
+import axios from 'axios'
+import './login.css'
+import Loader from '../../component/loader/Loader'
+import { AuthContext } from '../../authContext/AuthContext'
+import { loginFailure, loginStart, loginSuccess } from '../../authContext/AuthActions'
+import { Link } from 'react-router-dom'
+
 
 const Login = () => {
   const loginRef = useRef();
@@ -205,7 +203,7 @@ const Login = () => {
               />
               {signupRes.status === 500 && (
                 <div className="errormsg">
-                  {signupRes.data.email || undefined}
+                  {signupRes.data.email || undefined}        
                 </div>
               )}
             </div>
@@ -250,6 +248,7 @@ const Login = () => {
             >
               Sign up
             </button>
+            <p style={{ borderBottom: "solid 2px white", paddingBottom:0 }}><Link to='/'>&#129046; back to home page</Link></p>
           </div>
           <div></div>
           <div></div>
@@ -264,6 +263,7 @@ const Login = () => {
             >
               Sign in
             </button>
+            <p style={{ borderBottom: "solid 2px white", paddingBottom:0 }}><Link to='/'>&#129046; back to home page</Link></p>
           </div>
           <div></div>
         </div>

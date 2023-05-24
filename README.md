@@ -19,23 +19,44 @@
 ![GitHub repo size](https://img.shields.io/github/repo-size/Resourcio-Community/Resourcio_Community-Website)
 ![Github](https://img.shields.io/github/license/Resourcio-Community/Resourcio_Community-Website)
 ![GitHub issues](https://img.shields.io/github/issues/Resourcio-Community/Resourcio_Community-Website)
-![GitHub closed issues](https://img.shields.io/github/issues-closed-raw/Resourcio-Community/Resourcio_Community-Website)
+![GitHub closed issues](https://img.shields.io/github/issues-closed/Resourcio-Community/Resourcio_Community-Website)
 ![GitHub pull requests](https://img.shields.io/github/issues-pr/Resourcio-Community/Resourcio_Community-Website)
 ![GitHub closed pull requests](https://img.shields.io/github/issues-pr-closed/Resourcio-Community/Resourcio_Community-Website)
  </p>
  </div>
  <br>
 
-## One stop hub for all Engineers
+ # One stop hub for all Engineers
+<!-- TOC -->
 
-## 📌Key Features :
+## Table of Contents
+- [Key Features 📌](#key-features-)
+- [Tech Stacks used 💻](#tech-stacks-used-)
+- [Screenshots](#screenshots)
+- [Getting Involved](#getting-involved)
+  - [Contribute code](#contribute-code)
+  - [Report bugs and suggest features](#report-bugs-and-suggest-features)
+  - [Ask for help](#ask-for-help)
+- [Getting Started with Resourcio_Community-Website](#getting-started-with-resourcio_community-website)
+  - [Setup project in your local environment](#setup-project-in-your-local-environment)
+  - [Available Scripts](#available-scripts)
+- [Learn More](#learn-more)
+- [Support](#support)
+
+
+<!-- /TOC -->
+
+
+
+
+## Key Features 📌:
 - All software related resources in one single place
 - Interactive Sessions
 - News and updates of upcoming Hackathons & Open Sources Programs
 - 50+ resources added
 - Open Source Community
 
-## 💻Tech Stacks used :
+## Tech Stacks used 💻:
 - React JS
 - JavaScript
 - Node.js
@@ -45,16 +66,22 @@
 ## Screenshots
 
 ![Home-Page](https://github.com/Resourcio-Community/Resourcio_Community-Website/assets/100519291/d5cd42ca-a93e-4e55-8df9-7a3a819ac609)
+<br/>
 ![Category-Page](https://github.com/Resourcio-Community/Resourcio_Community-Website/assets/100519291/de041a8e-384b-4e6d-9464-dd6192eec2f0)
+<br/>
 ![About-Page](https://github.com/Resourcio-Community/Resourcio_Community-Website/assets/100519291/66727891-944a-4561-aaf2-d7d2df961cbb)
 
-<h2>Getting Involved</h2>
+## Getting Involved
 <p>We welcome contributions from the community and are always looking for ways to improve Resourcio Community. Here's how you can get involved:</p>
-<h3>Contribute code</h3>
+
+### Contribute code
 <p>If you have experience with React and would like to contribute code to the project, please follow the guidelines in the <a href="https://github.com/Resourcio-Community/Resourcio_Community-Website/blob/GSSOC23/CONTRIBUTING.md">CONTRIBUTING.md</a> file. Your contributions are greatly appreciated!</p>
-<h3>Report bugs and suggest features</h3>
+
+### Report bugs and suggest features
 <p>If you find any bugs or have ideas for new features, please open an issue in the <a href="https://github.com/Resourcio-Community/Resourcio_Community-Website/issues">Issues</a> section of the repository. Make sure to check if the issue has already been reported before creating a new one.</p>
-<h3>Ask for help</h3>
+
+### Ask for help
+
 <p>If you need help with anything related to the React App, feel free to open an issue in the <a href="https://github.com/Resourcio-Community/Resourcio_Community-Website/issues">Issues</a> section or reach out to the repository owner or a collaborator for assistance.</p>
 <p>We are excited to see what you can bring to the React App and can't wait to see your contributions!</p>
 
@@ -160,7 +187,9 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 
 <br>
-<div align="center">
-<h3>Show some ❤️ by starring this awesome repository!</h3>
-</div>
+
+
+### Support
+
+<h3>Show some ❤️ by 🌟 this awesome repository!</h3>
 
