@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
 
+
+
+
+
 .logincontainer,
 input {
   font-family: "Poppins", sans-serif;
@@ -145,11 +149,12 @@ form.sign-in-form {
   transition: 0.5s;
 }
 
-.loginpage-btn:disabled{
+.loginpage-btn:disabled {
   background: #78b4fc;
   cursor: default;
 }
-.loginpage-btn:disabled:hover{
+
+.loginpage-btn:disabled:hover {
   background: #78b4fc;
 }
 
@@ -200,10 +205,22 @@ form.sign-in-form {
   padding: 3rem 12% 2rem 17%;
 }
 
+.back_to_home {
+  text-align: left;
+  display: flex;
+  align-self: flex-start;
+}
+
+
+
 .panel .content {
+  flex-direction: column;
   color: #fff;
   transition: transform 0.9s ease-in-out;
   transition-delay: 0.6s;
+  display: flex;
+  align-self: center;
+  align-items: center;
 }
 
 .panel h3 {
@@ -293,6 +310,7 @@ form.sign-in-form {
   }
 
   .panels-container {
+    height: 100vh;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 2fr 1fr;
   }
@@ -317,6 +335,10 @@ form.sign-in-form {
     padding-right: 15%;
     transition: transform 0.9s ease-in-out;
     transition-delay: 0.8s;
+    padding-left: 8rem;
+    margin-right: 0;
+    display: flex;
+    align-self: flex-end;
   }
 
   .panel h3 {
