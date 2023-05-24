@@ -8,29 +8,13 @@
 }
 
 .footer-brand-text {
-    position: relative;
     margin-block: 20px;
-    left:-6rem;
-    top:-2rem;
-    text-align: center;
-    margin-top: 20px;
-}
-
-.footer-brand >img{
-    position:relative;
-    top:-3rem;
-    left:-23rem;
-    display: block;
-    margin: 0 auto;
 }
 
 .footer-brand .wrapper {
-    display: flex; 
+    display: flex;
     align-items: center;
     gap: 5px;
-    position: relative;
-    bottom: -1rem;
-    left:-6rem;
 }
 
 .footer-brand .wrapper:last-child {
@@ -85,77 +69,29 @@
 } */
 
 .social-list {
-    position: relative;
-    right: -55rem;
     display: flex;
     gap: 25px;
-    top:-7.5rem;
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
 }
 
 .social-link {
     font-size: 25px;
     color: lightyellow;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
 }
 
-/* Facebook */
-.social-link.facebook:hover {
-    color: #3b5998;
+.social-link:hover {
+    color: white;
     transform: scale(1.1);
-  }
-  
-  /* LinkedIn */
-  .social-link.linkedin:hover {
-    color: #0077b5;
-    transform: scale(1.1);
-  }
-  
-  /* Instagram */
-  .social-link.instagram:hover {
-    color: #c32aa3;
-    transform: scale(1.1);
-  }
-  
-  /* Twitter */
-  .social-link.twitter:hover {
-    color: #1da1f2;
-    transform: scale(1.1);
-  }
-  
-  /* GitHub */
-  .social-link.github:hover {
-    color: #333;
-    transform: scale(1.1);
-  }
-  
-  /* Discord */
-  .social-link.discord:hover {
-    color: #7289da;
-    transform: scale(1.1);
-  }
+    transition: all 200ms ease-in;
+}
 
-.footer-line {
-    border-top: 1px solid #ccc;
-    margin-bottom: 80px;
-    position: relative;
-    top:-8rem;
-    border-top: 1px solid #ccc;
-    margin-top: 20px;
-    margin-bottom: 20px;
-  }
+.footer-bottom {
+    border-block-start: 1px solid var(--eerie-black-1);
+    padding-block: 30px;
+}
 
 .copyright {
     cursor: default;
     text-align: center;
-    position: relative;
-    top:-4rem;
 }
 
 .copyright-link {
