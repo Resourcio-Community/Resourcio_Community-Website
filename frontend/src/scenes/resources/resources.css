@@ -4,16 +4,17 @@
     animation: gradient 15s ease infinite;
     background-size: 400% 400%;
     background-attachment: fixed;
-    height: 35vh;
+    height: 30vh;
     position: relative;
     width: 100%;
+    margin-bottom: 30px;
 }
 
 .resources_h1 {
     position: absolute;
     top: 0px;
     color: #fff;
-    height: 35vh;
+    height: 30vh;
     font-size: 2rem;
     display: flex;
     align-items: center;
@@ -99,28 +100,12 @@
     gap: 3.5rem;
 }
 
-.back_button {
-   display: flex;
-   align-items: center;
-   justify-content: center; 
-   width: 100%;
-   padding: 2rem;
-}
-
-.back_button button {
-    padding: 20px 30px;
-    border-radius: 5px;
-    width: 150px;
-    font-size: 1.2rem;
-    background-image: linear-gradient(-90deg,
-    hsl(151, 58%, 46%) 0%,
-    hsl(170, 75%, 41%) 100%);
-    transition: all 300 ease-in-out;
-    border:none;
-}
-
-.back_button button:hover {
-    transform: scale(1.05);
+.back_button{
+    position: absolute;
+    top: 8px;
+    cursor: pointer;
+    z-index: 100;
+    color: #fff;
 }
 
 @media screen and (max-width: 768px){

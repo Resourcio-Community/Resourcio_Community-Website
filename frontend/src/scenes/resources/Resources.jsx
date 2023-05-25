@@ -14,11 +14,13 @@ import os from '../../Images/open_source.png'
 import './resources.css'
 import { Helmet } from 'react-helmet'
 import ResourceCard from '../../component/resourceCard/ResourceCard'
-import {useHistory} from "react-router-dom"
+import { useHistory } from 'react-router-dom'
+
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 
 const Resources = () => {
 
-  const history = useHistory();
+  const history = useHistory()
 
   return (
     <div className='resources'>
@@ -26,14 +28,16 @@ const Resources = () => {
         <title>Resources</title>
       </Helmet>
 
-     
+
       <div className="resources-head">
         <div className="resources_wave"></div>
         <div className="resources_wave"></div>
         <div className="resources_wave"></div>
       </div>
+      <ArrowBackIcon className="back_button" onClick={() => history.push("/")} style={{ height: 30, width: 30, touchAction: true, marginLeft: '30px', marginTop: '30px' }} />
 
       <div className="resources_h1"><h1>RESOURCES</h1></div>
+
 
       <div className="card_container">
         <ResourceCard
@@ -104,9 +108,6 @@ const Resources = () => {
         />
       </div>
 
-      <div className="back_button">
-        <button onClick={() => history.push("/")}>Back</button>
-      </div>
     </div>
   )
 }
