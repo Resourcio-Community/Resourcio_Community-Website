@@ -39,7 +39,8 @@ const Navbar = () => {
                     <Link to='/'><li onClick={removeOverflow}>Home</li></Link>
                     <a href='#about'><li onClick={removeOverflow}>About Us</li></a>
                     <Link to='/resources'><li onClick={removeOverflow}>Resources</li></Link>
-                    <a href='#contact'><li onClick={removeOverflow}>Contact Us</li></a>
+                    <a href='#team'><li onClick={removeOverflow}>Team</li></a>
+                    <a href='#footer'><li onClick={removeOverflow}>Contact Us</li></a>
                     {!user
                         ? < Link to='/login'><li onClick={removeOverflow}>Sign in</li></Link>
                         : (
