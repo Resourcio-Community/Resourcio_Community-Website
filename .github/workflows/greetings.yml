@@ -3,7 +3,7 @@ name: Greetings
 on:
   fork:
   push:
-    branches: [main]
+    branches: [react,GSSOC23]
   issues:
     types: [opened]
   pull_request_target:
