@@ -93,7 +93,7 @@ body {
 }
 
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 11px;
 }
 
 ::-webkit-scrollbar-track {
@@ -101,12 +101,14 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: hsl(0, 0%, 80%);
-  border-radius: 12px;
+  background-color: #2DBAA3;
+  border-radius: 10px;
+  
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background-color: hsl(0, 0%, 70%);
+  background-color: #2AB983;
+  cursor: pointer;
 }
 
 button {
