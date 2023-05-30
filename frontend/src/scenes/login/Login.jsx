@@ -45,6 +45,7 @@ const Login = () => {
 
                 setTimeout(() => {
                     gotoSignin()
+                    setSignupRes({})
                 }, 1500)
 
                 setName('')
