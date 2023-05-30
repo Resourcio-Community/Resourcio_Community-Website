@@ -12,7 +12,6 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - uses: EddieHubCommunity/gh-action-community/src/welcome@main
-      - if: github.event.issue.body != 0
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           issue-message: "Hello ${{ github.actor }}, thanks for opening a issue, your contribution is valuable to us. The maintainers will review this issue and provide feedback as soon as possible."
