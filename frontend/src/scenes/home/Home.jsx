@@ -121,7 +121,7 @@ const Home = () => {
             <section className="section hero has-bg-image" aria-label="home" style={{ "backgroundImage": `url(${heroBg})` }}>
               <div className="container">
                 <div className="hero-content">
-                  <h1 className="h1 section-title" style={{ "fontSize": "50px" }}>
+                  <h1 className="h1 section-title" >
                     The Best Website for students to <span className="span">Search</span> for Software Resources.
                   </h1>
                   <p className="hero-text">
