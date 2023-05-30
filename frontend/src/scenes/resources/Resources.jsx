@@ -14,14 +14,30 @@ import os from '../../Images/open_source.png'
 import './resources.css'
 import { Helmet } from 'react-helmet'
 import ResourceCard from '../../component/resourceCard/ResourceCard'
+import { useHistory } from 'react-router-dom'
 
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 
 const Resources = () => {
+
+  const history = useHistory()
+
   return (
     <div className='resources'>
       <Helmet>
         <title>Resources</title>
       </Helmet>
+
+
+      <div className="resources-head">
+        <div className="resources_wave"></div>
+        <div className="resources_wave"></div>
+        <div className="resources_wave"></div>
+      </div>
+      <ArrowBackIcon className="back_button" onClick={() => history.push("/")} style={{ height: 30, width: 30, touchAction: true, marginLeft: '30px', marginTop: '30px' }} />
+
+      <div className="resources_h1"><h1>RESOURCES</h1></div>
+
 
       <div className="card_container">
         <ResourceCard
@@ -45,7 +61,7 @@ const Resources = () => {
         <ResourceCard
           image={cyber}
           title='Cyber Security'
-          content='Computer security, cybersecurity, or information technology security is the protection of computer systems and networks from attack by malicious actors.'
+          content='Computer security, cybersecurity, or information technology security is the protection of computer systems and networks from attacks by malicious actors.'
           href='https://github.com/Resourcio-Community/CyberSecurity-resources'
         />
         <ResourceCard
@@ -63,34 +79,35 @@ const Resources = () => {
         <ResourceCard
           image={web3}
           title='Web3 & Blockchain'
-          content='A blockchain is a type of distributed ledger technology (DLT) that consists of growing lists of records, called blocks, that are securely linked together using cryptography.Each block contains a cryptographic hash of the previous block, a timestamp, and transaction data. The timestamp proves that the transaction data existed when the block was created.'
+          content='A blockchain is a type of distributed ledger technology (DLT) that consists of growing lists of records, called blocks, that are securely linked together using cryptography. Each block contains a cryptographic hash of the previous block, a timestamp, and transaction data. The timestamp proves that the transaction data existed when the block was created.'
           href='https://github.com/Resourcio-Community/Blockchain-resources-and-web3'
         />
         <ResourceCard
           image={cpp}
           title='Competitive Programming'
-          content='Competitive programming is solving well-defined problems by writing computer programs under specified limits.Each problem has some specifications which need to be satisfied to solve the problem. The participants (known as competitive programmers) are required to solve these problems by writing efficient code.'
+          content='Competitive programming is solving well-defined problems by writing computer programs under specified limits.   Each problem has some specifications which need to be satisfied to solve the problem. The participants (known as competitive programmers) are required to solve these problems by writing efficient code.'
           href='https://github.com/Resourcio-Community/Competitive-Programming-Resources'
         />
         <ResourceCard
           image={dsa}
           title='Data Structure & Algorithms'
-          content='Data Structure is a way of collecting and organising data in such a way that we can perform operations on these data in an effective way.An algorithm is a finite set of instructions or logic, written in order, to accomplish a certain predefined task. Algorithm is not the complete code, it is just the core logic of a problem, which can be expressed either as an informal high level description as pseudocode or using a flowchart.'
+          content='Data Structure is a way of collecting and organizing data in such a way that we can perform operations on these data in an effective way. An algorithm is a finite set of instructions or logic, written in order, to accomplish a certain predefined task. An algorithm is not the complete code, it is just the core logic of a problem, which can be expressed either as an informal high-level description as pseudocode or using a flowchart.'
           href='https://github.com/Resourcio-Community/DSA-resources'
         />
         <ResourceCard
           image={hackathon}
           title='Hackathon'
-          content='Hacking is creative problem solving.A hackathon is any event of any duration where people come together to solve problems.Participants typically form groups of about 2-5 individuals, take out their laptops, and dive into problems. Training workshops are a great parallel track especially for newcomers but also for all participants.'
+          content='Hacking is creative problem-solving. A hackathon is any event of any duration where people come together to solve problems.  Participants typically form groups of about 2-5 individuals, take out their laptops, and dive into problems. Training workshops are a great parallel track, especially for newcomers but also for all participants.'
           href='https://discord.gg/mB6jpZtsN3'
         />
         <ResourceCard
           image={os}
           title='Open-Source'
-          content='Open source is a term that originally referred to open source software (OSS).OSS is software that is distributed with its source code, making it available for use, modification, and distribution with its original rights. Source code is the part of software that most computer users don’t ever see; it’s the code computer programmers manipulate to control how a program or application behaves. Programmers who have access to source code can change a program by adding to it, changing it, or fixing parts of it that aren’t working properly.'
+          content='Open source is a term that originally referred to open source software (OSS).OSS is software that is distributed with its source code, making it available for use, modification, and distribution with its original rights. Source code is  part of the software that most computer users don’t ever see; it’s the code computer programmers manipulate to control how a program or application behaves. Programmers who have access to source code can change a program by adding to it, changing it, or fixing parts of it that aren’t working properly.'
           href='https://discord.gg/bDk4ntUguh'
         />
       </div>
+
     </div>
   )
 }

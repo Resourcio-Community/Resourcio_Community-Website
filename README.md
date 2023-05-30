@@ -12,8 +12,8 @@
 [![Open Source Love svg1](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)
 ![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat)
 ![Visitors](https://api.visitorbadge.io/api/visitors?path=Resourcio-Community/Resourcio_Community-Website&countColor=%23263759&style=flat)
-![GitHub forks](https://img.shields.io/github/forks/Resourcio-Community/Resourcio_Community-Website)
-![GitHub Repo stars](https://img.shields.io/github/stars/Resourcio-Community/Resourcio_Community-Website)
+![GitHub forks](https://img.shields.io/github/forks/Resourcio-Community/Resourcio_Community-Website?style=flat&logo=github)
+![GitHub Repo stars](https://img.shields.io/github/stars/Resourcio-Community/Resourcio_Community-Website?style=flat&logo=github)
 ![GitHub contributors](https://img.shields.io/github/contributors/Resourcio-Community/Resourcio_Community-Website)
 ![GitHub last commit](https://img.shields.io/github/last-commit/Resourcio-Community/Resourcio_Community-Website)
 ![GitHub repo size](https://img.shields.io/github/repo-size/Resourcio-Community/Resourcio_Community-Website)
@@ -27,22 +27,27 @@
  <br>
 
  # One stop hub for all Engineers
-<!-- TOC -->
+ 
+ 
+<!-- Table of Contents -->
 
-## Table of Contents
-- [Key Features 📌](#key-features-)
-- [Tech Stacks used 💻](#tech-stacks-used-)
-- [Screenshots](#screenshots)
-- [Getting Involved](#getting-involved)
-  - [Contribute code](#contribute-code)
-  - [Report bugs and suggest features](#report-bugs-and-suggest-features)
-  - [Ask for help](#ask-for-help)
-- [Getting Started with Resourcio_Community-Website](#getting-started-with-resourcio_community-website)
-  - [Setup project in your local environment](#to-setup-this-project-in-your-local-environment)
-  - [Available Scripts](#available-scripts)
-- [Learn More](#learn-more)
-- [Support](#support)
-
+<details>
+  <summary>Table of Contents</summary>
+  <ol>
+    <li>
+      <a href="#key-features-">Key Features 📌</a>
+      <ul>
+        <li><a href="#tech-stacks-used-">Tech Stacks used 💻</a></li>
+      </ul>
+    </li>
+    <li><a href="#screenshots">Screenshots</a></li>
+    <li><a href="#getting-involved">Getting Involved</a></li>
+    <li><a href="#contribute-code">Contributing</a></li>
+    <li><a href="#getting-started-with-resourcio_community-website">Set Up</a></li>
+    <li><a href="#learn-more">Learn More</a></li>
+    <li><a href="#connect">Conect With US</a></li>
+  </ol>
+</details>
 
 <!-- /TOC -->
 
@@ -163,33 +168,18 @@ You don't have to ever use `eject`. The curated feature set is suitable for smal
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-
-
 <br>
 
+### Connect
 
-### Support
+<h4 align="center">Join Resourcio Community</h4>
+<p align="center">
+  <a target="_blank"href="https://www.linkedin.com/company/resourcio-community2022/"><img src="https://img.shields.io/badge/linkedin-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
+  <a target="_blank"href="https://twitter.com/ResourcioC"><img src="https://img.shields.io/badge/twitter-%231DA1F2.svg?&style=for-the-badge&logo=twitter&logoColor=white" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
+  <a target="_blank" href="https://chat.whatsapp.com/Km6AX9di04ZLIpFEcXTiNK"><img src="https://img.shields.io/badge/whatsapp-c737B5.svg?&style=for-the-badge&logo=gmail&logoColor=white" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
+  <a target="_blank" href="https://www.instagram.com/resourciocommunity22/"><img src="https://img.shields.io/badge/Instagram-4405F?style=for-the-badge&logo=instagram&logoColor=white" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
+ <a target="_blank" href="https://www.facebook.com/profile.php?id=100088472180461"><img src="https://img.shields.io/badge/Facebook-E4405F?style=for-the-badge&logo=instagram&logoColor=white" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
+</p>
 
 <h3 align="center">Show some ❤️ by 🌟 this awesome repository!</h3>
 
