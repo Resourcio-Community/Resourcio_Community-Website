@@ -8,13 +8,29 @@
 }
 
 .footer-brand-text {
+    position: relative;
     margin-block: 20px;
+    right: 28rem;
+    top:-2rem;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.footer-brand >img{
+    position:relative;
+    top:-3rem;
+    right: 45rem;
+    display: block;
+    margin: 0 auto;
 }
 
 .footer-brand .wrapper {
-    display: flex;
+    display: flex; 
     align-items: center;
     gap: 5px;
+    position: relative;
+    bottom: -1rem;
+    left: -4rem;
 }
 
 .footer-brand .wrapper:last-child {
@@ -30,68 +46,82 @@
     color: var(--kappel);
 }
 
-/* .footer-list-title {
-    color: var(--white);
-    font-family: var(--ff-league_spartan);
-    font-size: var(--fs-3);
-    font-weight: var(--fw-600);
-    margin-block-end: 10px;
-}
-
-
-.footer-list .footer-link {
-    padding-block: 5px;
-} */
-
 .wrapper-1{
     margin: 0 10px 0 7px;
 }
 
-
-/* .newsletter-form {
-    margin-block: 20px 35px;
-}
-
-.newsletter-form .email-field {
-    width: 70%;
-    background-color: var(--white);
-    padding: 12px;
-    font-size: var(--fs-5);
-    border-radius: var(--radius-5);
-    margin-block-end: 20px;
-    border: none;
-    outline: none;
-}
-
-.newsletter-form .btn {
-    height: 54px;
-    justify-content: center;
-} */
-
-.social-list {
+.footer-brand .wrapper .social-list {
+    position: relative;
+    right: -63rem;
     display: flex;
     gap: 25px;
+    top:-7rem;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
 }
 
 .social-link {
     font-size: 25px;
     color: lightyellow;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
 }
 
-.social-link:hover {
-    color: white;
+/* Facebook */
+.social-link.facebook:hover {
+    color: #3b5998;
     transform: scale(1.1);
-    transition: all 200ms ease-in;
-}
+  }
+  
+  /* LinkedIn */
+  .social-link.linkedin:hover {
+    color: #0077b5;
+    transform: scale(1.1);
+  }
+  
+  /* Instagram */
+  .social-link.instagram:hover {
+    color: #c32aa3;
+    transform: scale(1.1);
+  }
+  
+  /* Twitter */
+  .social-link.twitter:hover {
+    color: #1da1f2;
+    transform: scale(1.1);
+  }
+  
+  /* GitHub */
+  .social-link.github:hover {
+    color: #333;
+    transform: scale(1.1);
+  }
+  
+  /* Discord */
+  .social-link.discord:hover {
+    color: #7289da;
+    transform: scale(1.1);
+  }
 
-.footer-bottom {
-    border-block-start: 1px solid var(--eerie-black-1);
-    padding-block: 30px;
-}
+.footer-line {
+    border-top: 1px solid #ccc;
+    margin-bottom: 80px;
+    position: relative;
+    top:-8rem;
+    border-top: 1px solid #ccc;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
 
 .copyright {
     cursor: default;
     text-align: center;
+    position: relative;
+    top:-4rem;
 }
 
 .copyright-link {
@@ -99,61 +129,40 @@
     display: inline-block;
 }
 
-
-@media (min-width: 575px) {
-
-    .footer-brand,
-    .footer-list:last-child {
-        grid-column: 1 / 3;
+  @media (max-width: 768px) {
+    .footer-brand .wrapper:last-child {
+      margin-top: 40px;
     }
 
-    /* .newsletter-form {
+    .footer-brand>img{
+        left:2px;
+    }
+
+    .footer-brand-text{
         display: flex;
-        align-items: center;
-        gap: 10px;
+        flex-wrap: wrap;
+        left:2px;
     }
 
-    .newsletter-form .email-field {
-        margin-block-end: 0;
+    .footer-brand .wrapper{
+        left:1rem;
+        top:-2rem;
     }
+  
+    .footer-brand .wrapper .social-list {
+      position: relative;
+      left: 0.3rem;
+      top: -1.9rem;
 
-    .newsletter-form .btn {
-        min-width: max-content;
-    } */
-}
-
-
-@media (min-width: 768px) {
-
-    .footer-brand,
-    .footer-list:last-child {
-        grid-column: auto / auto;
     }
-
-    /* .newsletter-form .btn {
-        padding-block: 10px;
-    } */
-
-    /* .footer-list {
-        width: max-content;
-    } */
-
-    .footer-top .container {
-        display: flex;
-        flex-direction: column;
+  
+    .footer-brand {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
-}
-
-
-@media (min-width: 992px) {
-
-    .footer-top .container {
-        flex-direction: row;
+  
+    .footer-brand-logo {
+      margin-bottom: 10px;
     }
-}
-
-@media (max-width: 407px){
-    .wrapper-1{
-        display: none;
-    }
-}
+  }
