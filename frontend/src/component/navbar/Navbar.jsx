@@ -11,8 +11,7 @@ const Navbar = () => {
 
     const [navbar, setNavbar] = useState(false)
     const changeBackground = () => {
-        // console.log(window.scrollY)
-        if (window.scrollY >= 10) {
+        if (window.scrollY >= 100) {
             setNavbar(true)
         } else {
             setNavbar(false)
@@ -21,7 +20,7 @@ const Navbar = () => {
     useEffect(() => {
         changeBackground()
         window.addEventListener("scroll", changeBackground)
-    })
+    }, [])
 
 
 
@@ -44,7 +43,7 @@ const Navbar = () => {
     return (
         <nav className={navbar ? "navbar" : "navbar_scroll"}>
             <div className='community_logo'>
-                <a href='#'><img src={logo} height="100" width="100" /></a>
+                <a href='#'><img className='community_img' src={logo} height="105" width="105" /></a>
             </div>
             <ul className="nav-links">
                 <input type="checkbox" id="checkbox_toggle" onClick={hidebodyOverflow} ref={checkboxRef} />
