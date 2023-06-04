@@ -1,4 +1,4 @@
-name: auto_close_empty_issues
+name: Auto Close Empty Issues
 
 on:
   issues:

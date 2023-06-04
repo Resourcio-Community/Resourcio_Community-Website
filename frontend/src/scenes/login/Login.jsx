@@ -20,9 +20,6 @@ const Login = () => {
 
     const [btnDisabled, setBtnDisabled] = useState(false)
     const [hideshowPassword, setHideShowPassword] = useState(false)
-    const changeInputType = () => {
-        setHideShowPassword(!hideshowPassword)
-    }
 
     const [validatePassword, setValidatePassword] = useState()
     const [signupRes, setSignupRes] = useState({})
@@ -40,11 +37,17 @@ const Login = () => {
             setSignupResReceived(false)
             setBtnDisabled(true)
             try {
-                const res = await axios.post("/auth/register", { name, username, email, password })
+                const res = await axios.post("/auth/register", {
+                    name: name.trim(),
+                    username: username.trim(),
+                    email,
+                    password
+                })
                 setSignupRes(res)
 
                 setTimeout(() => {
                     gotoSignin()
+                    setSignupRes({})
                 }, 1500)
 
                 setName('')
@@ -125,7 +128,7 @@ const Login = () => {
                             />
                         </div>
                         <div className="input-field password">
-                            <i className="fas fa-eye" onClick={changeInputType}></i>
+                            <i className="fas fa-eye" onClick={() => setHideShowPassword(!hideshowPassword)}></i>
                             <input
                                 type={!hideshowPassword ? "password" : "text"}
                                 placeholder="Password"
@@ -153,7 +156,7 @@ const Login = () => {
                         {signupRes.status === 201 && (
                             <div className="usercreated">{signupRes.data.status}</div>
                         )}
-                        <div className="input-field">
+                        <div className="input-field" style={{ border: signupRes.data?.name ? '1px solid #FF1818' : 'none' }}>
                             <i className="fab fa-adn"></i>
                             <input
                                 type="text"
@@ -161,7 +164,7 @@ const Login = () => {
                                 value={name}
                                 autoComplete="off"
                                 spellCheck="false"
-                                onChange={(e) => setName(e.target.value.trim())}
+                                onChange={(e) => setName(e.target.value)}
                             />
                             {signupRes.status === 500 && (
                                 <div className="errormsg">
@@ -169,7 +172,7 @@ const Login = () => {
                                 </div>
                             )}
                         </div>
-                        <div className="input-field">
+                        <div className="input-field" style={{ border: signupRes.data?.username ? '1px solid #FF1818' : 'none' }}>
                             <i className="fas fa-user"></i>
                             <input
                                 type="text"
@@ -178,7 +181,7 @@ const Login = () => {
                                 autoComplete="off"
                                 spellCheck="false"
                                 required
-                                onChange={(e) => setUsername(e.target.value.trim())}
+                                onChange={(e) => setUsername(e.target.value)}
                             />
                             {signupRes.status === 500 && (
                                 <div className="errormsg">
@@ -186,7 +189,7 @@ const Login = () => {
                                 </div>
                             )}
                         </div>
-                        <div className="input-field">
+                        <div className="input-field" style={{ border: signupRes.data?.email ? '1px solid #FF1818' : 'none' }}>
                             <i className="fas fa-envelope"></i>
                             <input
                                 type="email"
@@ -203,10 +206,10 @@ const Login = () => {
                                 </div>
                             )}
                         </div>
-                        <div className="input-field password">
+                        <div className="input-field password" style={{ border: validatePassword === false ? '1px solid #FF1818' : 'none' }}>
                             <i
                                 className="fas fa-eye"
-                                onClick={changeInputType}
+                                onClick={() => setHideShowPassword(!hideshowPassword)}
                             ></i>
                             <input
                                 type={!hideshowPassword ? "password" : "text"}

@@ -1,9 +1,6 @@
 name: Greetings
 
 on:
-  fork:
-  push:
-    branches: [react,GSSOC23]
   issues:
     types: [opened]
   pull_request_target:
