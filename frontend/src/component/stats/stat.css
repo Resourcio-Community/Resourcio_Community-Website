@@ -14,6 +14,9 @@
     color: hsl(var(--color));
     font-size: var(--fs-2);
     line-height: 1.1;
+    display: flex;
+    place-content: center;
+    cursor: none;
 }
 
 .stats-card .card-text {
