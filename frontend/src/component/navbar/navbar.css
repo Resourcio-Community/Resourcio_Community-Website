@@ -97,13 +97,20 @@ input[type="checkbox"] {
         display: none;
         background-color: white;
         position: absolute;
-        top: 80px;
         left: 0;
         width: 100vw;
         height: 100vh;
         min-height: 100%;
         z-index: 10;
         min-width: 365px;
+    }
+
+    .navbar .menu{
+        top: 80px;
+    }
+
+    .navbar_scroll .menu{
+        top: 100px;
     }
 
     .menu li {
