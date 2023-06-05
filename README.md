@@ -76,7 +76,7 @@
 <br/>
 ![About-Page](https://github.com/Resourcio-Community/Resourcio_Community-Website/assets/100519291/66727891-944a-4561-aaf2-d7d2df961cbb)
 
- <p align ="right"><a href="#top">Back to top</a></p>
+ <p align ="right"><a href="#top">🔼 Back to top</a></p>
  
 ## Getting Involved
 <p>We welcome contributions from the community and are always looking for ways to improve Resourcio Community. Here's how you can get involved:</p>
@@ -133,7 +133,7 @@ npm start
 ```
 - Good to go!
  
-<p align ="right"><a href="#top">Back to top</a></p>
+<p align ="right"><a href="#top">🔼 Back to top</a></p>
  
 ### Available Scripts
 
@@ -186,5 +186,5 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 </p>
 
 <h3 align="center">Show some ❤️ by 🌟 this awesome repository!</h3>
- <p align ="right"><a href="#top">Back to top</a></p>
+ <p align ="right"><a href="#top">🔼 Back to top</a></p>
  </div>
