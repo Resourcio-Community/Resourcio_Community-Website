@@ -46,3 +46,7 @@
     margin-inline: auto;
     border-radius: var(--radius-5);
 }
+
+.grid-list .category-card {
+    height: 100%;
+}
