@@ -1,50 +1,56 @@
 import mongoose from "mongoose"
 
-const UserSchema = new mongoose.Schema({
+const UserSchema = new mongoose.Schema(
+  {
     name: {
-        type: String,
-        required: [true, 'Name is required'],
-        minLength: [6, 'Must be at least 6 characters'],
-        maxLength: [30, 'Max limit 30 characters']
+      type: String,
+      required: [true, "Name is required"],
+      minLength: [6, "Must be at least 6 characters"],
+      maxLength: [30, "Max limit 30 characters"]
     },
     username: {
-        type: String,
-        required: [true, 'Username is required'],
-        minLength: [8, 'Must be at least 8'],
-        maxLength: [20, 'Max 20 characters']  // {VALUE} to get the input
+      type: String,
+      required: [true, "Username is required"],
+      minLength: [8, "Must be at least 8"],
+      maxLength: [20, "Max 20 characters"] // {VALUE} to get the input
     },
     email: {
-        type: String,
-        lowercase: true,
-        required: [true, 'Email is required']
+      type: String,
+      lowercase: true,
+      required: [true, "Email is required"],
+      validate: {
+        validator: function (value) {
+          // Regular expression for email validation
+          return /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(value)
+        },
+        message: "Please enter a valid email address"
+      }
     },
     password: {
-        type: String,
-        required: true
+      type: String,
+      required: true
     },
     isAdmin: {
-        type: Boolean,
-        default: false
+      type: Boolean,
+      default: false,
     }
-},
-    {
-        timestamps: true
-    }
+  },
+  {
+    timestamps: true
+  }
 )
 
 /* Unique email validation */
-UserSchema.path('email').validate(async (email) => {
-    const emailCount = await mongoose.models.User.countDocuments({ email })
-    return !emailCount
-}, 'Email already exists')
+UserSchema.path("email").validate(async (email) => {
+  const emailCount = await mongoose.models.User.countDocuments({ email })
+  return !emailCount
+}, "Email already exists")
 
 /* Unique username validation */
-UserSchema.path('username').validate(async (username) => {
-    const usernameCount = await mongoose.models.User.countDocuments({ username })
-    return !usernameCount
-}, 'Username already exists')
+UserSchema.path("username").validate(async (username) => {
+  const usernameCount = await mongoose.models.User.countDocuments({ username })
+  return !usernameCount
+}, "Username already exists")
 
-
-
-const User = mongoose.model('User', UserSchema)
+const User = mongoose.model("User", UserSchema)
 export default User

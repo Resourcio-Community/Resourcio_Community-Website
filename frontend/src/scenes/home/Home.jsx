@@ -110,11 +110,11 @@ const Home = () => {
             <section className="section hero has-bg-image" aria-label="home" style={{ "backgroundImage": `url(${heroBg})` }}>
               <div className="container">
                 <div className="hero-content">
-                  <h1 className="h1 section-title" style={{ "fontSize": "50px" }}>
+                  <h1 className="h1 section-title" >
                     The Best Website for students to <span className="span">Search</span> for Software Resources.
                   </h1>
                   <p className="hero-text">
-                    Hello future engineers!<br />Welcome to <b>Resourcio Community</b>!! A one stop hub for all your
+                    Hello future engineers!<br />Welcome to <b>Resourcio Community</b>!! A one-stop hub for all your
                     resources and queries
                     regarding different software languages.
                   </p>
@@ -207,9 +207,9 @@ const Home = () => {
                   <p className="section-text" style={{ "color": "var(--gray-web)" }}>
                     Through Resourcio we have tried to bring in different resources related to software development and
                     other
-                    different fields related to software enginnering in a single place. We want to provide students a single platform where
+                    different fields related to software engineering  in a single place. We want to provide students a single platform where
                     they
-                    can find all new resources and they dont need to browse the web extensively for learning them.
+                    can find all new resources and they don't need to browse the web extensively for learning them.
                   </p>
                   <ul className="about-list" style={{ "fontSize": "1.5rem" }}>
                     <li className="about-item">
@@ -284,15 +284,15 @@ const Home = () => {
               <div className="container">
                 <ul className="grid-list">
                   <li>
-                    <Stat
-                      cardTitle="20+"
+                    <Stat 
+                      cardTitle={20}
                       cardText="Software Languages Covered"
                       style="170, 75%, 41%"
                     />
                   </li>
                   <li>
                     <Stat
-                      cardTitle="200+"
+                      cardTitle={200}
                       cardText="Resources Added"
                       style="351, 83%, 61%"
                       fontSize="35"
@@ -300,7 +300,7 @@ const Home = () => {
                   </li>
                   <li>
                     <Stat
-                      cardTitle="10+"
+                      cardTitle={10}
                       cardText="Servers Included"
                       style="260, 100%, 67%"
                       fontSize="35"
@@ -308,7 +308,7 @@ const Home = () => {
                   </li>
                   <li>
                     <Stat
-                      cardTitle="1000+"
+                      cardTitle={1000}
                       cardText="Members Visited"
                       style="42, 94%, 55%"
                       fontSize="35"

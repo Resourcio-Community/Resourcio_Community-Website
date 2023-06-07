@@ -5,11 +5,29 @@
 }
 
 .dev_image {
+    --f: 0.1;
+    --r: 10px;
+
+    --_f: calc(100% * var(--f)) / (1 + var(--f));
+    --_a: calc(90deg * var(--f));
+
     width: 180px;
     height: 180px;
+    aspect-ratio: calc(1 + var(--f));
     border-radius: 50%;
     margin-bottom: 18px;
     object-fit: cover;
+    transition: all 0.3s ease;
+
+    clip-path: inset(0 var(--_f) 0 0 round var(--r));
+    transform: perspective(400px) var(--_t, rotateY(var(--_a)));
+}
+
+.dev_image:hover {     
+    border: 10px solid rgba(26, 183, 157, 1); 
+
+    clip-path: inset(0 0 0 var(--_f) round var(--r));
+    --_t: translateX(calc(-1 * var(--_f))) rotateY(calc(-1 * var(--_a)));
 }
 
 .dev_role {
