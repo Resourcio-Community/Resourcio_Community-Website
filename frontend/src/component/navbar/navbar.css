@@ -1,5 +1,5 @@
 li {
-    list-style: none;
+    list-style: disc;
     cursor: pointer;
 }
 
@@ -40,7 +40,7 @@ li {
 }
 
 .navbar_scroll .community_img{
-    transform: scale(1);
+    transform: scale(0.7);
     transition: all 200ms ease-in-out;
 }
 
@@ -95,7 +95,7 @@ input[type="checkbox"] {
 
     .menu {
         display: none;
-        background-color: white;
+        background-color: #2AB983;
         position: absolute;
         top: 80px;
         left: 0;
