@@ -15,12 +15,32 @@ import './resources.css'
 import { Helmet } from 'react-helmet'
 import ResourceCard from '../../component/resourceCard/ResourceCard'
 import { useHistory } from 'react-router-dom'
+import axios from 'axios'
 
-import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+import ArrowBackIcon from '@mui/icons-material/ArrowBack'
+import { useState, useEffect } from 'react'
+
 
 const Resources = () => {
 
   const history = useHistory()
+  const axiosInstance = axios.create({ baseURL: process.env.REACT_APP_GITHUB_API_URL })
+
+  const [repos, setRepos] = useState(null)
+
+  const getRepos = async () => {
+    const res = await axiosInstance.get(`/orgs/Resourcio-Community/repos?type=private`, {
+      headers: {
+        'Authorization': `Bearer ${process.env.REACT_APP_GITHUB_PERSONAL_ACCESS_TOKEN}`
+      }
+    })
+    setRepos(res.data)
+  }
+
+  useEffect(() => {
+    getRepos()
+  }, [])
+
 
   return (
     <div className='resources'>
@@ -74,7 +94,7 @@ const Resources = () => {
           image={devops}
           title='DevOps'
           content='DevOps is a set of practices that combines software development and IT operations.'
-          href='https://github.com/Resourcio-Community/Devops-resources'
+          href={repos?.[1].html_url}
         />
         <ResourceCard
           image={web3}
