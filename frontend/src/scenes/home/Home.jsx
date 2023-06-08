@@ -13,8 +13,8 @@ import video from '../../Images/video.mp4'
 import Navbar from "../../component/navbar/Navbar"
 import Category from '../../component/category/Category'
 import Stat from '../../component/stats/Stat'
-import Team from '../../component/team/team'
 import Footer from '../../component/footer/Footer'
+import Team from '../../component/team/Team'
 import Notice from '../../component/notice/Notice'
 import Spinner from '../../component/spinner/Spinner'
 import LoadingScreen from '../../component/loadingScreen/LoadingScreen'
@@ -284,7 +284,7 @@ const Home = () => {
               <div className="container">
                 <ul className="grid-list">
                   <li>
-                    <Stat 
+                    <Stat
                       cardTitle={20}
                       cardText="Software Languages Covered"
                       style="170, 75%, 41%"
@@ -318,9 +318,8 @@ const Home = () => {
               </div>
             </section>
 
-          <Team/>
-          
-
+            <Team />
+            
           </article >
         </main >
 
