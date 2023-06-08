@@ -8,7 +8,7 @@ li {
     align-items: center;
     justify-content: space-between;
     padding: 20px;
-    height: 100px;
+    height: 80px;
     min-width: 365px;
     width: 100%;
     position: fixed;
@@ -17,6 +17,12 @@ li {
 
     z-index: 10;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    transition: height 200ms ease-in;
+}
+
+.navbar .community_img{
+    transform: scale(0.8);
+    transition: all 200ms ease-in-out;
 }
 
 .navbar_scroll {
@@ -30,6 +36,12 @@ li {
     background-color: white;
     z-index: 10;
     position: fixed;
+    transition: height 200ms ease-out;
+}
+
+.navbar_scroll .community_img{
+    transform: scale(1);
+    transition: all 200ms ease-in-out;
 }
 
 /* NAVBAR MENU */
@@ -58,7 +70,6 @@ input[type="checkbox"] {
 /*HAMBURGER MENU*/
 .hamburger {
     display: none;
-    /* font-size: 30px; */
     user-select: none;
     cursor: pointer;
 }
@@ -66,7 +77,7 @@ input[type="checkbox"] {
 .community_logo {
     display: grid;
     place-items: center;
-    margin-left: 10px;
+    margin-left: 8px;
     margin-top: 10px;
 }
 
@@ -76,7 +87,6 @@ input[type="checkbox"] {
 
     .community_logo {
         margin-left: -10px;
-        margin-top: 10px;
     }
 
     .navbar {
@@ -87,13 +97,20 @@ input[type="checkbox"] {
         display: none;
         background-color: white;
         position: absolute;
-        top: 95px;
         left: 0;
         width: 100vw;
         height: 100vh;
         min-height: 100%;
         z-index: 10;
         min-width: 365px;
+    }
+
+    .navbar .menu{
+        top: 80px;
+    }
+
+    .navbar_scroll .menu{
+        top: 100px;
     }
 
     .menu li {
@@ -105,10 +122,6 @@ input[type="checkbox"] {
         transition: 0.3s ease;
         background: rgb(249, 227, 227);
     }
-
-    /* input[type="checkbox"]:checked+body {
-        overflow: hidden;
-    } */
 
     input[type="checkbox"]:checked~.menu {
         display: flex;

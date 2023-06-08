@@ -130,7 +130,7 @@ form.sign-in-form {
 
 .password i:hover {
   cursor: pointer;
-  color: #006aff;
+  color:  #006aff ;
 }
 
 
@@ -140,7 +140,7 @@ form.sign-in-form {
   outline: none;
   height: 49px;
   border-radius: 49px;
-  background: #5995fd;
+  background: #2AB983;
   color: #fff;
   text-transform: uppercase;
   font-weight: 600;
@@ -150,16 +150,16 @@ form.sign-in-form {
 }
 
 .loginpage-btn:disabled {
-  background: #78b4fc;
+  background: #2AB983;
   cursor: default;
 }
 
 .loginpage-btn:disabled:hover {
-  background: #78b4fc;
+  background: #2AB983;
 }
 
 .loginpage-btn:hover {
-  background: #4d84e2;
+  background:  #4fd11b;
 }
 
 .panels-container {
@@ -180,7 +180,7 @@ form.sign-in-form {
   top: -10%;
   right: 48%;
   transform: translateY(-50%);
-  background-image: linear-gradient(-45deg, #4481eb 0%, #04befe 100%);
+  background-image: linear-gradient(-45deg,  #2AB983 0%, #2AB983 100%);
   transition: 1.1s ease-in-out;
   border-radius: 50%;
   z-index: 6;

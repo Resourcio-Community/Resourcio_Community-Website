@@ -1,36 +1,44 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react'
 import './stat.css'
-
+import NumberCounter from 'number-counter'
 
 const Stat = ({ style, fontSize, cardTitle, cardText }) => {
-    const [count, setCounter] = useState(0);
+  const [delay, setDelay] = useState(null)
 
-    useEffect(() => {
-        const interval = setInterval(() => {
-            setCounter(prevCounter => {
-                if (prevCounter <  cardTitle) {
-                    return prevCounter + 1;
-                } else {
-                    clearInterval(interval); // Stop the interval when counter reaches 10
-                    return prevCounter;
-                }
-            });
-        }, 2000 / (cardTitle - 0));
+  useEffect(() => {
+    const handleScroll = () => {
+      const cardElement = document.getElementById('stats-card')
+      const cardPosition = cardElement.getBoundingClientRect()
+      const shouldStartAnimation = cardPosition.top <= window.innerHeight * 0.8; 
 
-        return () => {
-            clearInterval(interval);
-        };
-    }, [cardTitle]); // Add [] as the dependency array to run the effect only once
+      if (shouldStartAnimation && delay === null) {
+        setDelay(3)
+      }
+    }
 
+    window.addEventListener('scroll', handleScroll)
 
-    return (
-        <div className="stats-card" style={{ "--color": `${style}` }}>
-            {/* <h3 className="card-title" >{cardTitle}</h3> */}
-            <h3 className="card-title" >{count} + </h3>
-            <p className="card-text"><span style={{ "fontSize": `${fontSize}px` }}>{cardText}</span></p>
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+    }
+  }, [delay])
 
-        </div>
-    )
-}
+  return (
+    <div className="stats-card" style={{ "--color": `${style}` }} id="stats-card">
+      <h3 className="card-title">
+        {delay !== null ? (
+          <NumberCounter end={cardTitle} start={0} delay={delay} />
+        ) : (
+          cardTitle
+        )}
+        +
+      </h3>
+      <p className="card-text">
+        <span style={{ fontSize: `${fontSize}px` }}>{cardText}</span>
+      </p>
+    </div>
+  );
+};
 
-export default Stat
+export default Stat;
+

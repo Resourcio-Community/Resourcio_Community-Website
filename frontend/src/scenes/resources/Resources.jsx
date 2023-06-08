@@ -15,12 +15,22 @@ import './resources.css'
 import { Helmet } from 'react-helmet'
 import ResourceCard from '../../component/resourceCard/ResourceCard'
 import { useHistory } from 'react-router-dom'
-
+import { useRef } from 'react'
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 
 const Resources = () => {
 
   const history = useHistory()
+  const backtopRef = useRef()
+  window.addEventListener('scroll', () => {
+    if (backtopRef.current !== null) {
+      if (window.scrollY > 400) {
+        backtopRef.current?.classList.add("active")
+      } else {
+        backtopRef.current?.classList.remove("active")
+      }
+    }
+  })
 
   return (
     <div className='resources'>
@@ -106,6 +116,11 @@ const Resources = () => {
           content='Open source is a term that originally referred to open source software (OSS).OSS is software that is distributed with its source code, making it available for use, modification, and distribution with its original rights. Source code is  part of the software that most computer users don’t ever see; it’s the code computer programmers manipulate to control how a program or application behaves. Programmers who have access to source code can change a program by adding to it, changing it, or fixing parts of it that aren’t working properly.'
           href='https://discord.gg/bDk4ntUguh'
         />
+         <a href="#" className="back-top-btn" aria-label="back top top" ref={backtopRef}>
+          <ion-icon name="chevron-up" aria-hidden="true"></ion-icon>
+        </a>
+
+
       </div>
 
     </div>

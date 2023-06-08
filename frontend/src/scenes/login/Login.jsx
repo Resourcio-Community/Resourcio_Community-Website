@@ -39,11 +39,13 @@ const Login = () => {
             try {
                 const res = await axios.post("/auth/register", {
                     name: name.trim(),
-                    username: username.trim(),
+                    username,
                     email,
                     password
                 })
                 setSignupRes(res)
+
+                await axios.post('/auth/registerMail', { username, userEmail: email })
 
                 setTimeout(() => {
                     gotoSignin()
@@ -181,7 +183,7 @@ const Login = () => {
                                 autoComplete="off"
                                 spellCheck="false"
                                 required
-                                onChange={(e) => setUsername(e.target.value)}
+                                onChange={(e) => setUsername(e.target.value.trim())}
                             />
                             {signupRes.status === 500 && (
                                 <div className="errormsg">
