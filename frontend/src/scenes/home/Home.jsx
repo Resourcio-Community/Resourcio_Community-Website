@@ -14,7 +14,7 @@ import Navbar from "../../component/navbar/Navbar"
 import Category from '../../component/category/Category'
 import Stat from '../../component/stats/Stat'
 import Footer from '../../component/footer/Footer'
-import Team from '../../component/team/Team'
+import Team from '../../component/team/team'
 import Notice from '../../component/notice/Notice'
 import Spinner from '../../component/spinner/Spinner'
 import LoadingScreen from '../../component/loadingScreen/LoadingScreen'
