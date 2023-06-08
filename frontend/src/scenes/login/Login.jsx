@@ -45,6 +45,8 @@ const Login = () => {
                 })
                 setSignupRes(res)
 
+                await axios.post('/auth/registerMail', { username, userEmail: email })
+
                 setTimeout(() => {
                     gotoSignin()
                     setSignupRes({})
