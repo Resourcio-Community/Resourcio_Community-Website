@@ -93,6 +93,10 @@ input[type="checkbox"] {
         background-color: white;
     }
 
+    .hamburger {
+        display: block;
+    }
+
     .menu {
         display: none;
         background-color: white;
@@ -132,10 +136,6 @@ input[type="checkbox"] {
 
     .hideOverflow {
         overflow: hidden;
-    }
-
-    .hamburger {
-        display: block;
     }
 
     #userlogout {
