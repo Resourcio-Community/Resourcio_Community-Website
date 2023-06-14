@@ -10,62 +10,74 @@ import { Link } from 'react-router-dom'
 import HomeRoundedIcon from '@mui/icons-material/HomeRounded';
 
 const Login = () => {
-    const loginRef = useRef()
-    const gotoSignup = () => {
-        loginRef.current.classList.add("sign-up-mode")
+  const loginRef = useRef()
+  const gotoSignup = () => {
+    loginRef.current.classList.add("sign-up-mode")
+  }
+  const gotoSignin = () => {
+    loginRef.current.classList.remove("sign-up-mode")
+  }
+
+  const [btnDisabled, setBtnDisabled] = useState(false)
+  const [hideshowPassword, setHideShowPassword] = useState(false)
+
+  const [validatePassword, setValidatePassword] = useState()
+  const [signupRes, setSignupRes] = useState({})
+  const [name, setName] = useState("")
+  const [username, setUsername] = useState("")
+  const [email, setEmail] = useState("")
+  const [password, setPassword] = useState("")
+  const [signupResReceived, setSignupResReceived] = useState()
+
+  const handleSignup = async (e) => {
+    e.preventDefault()
+
+    // Validate name input
+    const nameRegex = /^[a-zA-Z]+$/
+    const isNameValid = nameRegex.test(name.trim())
+
+    if (!isNameValid) {
+      // Show error message or handle invalid name
+      console.log('Invalid name. Only alphabets are allowed.')
+      return
     }
-    const gotoSignin = () => {
-        loginRef.current.classList.remove("sign-up-mode")
+
+    if (password.length >= 6) {
+      setValidatePassword(true)
+      setSignupResReceived(false)
+      setBtnDisabled(true)
+      try {
+        const res = await axios.post("/auth/register", {
+          name: name.trim(),
+          username,
+          email,
+          password
+        })
+        setSignupRes(res)
+
+        await axios.post('/auth/registerMail', { username, userEmail: email })
+
+        setTimeout(() => {
+          gotoSignin()
+          setSignupRes({})
+        }, 1500)
+
+        setName('')
+        setUsername('')
+        setEmail('')
+        setPassword('')
+      } catch (err) {
+        setSignupRes(err.response)
+      } finally {
+        setSignupResReceived(true)
+        setBtnDisabled(false)
+      }
+    } else {
+      setValidatePassword(false)
     }
+  }
 
-    const [btnDisabled, setBtnDisabled] = useState(false)
-    const [hideshowPassword, setHideShowPassword] = useState(false)
-
-    const [validatePassword, setValidatePassword] = useState()
-    const [signupRes, setSignupRes] = useState({})
-    const [name, setName] = useState("")
-    const [username, setUsername] = useState("")
-    const [email, setEmail] = useState("")
-    const [password, setPassword] = useState("")
-    const [signupResReceived, setSignupResReceived] = useState()
-
-    const handleSignup = async (e) => {
-        e.preventDefault()
-
-        if (password.length >= 6) {
-            setValidatePassword(true)
-            setSignupResReceived(false)
-            setBtnDisabled(true)
-            try {
-                const res = await axios.post("/auth/register", {
-                    name: name.trim(),
-                    username,
-                    email,
-                    password
-                })
-                setSignupRes(res)
-
-                await axios.post('/auth/registerMail', { username, userEmail: email })
-
-                setTimeout(() => {
-                    gotoSignin()
-                    setSignupRes({})
-                }, 1500)
-
-                setName('')
-                setUsername('')
-                setEmail('')
-                setPassword('')
-            } catch (err) {
-                setSignupRes(err.response)
-            } finally {
-                setSignupResReceived(true)
-                setBtnDisabled(false)
-            }
-        } else {
-            setValidatePassword(false)
-        }
-    }
+  
 
     /* API CALL */
     const [loginRes, setLoginRes] = useState({})
