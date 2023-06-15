@@ -10,6 +10,7 @@ import cpp from '../../Images/Comp_progrm.png'
 import dsa from '../../Images/DSA.png'
 import hackathon from '../../Images/hackathon.png'
 import os from '../../Images/open_source.png'
+import react from '../../Images/React-icon.svg.png'
 /* ------------------------------------------- */
 import './resources.css'
 import { Helmet } from 'react-helmet'
@@ -116,7 +117,13 @@ const Resources = () => {
           content='Open source is a term that originally referred to open source software (OSS).OSS is software that is distributed with its source code, making it available for use, modification, and distribution with its original rights. Source code is  part of the software that most computer users don’t ever see; it’s the code computer programmers manipulate to control how a program or application behaves. Programmers who have access to source code can change a program by adding to it, changing it, or fixing parts of it that aren’t working properly.'
           href='https://discord.gg/bDk4ntUguh'
         />
-         <a href="#" className="back-top-btn" aria-label="back top top" ref={backtopRef}>
+        <ResourceCard
+          image={react}
+          title='React.js'
+          content='The library for web and native user interfaces.'
+          href='https://react.dev/learn'
+        />
+          <a href="#" className="back-top-btn" aria-label="back top top" ref={backtopRef}>
           <ion-icon name="chevron-up" aria-hidden="true"></ion-icon>
         </a>
 
