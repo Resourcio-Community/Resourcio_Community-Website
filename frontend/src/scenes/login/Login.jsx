@@ -29,17 +29,20 @@ const Login = () => {
   const [password, setPassword] = useState("")
   const [signupResReceived, setSignupResReceived] = useState()
 
+  const [nameError, setNameError] = useState('')
+  
+
   const handleSignup = async (e) => {
     e.preventDefault()
 
-    // Validate name input
     const nameRegex = /^[a-zA-Z]+$/
     const isNameValid = nameRegex.test(name.trim())
 
     if (!isNameValid) {
-      // Show error message or handle invalid name
-      console.log('Invalid name. Only alphabets are allowed.')
+      setNameError('Invalid name. Only alphabets are allowed.')
       return
+    } else {
+      setNameError('')
     }
 
     if (password.length >= 6) {
@@ -170,22 +173,20 @@ const Login = () => {
                         {signupRes.status === 201 && (
                             <div className="usercreated">{signupRes.data.status}</div>
                         )}
-                        <div className="input-field" style={{ border: signupRes.data?.name ? '1px solid #FF1818' : 'none' }}>
-                            <i className="fab fa-adn"></i>
-                            <input
-                                type="text"
-                                placeholder="Name"
-                                value={name}
-                                autoComplete="off"
-                                spellCheck="false"
-                                onChange={(e) => setName(e.target.value)}
-                            />
-                            {signupRes.status === 500 && (
-                                <div className="errormsg">
-                                    {signupRes.data.name || undefined}
-                                </div>
-                            )}
-                        </div>
+                        <div className="input-field" style={{ border: nameError ? '1px solid #FF1818' : 'none' }}>
+  <i className="fab fa-adn"></i>
+  <input
+    type="text"
+    placeholder="Name"
+    value={name}
+    autoComplete="off"
+    spellCheck="false"
+    onChange={(e) => setName(e.target.value)}
+  />
+</div>
+{nameError && <p className="error-message">{nameError}</p>}
+
+                       
                         <div className="input-field" style={{ border: signupRes.data?.username ? '1px solid #FF1818' : 'none' }}>
                             <i className="fas fa-user"></i>
                             <input
