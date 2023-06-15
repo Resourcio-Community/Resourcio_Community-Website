@@ -173,18 +173,18 @@ const Login = () => {
                         {signupRes.status === 201 && (
                             <div className="usercreated">{signupRes.data.status}</div>
                         )}
-                        <div className="input-field" style={{ border: nameError ? '1px solid #FF1818' : 'none' }}>
-  <i className="fab fa-adn"></i>
-  <input
-    type="text"
-    placeholder="Name"
-    value={name}
-    autoComplete="off"
-    spellCheck="false"
-    onChange={(e) => setName(e.target.value)}
-  />
-</div>
-{nameError && <p className="error-message">{nameError}</p>}
+                        <div className="input-field" style={{ border: signupRes.data?.nameError ? '1px solid #FF1818' : 'none' }}>
+                        <i className="fab fa-adn"></i>
+                        <input
+                                 type="text"
+                                 placeholder="Name"
+                                 value={name}
+                                 autoComplete="off"
+                                 spellCheck="false"
+                                 onChange={(e) => setName(e.target.value)}
+                               />
+                        </div>
+                        {nameError && <span className="errormsg">{nameError}</span>}
 
                        
                         <div className="input-field" style={{ border: signupRes.data?.username ? '1px solid #FF1818' : 'none' }}>
