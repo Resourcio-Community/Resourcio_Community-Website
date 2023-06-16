@@ -225,7 +225,7 @@ const Home = () => {
                       <span className="span">All in a single platform</span>
                     </li>
                   </ul>
-                  <img src={shape4} width={100} height={100} loading="lazy" alt=""
+                  <img src={shape4} width={100} height={100} loading="lazy" alt="background shape"
                     className="shape about-shape-4" />
                 </div>
 
@@ -274,7 +274,7 @@ const Home = () => {
                       <source src={video} type="video/mp4" />
                     </video>
                   </div>
-                  <img src={shape2} width={158} height={174} loading="lazy" className="shape video-shape-2" />
+                  <img src={shape2} width={158} height={174} loading="lazy" className="shape video-shape-2" alt="background shape"/>
                 </div>
               </div>
             </section>

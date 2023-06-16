@@ -11,18 +11,18 @@ const Footer = () => {
             <div className="footer-top section">
                 <div className="container">
                     <div className="footer-brand">
-                        <img src={communityLogo} style={{ "border": "4px solid rgb(234, 255, 2)" }} width={162} />
+                        <img src={communityLogo} style={{ "border": "4px solid rgb(234, 255, 2)" }} width={162} alt="community logo"/>
                         <p className="footer-brand-text">
                             Thank You for visiting our website. Wishing you a very happy day ahead.
                         </p>
                         <div className="wrapper">
-                            <img src={whatsapp} height={45} width={45} />
+                            <img src={whatsapp} height={45} width={45} alt="whatsapp"/>
                             <a href="https://chat.whatsapp.com/Km6AX9di04ZLIpFEcXTiNK" target="_blank" className="footer-link">
                                 WhatsApp
                             </a>
                         </div>
                         <div className="wrapper">
-                            <img src={gmail} className='wrapper-1' height={30} width={30} />
+                            <img src={gmail} className='wrapper-1' height={30} width={30} alt="gmail"/>
                             <a href="mailto:resourciocommunity22@gmail.com" target="_blank" className="footer-link">
                                 resourciocommunity22@gmail.com
                             </a>
