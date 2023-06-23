@@ -162,7 +162,7 @@ const Login = () => {
                             <i className="fab fa-adn"></i>
                             <input
                                 type="text"
-                                placeholder="Name"
+                                placeholder="Full Name"
                                 value={name}
                                 autoComplete="off"
                                 spellCheck="false"
