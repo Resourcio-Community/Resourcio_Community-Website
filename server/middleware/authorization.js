@@ -14,7 +14,7 @@ export default async function verifyToken(req, res, next) {
         })
     }
     catch (error) {
-        res.status(401).json({ error: 'Authentication Failed' })
+        return res.status(401).json({ error: 'Authentication Failed' })
     }
 }
 
