@@ -43,7 +43,7 @@ const Navbar = () => {
     return (
         <nav className={navbar ? "navbar" : "navbar_scroll"}>
             <div className='community_logo'>
-                <a href='#'><img className='community_img' src={logo} height="105" width="105" alt="logo"/></a>
+                <a href='#'><img className='community_img' src={logo} height="90" width="90" alt="logo"/></a>
             </div>
             <ul className="nav-links">
                 <input type="checkbox" id="checkbox_toggle" onClick={hidebodyOverflow} ref={checkboxRef} />
