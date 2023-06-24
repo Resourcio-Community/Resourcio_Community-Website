@@ -30,7 +30,8 @@ import "swiper/css/effect-coverflow"
 import "swiper/css/navigation"
 import "swiper/css/pagination"
 import { EffectCoverflow, Pagination, Navigation } from 'swiper'
-
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 
 const Home = () => {
@@ -38,7 +39,10 @@ const Home = () => {
   const [pastEvents, setPastEvents] = useState([])
   const [pageLoading, setPageLoading] = useState(false)
   const [loading, setLoading] = useState(false)
-
+  useEffect(()=>{
+    AOS.init();
+    AOS.refresh();
+  },[]);
 
   /** API call for all the events */
   const fetchEvents = async () => {
@@ -109,22 +113,25 @@ const Home = () => {
 
             <section className="section hero has-bg-image" aria-label="home" style={{ "backgroundImage": `url(${heroBg})` }}>
               <div className="container">
-                <div className="hero-content">
+                <div className="hero-content" data-aos="fade-right" data-aos-offset="200" data-aos-duration="1000">
                   <h1 className="h1 section-title" >
                     The Best Website for students to <span className="span">Search</span> for Software Resources.
                   </h1>
-                  <p className="hero-text">
+                  <p className="hero-text" >
                     Hello future engineers!<br />Welcome to <b>Resourcio Community</b>!! A one-stop hub for all your
                     resources and queries
                     regarding different software languages.
                   </p>
-                  <Link to='/resources' className='link btn has-before'>
-                    <span>Find Resources</span>
+                  
+                  <Link to='/resources' className='link btn has-before' >
+                    <span >Find Resources</span>
                     <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
                   </Link>
-                </div>
+                
+                  </div>
+                 
                 <div className="hero-banner">
-                  <div className="noticeboard"
+                  <div className="noticeboard" data-aos="flip-right" data-aos-duration="1000"
                     style={{
                       alignItems: upcomingEvents.length === 0 ? 'center' : '',
                       justifyContent: upcomingEvents.length === 0 ? 'center' : '',
