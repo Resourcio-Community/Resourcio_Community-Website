@@ -13,22 +13,7 @@ const ResourceCard = ({ image, title, content, href }) => {
 
 
     const handleEvent = async () => {
-        // user ? window.open(href, '_blank') : history.push('/login')
-        fetch(href, {
-            method: 'GET',
-            mode: 'no-cors',
-            headers: {
-                'Authorization': `Bearer ${process.env.REACT_APP_GITHUB_PERSONAL_ACCESS_TOKEN}`,
-            }
-        })
-            .then((res) => res.blob())
-            .then((blob) => {
-                console.log(blob)
-                // var url = window.URL.createObjectURL(blob)
-                // window.open(url, '_blank').focus()
-            }).catch((err) => {
-                console.log(err)
-            })
+        user ? window.open(href, '_blank') : history.push('/login')
     }
 
     return (

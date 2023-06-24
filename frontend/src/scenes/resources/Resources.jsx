@@ -15,32 +15,28 @@ import './resources.css'
 import { Helmet } from 'react-helmet'
 import ResourceCard from '../../component/resourceCard/ResourceCard'
 import { useHistory } from 'react-router-dom'
-import axios from 'axios'
 
 import ArrowBackIcon from '@mui/icons-material/ArrowBack'
-import { useState, useEffect } from 'react'
+import { App } from 'octokit'
+import { useEffect } from 'react'
 
 
 const Resources = () => {
 
   const history = useHistory()
-  const axiosInstance = axios.create({ baseURL: process.env.REACT_APP_GITHUB_API_URL })
 
-  const [repos, setRepos] = useState(null)
+  const app = new App({
+    appId: 351801,
+    privateKey: 'SHA256:8sHRlB38czMy61OTEeN/ssVKInLvD9UNR0hwcn78WPw='
+  })
 
-  const getRepos = async () => {
-    const res = await axiosInstance.get(`/orgs/Resourcio-Community/repos?type=private`, {
-      headers: {
-        'Authorization': `Bearer ${process.env.REACT_APP_GITHUB_PERSONAL_ACCESS_TOKEN}`
-      }
-    })
-    setRepos(res.data)
+  const request = async () => {
+    await app.octokit.request('GET /app')
   }
 
   useEffect(() => {
-    getRepos()
+    request()
   }, [])
-
 
   return (
     <div className='resources'>
@@ -94,7 +90,7 @@ const Resources = () => {
           image={devops}
           title='DevOps'
           content='DevOps is a set of practices that combines software development and IT operations.'
-          href={repos?.[1].html_url}
+          href='https://github.com/Resourcio-Community/Devops-resources'
         />
         <ResourceCard
           image={web3}
