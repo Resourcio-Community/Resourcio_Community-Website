@@ -5,14 +5,15 @@ import gmail from '../../Images/gmail.svg'
 import './footer.css'
 
 
+
 const Footer = () => {
     return (
         <footer className="footer" id="footer" style={{ "backgroundImage": `url(${footerBg})` }}>
             <div className="footer-top section">
                 <div className="container">
-                    <div className="footer-brand">
+                    <div className="footer-brand" >
                         <img src={communityLogo} style={{ "border": "4px solid rgb(234, 255, 2)" }} width={162} alt="community logo"/>
-                        <p className="footer-brand-text">
+                        <p className="footer-brand-text" data-aos="fade-up">
                             Thank You for visiting our website. Wishing you a very happy day ahead.
                         </p>
                         <div className="wrapper">
@@ -21,14 +22,14 @@ const Footer = () => {
                                 WhatsApp
                             </a>
                         </div>
-                        <div className="wrapper">
-                            <img src={gmail} className='wrapper-1' height={30} width={30} alt="gmail"/>
+                        <div className="wrapper" >
+                            <img src={gmail} className='wrapper-1' height={30} width={30} alt="gmail" />
                             <a href="mailto:resourciocommunity22@gmail.com" target="_blank" className="footer-link">
                                 resourciocommunity22@gmail.com
                             </a>
                         </div>
-                        <div className="wrapper">
-                            <ul className="social-list">
+                        <div className="wrapper" >
+                            <ul className="social-list" >
                                 <li>
                                     <a href="https://www.facebook.com/profile.php?id=100088472180461" target="_blank" className="social-link">
                                         <ion-icon name="logo-facebook"></ion-icon>
@@ -62,7 +63,7 @@ const Footer = () => {
                             </ul>
                         </div>
                     </div>
-                    <div className="footer-list">
+                    <div className="footer-list" >
                         {/* <p className="footer-list-title">Contacts</p>
                         <p className="footer-list-text">
                             Enter your email address to register to our newsletter subscription.
