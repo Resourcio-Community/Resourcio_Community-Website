@@ -13,7 +13,7 @@ const Footer = () => {
                 <div className="container">
                     <div className="footer-brand" >
                         <img src={communityLogo} style={{ "border": "4px solid rgb(234, 255, 2)" }} width={162} alt="community logo"/>
-                        <p className="footer-brand-text" data-aos="fade-up">
+                        <p className="footer-brand-text" >
                             Thank You for visiting our website. Wishing you a very happy day ahead.
                         </p>
                         <div className="wrapper">
