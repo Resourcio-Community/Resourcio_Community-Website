@@ -10,14 +10,15 @@ import snigdha from '../../Images/Snigdha.webp'
 
 import ContactCard from '../contactCard/ContactCard'
 import blogBg from '../../Images/blog-bg.svg'
-
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Team = () => {
   return (
     <section className="section blog has-bg-image" id="team" aria-label="contact" style={{ "backgroundImage": `url(${blogBg})` }}>
       <div className="container">
         <p className="section-subtitle" style={{ "color": "var(--gray-web)" }}>Team</p>
-        <h2 className="h2 section-title">Get in touch with us</h2>
+        <h2 className="h2 section-title" data-aos="fade-right">Get in touch with us</h2>
         <ul className="grid-list">
 
           <li className="dev_card">

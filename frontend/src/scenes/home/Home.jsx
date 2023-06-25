@@ -30,7 +30,8 @@ import "swiper/css/effect-coverflow"
 import "swiper/css/navigation"
 import "swiper/css/pagination"
 import { EffectCoverflow, Pagination, Navigation } from 'swiper'
-
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 
 const Home = () => {
@@ -38,7 +39,10 @@ const Home = () => {
   const [pastEvents, setPastEvents] = useState([])
   const [pageLoading, setPageLoading] = useState(false)
   const [loading, setLoading] = useState(false)
-
+  useEffect(()=>{
+    AOS.init();
+    AOS.refresh();
+  },[]);
 
   /** API call for all the events */
   const fetchEvents = async () => {
@@ -109,22 +113,25 @@ const Home = () => {
 
             <section className="section hero has-bg-image" aria-label="home" style={{ "backgroundImage": `url(${heroBg})` }}>
               <div className="container">
-                <div className="hero-content">
+                <div className="hero-content" data-aos="fade-right" data-aos-offset="200" data-aos-duration="1000">
                   <h1 className="h1 section-title" >
-                    The Best Website for students to <span className="span">Search</span> for Software Resources.
+                    The Best Website for students to <span className="span" data-aos="zoom-in" data-aos-delay="500">Search</span> for Software Resources.
                   </h1>
-                  <p className="hero-text">
+                  <p className="hero-text" >
                     Hello future engineers!<br />Welcome to <b>Resourcio Community</b>!! A one-stop hub for all your
                     resources and queries
                     regarding different software languages.
                   </p>
-                  <Link to='/resources' className='link btn has-before'>
-                    <span>Find Resources</span>
+                  
+                  <Link to='/resources' className='link btn has-before' >
+                    <span >Find Resources</span>
                     <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
                   </Link>
-                </div>
+                
+                  </div>
+                 
                 <div className="hero-banner">
-                  <div className="noticeboard"
+                  <div className="noticeboard" data-aos="flip-right" data-aos-duration="1000"
                     style={{
                       alignItems: upcomingEvents.length === 0 ? 'center' : '',
                       justifyContent: upcomingEvents.length === 0 ? 'center' : '',
@@ -151,14 +158,14 @@ const Home = () => {
               <div className="container">
                 <p className="section-subtitle">Categories</p>
                 <h2 className="h2 section-title">
-                  Online <span className="span">Resources</span> For Remote Learning.
+                  Online <span className="span" data-aos="zoom-in">Resources</span> For Remote Learning.
                 </h2>
                 <p className="section-text">
                   Here are the different resouces:
                 </p>
-                <ul className="grid-list">
+                <ul className="grid-list" data-aos="flip-right" data-aos-duration="1000">
                   <li>
-                    <Category
+                    <Category 
                       image={category1}
                       cardTitle="CP Resources"
                       cardText="Here you can get all information and valuable resources about competetive programming at free-of-cost"
@@ -201,8 +208,8 @@ const Home = () => {
               <div className="container">
                 <div className="about-content">
                   <p className="section-subtitle" style={{ "color": "var(--gray-web)" }}>About Us</p>
-                  <h3 className="h2 section-title">
-                    A group of enthusiastic <span className="span">Engineers keen to</span> help their fellow Engineers.
+                  <h3 className="h2 section-title" data-aos="fade-right" data-aos-duration="500">
+                    A group of enthusiastic <span className="span" data-aos="zoom-in" data-aos-delay="500">Engineers keen to</span> help their fellow Engineers.
                   </h3>
                   <p className="section-text" style={{ "color": "var(--gray-web)" }}>
                     Through Resourcio we have tried to bring in different resources related to software development and
@@ -214,15 +221,15 @@ const Home = () => {
                   <ul className="about-list" style={{ "fontSize": "1.5rem" }}>
                     <li className="about-item">
                       <ion-icon name="checkmark-done-outline" aria-hidden="true"></ion-icon>
-                      <span className="span">Free Resources</span>
+                      <span className="span" data-aos="zoom-in">Free Resources</span>
                     </li>
                     <li className="about-item">
                       <ion-icon name="checkmark-done-outline" aria-hidden="true"></ion-icon>
-                      <span className="span">Maximum topics covered</span>
+                      <span className="span" data-aos="zoom-in" data-aos-delay="500">Maximum topics covered</span>
                     </li>
                     <li className="about-item">
                       <ion-icon name="checkmark-done-outline" aria-hidden="true"></ion-icon>
-                      <span className="span">All in a single platform</span>
+                      <span className="span" data-aos="zoom-in" data-aos-delay="1000">All in a single platform</span>
                     </li>
                   </ul>
                   <img src={shape4} width={100} height={100} loading="lazy" alt="background shape"
