@@ -22,4 +22,5 @@ yarn-debug.log*
 yarn-error.log*
 
 # useless
-package-lock.json/
+package-lock.json
+yarn.lock
