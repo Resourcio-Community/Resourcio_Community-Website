@@ -1,19 +1,44 @@
 .category-card {
+    position: relative;
+    perspective: 1000px;
+    width: 100%;
+    transform-style: preserve-3d;
+    cursor: pointer;
+    transition: transform 0.5s ease-in-out; /* Add smooth transition */
+  }
+  
+  .category-card.flipped {
+    transform: rotateY(180deg);
+  }
+  
+  .category-card .card-front,
+  .category-card .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+  }
+  
+  .category-card .card-front {
+    height: 280px;
     background-color: hsla(var(--color), 0.1);
     padding: 50px 30px;
     text-align: center;
     border-radius: var(--radius-5);
-}
-
-.category-card::after {
-    transition: 0.5s;
-}
-
-.category-card:hover {
-    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
-}
-
-.category-card .card-icon {
+    transform: rotateY(0deg);
+    z-index: 2;
+  }
+  
+  .category-card .card-back {
+    height: 280px;
+    background-color: hsla(var(--color), 0.1);
+    padding: 50px 30px;
+    text-align: center;
+    border-radius: var(--radius-5);
+    transform: rotateY(180deg);
+  }
+  
+  .category-card .card-icon {
     background-color: hsla(var(--color), 0.1);
     width: 80px;
     height: 80px;
@@ -22,21 +47,21 @@
     border-radius: var(--radius-circle);
     margin-inline: auto;
     margin-block-end: 30px;
-}
-
-.category-card .card-title{
+  }
+  
+  .category-card .card-title {
     font-weight: var(--fw-600);
     margin-bottom: 20px;
     font-size: 29px;
-}
-
-.category-card .card-text {
+  }
+  
+  .category-card .card-text {
     color: var(--eerie-black-1);
     font-size: 19px;
     margin-block: 15px 25px;
-}
-
-.category-card .card-badge {
+  }
+  
+  .category-card .card-badge {
     background-color: hsla(var(--color), 0.1);
     color: hsl(var(--color));
     font-size: var(--fs-5);
@@ -45,8 +70,13 @@
     max-width: max-content;
     margin-inline: auto;
     border-radius: var(--radius-5);
-}
-
-.grid-list .category-card {
+  }
+  
+  .category-card:hover {
+    transform: rotateY(180deg);
+  }
+  
+  .grid-list .category-card {
     height: 100%;
-}
+  }
+  
