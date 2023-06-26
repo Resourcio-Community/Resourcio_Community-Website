@@ -112,7 +112,7 @@ const Login = () => {
             <div className="forms-container">
                 <div className="signin-signup">
                     <form className="form sign-in-form">
-                        <h2 className="title">Sign in</h2>
+                        <h2 className="title">SIGN IN</h2>
                         {loginresReceived === false && <Loader />}
                         {loginRes.status === 401 && loginresReceived && (
                             <div className="error_message">{loginRes.data}</div>
