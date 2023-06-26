@@ -2,9 +2,11 @@
     background-repeat: no-repeat;
     background-color: var(--eerie-black-2);
     color: var(--gray-x-11);
-    font-size: var(--fs-5);
+    font-size: var(--fs-6);
     width: 100%;
     min-width: 365px;
+    height: 578px;
+
 }
 
 .footer-brand-text {
@@ -71,6 +73,15 @@
 .social-list {
     display: flex;
     gap: 25px;
+    position: relative;
+    bottom: 300px;
+    left: 600px;
+}
+ 
+.footer-web{
+    position: relative;
+    left: 745px;
+    bottom: 350px;
 }
 
 .social-link {
@@ -92,6 +103,9 @@
 .copyright {
     cursor: default;
     text-align: center;
+    position: relative;
+    bottom: 150px;
+
 }
 
 .copyright-link {

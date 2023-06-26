@@ -29,6 +29,9 @@ const Footer = () => {
                             </a>
                         </div>
                         <div className="wrapper" >
+                            <div className="footer-web">
+                                <p>Follow us on web</p>
+                            </div>
                             <ul className="social-list" >
                                 <li>
                                     <a href="https://www.facebook.com/profile.php?id=100088472180461" target="_blank" className="social-link">
