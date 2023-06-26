@@ -33,7 +33,7 @@ li {
     height: 85px;
     min-width: 365px;
     width: 100%;
-    background-color: white;
+    background-color:rgb(230, 230, 230);
     z-index: 10;
     position: fixed;
     transition: height 200ms ease-out;
