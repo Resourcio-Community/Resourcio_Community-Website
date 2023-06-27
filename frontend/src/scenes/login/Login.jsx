@@ -209,7 +209,7 @@ const Login = () => {
                             )}
                         </div>
                         <div className="input-field password" style={{ border: validatePassword === false ? '1px solid #FF1818' : 'none' }}>
-                            <i className={`fas ${!hideshowPassword ? 'fa-eye-slash' : 'fa-eye'}`}  onClick={() => setHideShowPassword(!hideshowPassword)}></i>
+                            <i className={`fas ${!hideshowPassword ? 'fa-eye' : 'fa-eye-slash'}`}  onClick={() => setHideShowPassword(!hideshowPassword)}></i>
                             <input
                                 type={!hideshowPassword ? "password" : "text"}
                                 placeholder="Password"
