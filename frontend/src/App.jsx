@@ -5,7 +5,7 @@ import Spinner from './component/spinner/Spinner'
 import { Route, Switch, Redirect } from "react-router-dom"
 import { useContext, lazy, Suspense } from 'react'
 import { AuthContext } from './authContext/AuthContext'
-
+import { React, useState, useEffect } from 'react';
 
 const Home = lazy(() => import('./scenes/home/Home'))
 const Resources = lazy(() => import('./scenes/resources/Resources'))
@@ -19,10 +19,12 @@ axios.defaults.baseURL = process.env.REACT_APP_API_URL
 
 const App = () => {
 
-  const { user } = useContext(AuthContext)
+const { user } = useContext(AuthContext)
 
   return (
     <>
+
+
       <Suspense fallback={<Spinner width='40px' height='40px' />}>
         <Switch>
           <Route exact path='/'>
@@ -42,7 +44,7 @@ const App = () => {
           </Route>
         </Switch>
       </Suspense>
-      
+
       <Analytics />
     </>
   )

@@ -17,7 +17,7 @@ import ResourceCard from '../../component/resourceCard/ResourceCard'
 import { useHistory } from 'react-router-dom'
 import { useRef } from 'react'
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
-
+import {useEffect} from 'react';
 const Resources = () => {
 
   const history = useHistory()
@@ -31,9 +31,24 @@ const Resources = () => {
       }
     }
   })
-
+  const progressBarHandler=()=>{
+    const totalScroll=document.documentElement.scrollTop;
+    const windowHeight=document.documentElement.scrollHeight-document.documentElement.clientHeight;
+    const scroll=`${totalScroll/windowHeight}`;
+    const progressBar=document.getElementById('progressBar');
+    progressBar.style.transform=`scale(${scroll},1)`;
+    progressBar.style.opacity=`${scroll}`
+  }
+  useEffect(()=>{
+    window.addEventListener('scroll',progressBarHandler)
+  })
+  
   return (
+   
     <div className='resources'>
+       <div id="progressBarContainer" >
+    <div id="progressBar" ></div>
+  </div>
       <Helmet>
         <title>Resources</title>
       </Helmet>
