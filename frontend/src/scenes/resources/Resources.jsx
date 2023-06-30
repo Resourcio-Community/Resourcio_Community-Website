@@ -15,7 +15,7 @@ import './resources.css'
 import { Helmet } from 'react-helmet'
 import ResourceCard from '../../component/resourceCard/ResourceCard'
 import { useHistory } from 'react-router-dom'
-import { useRef } from 'react'
+import { useRef,useEffect } from 'react'
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 
 const Resources = () => {
@@ -31,13 +31,25 @@ const Resources = () => {
       }
     }
   })
-
+  const progressBarHandler=()=>{
+    const totalScroll=document.documentElement.scrollTop;
+    const windowHeight=document.documentElement.scrollHeight-document.documentElement.clientHeight;
+    const scroll=`${totalScroll/windowHeight}`;
+    const progressBar=document.getElementById('progressBar');
+    progressBar.style.transform=`scale(${scroll},1)`;
+    progressBar.style.opacity=`${scroll}`
+  }
+  useEffect(()=>{
+    window.addEventListener('scroll',progressBarHandler)
+  })
   return (
     <div className='resources'>
       <Helmet>
         <title>Resources</title>
       </Helmet>
-
+      <div id="progressBarContainer" >
+      <div id="progressBar" ></div>
+    </div>
 
       <div className="resources-head">
         <div className="resources_wave"></div>
