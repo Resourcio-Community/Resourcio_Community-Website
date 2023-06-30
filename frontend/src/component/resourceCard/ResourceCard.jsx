@@ -1,6 +1,6 @@
 import { useContext } from 'react'
 import './resourceCard.css'
-import { AuthContext } from '../../authContext/AuthContext'
+import { AuthContext } from '../../context/authContext/AuthContext'
 import { useHistory } from 'react-router-dom'
 import { LazyLoadImage } from 'react-lazy-load-image-component'
 import 'react-lazy-load-image-component/src/effects/blur.css'

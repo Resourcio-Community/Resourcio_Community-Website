@@ -3,8 +3,8 @@ import { Helmet } from 'react-helmet'
 import axios from 'axios'
 import './login.css'
 import Loader from '../../component/loader/Loader'
-import { AuthContext } from '../../authContext/AuthContext'
-import { loginFailure, loginStart, loginSuccess } from '../../authContext/AuthActions'
+import { AuthContext } from '../../context/authContext/AuthContext'
+import { loginFailure, loginStart, loginSuccess } from '../../context/authContext/AuthActions'
 import { Link } from 'react-router-dom'
 
 import HomeRoundedIcon from '@mui/icons-material/HomeRounded';
