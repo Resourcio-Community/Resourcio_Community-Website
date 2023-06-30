@@ -132,9 +132,13 @@ body {
 
 #progressBar,
 #progressBarContainer {
-  height: 15px;
+  height: 6px;
 }
-
+@media(max-width:768px){
+  #progressBar,#progressBarContainer{
+    height: 3px;
+  }
+} 
 
 button {
   cursor: pointer;
