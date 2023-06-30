@@ -1,23 +1,16 @@
-import React, { useState } from 'react';
-import './category.css';
+import { useState } from 'react'
+import './category.css'
 
 const Category = ({ style, image, cardTitle, cardText }) => {
-  const [flip, setFlip] = useState(false);
+  const [flip, setFlip] = useState(false)
 
-  const handleCardHover = () => {
-    setFlip(true);
-  };
-
-  const handleCardLeave = () => {
-    setFlip(false);
-  };
 
   return (
     <div
       className={`category-card ${flip ? 'flipped' : ''}`}
       style={{ '--color': `${style}` }}
-      onMouseEnter={handleCardHover}
-      onMouseLeave={handleCardLeave}
+      onMouseEnter={() => setFlip(true)}
+      onMouseLeave={() => setFlip(false)}
     >
       {/* front */}
       <div className="card-front">
@@ -38,8 +31,7 @@ const Category = ({ style, image, cardTitle, cardText }) => {
       </div>
     </div>
 
-  );
-};
+  )
+}
 
-export default Category;
-
+export default Category
