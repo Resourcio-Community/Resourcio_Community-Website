@@ -1,9 +1,10 @@
 .category-card {
     position: relative;
-    perspective: 1000px;
+    perspective: 800px;
     width: 100%;
-    transform-style: preserve-3d;
+    text-align: center;
     cursor: pointer;
+    transform-style: preserve-3d;
     transition: transform 0.5s ease-in-out; /* Add smooth transition */
   }
   
@@ -15,26 +16,23 @@
   .category-card .card-back {
     position: absolute;
     width: 100%;
-    height: 100%;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: hsla(var(--color), 0.1);
     backface-visibility: hidden;
+    border-radius: var(--radius-10);
   }
   
   .category-card .card-front {
-    height: 280px;
-    background-color: hsla(var(--color), 0.1);
-    padding: 50px 30px;
-    text-align: center;
-    border-radius: var(--radius-5);
     transform: rotateY(0deg);
     z-index: 2;
   }
   
   .category-card .card-back {
-    height: 280px;
-    background-color: hsla(var(--color), 0.1);
-    padding: 50px 30px;
-    text-align: center;
-    border-radius: var(--radius-5);
+    padding: 30px 20px;
     transform: rotateY(180deg);
   }
   
@@ -45,7 +43,6 @@
     display: grid;
     place-items: center;
     border-radius: var(--radius-circle);
-    margin-inline: auto;
     margin-block-end: 30px;
   }
   

@@ -3,8 +3,8 @@ import userLogo from '../../Images/user-logo.jpg'
 import './navbar.css'
 import { Link } from 'react-router-dom'
 import { useEffect, useContext, useRef, useState } from 'react'
-import { AuthContext } from '../../authContext/AuthContext'
-import { logout } from '../../authContext/AuthActions'
+import { AuthContext } from '../../context/authContext/AuthContext'
+import { logout } from '../../context/authContext/AuthActions'
 
 
 const Navbar = () => {

@@ -9,7 +9,7 @@ const Stat = ({ style, fontSize, cardTitle, cardText }) => {
     const handleScroll = () => {
       const cardElement = document.getElementById('stats-card')
       const cardPosition = cardElement.getBoundingClientRect()
-      const shouldStartAnimation = cardPosition.top <= window.innerHeight * 0.8; 
+      const shouldStartAnimation = cardPosition.top <= window.innerHeight * 0.8
 
       if (shouldStartAnimation && delay === null) {
         setDelay(3)
@@ -37,8 +37,7 @@ const Stat = ({ style, fontSize, cardTitle, cardText }) => {
         <span style={{ fontSize: `${fontSize}px` }}>{cardText}</span>
       </p>
     </div>
-  );
-};
+  )
+}
 
-export default Stat;
-
+export default Stat
