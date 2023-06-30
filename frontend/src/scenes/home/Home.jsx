@@ -9,27 +9,27 @@ import videoBg from '../../Images/video-bg.png'
 import shape2 from '../../Images/video-shape-2.png'
 import video from '../../Images/video.mp4'
 /* ----------------------------------------------------*/
-
 import Navbar from "../../component/navbar/Navbar"
 import Category from '../../component/category/Category'
 import Stat from '../../component/stats/Stat'
 import Footer from '../../component/footer/Footer'
 import Team from '../../component/team/team'
+import FAQ from "../../component/faq";
 import Notice from '../../component/notice/Notice'
 import Spinner from '../../component/spinner/Spinner'
 import LoadingScreen from '../../component/loadingScreen/LoadingScreen'
 import './home.css'
-import { Link } from 'react-router-dom'
-import { useRef, useState, useEffect } from 'react'
-import { Helmet } from 'react-helmet'
-import { useInView } from 'react-intersection-observer'
+import {Link} from 'react-router-dom'
+import {useEffect, useRef, useState} from 'react'
+import {Helmet} from 'react-helmet'
+import {useInView} from 'react-intersection-observer'
 import axios from 'axios'
-import { Swiper, SwiperSlide } from 'swiper/react'
+import {Swiper, SwiperSlide} from 'swiper/react'
 import "swiper/css"
 import "swiper/css/effect-coverflow"
 import "swiper/css/navigation"
 import "swiper/css/pagination"
-import { EffectCoverflow, Pagination, Navigation } from 'swiper'
+import {EffectCoverflow, Navigation, Pagination} from 'swiper'
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -39,22 +39,20 @@ const Home = () => {
   const [pastEvents, setPastEvents] = useState([])
   const [pageLoading, setPageLoading] = useState(false)
   const [loading, setLoading] = useState(false)
-  useEffect(()=>{
+  useEffect(() => {
     AOS.init();
     AOS.refresh();
-  },[]);
+  }, []);
 
   /** API call for all the events */
   const fetchEvents = async () => {
     try {
       setLoading(true)
-      const { data } = await axios.get('/event/getevents')
+      const {data} = await axios.get('/event/getevents')
       setUpcomingEvents(data)
-    }
-    catch (error) {
+    } catch (error) {
       throw error
-    }
-    finally {
+    } finally {
       setLoading(false)
     }
   }
@@ -62,13 +60,11 @@ const Home = () => {
   const fetchPastEvents = async () => {
     try {
       setPageLoading(true)
-      const { data } = await axios.get('/event/getpastevents')
+      const {data} = await axios.get('/event/getpastevents')
       setPastEvents(data)
-    }
-    catch (error) {
+    } catch (error) {
       throw error
-    }
-    finally {
+    } finally {
       setPageLoading(false)
     }
   }
@@ -91,53 +87,54 @@ const Home = () => {
     }
   })
 
-  const { ref: playRef, inView, entry } = useInView({ threshold: 0.6 })
+  const {ref: playRef, inView, entry} = useInView({threshold: 0.6})
   if (entry !== undefined) {
     entry.target.muted = true
     inView ? entry.target.play() : entry.target.pause()
   }
 
 
-
   return (
-    pageLoading ? <LoadingScreen />
+    pageLoading ? <LoadingScreen/>
       : <>
         <Helmet>
           <title>Resourcio Community</title>
         </Helmet>
 
-        <Navbar />
+        <Navbar/>
 
         <main>
           <article>
 
-            <section className="section hero has-bg-image" aria-label="home" style={{ "backgroundImage": `url(${heroBg})` }}>
+            <section className="section hero has-bg-image" aria-label="home"
+                     style={{"backgroundImage": `url(${heroBg})`}}>
               <div className="container">
                 <div className="hero-content" data-aos="fade-right" data-aos-offset="200" data-aos-duration="1000">
-                  <h1 className="h1 section-title" >
-                    The Best Website for students to <span className="span" data-aos="zoom-in" data-aos-delay="500">Search</span> for Software Resources.
+                  <h1 className="h1 section-title">
+                    The Best Website for students to <span className="span" data-aos="zoom-in"
+                                                           data-aos-delay="500">Search</span> for Software Resources.
                   </h1>
-                  <p className="hero-text" >
-                    Hello future engineers!<br />Welcome to <b>Resourcio Community</b>!! A one-stop hub for all your
+                  <p className="hero-text">
+                    Hello future engineers!<br/>Welcome to <b>Resourcio Community</b>!! A one-stop hub for all your
                     resources and queries
                     regarding different software languages.
                   </p>
-                  
-                  <Link to='/resources' className='link btn has-before' >
-                    <span >Find Resources</span>
+
+                  <Link to='/resources' className='link btn has-before'>
+                    <span>Find Resources</span>
                     <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
                   </Link>
-                
-                  </div>
-                 
+
+                </div>
+
                 <div className="hero-banner">
                   <div className="noticeboard" data-aos="flip-right" data-aos-duration="1000"
-                    style={{
-                      alignItems: upcomingEvents.length === 0 ? 'center' : '',
-                      justifyContent: upcomingEvents.length === 0 ? 'center' : '',
-                    }}
+                       style={{
+                         alignItems: upcomingEvents.length === 0 ? 'center' : '',
+                         justifyContent: upcomingEvents.length === 0 ? 'center' : '',
+                       }}
                   >
-                    {loading ? <Spinner width='20px' height='20px' /> : upcomingEvents.length > 0 ?
+                    {loading ? <Spinner width='20px' height='20px'/> : upcomingEvents.length > 0 ?
                       upcomingEvents.map((event) => (
                         <Notice
                           key={event._id}
@@ -165,7 +162,7 @@ const Home = () => {
                 </p>
                 <ul className="grid-list cate" data-aos="flip-right" data-aos-duration="1000">
                   <li>
-                    <Category 
+                    <Category
                       image={category1}
                       cardTitle="CP Resources"
                       cardText="Here you can get all information and valuable resources about competetive programming at free-of-cost"
@@ -207,18 +204,20 @@ const Home = () => {
             <section className="section about" id='about' aria-label="about">
               <div className="container">
                 <div className="about-content">
-                  <p className="section-subtitle" style={{ "color": "var(--gray-web)" }}>About Us</p>
+                  <p className="section-subtitle" style={{"color": "var(--gray-web)"}}>About Us</p>
                   <h3 className="h2 section-title" data-aos="fade-right" data-aos-duration="500">
-                    A group of enthusiastic <span className="span" data-aos="zoom-in" data-aos-delay="500">Engineers keen to</span> help their fellow Engineers.
+                    A group of enthusiastic <span className="span" data-aos="zoom-in" data-aos-delay="500">Engineers keen to</span> help
+                    their fellow Engineers.
                   </h3>
-                  <p className="section-text" style={{ "color": "var(--gray-web)" }}>
+                  <p className="section-text" style={{"color": "var(--gray-web)"}}>
                     Through Resourcio we have tried to bring in different resources related to software development and
                     other
-                    different fields related to software engineering  in a single place. We want to provide students a single platform where
+                    different fields related to software engineering in a single place. We want to provide students a
+                    single platform where
                     they
                     can find all new resources and they don't need to browse the web extensively for learning them.
                   </p>
-                  <ul className="about-list" style={{ "fontSize": "1.5rem" }}>
+                  <ul className="about-list" style={{"fontSize": "1.5rem"}}>
                     <li className="about-item">
                       <ion-icon name="checkmark-done-outline" aria-hidden="true"></ion-icon>
                       <span className="span" data-aos="zoom-in">Free Resources</span>
@@ -233,7 +232,7 @@ const Home = () => {
                     </li>
                   </ul>
                   <img src={shape4} width={100} height={100} loading="lazy" alt="background shape"
-                    className="shape about-shape-4" />
+                       className="shape about-shape-4"/>
                 </div>
 
                 <div className="past-videos">
@@ -256,7 +255,9 @@ const Home = () => {
                   >
                     {pastEvents.map((event) => (
                       <SwiperSlide key={event?._id}>
-                        <iframe src={event?.eventLink} title='YouTube video player' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share;' loading='eager' allowFullScreen></iframe>
+                        <iframe src={event?.eventLink} title='YouTube video player'
+                                allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share;'
+                                loading='eager' allowFullScreen></iframe>
                       </SwiperSlide>
                     ))}
                   </Swiper>
@@ -273,15 +274,16 @@ const Home = () => {
             </section>
 
 
-            <section className="video has-bg-image" aria-label="video" style={{ "backgroundImage": `url(${videoBg})` }}>
+            <section className="video has-bg-image" aria-label="video" style={{"backgroundImage": `url(${videoBg})`}}>
               <div className="container">
                 <div className="video-card">
                   <div className="video-banner img-holder">
                     <video ref={playRef} width={850} loop>
-                      <source src={video} type="video/mp4" />
+                      <source src={video} type="video/mp4"/>
                     </video>
                   </div>
-                  <img src={shape2} width={158} height={174} loading="lazy" className="shape video-shape-2" alt="background shape"/>
+                  <img src={shape2} width={158} height={174} loading="lazy" className="shape video-shape-2"
+                       alt="background shape"/>
                 </div>
               </div>
             </section>
@@ -325,19 +327,16 @@ const Home = () => {
               </div>
             </section>
 
-            <Team />
-            
-          </article >
-        </main >
+            <Team/>
+            <FAQ/>
+          </article>
+        </main>
 
-        <Footer />
+        <Footer/>
 
         <a href="#" className="back-top-btn" aria-label="back top top" ref={backtopRef}>
           <ion-icon name="chevron-up" aria-hidden="true"></ion-icon>
         </a>
-
-
-
 
 
         <style>
@@ -363,8 +362,6 @@ const Home = () => {
       </>
   )
 }
-
-
 
 
 export default Home
