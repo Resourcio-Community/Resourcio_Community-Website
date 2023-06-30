@@ -30,8 +30,8 @@ import "swiper/css/effect-coverflow"
 import "swiper/css/navigation"
 import "swiper/css/pagination"
 import { EffectCoverflow, Pagination, Navigation } from 'swiper'
-import AOS from "aos";
-import "aos/dist/aos.css";
+import AOS from "aos"
+import "aos/dist/aos.css"
 
 
 const Home = () => {
@@ -39,10 +39,7 @@ const Home = () => {
   const [pastEvents, setPastEvents] = useState([])
   const [pageLoading, setPageLoading] = useState(false)
   const [loading, setLoading] = useState(false)
-  useEffect(()=>{
-    AOS.init();
-    AOS.refresh();
-  },[]);
+  
 
   /** API call for all the events */
   const fetchEvents = async () => {
@@ -75,6 +72,9 @@ const Home = () => {
 
 
   useEffect(() => {
+    AOS.init()
+    AOS.refresh()
+
     fetchEvents()
     fetchPastEvents()
   }, [])
@@ -209,7 +209,7 @@ const Home = () => {
                 <div className="about-content">
                   <p className="section-subtitle" style={{ "color": "var(--gray-web)" }}>About Us</p>
                   <h3 className="h2 section-title" data-aos="fade-right" data-aos-duration="500">
-                    A group of enthusiastic <span className="span" data-aos="zoom-in" data-aos-delay="500">Engineers keen to</span> help their fellow Engineers.
+                    A group of enthusiastic <span className="span" data-aos="zoom-in" data-aos-delay="400">Engineers keen to</span> help their fellow Engineers.
                   </h3>
                   <p className="section-text" style={{ "color": "var(--gray-web)" }}>
                     Through Resourcio we have tried to bring in different resources related to software development and
@@ -225,11 +225,11 @@ const Home = () => {
                     </li>
                     <li className="about-item">
                       <ion-icon name="checkmark-done-outline" aria-hidden="true"></ion-icon>
-                      <span className="span" data-aos="zoom-in" data-aos-delay="500">Maximum topics covered</span>
+                      <span className="span" data-aos="zoom-in" data-aos-delay="400">Maximum topics covered</span>
                     </li>
                     <li className="about-item">
                       <ion-icon name="checkmark-done-outline" aria-hidden="true"></ion-icon>
-                      <span className="span" data-aos="zoom-in" data-aos-delay="1000">All in a single platform</span>
+                      <span className="span" data-aos="zoom-in" data-aos-delay="800">All in a single platform</span>
                     </li>
                   </ul>
                   <img src={shape4} width={100} height={100} loading="lazy" alt="background shape"
