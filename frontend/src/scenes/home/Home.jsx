@@ -163,7 +163,7 @@ const Home = () => {
                 <p className="section-text">
                   Here are the different resouces:
                 </p>
-                <ul className="grid-list" data-aos="flip-right" data-aos-duration="1000">
+                <ul className="grid-list cate" data-aos="flip-right" data-aos-duration="1000">
                   <li>
                     <Category 
                       image={category1}
