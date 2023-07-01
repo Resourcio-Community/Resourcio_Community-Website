@@ -1,11 +1,9 @@
 import logo from '../../Images/rc_com.png'
-import userLogo from '../../Images/user-logo.jpg'
 import './navbar.css'
 import { Link } from 'react-router-dom'
 import { useEffect, useContext, useRef, useState } from 'react'
-import { AuthContext } from '../../context/authContext/AuthContext'
-import { logout } from '../../context/authContext/AuthActions'
 import { ThemeContext } from '../../context/ThemeContext'
+import Profile from '../profile/Profile'
 
 
 const Navbar = () => {
@@ -23,7 +21,7 @@ const Navbar = () => {
     useEffect(() => {
         window.addEventListener("scroll", changeBackground)
 
-        return(() => window.removeEventListener('scroll', changeBackground))
+        return (() => window.removeEventListener('scroll', changeBackground))
     }, [])
 
 
@@ -42,12 +40,11 @@ const Navbar = () => {
     }
 
 
-    const { user, dispatch } = useContext(AuthContext)
 
     return (
         <nav className={navbar ? "navbar" : "navbar_scroll"}>
             <div className='community_logo'>
-                <a href='#'><img className='community_img' src={logo} height="90" width="90" alt="logo"/></a>
+                <a href='#'><img className='community_img' src={logo} height="90" width="90" alt="logo" /></a>
             </div>
             <ul className="nav-links">
                 <input type="checkbox" id="checkbox_toggle" onClick={hidebodyOverflow} ref={checkboxRef} />
@@ -55,7 +52,6 @@ const Navbar = () => {
                     htmlFor="checkbox_toggle"
                     style={{
                         fontSize: labelText === "&times;" ? "35px" : "24px",
-                        color: labelText === "&times;" ? 'red' : undefined
                     }}
                     className="hamburger"
                     dangerouslySetInnerHTML={{ __html: labelText }}>
@@ -65,17 +61,7 @@ const Navbar = () => {
                     <Link to='/resources'><li onClick={removeOverflow}>Resources</li></Link>
                     <a href='#team'><li onClick={removeOverflow}>Team</li></a>
                     <a href='#footer'><li onClick={removeOverflow}>Contact Us</li></a>
-                    {!user
-                        ? < Link to='/login'><li onClick={removeOverflow}>Sign in</li></Link>
-                        : (
-                            <li onClick={() => dispatch(logout())} id='userlogout'>
-                                <div className="logout">
-                                    <img src={userLogo} width={35} style={{ "borderRadius": "50%" }} alt="avatar"/>
-                                    <span id='logout'>Logout</span>
-                                </div>
-                            </li>
-                        )
-                    }
+                    <Profile handleOverflow={removeOverflow} />
                 </div>
             </ul>
             <button className="btn btn-primary" onClick={toggleTheme}>DarkMode</button>
