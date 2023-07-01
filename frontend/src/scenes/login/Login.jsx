@@ -3,8 +3,8 @@ import { Helmet } from 'react-helmet'
 import axios from 'axios'
 import './login.css'
 import Loader from '../../component/loader/Loader'
-import { AuthContext } from '../../authContext/AuthContext'
-import { loginFailure, loginStart, loginSuccess } from '../../authContext/AuthActions'
+import { AuthContext } from '../../context/authContext/AuthContext'
+import { loginFailure, loginStart, loginSuccess } from '../../context/authContext/AuthActions'
 import { Link } from 'react-router-dom'
 
 import HomeRoundedIcon from '@mui/icons-material/HomeRounded';
@@ -130,7 +130,7 @@ const Login = () => {
                             />
                         </div>
                         <div className="input-field password">
-                            <i className="fas fa-eye" onClick={() => setHideShowPassword(!hideshowPassword)}></i>
+                            <i className={`fas ${!hideshowPassword ? 'fa-eye' : 'fa-eye-slash'}`} onClick={() => setHideShowPassword(!hideshowPassword)}></i>
                             <input
                                 type={!hideshowPassword ? "password" : "text"}
                                 placeholder="Password"
@@ -162,7 +162,7 @@ const Login = () => {
                             <i className="fab fa-adn"></i>
                             <input
                                 type="text"
-                                placeholder="Name"
+                                placeholder="Full Name"
                                 value={name}
                                 autoComplete="off"
                                 spellCheck="false"
@@ -209,10 +209,7 @@ const Login = () => {
                             )}
                         </div>
                         <div className="input-field password" style={{ border: validatePassword === false ? '1px solid #FF1818' : 'none' }}>
-                            <i
-                                className="fas fa-eye"
-                                onClick={() => setHideShowPassword(!hideshowPassword)}
-                            ></i>
+                            <i className={`fas ${!hideshowPassword ? 'fa-eye' : 'fa-eye-slash'}`} onClick={() => setHideShowPassword(!hideshowPassword)}></i>
                             <input
                                 type={!hideshowPassword ? "password" : "text"}
                                 placeholder="Password"

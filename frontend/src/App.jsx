@@ -4,7 +4,7 @@ import axios from 'axios'
 import Spinner from './component/spinner/Spinner'
 import { Route, Switch, Redirect } from "react-router-dom"
 import { useContext, lazy, Suspense } from 'react'
-import { AuthContext } from './authContext/AuthContext'
+import { AuthContext } from './context/authContext/AuthContext'
 
 
 const Home = lazy(() => import('./scenes/home/Home'))

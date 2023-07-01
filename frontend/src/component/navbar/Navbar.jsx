@@ -3,8 +3,8 @@ import userLogo from '../../Images/user-logo.jpg'
 import './navbar.css'
 import { Link } from 'react-router-dom'
 import { useEffect, useContext, useRef, useState } from 'react'
-import { AuthContext } from '../../authContext/AuthContext'
-import { logout } from '../../authContext/AuthActions'
+import { AuthContext } from '../../context/authContext/AuthContext'
+import { logout } from '../../context/authContext/AuthActions'
 
 
 const Navbar = () => {
@@ -18,8 +18,9 @@ const Navbar = () => {
         }
     }
     useEffect(() => {
-        changeBackground()
         window.addEventListener("scroll", changeBackground)
+
+        return(() => window.removeEventListener('scroll', changeBackground))
     }, [])
 
 
@@ -43,7 +44,7 @@ const Navbar = () => {
     return (
         <nav className={navbar ? "navbar" : "navbar_scroll"}>
             <div className='community_logo'>
-                <a href='#'><img className='community_img' src={logo} height="105" width="105" alt="logo"/></a>
+                <a href='#'><img className='community_img' src={logo} height="90" width="90" alt="logo"/></a>
             </div>
             <ul className="nav-links">
                 <input type="checkbox" id="checkbox_toggle" onClick={hidebodyOverflow} ref={checkboxRef} />

@@ -8,7 +8,7 @@ li {
     align-items: center;
     justify-content: space-between;
     padding: 20px;
-    height: 80px;
+    height: 70px;
     min-width: 365px;
     width: 100%;
     position: fixed;
@@ -30,7 +30,7 @@ li {
     align-items: center;
     justify-content: space-between;
     padding: 20px;
-    height: 100px;
+    height: 85px;
     min-width: 365px;
     width: 100%;
     background-color: white;
@@ -110,11 +110,11 @@ input[type="checkbox"] {
     }
 
     .navbar .menu{
-        top: 80px;
+        top: 70px;
     }
 
     .navbar_scroll .menu{
-        top: 100px;
+        top: 85px;
     }
 
     .menu li {
