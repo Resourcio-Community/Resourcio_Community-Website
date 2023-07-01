@@ -5,9 +5,12 @@ import { Link } from 'react-router-dom'
 import { useEffect, useContext, useRef, useState } from 'react'
 import { AuthContext } from '../../context/authContext/AuthContext'
 import { logout } from '../../context/authContext/AuthActions'
+import { ThemeContext } from '../../context/ThemeContext'
 
 
 const Navbar = () => {
+
+    const {toggleTheme, darkMode} = useContext(ThemeContext);
 
     const [navbar, setNavbar] = useState(false)
     const changeBackground = () => {
@@ -75,6 +78,7 @@ const Navbar = () => {
                     }
                 </div>
             </ul>
+            <button className="btn btn-primary" onClick={toggleTheme}>DarkMode</button>
         </nav>
     )
 }
