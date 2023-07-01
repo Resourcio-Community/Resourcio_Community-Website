@@ -10,7 +10,7 @@ const ThemeButton = () => {
     return (
         <>
             <div className="theme-container">
-                <input type="checkbox" defaultChecked={!darkMode} id="themeToggle" onClick={toggleTheme} />
+                <input type="checkbox" defaultChecked={darkMode} id="themeToggle" onClick={toggleTheme} />
                 <label htmlFor="themeToggle"></label>
             </div>
         </>
