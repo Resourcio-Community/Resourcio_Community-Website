@@ -15,8 +15,8 @@ import './resources.css'
 import { Helmet } from 'react-helmet'
 import ResourceCard from '../../component/resourceCard/ResourceCard'
 import { useHistory } from 'react-router-dom'
-import { useRef,useEffect } from 'react'
-import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+import { useRef } from 'react'
+import ArrowBackIcon from '@mui/icons-material/ArrowBack'
 
 const Resources = () => {
 
@@ -31,25 +31,26 @@ const Resources = () => {
       }
     }
   })
-  const progressBarHandler=()=>{
-    const totalScroll=document.documentElement.scrollTop;
-    const windowHeight=document.documentElement.scrollHeight-document.documentElement.clientHeight;
-    const scroll=`${totalScroll/windowHeight}`;
-    const progressBar=document.getElementById('progressBar');
-    progressBar.style.transform=`scale(${scroll},1)`;
-    progressBar.style.opacity=`${scroll}`
+
+  const progressBarHandler = () => {
+    const totalScroll = document.documentElement.scrollTop
+    const windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight
+    const scroll = `${totalScroll / windowHeight}`
+    const progressBar = document.getElementById('progressBar')
+    progressBar.style.transform = `scale(${scroll},1)`
+    progressBar.style.opacity = `${scroll}`
   }
-  useEffect(()=>{
-    window.addEventListener('scroll',progressBarHandler)
-  })
+  window.addEventListener('scroll', progressBarHandler)
+
+
   return (
     <div className='resources'>
       <Helmet>
         <title>Resources</title>
       </Helmet>
       <div id="progressBarContainer" >
-      <div id="progressBar" ></div>
-    </div>
+        <div id="progressBar" ></div>
+      </div>
 
       <div className="resources-head">
         <div className="resources_wave"></div>
@@ -128,7 +129,7 @@ const Resources = () => {
           content='Open source is a term that originally referred to open source software (OSS).OSS is software that is distributed with its source code, making it available for use, modification, and distribution with its original rights. Source code is  part of the software that most computer users don’t ever see; it’s the code computer programmers manipulate to control how a program or application behaves. Programmers who have access to source code can change a program by adding to it, changing it, or fixing parts of it that aren’t working properly.'
           href='https://discord.gg/bDk4ntUguh'
         />
-         <a href="#" className="back-top-btn" aria-label="back top top" ref={backtopRef}>
+        <a href="#" className="back-top-btn" aria-label="back top top" ref={backtopRef}>
           <ion-icon name="chevron-up" aria-hidden="true"></ion-icon>
         </a>
 

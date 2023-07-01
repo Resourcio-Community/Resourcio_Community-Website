@@ -67,7 +67,6 @@ const Home = () => {
     }
   }
 
-
   useEffect(() => {
     AOS.init()
     AOS.refresh()
@@ -75,6 +74,17 @@ const Home = () => {
     fetchEvents()
     fetchPastEvents()
   }, [])
+
+  
+  const progressBarHandler = () => {
+    const totalScroll = document.documentElement.scrollTop
+    const windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight
+    const scroll = `${totalScroll / windowHeight}`
+    const progressBar = document.getElementById('progressBar')
+    progressBar.style.transform = `scale(${scroll},1)`
+    progressBar.style.opacity = `${scroll}`
+  }
+  window.addEventListener('scroll', progressBarHandler)
 
 
   const backtopRef = useRef()
@@ -93,17 +103,8 @@ const Home = () => {
     entry.target.muted = true
     inView ? entry.target.play() : entry.target.pause()
   }
-  const progressBarHandler=()=>{
-    const totalScroll=document.documentElement.scrollTop;
-    const windowHeight=document.documentElement.scrollHeight-document.documentElement.clientHeight;
-    const scroll=`${totalScroll/windowHeight}`;
-    const progressBar=document.getElementById('progressBar');
-    progressBar.style.transform=`scale(${scroll},1)`;
-    progressBar.style.opacity=`${scroll}`
-  }
-  useEffect(()=>{
-    window.addEventListener('scroll',progressBarHandler)
-  })
+
+
 
   return (
     pageLoading ? <LoadingScreen />
@@ -116,9 +117,10 @@ const Home = () => {
 
         <main>
           <article>
-          <div id="progressBarContainer" >
-      <div id="progressBar" ></div>
-    </div>
+            <div id="progressBarContainer" >
+              <div id="progressBar" ></div>
+            </div>
+
             <section className="section hero has-bg-image" aria-label="home"
               style={{ "backgroundImage": `url(${heroBg})` }}>
               <div className="container">
