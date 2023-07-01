@@ -220,8 +220,8 @@ const Home = () => {
               <div className="container">
                 <div className="about-content">
                   <p className="section-subtitle" style={{ "color": "var(--gray-web)" }}>About Us</p>
-                  <h3 className="h2 section-title" data-aos="fade-right" data-aos-duration="500">
-                    A group of enthusiastic <span className="span" data-aos="zoom-in" data-aos-delay="400">Engineers keen to</span> help
+                  <h3 className="h2 section-title" data-aos="fade-right" data-aos-duration="400">
+                    A group of enthusiastic <span className="span" data-aos="zoom-in" data-aos-delay="300">Engineers keen to</span> help
                     their fellow Engineers.
                   </h3>
                   <p className="section-text" style={{ "color": "var(--gray-web)" }}>
@@ -239,11 +239,11 @@ const Home = () => {
                     </li>
                     <li className="about-item">
                       <ion-icon name="checkmark-done-outline" aria-hidden="true"></ion-icon>
-                      <span className="span" data-aos="zoom-in" data-aos-delay="400">Maximum topics covered</span>
+                      <span className="span" data-aos="zoom-in" data-aos-delay="300">Maximum topics covered</span>
                     </li>
                     <li className="about-item">
                       <ion-icon name="checkmark-done-outline" aria-hidden="true"></ion-icon>
-                      <span className="span" data-aos="zoom-in" data-aos-delay="800">All in a single platform</span>
+                      <span className="span" data-aos="zoom-in" data-aos-delay="600">All in a single platform</span>
                     </li>
                   </ul>
                   <img src={shape4} width={100} height={100} loading="lazy" alt="background shape"
