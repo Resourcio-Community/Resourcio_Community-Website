@@ -101,7 +101,7 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #2DBAA3;
+  background:linear-gradient(transparent,#2DBAA3) ;
   border-radius: 10px;
   
 }
@@ -250,3 +250,31 @@ button {
   object-fit: contain;
   border-radius: 40px;
 }
+ #progressBarContainer {
+  position: fixed;
+  z-index: 10;
+  background: #fff;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+
+}
+
+#progressBar {
+  background: linear-gradient(to left, #09bd78, hsl(351, 83%, 61%));
+  transform-origin: top leftt;
+  transform: scale(0, 0);
+  opacity: 0;
+
+}
+
+#progressBar,
+#progressBarContainer {
+  height: 6px;
+}
+@media(max-width:768px){
+  #progressBar,#progressBarContainer{
+    height: 3px;
+  }
+} 
