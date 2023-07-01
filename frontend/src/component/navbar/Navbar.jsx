@@ -4,11 +4,12 @@ import { Link } from 'react-router-dom'
 import { useEffect, useContext, useRef, useState } from 'react'
 import { ThemeContext } from '../../context/ThemeContext'
 import Profile from '../profile/Profile'
+import ThemeButton from '../themeChange/ThemeButton'
 
 
 const Navbar = () => {
 
-    const {toggleTheme, darkMode} = useContext(ThemeContext);
+    const {darkMode} = useContext(ThemeContext);
 
     const [navbar, setNavbar] = useState(false)
     const changeBackground = () => {
@@ -64,7 +65,7 @@ const Navbar = () => {
                     <Profile handleOverflow={removeOverflow} />
                 </div>
             </ul>
-            <button className="btn btn-primary" onClick={toggleTheme}>DarkMode</button>
+            <ThemeButton/>
         </nav>
     )
 }
