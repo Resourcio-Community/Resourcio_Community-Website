@@ -8,46 +8,41 @@ export const data = [
     {
         id: 2,
         q: "\tWhat is our aim?",
-        a: "Our main motto is to create a healthy atmosphere to learn and grow up in a community. And we also want to develop your journey with relevant skills constructively."
+        a: "Our main motto is to create a healthy atmosphere to learn and grow up in a community. Resourcio Community organizes various initiatives and events to promote collaboration and resource sharing. These include webinars and workshops on specific topics, where members can learn from sound knowledged person and gain new insights. The community also hosts hackathons and collaborative projects, encouraging members to come together and work on innovative solutions."
     },
-    // {
-    //     id: 3,
-    //     q: "\tWant to join our community?",
-    //     a: "Join here https://bit.ly/resourciocommunity"
-    // },
+    {
+        id: 3,
+        q: "\tWhy join us?",
+        a: "Joining Resourcio Community can benefit individualsnin the tech industry in several ways. Firstly, it provides access to a network of like-minded people who can offer support, guidance, and collaboration opportunities. This can lead to new partnerships, and career growth. Additionally, Resourcio Community offers a wealth of resources and tools that members can access to enhance their skills and knowledge. From webinars and workshops to industry insights and best practices, the community serves as a valuable resource hub for individuals to thrive in the tech industry."
+    },
     {
         id: 4,
-        q: "\tStuck with anything?",
-        a: `Contact mondalsoumya02@gmail.com`
+        q: "\tAre there any specific requirements needed to join Resourcio Community?",
+        a: "There are no membership fees to join Resourcio Community. It is open to anyone in the tech industry who wishes to connect, collaborate, and share resources. The community believes in providing equal opportunities for all professionals, regardless of their financial situation. This commitment to inclusivity ensures that individuals from diverse backgrounds can participate and benefit from the community's resources and networking opportunities."
     },
     {
         id: 5,
-        q: "\tLive event notifications?",
-        a: "Yes, it is available. And we will conduct short events every week. You can also get notified from our main group and social handles."
-    },
-    {
-        id: 6,
         q: "\tAre specialized speakers available or not?",
         a: "We have specialized speakers on Web development, cloud, AI/ML, cyber security, blockchain, app development, and data structure.",
     },
     {
-        id: 7,
+        id: 6,
         q: "\tAny prize from events?",
-        a: "Yes."
+        a: "Yes, we provide amazing stickers and also cash prize for selected events."
+    },
+    {
+        id: 7,
+        q: "\tAny certified event?",
+        a: "Yes. We do provide certificate for every events conducted."
     },
     {
         id: 8,
-        q: "\tAny certified event?",
-        a: "No certified event till date."
-    },
-    {
-        id: 9,
         q: "\tCollege community or global community?",
-        a: "Global."
+        a: "Global, because it enriches the field of peer to peer networking."
 
     },
     {
-        id: 10,
+        id: 9,
         q: "\t Preferred language to communicate?",
         a: "English obviously."
     }
