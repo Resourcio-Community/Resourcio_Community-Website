@@ -23,6 +23,7 @@ const Stat = ({ style, fontSize, cardTitle, cardText }) => {
     }
   }, [delay])
 
+  
   return (
     <div className="stats-card" style={{ "--color": `${style}` }} id="stats-card">
       <h3 className="card-title">
