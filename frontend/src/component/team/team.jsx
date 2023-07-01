@@ -10,8 +10,8 @@ import snigdha from '../../Images/Snigdha.webp'
 
 import ContactCard from '../contactCard/ContactCard'
 import blogBg from '../../Images/blog-bg.svg'
-import AOS from "aos";
-import "aos/dist/aos.css";
+import "aos/dist/aos.css"
+
 
 const Team = () => {
   return (
