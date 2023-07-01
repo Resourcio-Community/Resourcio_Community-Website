@@ -45,7 +45,9 @@ const FAQ = () => {
   return (
     <section id="faq" className={"section faq"}>
       <Container>
-        <h2 className="h2 section-title" data-aos="fade-right">Frequently Asked Questions</h2>
+        <h3 className="h3 section-title" data-aos="fade-right" style={{ color: "var(--gray-web)", marginBottom: '25px' }}>
+          Frequently Asked Questions
+        </h3>
         {data.map((item) => (
           <Accordion
             key={item.id}
