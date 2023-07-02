@@ -1,15 +1,12 @@
 import logo from '../../Images/rc_com.png'
 import './navbar.css'
 import { Link } from 'react-router-dom'
-import { useEffect, useContext, useRef, useState } from 'react'
-import { ThemeContext } from '../../context/ThemeContext'
+import { useEffect, useRef, useState } from 'react'
 import Profile from '../profile/Profile'
 import ThemeButton from '../themeChange/ThemeButton'
 
 
 const Navbar = () => {
-
-    const {darkMode} = useContext(ThemeContext);
 
     const [navbar, setNavbar] = useState(false)
     const changeBackground = () => {
@@ -63,9 +60,9 @@ const Navbar = () => {
                     <a href='#team'><li onClick={removeOverflow}>Team</li></a>
                     <a href='#footer'><li onClick={removeOverflow}>Contact Us</li></a>
                     <Profile handleOverflow={removeOverflow} />
+                    <ThemeButton />
                 </div>
             </ul>
-            <ThemeButton/>
         </nav>
     )
 }
