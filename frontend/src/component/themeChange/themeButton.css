@@ -6,8 +6,8 @@
     content: '';
     display: inline-block;
     cursor: pointer;
-    height: 40px;
-    width: 40px;
+    height: 35px;
+    width: 35px;
     border-radius: 50%;
     transition: all 0.3s ease-in-out;
 }
@@ -18,5 +18,5 @@
 
 #themeToggle:checked+label {
     background-color: transparent;
-    box-shadow: inset -18px -16px 1px -6px #151515;
+    box-shadow: inset -18px -15px 0 -9px #151515;
 }
