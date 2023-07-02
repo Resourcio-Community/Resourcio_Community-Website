@@ -1,11 +1,13 @@
-import { useState } from 'react'
+import { useState, useContext } from 'react'
 import { data } from './data'
 import { Accordion, Container, SummaryDetails, SummarySection } from './faqStyles'
 import Typography from '@mui/material/Typography'
+import { ThemeContext } from '../../context/ThemeContext'
 
 const FAQ = () => {
   const emailRegex = /([\w.-]+@[\w-]+\.[\w.-]+)/gi
   const urlRegex = /(https?:\/\/\S+)/gi
+  const {darkMode} = useContext(ThemeContext)
 
   const renderAnswer = (ans) => {
     const links = ans.split(urlRegex)
@@ -43,7 +45,7 @@ const FAQ = () => {
   const [expandPanel, setExpandPanel] = useState(false)
 
   return (
-    <section id="faq" className={"section faq"}>
+    <section id="faq" className={"section faq"} style={{filter: darkMode?"invert(1)":"invert(0)"}}>
       <Container>
         <h3 className="h3 section-title" data-aos="fade-right" style={{ color: "var(--gray-web)", marginBottom: '25px' }}>
           Frequently Asked Questions
