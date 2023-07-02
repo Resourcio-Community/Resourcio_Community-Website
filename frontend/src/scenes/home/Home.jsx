@@ -37,7 +37,7 @@ import { ThemeContext } from '../../context/ThemeContext'
 
 
 const Home = () => {
-  const {darkMode} = useContext(ThemeContext);
+  const { darkMode } = useContext(ThemeContext)
   const [upcomingEvents, setUpcomingEvents] = useState([])
   const [pastEvents, setPastEvents] = useState([])
   const [pageLoading, setPageLoading] = useState(false)
@@ -77,7 +77,7 @@ const Home = () => {
     fetchPastEvents()
   }, [])
 
-  
+
   const progressBarHandler = () => {
     const totalScroll = document.documentElement.scrollTop
     const windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight
@@ -124,9 +124,9 @@ const Home = () => {
             </div>
 
             <section className="section hero has-bg-image" aria-label="home"
-              style={{ "backgroundImage": `url(${heroBg})`, filter: darkMode?"invert(1)":"invert(0)"}}>
+              style={{ "backgroundImage": `url(${heroBg})`, filter: darkMode ? "invert(1)" : "invert(0)" }}>
               <div className="container">
-                <div className="hero-content" data-aos="fade-right" data-aos-offset="200" data-aos-duration="1000" style={{filter: darkMode?"invert(1)":"invert(0)"}}>
+                <div className="hero-content" data-aos="fade-right" data-aos-offset="200" data-aos-duration="1000" style={{ filter: darkMode ? "invert(0.99)" : "invert(0)" }}>
                   <h1 className="h1 section-title">
                     The Best Website for students to <span className="span" data-aos="zoom-in"
                       data-aos-delay="500">Search</span> for Software Resources.
