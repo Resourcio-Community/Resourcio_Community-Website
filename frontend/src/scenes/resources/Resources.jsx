@@ -17,6 +17,7 @@ import ResourceCard from '../../component/resourceCard/ResourceCard'
 import { useHistory } from 'react-router-dom'
 import { useRef } from 'react'
 import ArrowBackIcon from '@mui/icons-material/ArrowBack'
+import Footer from '../../component/footer/Footer'
 
 const Resources = () => {
 
@@ -135,7 +136,7 @@ const Resources = () => {
 
 
       </div>
-
+      <Footer></Footer>
     </div>
   )
 }
