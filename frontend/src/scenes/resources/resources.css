@@ -89,6 +89,7 @@
     line-height: 1.5;
     background-repeat: repeat-y;
     background-color: #F0EEED;
+    background: linear-gradient(1deg, rgb(225, 242, 254) -2.8%, rgb(193, 224, 250) 44.6%, rgb(132 172 206) 102.4%);
 }
 
 .card_container{
