@@ -69,6 +69,38 @@ input[type="checkbox"] {
     display: none;
 }
 
+/* DROPDOWN MENU */
+.dropdown {
+    position: relative;
+    display: inline-block;
+    
+  }
+  /* .dropdown a{
+    color: black;
+    
+  } */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 5px;
+    font-size: 18px;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 6px 5px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
 /*HAMBURGER MENU*/
 .hamburger {
     display: none;
@@ -82,10 +114,12 @@ input[type="checkbox"] {
     margin-left: 8px;
     margin-top: 10px;
 }
+.mobile{
+    display: none;
+}
 
 /* APPLYING MEDIA QUERIES */
-@media (max-width: 768px) {
-
+@media (max-width: 894px) {
 
     .community_logo {
         margin-left: -10px;
@@ -93,6 +127,7 @@ input[type="checkbox"] {
 
     .navbar {
         background-color: white;
+        
     }
 
     .hamburger {
@@ -109,20 +144,24 @@ input[type="checkbox"] {
         min-height: 100%;
         z-index: 10;
         min-width: 365px;
+        overflow-y: auto;
+        margin-top: 6px;
     }
+    
 
     .navbar .menu{
         top: 70px;
     }
 
     .navbar_scroll .menu{
-        top: 85px;
+        top: 75px;
     }
 
     .menu li {
         transform: translateY(-150%);
         color: var(--eerie-black-1);
-    }
+        
+      }
 
     .menu li:hover {
         display: inline-block;
@@ -144,6 +183,44 @@ input[type="checkbox"] {
     #userlogout {
         margin-top: 30px;
     }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        min-width: 160px;
+        box-shadow: none;
+        z-index: 1;
+        border-radius: 5px;
+        font-size: 18px;
+        background-color: white;
+        
+      }
+     
+      .dropdown-content a {
+        color: black;
+        padding: 0;
+        text-decoration: none;
+        display: flex;
+        background: none;
+      }
+    
+      
+      .dropdown:hover .dropdown-content {
+        display: block;
+       
+      }
+     
+      .mobile-theme{
+        display: none;
+      }
+      
+      .mobile{
+        display: block;
+        position: absolute;
+        right: 13%;
+      }
+     
+    
 }
 
 .logout {
@@ -159,3 +236,4 @@ input[type="checkbox"] {
     overflow: hidden;
     cursor: pointer;
 }
+

@@ -23,11 +23,11 @@ const Navbar = () => {
     }, [])
 
 
-
+    
     const [labelText, setLabelText] = useState('&#9776;')
     const hidebodyOverflow = (e) => {
         document.body.classList.toggle('hideOverflow')
-        if (!checkboxRef.current.checked) setLabelText("&#9776;")
+        if (!checkboxRef.current.checked)       setLabelText("&#9776;")
         else setLabelText("&times;")
     }
     const checkboxRef = useRef()
@@ -37,12 +37,20 @@ const Navbar = () => {
         setLabelText("&#9776;")
     }
 
-
+    
+    
 
     return (
         <nav className={navbar ? "navbar" : "navbar_scroll"}>
             <div className='community_logo'>
                 <a href='#'><img className='community_img' src={logo} height="90" width="90" alt="logo" /></a>
+                
+                { document.body.classList.contains("hideOverflow") &&
+                        <div className= "mobile">
+                            <ThemeButton/>
+                        </div>  
+                    }
+                
             </div>
             <ul className="nav-links">
                 <input type="checkbox" id="checkbox_toggle" onClick={hidebodyOverflow} ref={checkboxRef} />
@@ -53,16 +61,35 @@ const Navbar = () => {
                     }}
                     className="hamburger"
                     dangerouslySetInnerHTML={{ __html: labelText }}>
+                    
                 </label>
+                
                 <div className="menu">
                     <a href='#about'><li onClick={removeOverflow}>About Us</li></a>
                     <Link to='/resources'><li onClick={removeOverflow}>Resources</li></Link>
                     <a href='#team'><li onClick={removeOverflow}>Team</li></a>
                     <a href='#footer'><li onClick={removeOverflow}>Contact Us</li></a>
-                    <Profile handleOverflow={removeOverflow} />
-                    <ThemeButton />
+                   
+                    <div className="dropdown">
+                        <a href='#'><li>More  <i class="fa fa-caret-down"></i></li></a>
+                        <div className="dropdown-content">
+                                <a href='#'><li>Blogs</li></a>
+                                <a href='#faq'><li>FAQ</li></a>
+                                <a href='#' ><li>Achievements</li></a>
+                        </div> 
+                    </div>
+                    <div className='mobile-theme'>
+                        { 
+                         <ThemeButton/>
+                        }
+                    </div>
+                   
+                     <div>
+                        <Profile handleOverflow={removeOverflow} />
+                    </div>
                 </div>
             </ul>
+            
         </nav>
     )
 }
