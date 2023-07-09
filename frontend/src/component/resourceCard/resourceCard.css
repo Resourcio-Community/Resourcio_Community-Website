@@ -56,6 +56,7 @@
     cursor: pointer;
     position: absolute;
     bottom: 0%;
+    color: black;
 }
 
 .resource-button:hover {

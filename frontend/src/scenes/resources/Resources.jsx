@@ -52,15 +52,19 @@ const Resources = () => {
         <div id="progressBar" ></div>
       </div>
 
-      <div className="resources-head">
-        <div className="resources_wave"></div>
-        <div className="resources_wave"></div>
-        <div className="resources_wave"></div>
+      <div className='search'>
+        <ArrowBackIcon className="back_button" onClick={() => history.push("/")} style={{ height: 30, width: 30, touchAction: true, position: "inherit" }} />
+        <input type="text" placeholder='search'/>
+        <div>
+          <img src={os} alt="" />
+          <span>admin</span>
+        </div>
       </div>
-      <ArrowBackIcon className="back_button" onClick={() => history.push("/")} style={{ height: 30, width: 30, touchAction: true, marginLeft: '30px', marginTop: '30px' }} />
 
-      <div className="resources_h1"><h1>RESOURCES</h1></div>
-
+      <div className="resources_h1">
+        <div>Resources</div>
+        <div>Welcome To Resource Gallery</div>
+        </div>
 
       <div className="card_container">
         <ResourceCard
