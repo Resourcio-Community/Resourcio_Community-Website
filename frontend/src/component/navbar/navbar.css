@@ -14,8 +14,7 @@ li {
     position: fixed;
     background: rgba(255, 255, 255, 0.65);
     backdrop-filter: blur(18.5px);
-    color: black;
-    
+    color: black;  
     z-index: 10;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     transition: height 200ms ease-in;
@@ -24,6 +23,7 @@ li {
 .navbar .community_img{
     transform: scale(0.8);
     transition: all 200ms ease-in-out;
+    
 }
 
 .navbar_scroll {
@@ -44,15 +44,19 @@ li {
 .navbar_scroll .community_img{
     transform: scale(1);
     transition: all 200ms ease-in-out;
+    margin-right: 18px;
 }
 
 /* NAVBAR MENU */
 .menu {
     display: flex;
     align-items: center;
-    gap: 1em;
-    font-size: 18px;
+    justify-content: space-between;
+    /* gap: 44vw; */
+    font-size: 18px; 
+   
 }
+
 
 .menu li:hover {
     background: rgb(249, 227, 227);
@@ -68,6 +72,20 @@ li {
 input[type="checkbox"] {
     display: none;
 }
+.left-menu{
+    display: flex;
+    gap: 0em;
+    
+}
+
+.right-menu{
+    display: flex;
+    align-items: center;
+    gap: 1.5em;
+    
+
+}
+
 
 /* DROPDOWN MENU */
 .dropdown {
@@ -75,10 +93,7 @@ input[type="checkbox"] {
     display: inline-block;
     
   }
-  /* .dropdown a{
-    color: black;
-    
-  } */
+  
   .dropdown-content {
     display: none;
     position: absolute;
@@ -108,18 +123,25 @@ input[type="checkbox"] {
     cursor: pointer;
 }
 
-.community_logo {
+/* .community_logo {
     display: grid;
     place-items: center;
     margin-left: 8px;
     margin-top: 10px;
+} */
+.community_logo{
+    display: flex;
+    margin-left: 8px;
+    margin-top:10px;
+    align-items: center;
 }
 .mobile{
     display: none;
 }
 
 /* APPLYING MEDIA QUERIES */
-@media (max-width: 894px) {
+
+@media (max-width: 850px) {
 
     .community_logo {
         margin-left: -10px;
@@ -131,7 +153,8 @@ input[type="checkbox"] {
     }
 
     .hamburger {
-        display: block;
+        display: flex;
+        
     }
 
     .menu {
@@ -146,13 +169,17 @@ input[type="checkbox"] {
         min-width: 365px;
         overflow-y: auto;
         margin-top: 6px;
-    }
+        gap: 0.3em;
+    }   
     
 
     .navbar .menu{
         top: 70px;
     }
-
+    .navbar_scroll{
+        display: flex;
+        justify-content: space-between;
+    }
     .navbar_scroll .menu{
         top: 75px;
     }
@@ -219,7 +246,20 @@ input[type="checkbox"] {
         position: absolute;
         right: 13%;
       }
-     
+     /* .left-menu{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1em;
+        margin-top: 40%;
+     } */
+     .left-menu{
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5em;
+    }
+    
     
 }
 
