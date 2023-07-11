@@ -10,16 +10,50 @@
     margin-bottom: 30px;
 }
 
-.resources_h1 {
-    position: absolute;
-    top: 0px;
-    color: #fff;
-    height: 30vh;
-    font-size: 2rem;
+.search{
     display: flex;
     align-items: center;
-    justify-content: center;
-    width: 100%;
+    padding: 30px 0px;
+    justify-content: space-between;
+}
+
+.search input{
+    min-width: 100px;
+    width: 100vw;
+    max-width: 300px;
+    height: 50px;
+    outline: none;
+    margin: 0px 20px;
+    border-radius: 18px;
+    border: 2px solid #7e7e7e;
+    padding: 10px;
+}
+
+.search div{
+    display: flex;
+    align-items: center;
+    margin: 0px 20px;
+    color: black;
+    font-weight: 500;
+}
+
+.search div img{
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    margin: 0px 10px;
+}
+
+.resources_h1 {
+    color: black;
+    font-size: 1.5rem;
+    margin: auto;
+    padding: 20px 30px;
+    font-weight: 500;
+}
+
+.resources_h1 :first-child{
+    font-weight: 800;
 }
 
 @keyframes gradient {
@@ -89,6 +123,7 @@
     line-height: 1.5;
     background-repeat: repeat-y;
     background-color: #F0EEED;
+    background: linear-gradient(1deg, rgb(225, 242, 254) -2.8%, rgb(193, 224, 250) 44.6%, rgb(132 172 206) 102.4%);
 }
 
 .card_container{

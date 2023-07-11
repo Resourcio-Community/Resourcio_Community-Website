@@ -15,19 +15,27 @@ const ResourceCard = ({ image, title, content, href }) => {
         user ? window.open(href, '_blank') : history.push('/login')
     }
 
+    const clip = (text)=>{
+        if(text.length>180)
+        {
+            text = text.slice(0,180)+"...";
+        }
+        return text;
+    }
+
     return (
         <div className="box_card">
-            <figure className="box_img">
-                <LazyLoadImage
-                    className='image'
-                    src={image}
-                    effect='blur'
-                />
-            </figure>
+                <div className='box_child'>
+                    <img src={image} alt="" />
+                {/* {console.log(image)} */}
+                </div>
             <div className="box_content">
-                <div className="resource-button" onClick={handleEvent}>Learn More</div>
+                <div style={{minHeight: "250px"}}>
                 <h3 className="resource-title">{title}</h3>
-                <p className="resource-text">{content}</p>
+                <p className="resource-text">{clip(content)}</p>
+                </div>
+                <hr className='line'/>
+                <div className="resource-button" onClick={handleEvent}>Learn More</div>
             </div>
         </div>
     )
