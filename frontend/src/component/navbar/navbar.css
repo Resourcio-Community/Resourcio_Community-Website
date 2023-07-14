@@ -142,7 +142,6 @@ input[type="checkbox"] {
 /* APPLYING MEDIA QUERIES */
 
 @media (max-width: 850px) {
-
     .community_logo {
         margin-left: -10px;
     }
@@ -185,7 +184,7 @@ input[type="checkbox"] {
     }
 
     .menu li {
-        transform: translateY(-150%);
+        /* transform: translateY(-150%); */
         color: var(--eerie-black-1);
         
       }
@@ -259,12 +258,12 @@ input[type="checkbox"] {
         align-items: center;
         gap: 0.5em;
     }
-    .dropdown-menu {
+    /* .dropdown-menu {
        position: static;
     }
     .dropdown li {
         transform: none;
-    }
+    } */
     
 }
 
@@ -281,7 +280,7 @@ input[type="checkbox"] {
     overflow: hidden;
     cursor: pointer;
 }
-.dropdown-menu {
+/* .dropdown-menu {
     position: absolute;
     top: 70px;
     right: 10px;
@@ -294,6 +293,6 @@ input[type="checkbox"] {
   .dropdown-options {
     display: flex;
     /* justify-content: center; */
-    align-items: center;
-  }
+    /* align-items: center;
+  } */ 
 
