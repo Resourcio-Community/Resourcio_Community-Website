@@ -26,9 +26,6 @@ export async function createEvent(req, res) {
                 return res.status(401).json(error)
             }
         }
-        else {
-            return res.status(401).json({ error: 'User not found' })
-        }
     }
     catch (error) {
         return res.status(404).json(error)
@@ -42,15 +39,15 @@ export async function getEvents(req, res) {
     try {
         const events = await Event.find()
 
-        res.status(200).json(events.reverse())
+        return res.status(200).json(events.reverse())
     }
     catch (error) {
-        res.status(500).json(error)
+        return res.status(500).json(error)
     }
 }
 
 
-// POST YOUTUBE IFRAME TO DATABASE
+// POST YOUTUBE VIDEO EMBEDDED LINK TO DATABASE
 export async function addPastEvent(req, res) {
     try {
         const { userId } = req.user
@@ -73,9 +70,6 @@ export async function addPastEvent(req, res) {
                 return res.status(401).json(error)
             }
         }
-        else {
-            return res.status(401).json({ error: 'User not found' })
-        }
     }
     catch (error) {
         return res.status(404).json(error)
@@ -89,9 +83,9 @@ export async function getPastEvents(req, res) {
     try {
         const pastEvents = await PastEvent.find()
 
-        res.status(200).json(pastEvents)
+        return res.status(200).json(pastEvents)
     }
     catch (error) {
-        res.status(500).json(error)
+        return res.status(500).json(error)
     }
 }

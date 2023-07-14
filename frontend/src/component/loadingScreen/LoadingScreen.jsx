@@ -5,7 +5,7 @@ const LoadingScreen = () => {
     return (
         <>
             <div className='loading_screen'></div>
-            <img src={logo} className='loading_image' />
+            <img src={logo} className='loading_image' alt="logo"/>
         </>
     )
 }

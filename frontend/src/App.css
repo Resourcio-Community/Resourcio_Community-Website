@@ -93,6 +93,7 @@ body {
 }
 
 ::-webkit-scrollbar {
+  display: none;
   width: 11px;
 }
 
@@ -101,9 +102,8 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #2DBAA3;
+  background: #2DBAA3;
   border-radius: 10px;
-  
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -249,4 +249,32 @@ button {
   height: 100%;
   object-fit: contain;
   border-radius: 40px;
+}
+
+#progressBarContainer {
+  position: fixed;
+  z-index: 10;
+  background: #fff;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+#progressBar {
+  background: #09bd78;
+  transform-origin: top;
+  transform: scale(0, 0);
+  opacity: 0;
+}
+
+#progressBar,
+#progressBarContainer {
+  height: 5px;
+}
+
+@media(max-width:768px) {
+  #progressBar,
+  #progressBarContainer {
+    height: 3px;
+  }
 }

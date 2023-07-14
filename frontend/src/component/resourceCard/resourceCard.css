@@ -2,40 +2,35 @@
     background: white;
     border-radius: 20px;
     transition: 0.3s;
+    box-shadow: rgb(6 6 6 / 20%) 0px 9px 8px 0px;
+    transition: all 300 ease-in-out;
+    position: relative;
+    padding: 20px;
 }
 
 .box_card:hover {
-    box-shadow: 0 4px 20px 0 rgba(34, 68, 123, 0.2);
+    transform: scale(1.05);
 }
 
-.box_img {
-    height: 220px;
-    overflow: hidden;
-    display: grid;
-    place-items: center;
-    background: #151515;
-    border-top: 3px solid #ff1717;
-    border-left: 4px solid #ff1717;
-    border-right: 4px solid #ff1717;
-    border-radius: 15px 15px 0 0;
+.line{
+    border-top: 1px solid rgb(204 204 204);
 }
 
-.box_img .image {
-    width: 200px;
-    height: 200px;
-    margin-top: 4px;
+.box_child{
+    position: absolute;
+    top: -25px;
+    left: 40px;
+}
+
+.box_child img {
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
-    object-fit: fill;
-    z-index: 2;
-    border: 3px solid #40e0d0;
-}
-
-.image:hover {
-    border: 6px solid #24ffe9;
 }
 
 .box_content {
     padding: 1.3rem 1.3rem 2rem 1.3rem;
+    margin-bottom: 20px;
 }
 
 .box_content .resource-title {
@@ -51,24 +46,27 @@
 }
 
 .resource-button {
-    display: inline-flex;
-    text-transform: uppercase;
+    display: block;
+    text-transform: lowercase;
     letter-spacing: 0.1em;
-    padding: 12px 20px;
-    font-weight: 500;
+    padding: 5px 0px;
+    margin: 10px 0px;
+    /* font-weight: 500; */
     border-radius: 20px;
-    background: #3c89e0;
     cursor: pointer;
+    position: absolute;
+    bottom: 0%;
+    color: black;
 }
 
 .resource-button:hover {
     transition: 0.26s ease-out;
-    background: #23cf5d;
+    text-decoration: underline;
 }
 
 @media screen and (min-width:768px) {
     .box_card {
         display: grid;
-        grid-template-rows: 220px 1fr;
+        grid-template-rows: 1fr;
     }
 }
