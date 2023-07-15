@@ -14,13 +14,12 @@ import os from '../../Images/open_source.png'
 import './resources.css'
 import { Helmet } from 'react-helmet'
 import ResourceCard from '../../component/resourceCard/ResourceCard'
-import { useHistory } from 'react-router-dom'
+import Profile from '../../component/profile/Profile'
 import { useRef } from 'react'
-import ArrowBackIcon from '@mui/icons-material/ArrowBack'
+
 
 const Resources = () => {
 
-  const history = useHistory()
   const backtopRef = useRef()
   window.addEventListener('scroll', () => {
     if (backtopRef.current !== null) {
@@ -53,18 +52,14 @@ const Resources = () => {
       </div>
 
       <div className='search'>
-        <ArrowBackIcon className="back_button" onClick={() => history.push("/")} style={{ height: 30, width: 30, touchAction: true, position: "inherit" }} />
-        <input type="text" placeholder='search'/>
-        <div>
-          <img src={os} alt="" />
-          <span>admin</span>
-        </div>
+        <input type="text" placeholder='search' />
+        <Profile />
       </div>
 
       <div className="resources_h1">
         <div>Resources</div>
         <div>Welcome To Resource Gallery</div>
-        </div>
+      </div>
 
       <div className="card_container">
         <ResourceCard
@@ -136,8 +131,6 @@ const Resources = () => {
         <a href="#" className="back-top-btn" aria-label="back top top" ref={backtopRef}>
           <ion-icon name="chevron-up" aria-hidden="true"></ion-icon>
         </a>
-
-
       </div>
 
     </div>

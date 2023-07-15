@@ -1,37 +1,37 @@
-import logo from "../../Images/rc_com.png";
-import "./navbar.css";
-import { Link } from "react-router-dom";
-import { useEffect, useRef, useState } from "react";
-import Profile from "../profile/Profile";
-import ThemeButton from "../themeChange/ThemeButton";
+import logo from "../../Images/rc_com.png"
+import "./navbar.css"
+import { Link } from "react-router-dom"
+import { useEffect, useRef, useState } from "react"
+import Profile from "../profile/Profile"
+import ThemeButton from "../themeChange/ThemeButton"
 
 const Navbar = () => {
-  const [navbar, setNavbar] = useState(false);
+  const [navbar, setNavbar] = useState(false)
   const changeBackground = () => {
     if (window.scrollY >= 100) {
-      setNavbar(true);
+      setNavbar(true)
     } else {
-      setNavbar(false);
+      setNavbar(false)
     }
-  };
+  }
   useEffect(() => {
-    window.addEventListener("scroll", changeBackground);
+    window.addEventListener("scroll", changeBackground)
 
-    return () => window.removeEventListener("scroll", changeBackground);
-  }, []);
+    return () => window.removeEventListener("scroll", changeBackground)
+  }, [])
 
-  const [labelText, setLabelText] = useState("&#9776;");
+  const [labelText, setLabelText] = useState("&#9776")
   const hidebodyOverflow = (e) => {
-    document.body.classList.toggle("hideOverflow");
-    if (!checkboxRef.current.checked) setLabelText("&#9776;");
-    else setLabelText("&times;");
-  };
-  const checkboxRef = useRef();
+    document.body.classList.toggle("hideOverflow")
+    if (!checkboxRef.current.checked) setLabelText("&#9776")
+    else setLabelText("&times")
+  }
+  const checkboxRef = useRef()
   const removeOverflow = () => {
-    checkboxRef.current.checked = false;
-    document.body.classList.remove("hideOverflow");
-    setLabelText("&#9776;");
-  };
+    checkboxRef.current.checked = false
+    document.body.classList.remove("hideOverflow")
+    setLabelText("&#9776")
+  }
 
   return (
     <nav className={navbar ? "navbar" : "navbar_scroll"}>
@@ -99,7 +99,7 @@ const Navbar = () => {
         <label
           htmlFor="checkbox_toggle"
           style={{
-            fontSize: labelText === "&times;" ? "35px" : "24px",
+            fontSize: labelText === "&times" ? "35px" : "24px",
           }}
           className="hamburger"
           dangerouslySetInnerHTML={{ __html: labelText }}
@@ -143,16 +143,14 @@ const Navbar = () => {
             </div>
           )}
           <div className="right-menu">
-            <div className="mobile-theme">{<ThemeButton />}</div>
-
-            <div>
-              <Profile handleOverflow={removeOverflow} />
-            </div>
+            <div className="mobile-theme"><ThemeButton /></div>
+            <Profile handleOverflow={removeOverflow} />
           </div>
+          
         </div>
       </ul>
     </nav>
-  );
-};
+  )
+}
 
-export default Navbar;
+export default Navbar

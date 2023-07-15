@@ -14,16 +14,16 @@ li {
     position: fixed;
     background: rgba(255, 255, 255, 0.65);
     backdrop-filter: blur(18.5px);
-    color: black;  
+    color: black;
     z-index: 10;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     transition: height 200ms ease-in;
 }
 
-.navbar .community_img{
+.navbar .community_img {
     transform: scale(0.8);
     transition: all 200ms ease-in-out;
-    
+
 }
 
 .navbar_scroll {
@@ -41,7 +41,7 @@ li {
     transition: height 200ms ease-out;
 }
 
-.navbar_scroll .community_img{
+.navbar_scroll .community_img {
     transform: scale(1);
     transition: all 200ms ease-in-out;
     margin-right: 18px;
@@ -53,8 +53,8 @@ li {
     align-items: center;
     justify-content: space-between;
     /* gap: 44vw; */
-    font-size: 18px; 
-   
+    font-size: 18px;
+
 }
 
 
@@ -72,18 +72,18 @@ li {
 input[type="checkbox"] {
     display: none;
 }
-.left-menu{
+
+.left-menu {
     display: flex;
     gap: 0em;
-    
+
 }
 
-.right-menu{
+.right-menu {
     display: flex;
     align-items: center;
-    gap: 1.5em;
-    
-
+    height: 100%;
+    gap: 0.6em;
 }
 
 
@@ -91,30 +91,29 @@ input[type="checkbox"] {
 .dropdown {
     position: relative;
     display: inline-block;
-    
-  }
-  
-  .dropdown-content {
+}
+
+.dropdown-content {
     display: none;
     position: absolute;
     background-color: #f9f9f9;
     min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
     border-radius: 5px;
     font-size: 18px;
-  }
-  
-  .dropdown-content a {
+}
+
+.dropdown-content a {
     color: black;
     padding: 6px 5px;
     text-decoration: none;
     display: block;
-  }
-  
-  .dropdown:hover .dropdown-content {
+}
+
+.dropdown:hover .dropdown-content {
     display: block;
-  }
+}
 
 /*HAMBURGER MENU*/
 .hamburger {
@@ -129,13 +128,14 @@ input[type="checkbox"] {
     margin-left: 8px;
     margin-top: 10px;
 } */
-.community_logo{
+.community_logo {
     display: flex;
     margin-left: 8px;
-    margin-top:10px;
+    margin-top: 10px;
     align-items: center;
 }
-.mobile{
+
+.mobile {
     display: none;
 }
 
@@ -148,12 +148,12 @@ input[type="checkbox"] {
 
     .navbar {
         background-color: white;
-        
+
     }
 
     .hamburger {
         display: flex;
-        
+
     }
 
     .menu {
@@ -169,25 +169,27 @@ input[type="checkbox"] {
         overflow-y: auto;
         margin-top: 6px;
         gap: 0.3em;
-    }   
-    
+    }
 
-    .navbar .menu{
+
+    .navbar .menu {
         top: 70px;
     }
-    .navbar_scroll{
+
+    .navbar_scroll {
         display: flex;
         justify-content: space-between;
     }
-    .navbar_scroll .menu{
+
+    .navbar_scroll .menu {
         top: 75px;
     }
 
     .menu li {
         /* transform: translateY(-150%); */
         color: var(--eerie-black-1);
-        
-      }
+
+    }
 
     .menu li:hover {
         display: inline-block;
@@ -219,57 +221,60 @@ input[type="checkbox"] {
         border-radius: 5px;
         font-size: 18px;
         background-color: white;
-        
-      }
-     
-      .dropdown-content a {
+
+    }
+
+    .dropdown-content a {
         color: black;
         padding: 0;
         text-decoration: none;
         display: flex;
         background: none;
-      }
-    
-      
-      .dropdown:hover .dropdown-content {
+    }
+
+
+    .dropdown:hover .dropdown-content {
         display: block;
-       
-      }
-     
-      .mobile-theme{
+
+    }
+
+    .mobile-theme {
         display: none;
-      }
-      
-      .mobile{
+    }
+
+    .mobile {
         display: block;
         position: absolute;
         right: 13%;
-      }
-     /* .left-menu{
+    }
+
+    /* .left-menu{
         display: flex;
         flex-direction: column;
         align-items: center;
         gap: 1em;
         margin-top: 40%;
      } */
-     .left-menu{
-        display:flex;
+    .left-menu {
+        display: flex;
         flex-direction: column;
         align-items: center;
         gap: 0.5em;
     }
+
     /* .dropdown-menu {
        position: static;
     }
     .dropdown li {
         transform: none;
     } */
-    
+
 }
 
 .logout {
     display: flex;
     align-items: center;
+    padding: 3px;
 }
 
 #logout {
@@ -280,6 +285,7 @@ input[type="checkbox"] {
     overflow: hidden;
     cursor: pointer;
 }
+
 /* .dropdown-menu {
     position: absolute;
     top: 70px;
@@ -293,6 +299,5 @@ input[type="checkbox"] {
   .dropdown-options {
     display: flex;
     /* justify-content: center; */
-    /* align-items: center;
-  } */ 
-
+/* align-items: center;
+  } */

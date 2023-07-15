@@ -18,16 +18,15 @@ const ResourceCard = ({ image, title, content, href }) => {
     const clip = (text)=>{
         if(text.length>180)
         {
-            text = text.slice(0,180)+"...";
+            text = text.slice(0,180)+"..."
         }
-        return text;
+        return text
     }
 
     return (
         <div className="box_card">
                 <div className='box_child'>
-                    <img src={image} alt="" />
-                {/* {console.log(image)} */}
+                <LazyLoadImage src={image} effect='blur'/>
                 </div>
             <div className="box_content">
                 <div style={{minHeight: "250px"}}>
