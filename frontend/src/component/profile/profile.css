@@ -1,0 +1,20 @@
+.dropdown-menu {
+    position: absolute;
+    top: 70px;
+    right: 10px;
+    background-color: #fff;
+    padding: 10px;
+    list-style-type: none;
+    border-radius: 4px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }  
+  .dropdown-options {
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+  }
+@media (max-width: 850px) {
+  .dropdown-menu {
+    position: static;
+ }
+}

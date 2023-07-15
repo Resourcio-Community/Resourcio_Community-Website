@@ -77,7 +77,7 @@ export async function login(req, res) {
 
         const { _id, username, email, password, isAdmin, createdAt, updatedAt, __v, ...info } = user._doc
 
-        res.status(200).json({ ...info, accessToken })
+        res.status(200).json({ ...info, username, accessToken })
         res.end()
     }
     catch (error) {
