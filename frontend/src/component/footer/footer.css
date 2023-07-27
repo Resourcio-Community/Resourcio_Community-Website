@@ -6,19 +6,29 @@
     width: 100%;
     min-width: 365px;
 }
-
+.footer-top{
+    height:auto;
+    padding-top: 50px;
+}
+.footer-brand{
+    display: flex;
+    justify-content: space-between;
+}
 .footer-brand-text {
     margin-block: 20px;
 }
-
+.flexlinks{
+ margin-left: 500px;
+margin-top: 60px;
+}
 .footer-brand .wrapper {
     display: flex;
     align-items: center;
-    gap: 5px;
+    /* gap: 5px; */
 }
 
 .footer-brand .wrapper:last-child {
-    margin-block-start: 60px;
+    margin-block-start: 5px;
 }
 
 .footer-link {
