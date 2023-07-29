@@ -1,4 +1,4 @@
-import logo from "../../Images/rc_com.png"
+import logo from "https://user-images.githubusercontent.com/121785700/256566288-dca58138-a1cf-439f-98eb-37b100fe8290.jpg"
 import "./navbar.css"
 import { Link } from "react-router-dom"
 import { useEffect, useRef, useState } from "react"
