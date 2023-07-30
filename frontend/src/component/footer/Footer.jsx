@@ -1,5 +1,5 @@
 import footerBg from '../../Images/footer-bg.png'
-import communityLogo from '../../Images/Resourcio_community_logo.jpeg'
+import communityLogo from '../../Images/Updated logo.jpeg'
 import whatsapp from '../../Images/WhatsApp.svg'
 import gmail from '../../Images/gmail.svg'
 import './footer.css'
