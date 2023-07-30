@@ -1,5 +1,5 @@
 <div align="center">
- <kbd><img src="https://github.com/Debaditya-Som/Resourcio_Community-Website/assets/121785700/dca58138-a1cf-439f-98eb-37b100fe8290" width="100" height="100"/></kbd>
+ <kbd><img src="https://raw.githubusercontent.com/Resourcio-Community/Resourcio_Community-Website/GSSOC23/frontend/src/Images/Updated%20logo.jpg" width="100" height="100"/></kbd>
 </div>
 <h1 align="center"> Resourcio Community </h1>
 <br>
