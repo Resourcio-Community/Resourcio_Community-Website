@@ -9,10 +9,10 @@ import './footer.css'
 const Footer = () => {
     return (
         <footer className="footer" id="footer" style={{ "backgroundImage": `url(${footerBg})` }}>
-            <div className="footer-top ">
+            <div className="footer-top">
                 <div className="container">
                     <div className="footer-brand" >
-                        <div>
+                        <div >
                         <img src={communityLogo} 
                         style={{ borderRadius:'15px',
                         boxShadow: "gray 0px 2px 1px, gray 0px 4px 2px, gray 0px 16px 8px, gray 0px 2px 6px",
