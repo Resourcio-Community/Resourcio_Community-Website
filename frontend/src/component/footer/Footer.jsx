@@ -1,5 +1,5 @@
 import footerBg from '../../Images/footer-bg.png'
-import communityLogo from '../../Images/Updated logo.jpeg'
+import communityLogo from '../../Images/main_t.png'
 import whatsapp from '../../Images/WhatsApp.svg'
 import gmail from '../../Images/gmail.svg'
 import './footer.css'
@@ -13,86 +13,72 @@ const Footer = () => {
                 <div className="container">
                     <div className="footer-brand" >
                         <div >
-                        <img src={communityLogo} 
-                        style={{ borderRadius:'15px',
-                        boxShadow: "gray 0px 2px 1px, gray 0px 4px 2px, gray 0px 16px 8px, gray 0px 2px 6px",
-                    }}
-                         width={100} height={100} alt="community logo"/>
-                        <p className="footer-brand-text" >
-                            Thank You for visiting our website. <br/>
-                            Wishing you a very happy day ahead.
-                        </p>
-                        <div className="wrapper" >
-                            <ul className="social-list" >
-                                <li>
-                                    <a href="https://www.facebook.com/profile.php?id=100088472180461" target="_blank" className="social-link">
-                                        <ion-icon name="logo-facebook"></ion-icon>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="https://www.linkedin.com/company/resourcio-community2022/" target="_blank" className="social-link">
-                                        <ion-icon name="logo-linkedin"></ion-icon>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="https://www.instagram.com/resourciocommunity22/" target="_blank" className="social-link">
-                                        <ion-icon name="logo-instagram"></ion-icon>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="https://twitter.com/ResourcioC" target="_blank" className="social-link">
-                                        <ion-icon name="logo-twitter"></ion-icon>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="https://github.com/Resourcio-Community" target="_blank" className="social-link">
-                                        <ion-icon name="logo-github"></ion-icon>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="https://discord.gg/j2cMDF6Dtx" target="_blank" className="social-link">
-                                        <ion-icon name="logo-discord"></ion-icon>
-                                    </a>
-                                </li>
-                            </ul>
+                            <img src={communityLogo}
+                                // width={300}
+                                height={120}
+                                style={{ marginLeft: '-60px'}}
+                                alt="community logo"
+                            />
+                            <p className="footer-brand-text" >
+                                Thank You for visiting our website. <br />
+                                Wishing you a very happy day ahead.
+                            </p>
+                            <div className="wrapper" >
+                                <ul className="social-list" >
+                                    <li>
+                                        <a href="https://www.facebook.com/profile.php?id=100088472180461" target="_blank" className="social-link">
+                                            <ion-icon name="logo-facebook"></ion-icon>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.linkedin.com/company/resourcio-community2022/" target="_blank" className="social-link">
+                                            <ion-icon name="logo-linkedin"></ion-icon>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.instagram.com/resourciocommunity22/" target="_blank" className="social-link">
+                                            <ion-icon name="logo-instagram"></ion-icon>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://twitter.com/ResourcioC" target="_blank" className="social-link">
+                                            <ion-icon name="logo-twitter"></ion-icon>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://github.com/Resourcio-Community" target="_blank" className="social-link">
+                                            <ion-icon name="logo-github"></ion-icon>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://discord.gg/j2cMDF6Dtx" target="_blank" className="social-link">
+                                            <ion-icon name="logo-discord"></ion-icon>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
-                        </div>
-                      
+
                         <div className='flexlinks'>
-                        <p>
-                        Feel free to leave a message <br/>
-                        if you have any questions.
-                        </p>
-                        <br/>
-                        
-                        <div className="wrapper">
-                            <img src={whatsapp} height={45} width={45} alt="whatsapp"/>
-                            <a href="https://chat.whatsapp.com/Km6AX9di04ZLIpFEcXTiNK" target="_blank" className="footer-link">
-                                WhatsApp
-                            </a>
+                            <p>
+                                Feel free to leave a message <br />
+                                if you have any questions.
+                            </p>
+                            <br />
+
+                            <div className="wrapper">
+                                <img src={whatsapp} height={45} width={45} alt="whatsapp" />
+                                <a href="https://chat.whatsapp.com/Km6AX9di04ZLIpFEcXTiNK" target="_blank" className="footer-link">
+                                    WhatsApp
+                                </a>
+                            </div>
+                            <div className="wrapper" >
+                                <img src={gmail} className='wrapper-1' height={30} width={30} alt="gmail" />
+                                <a href="mailto:resourciocommunity22@gmail.com" target="_blank" className="footer-link">
+                                    resourciocommunity22@gmail.com
+                                </a>
+                            </div>
                         </div>
-                        <div className="wrapper" >
-                            <img src={gmail} className='wrapper-1' height={30} width={30} alt="gmail" />
-                            <a href="mailto:resourciocommunity22@gmail.com" target="_blank" className="footer-link">
-                                resourciocommunity22@gmail.com
-                            </a>
-                        </div>
-                        </div>
-                    
-                       
-                    </div>
-                    <div className="footer-list" >
-                        {/* <p className="footer-list-title">Contacts</p>
-                        <p className="footer-list-text">
-                            Enter your email address to register to our newsletter subscription.
-                        </p>
-                        <form className="newsletter-form">
-                            <input type="email" name="email_address" placeholder="Your email" required className="email-field"
-                                autoComplete="off" />
-                            <button type="submit" className="btn has-before">
-                                <span className="span">Subscribe</span>
-                                <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
-                            </button> </form> */}
                     </div>
                 </div>
             </div>
