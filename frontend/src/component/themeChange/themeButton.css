@@ -1,3 +1,7 @@
+.theme-container{
+    display: flex;
+}
+
 #themeToggle {
     visibility: hidden;
 }
