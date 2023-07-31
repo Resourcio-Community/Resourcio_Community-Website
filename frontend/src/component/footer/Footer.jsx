@@ -9,25 +9,19 @@ import './footer.css'
 const Footer = () => {
     return (
         <footer className="footer" id="footer" style={{ "backgroundImage": `url(${footerBg})` }}>
-            <div className="footer-top section">
+            <div className="footer-top">
                 <div className="container">
                     <div className="footer-brand" >
-                        <img src={communityLogo} style={{ "border": "4px solid rgb(234, 255, 2)" }} width={162} alt="community logo"/>
+                        <div >
+                        <img src={communityLogo} 
+                        style={{ borderRadius:'15px',
+                        boxShadow: "gray 0px 2px 1px, gray 0px 4px 2px, gray 0px 16px 8px, gray 0px 2px 6px",
+                    }}
+                         width={100} height={100} alt="community logo"/>
                         <p className="footer-brand-text" >
-                            Thank You for visiting our website. Wishing you a very happy day ahead.
+                            Thank You for visiting our website. <br/>
+                            Wishing you a very happy day ahead.
                         </p>
-                        <div className="wrapper">
-                            <img src={whatsapp} height={45} width={45} alt="whatsapp"/>
-                            <a href="https://chat.whatsapp.com/Km6AX9di04ZLIpFEcXTiNK" target="_blank" className="footer-link">
-                                WhatsApp
-                            </a>
-                        </div>
-                        <div className="wrapper" >
-                            <img src={gmail} className='wrapper-1' height={30} width={30} alt="gmail" />
-                            <a href="mailto:resourciocommunity22@gmail.com" target="_blank" className="footer-link">
-                                resourciocommunity22@gmail.com
-                            </a>
-                        </div>
                         <div className="wrapper" >
                             <ul className="social-list" >
                                 <li>
@@ -62,6 +56,30 @@ const Footer = () => {
                                 </li>
                             </ul>
                         </div>
+                        </div>
+                      
+                        <div className='flexlinks'>
+                        <p>
+                        Feel free to leave a message <br/>
+                        if you have any questions.
+                        </p>
+                        <br/>
+                        
+                        <div className="wrapper">
+                            <img src={whatsapp} height={45} width={45} alt="whatsapp"/>
+                            <a href="https://chat.whatsapp.com/Km6AX9di04ZLIpFEcXTiNK" target="_blank" className="footer-link">
+                                WhatsApp
+                            </a>
+                        </div>
+                        <div className="wrapper" >
+                            <img src={gmail} className='wrapper-1' height={30} width={30} alt="gmail" />
+                            <a href="mailto:resourciocommunity22@gmail.com" target="_blank" className="footer-link">
+                                resourciocommunity22@gmail.com
+                            </a>
+                        </div>
+                        </div>
+                    
+                       
                     </div>
                     <div className="footer-list" >
                         {/* <p className="footer-list-title">Contacts</p>
