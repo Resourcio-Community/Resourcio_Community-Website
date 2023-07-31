@@ -1,26 +1,35 @@
-import sayan from "../../Images/Sayan.webp";
-import koustav from "../../Images/Koustav.webp";
-import rohit from "../../Images/Rohit.webp";
-import snehadrita from "../../Images/Snehadrita.webp";
-import purbali from "../../Images/Purbali.webp";
-import soumya from "../../Images/Soumya.webp";
-import ayishik from "../../Images/Ayishik.webp";
-import gunjan from "../../Images/Gunjan.webp";
-import snigdha from "../../Images/Snigdha.webp";
-import ContactCard from "../contactCard/ContactCard";
-import blogBg from "../../Images/blog-bg.svg";
-import "aos/dist/aos.css";
-import { ThemeContext } from "../../context/ThemeContext";
-import { useContext } from "react";
-import React from "react";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import "../../../node_modules/slick-carousel/slick/slick.css";
-import "../../../node_modules/slick-carousel/slick/slick-theme.css";
+import sayan from "../../Images/Sayan.webp"
+import koustav from "../../Images/Koustav.webp"
+import rohit from "../../Images/Rohit.webp"
+import snehadrita from "../../Images/Snehadrita.webp"
+import purbali from "../../Images/Purbali.webp"
+import soumya from "../../Images/Soumya.webp"
+import ayishik from "../../Images/Ayishik.webp"
+import gunjan from "../../Images/Gunjan.webp"
+import snigdha from "../../Images/Snigdha.webp"
+import ContactCard from "../contactCard/ContactCard"
+import blogBg from "../../Images/blog-bg.svg"
+import "aos/dist/aos.css"
+import { ThemeContext } from "../../context/ThemeContext"
+import { useContext } from "react"
+import React from "react"
+import Slider from "react-slick"
+import "slick-carousel/slick/slick.css"
+import "slick-carousel/slick/slick-theme.css"
+import ArrowCircleLeftIcon from '@mui/icons-material/ArrowCircleLeft'
+import ArrowCircleRightIcon from '@mui/icons-material/ArrowCircleRight'
+import zIndex from "@mui/material/styles/zIndex"
+
+
 const Team = () => {
-  const { darkMode } = useContext(ThemeContext);
+  const { darkMode } = useContext(ThemeContext)
   const sliderSettings = {
+    className: 'center',
+    centerMode: true,
+    centerPadding: '40px',
+    autoplay: true,
+    autoplaySpeed: 2000,
+    pauseOnHover: true,
     dots: true,
     infinite: true,
     speed: 500,
@@ -40,23 +49,11 @@ const Team = () => {
         },
       },
     ],
-    prevArrow: (
-      <img
-        width="50"
-        height="50"
-        src="https://img.icons8.com/ios-filled/50/long-arrow-left.png"
-        alt="long-arrow-left"
-      />
-    ),
-    nextArrow: (
-      <img
-        width="50"
-        height="50"
-        src="https://img.icons8.com/ios-filled/50/long-arrow-right.png"
-        alt="long-arrow-right"
-      />
-    ),
-  };
+    prevArrow: <ArrowCircleLeftIcon sx={{zIndex: 100}} />,
+    nextArrow: <ArrowCircleRightIcon />
+  }
+
+
   return (
     <section
       className="section blog has-bg-image"
@@ -154,7 +151,7 @@ const Team = () => {
         </Slider>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default Team;
+export default Team

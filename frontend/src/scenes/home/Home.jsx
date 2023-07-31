@@ -241,11 +241,11 @@ const Home = () => {
                     </li>
                     <li className="about-item">
                       <ion-icon name="checkmark-done-outline" aria-hidden="true"></ion-icon>
-                      <span className="span" data-aos="zoom-in" data-aos-delay="300">Maximum topics covered</span>
+                      <span className="span" data-aos="zoom-in" data-aos-delay="200">Maximum topics covered</span>
                     </li>
                     <li className="about-item">
                       <ion-icon name="checkmark-done-outline" aria-hidden="true"></ion-icon>
-                      <span className="span" data-aos="zoom-in" data-aos-delay="600">All in a single platform</span>
+                      <span className="span" data-aos="zoom-in" data-aos-delay="400">All in a single platform</span>
                     </li>
                   </ul>
                   <img src={shape4} width={100} height={100} loading="lazy" alt="background shape"
