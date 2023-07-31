@@ -1,5 +1,5 @@
 <div align="center">
- <kbd><img src="https://raw.githubusercontent.com/Resourcio-Community/Resourcio_Community-Website/GSSOC23/frontend/src/Images/Updated%20logo.jpg" width="100" height="100"/></kbd>
+ <kbd><img src="https://raw.githubusercontent.com/Resourcio-Community/Resourcio_Community-Website/GSSOC23/frontend/src/Images/Updated-logo.svg" width="100" height="100"/></kbd>
 </div>
 <h1 align="center"> Resourcio Community </h1>
 <br>
