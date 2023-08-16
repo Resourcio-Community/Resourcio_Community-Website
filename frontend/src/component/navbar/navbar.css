@@ -8,7 +8,7 @@ li {
     align-items: center;
     justify-content: space-between;
     padding: 20px;
-    height: 70px;
+    height: 80px;
     min-width: 365px;
     width: 100%;
     position: fixed;
@@ -17,18 +17,17 @@ li {
     color: black;
     z-index: 10;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-    transition: height 200ms ease-in;
+    /* transition: height 200ms ease-in; */
 }
 
 .navbar .community_img {
-    transform: scale(0.8);
+    transform: scale(0.9);
     transition: all 200ms ease-in-out;
-
 }
 
 .navbar_scroll {
-    display: flex;
     color: black;
+    display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 20px;
@@ -38,13 +37,12 @@ li {
     background-color: white;
     z-index: 10;
     position: fixed;
-    transition: height 200ms ease-out;
+    /* transition: height 200ms ease-out; */
 }
 
 .navbar_scroll .community_img {
     transform: scale(1);
     transition: all 200ms ease-in-out;
-    margin-right: 18px;
 }
 
 /* NAVBAR MENU */
@@ -52,9 +50,7 @@ li {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    /* gap: 44vw; */
     font-size: 18px;
-
 }
 
 
@@ -76,7 +72,6 @@ input[type="checkbox"] {
 .left-menu {
     display: flex;
     gap: 0em;
-
 }
 
 .right-menu {
@@ -122,16 +117,9 @@ input[type="checkbox"] {
     cursor: pointer;
 }
 
-/* .community_logo {
-    display: grid;
-    place-items: center;
-    margin-left: 8px;
-    margin-top: 10px;
-} */
 .community_logo {
     display: flex;
     margin-left: 8px;
-    margin-top: 10px;
     align-items: center;
 }
 
