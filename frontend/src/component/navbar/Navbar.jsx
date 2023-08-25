@@ -69,7 +69,7 @@ const Navbar = () => {
               <li onClick={removeOverflow}>Contact Us</li>
             </a>
 
-            <div className="dropdown">
+            {/* <div className="dropdown">
               <a href="#">
                 <li>
                   More <i class="fa fa-caret-down"></i>
@@ -86,7 +86,7 @@ const Navbar = () => {
                   <li>Achievements</li>
                 </a>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
@@ -124,7 +124,7 @@ const Navbar = () => {
                 <li onClick={removeOverflow}>Contact Us</li>
               </a>
 
-              <div className="dropdown">
+              {/* <div className="dropdown">
                 <a href="#">
                   <li>
                     More <i class="fa fa-caret-down"></i>
@@ -141,7 +141,7 @@ const Navbar = () => {
                     <li>Achievements</li>
                   </a>
                 </div>
-              </div>
+              </div> */}
             </div>
           )}
           <div className="right-menu">
