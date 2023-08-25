@@ -53,8 +53,8 @@ export async function addPastEvent(req, res) {
         const { userId } = req.user
 
         if (userId) {
-            const { eventLink } = req.body
-            const pastEvent = new PastEvent({ eventLink })
+            const { eventName, eventLink } = req.body
+            const pastEvent = new PastEvent({ eventName, eventLink })
 
             try {
                 const user = await User.findById(userId)
