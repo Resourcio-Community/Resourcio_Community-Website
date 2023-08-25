@@ -13,7 +13,7 @@ export const data = [
     {
         id: 3,
         q: "\tWhy join us?",
-        a: "Joining Resourcio Community can benefit individualsnin the tech industry in several ways. Firstly, it provides access to a network of like-minded people who can offer support, guidance, and collaboration opportunities. This can lead to new partnerships, and career growth. Additionally, Resourcio Community offers a wealth of resources and tools that members can access to enhance their skills and knowledge. From webinars and workshops to industry insights and best practices, the community serves as a valuable resource hub for individuals to thrive in the tech industry."
+        a: "Joining Resourcio Community can benefit individuals in the tech industry in several ways. Firstly, it provides access to a network of like-minded people who can offer support, guidance, and collaboration opportunities. This can lead to new partnerships, and career growth. Additionally, Resourcio Community offers a wealth of resources and tools that members can access to enhance their skills and knowledge. From webinars and workshops to industry insights and best practices, the community serves as a valuable resource hub for individuals to thrive in the tech industry."
     },
     {
         id: 4,

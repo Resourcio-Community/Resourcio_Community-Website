@@ -21,7 +21,7 @@ import Spinner from '../../component/spinner/Spinner'
 import LoadingScreen from '../../component/loadingScreen/LoadingScreen'
 
 import { Link } from 'react-router-dom'
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useRef, useState, useContext } from 'react'
 import { Helmet } from 'react-helmet'
 import { useInView } from 'react-intersection-observer'
 import axios from 'axios'
@@ -33,9 +33,11 @@ import "swiper/css/pagination"
 import { EffectCoverflow, Navigation, Pagination } from 'swiper'
 import AOS from "aos"
 import "aos/dist/aos.css"
+import { ThemeContext } from '../../context/ThemeContext'
 
 
 const Home = () => {
+  const { darkMode } = useContext(ThemeContext)
   const [upcomingEvents, setUpcomingEvents] = useState([])
   const [pastEvents, setPastEvents] = useState([])
   const [pageLoading, setPageLoading] = useState(false)
@@ -75,7 +77,7 @@ const Home = () => {
     fetchPastEvents()
   }, [])
 
-  
+
   const progressBarHandler = () => {
     const totalScroll = document.documentElement.scrollTop
     const windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight
@@ -122,9 +124,9 @@ const Home = () => {
             </div>
 
             <section className="section hero has-bg-image" aria-label="home"
-              style={{ "backgroundImage": `url(${heroBg})` }}>
+              style={{ "backgroundImage": `url(${heroBg})`, filter: darkMode ? "invert(1)" : "invert(0)" }}>
               <div className="container">
-                <div className="hero-content" data-aos="fade-right" data-aos-offset="200" data-aos-duration="1000">
+                <div className="hero-content" data-aos="fade-right" data-aos-offset="200" data-aos-duration="1000" style={{ filter: darkMode ? "invert(0.99)" : "invert(0)" }}>
                   <h1 className="h1 section-title">
                     The Best Website for students to <span className="span" data-aos="zoom-in"
                       data-aos-delay="500">Search</span> for Software Resources.
@@ -220,8 +222,8 @@ const Home = () => {
               <div className="container">
                 <div className="about-content">
                   <p className="section-subtitle" style={{ "color": "var(--gray-web)" }}>About Us</p>
-                  <h3 className="h2 section-title" data-aos="fade-right" data-aos-duration="500">
-                    A group of enthusiastic <span className="span" data-aos="zoom-in" data-aos-delay="400">Engineers keen to</span> help
+                  <h3 className="h2 section-title" data-aos="fade-right" data-aos-duration="400">
+                    A group of enthusiastic <span className="span" data-aos="zoom-in" data-aos-delay="300">Engineers keen to</span> help
                     their fellow Engineers.
                   </h3>
                   <p className="section-text" style={{ "color": "var(--gray-web)" }}>
@@ -239,11 +241,11 @@ const Home = () => {
                     </li>
                     <li className="about-item">
                       <ion-icon name="checkmark-done-outline" aria-hidden="true"></ion-icon>
-                      <span className="span" data-aos="zoom-in" data-aos-delay="400">Maximum topics covered</span>
+                      <span className="span" data-aos="zoom-in" data-aos-delay="200">Maximum topics covered</span>
                     </li>
                     <li className="about-item">
                       <ion-icon name="checkmark-done-outline" aria-hidden="true"></ion-icon>
-                      <span className="span" data-aos="zoom-in" data-aos-delay="800">All in a single platform</span>
+                      <span className="span" data-aos="zoom-in" data-aos-delay="400">All in a single platform</span>
                     </li>
                   </ul>
                   <img src={shape4} width={100} height={100} loading="lazy" alt="background shape"
