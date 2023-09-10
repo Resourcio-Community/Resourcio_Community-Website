@@ -5,9 +5,9 @@ import category2 from '../../Images/category-2.svg'
 import category3 from '../../Images/category-3.svg'
 import category4 from '../../Images/category-4.svg'
 import shape4 from '../../Images/about-shape-4.svg'
-import heroBg from '../../Images/Background.png'
-import videoBg from '../../Images/video-bg.png'
-import shape2 from '../../Images/video-shape-2.png'
+import heroBg from '../../Images/Background.webp'
+import videoBg from '../../Images/video-bg.webp'
+import shape2 from '../../Images/video-shape-2.webp'
 import video from '../../Images/video.mp4'
 /* ----------------------------------------------------*/
 import Navbar from "../../component/navbar/Navbar"
