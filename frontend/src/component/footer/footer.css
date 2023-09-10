@@ -93,6 +93,7 @@
 }
 
 .copyright {
+    font-size: var(--fs-7);
     cursor: default;
     text-align: center;
 }
