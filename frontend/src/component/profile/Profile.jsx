@@ -3,8 +3,8 @@ import { AuthContext } from "../../context/authContext/AuthContext"
 import { logout } from '../../context/authContext/AuthActions'
 import { Link } from "react-router-dom"
 import { useState } from "react"
-import userLogo from '../../Images/user-logo.jpg'
-import logoutLogo from "../../Images/logout.png"
+import userLogo from '../../Images/profile/user-logo.jpg'
+import logoutLogo from "../../Images/profile/logout.png"
 import './profile.css'
 
 

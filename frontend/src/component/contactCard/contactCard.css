@@ -4,7 +4,7 @@
     flex-direction: column;
 }
 
-.dev_image {
+.dev_image img {
     --f: 0.1;
     --r: 10px;
 
@@ -17,14 +17,13 @@
     border-radius: 50%;
     margin-bottom: 18px;
     object-fit: cover;
-    transition: all 0.3s ease;
-
+    
     clip-path: inset(0 var(--_f) 0 0 round var(--r));
     transform: perspective(400px) var(--_t, rotateY(var(--_a)));
 }
 
-.dev_image:hover {     
-    border: 10px solid rgba(26, 183, 157, 1); 
+.dev_image img:hover {     
+    border: 8px solid rgba(26, 183, 157, 1); 
 
     clip-path: inset(0 0 0 var(--_f) round var(--r));
     --_t: translateX(calc(-1 * var(--_f))) rotateY(calc(-1 * var(--_a)));

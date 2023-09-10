@@ -1,4 +1,4 @@
-import footerBg from '../../Images/footer-bg.png'
+import footerBg from '../../Images/footer-bg.webp'
 import communityLogo from '../../Images/main_t.webp'
 import whatsapp from '../../Images/WhatsApp.svg'
 import gmail from '../../Images/gmail.svg'

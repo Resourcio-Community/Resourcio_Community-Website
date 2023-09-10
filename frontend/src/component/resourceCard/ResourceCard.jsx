@@ -25,7 +25,7 @@ const ResourceCard = ({ image, title, content, href }) => {
     return (
         <div className="box_card">
             <div className='box_child'>
-                <LazyLoadImage src={image} effect='blur' />
+                <LazyLoadImage src={image} effect='blur' alt={title} />
             </div>
             <div className="box_content">
                 <div style={{ minHeight: "250px" }}>
