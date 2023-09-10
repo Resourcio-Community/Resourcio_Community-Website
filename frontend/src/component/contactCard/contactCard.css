@@ -4,7 +4,7 @@
     flex-direction: column;
 }
 
-.dev_image img {
+.dev_image {
     --f: 0.1;
     --r: 10px;
 
@@ -20,9 +20,10 @@
     
     clip-path: inset(0 var(--_f) 0 0 round var(--r));
     transform: perspective(400px) var(--_t, rotateY(var(--_a)));
+    transition: all 0.3s ease;
 }
 
-.dev_image img:hover {     
+.dev_image:hover {     
     border: 8px solid rgba(26, 183, 157, 1); 
 
     clip-path: inset(0 0 0 var(--_f) round var(--r));
