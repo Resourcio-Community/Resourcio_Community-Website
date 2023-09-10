@@ -101,6 +101,11 @@
     color: var(--kappel);
     display: inline-block;
 }
+.X-logo{
+    height:20px;
+   width: 20px;
+    margin-bottom: 7px;
+}
 
 @media (max-width: 1232px) {
     .flexlinks {
