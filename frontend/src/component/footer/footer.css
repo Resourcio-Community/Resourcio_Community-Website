@@ -79,12 +79,11 @@
 }
 
 .social-list li:nth-child(5) .social-link:hover {
-    color: #ffffff;
-    opacity: 0.7;
+    color: #666667;
 }
 
 .social-list li:nth-child(6) .social-link:hover {
-    color: #7983F5;
+    color: #7289d9;
 }
 
 .footer-bottom {
