@@ -1,24 +1,22 @@
-import sayan from "../../Images/Sayan.webp"
-import koustav from "../../Images/Koustav.webp"
-import rohit from "../../Images/Rohit.webp"
-import snehadrita from "../../Images/Snehadrita.webp"
-import purbali from "../../Images/Purbali.webp"
-import soumya from "../../Images/Soumya.webp"
-import ayishik from "../../Images/Ayishik.webp"
-import gunjan from "../../Images/Gunjan.webp"
-import snigdha from "../../Images/Snigdha.webp"
+import sayan from "../../Images/team/Sayan.webp"
+import koustav from "../../Images/team/Koustav.webp"
+import rohit from "../../Images/team/Rohit.webp"
+import snehadrita from "../../Images/team/Snehadrita.webp"
+import purbali from "../../Images/team/Purbali.webp"
+import soumya from "../../Images/team/Soumya.webp"
+import ayishik from "../../Images/team/Ayishik.webp"
+import gunjan from "../../Images/team/Gunjan.webp"
+import snigdha from "../../Images/team/Snigdha.webp"
 import ContactCard from "../contactCard/ContactCard"
 import blogBg from "../../Images/blog-bg.svg"
 import "aos/dist/aos.css"
 import { ThemeContext } from "../../context/ThemeContext"
 import { useContext } from "react"
-import React from "react"
 import Slider from "react-slick"
 import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
 import ArrowCircleLeftIcon from '@mui/icons-material/ArrowCircleLeft'
 import ArrowCircleRightIcon from '@mui/icons-material/ArrowCircleRight'
-import zIndex from "@mui/material/styles/zIndex"
 
 
 const Team = () => {

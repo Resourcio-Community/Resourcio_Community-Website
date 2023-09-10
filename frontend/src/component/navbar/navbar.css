@@ -17,12 +17,11 @@ li {
     color: black;
     z-index: 10;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-    /* transition: height 200ms ease-in; */
 }
 
 .navbar .community_img {
     transform: scale(0.9);
-    transition: all 200ms ease-in-out;
+    transition: all 400ms ease-in-out;
 }
 
 .navbar_scroll {
@@ -31,18 +30,17 @@ li {
     align-items: center;
     justify-content: space-between;
     padding: 20px;
-    height: 85px;
+    height: 80px;
     min-width: 365px;
     width: 100%;
     background-color: white;
     z-index: 10;
     position: fixed;
-    /* transition: height 200ms ease-out; */
 }
 
 .navbar_scroll .community_img {
     transform: scale(1);
-    transition: all 200ms ease-in-out;
+    transition: all 400ms ease-in-out;
 }
 
 /* NAVBAR MENU */

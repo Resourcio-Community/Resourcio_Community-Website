@@ -1,5 +1,5 @@
 import footerBg from '../../Images/footer-bg.png'
-import communityLogo from '../../Images/main_t.png'
+import communityLogo from '../../Images/main_t.webp'
 import whatsapp from '../../Images/WhatsApp.svg'
 import gmail from '../../Images/gmail.svg'
 import './footer.css'
@@ -14,9 +14,9 @@ const Footer = () => {
                     <div className="footer-brand" >
                         <div >
                             <img src={communityLogo}
-                                // width={300}
+                                width={320}
                                 height={120}
-                                style={{ marginLeft: '-60px'}}
+                                style={{ marginLeft: '-52px'}}
                                 alt="community logo"
                             />
                             <p className="footer-brand-text" >

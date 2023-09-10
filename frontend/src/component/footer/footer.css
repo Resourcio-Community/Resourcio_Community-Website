@@ -14,7 +14,6 @@
 
 .footer-brand {
     display: flex;
-    /* justify-content: space-between; */
 }
 
 .footer-brand-text {
@@ -29,7 +28,6 @@
 .footer-brand .wrapper {
     display: flex;
     align-items: center;
-    /* gap: 5px; */
 }
 
 .footer-brand .wrapper:last-child {
@@ -90,7 +88,7 @@
 }
 
 .footer-bottom {
-    border-block-start: 1px solid var(--eerie-black-1);
+    margin-block-start: 15px;
     padding-block: 30px;
 }
 

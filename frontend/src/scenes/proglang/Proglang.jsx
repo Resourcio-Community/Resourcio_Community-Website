@@ -1,10 +1,10 @@
 /* ----------------------------------------- */
-import c from '../../Images/C.jpg'
-import python from '../../Images/python.png'
-import java from '../../Images/java.jpg'
-import cpp from '../../Images/C++.jpeg'
-import csharp from '../../Images/Csharp.jpeg'
-import go from '../../Images/golang.png'
+import c from '../../Images/topic/C.jpg'
+import python from '../../Images/topic/python.png'
+import java from '../../Images/topic/java.jpg'
+import cpp from '../../Images/topic/C++.jpeg'
+import csharp from '../../Images/topic/Csharp.jpeg'
+import go from '../../Images/topic/golang.png'
 /* ---------------------------------------- */
 import './proglang.css'
 import { Helmet } from 'react-helmet'
