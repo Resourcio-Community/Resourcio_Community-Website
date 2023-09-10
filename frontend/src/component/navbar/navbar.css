@@ -19,11 +19,6 @@ li {
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
-.navbar .community_img {
-    transform: scale(0.9);
-    transition: all 400ms ease-in-out;
-}
-
 .navbar_scroll {
     color: black;
     display: flex;
@@ -36,11 +31,6 @@ li {
     background-color: white;
     z-index: 10;
     position: fixed;
-}
-
-.navbar_scroll .community_img {
-    transform: scale(1);
-    transition: all 400ms ease-in-out;
 }
 
 /* NAVBAR MENU */

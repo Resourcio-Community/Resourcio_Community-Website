@@ -41,8 +41,8 @@ const Navbar = () => {
             <img
               className="community_img"
               src={logo}
-              width={65}
-              height={65}
+              width={55}
+              height={55}
               alt="logo"
             />
           </div>
