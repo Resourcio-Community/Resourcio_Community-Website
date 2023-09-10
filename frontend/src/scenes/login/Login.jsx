@@ -6,6 +6,10 @@ import Loader from '../../component/loader/Loader'
 import { AuthContext } from '../../context/authContext/AuthContext'
 import { loginFailure, loginStart, loginSuccess } from '../../context/authContext/AuthActions'
 import { Link } from 'react-router-dom'
+import { GoogleLogin } from '@react-oauth/google';
+import { GoogleOAuthProvider } from '@react-oauth/google';
+import jwt_decode from 'jwt-decode';
+
 
 import HomeRoundedIcon from '@mui/icons-material/HomeRounded';
 
@@ -150,6 +154,16 @@ const Login = () => {
                         >
                             Login
                         </button>
+                        <GoogleOAuthProvider clientId="807976962778-q9vki3gb87mbgp2fif1nu7mg7f6t2e0a.apps.googleusercontent.com">
+                        <GoogleLogin
+                            onSuccess={credentialResponse => {
+                                console.log(jwt_decode(credentialResponse.credential));
+                            }}
+                            onError={() => {
+                                console.log('Login Failed');
+                            }}/>
+                        </GoogleOAuthProvider>
+
                     </form>
 
                     <form className="form sign-up-form">
