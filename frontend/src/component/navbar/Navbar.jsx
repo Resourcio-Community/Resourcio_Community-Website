@@ -36,17 +36,15 @@ const Navbar = () => {
   return (
     <nav className={navbar ? "navbar" : "navbar_scroll"}>
       <div className="community_logo">
-        <a href="#">
-          <div style={{ display: "flex" }}>
-            <img
-              className="community_img"
-              src={logo}
-              width={55}
-              height={55}
-              alt="logo"
-            />
-          </div>
-        </a>
+        <div style={{ display: "flex" }}>
+          <img
+            className="community_img"
+            src={logo}
+            width={55}
+            height={55}
+            alt="logo"
+          />
+        </div>
 
         {document.body.classList.contains("hideOverflow") && (
           <div className="mobile">

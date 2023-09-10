@@ -33,6 +33,10 @@ li {
     position: fixed;
 }
 
+.community_img{
+    margin-inline-end: 15px;
+}
+
 /* NAVBAR MENU */
 .menu {
     display: flex;
