@@ -53,6 +53,10 @@ export const SummarySection = styled((props) => (
             ? 'rgba(255, 255, 255, .05)'
             : 'rgba(0, 0, 0, .03)',
     flexDirection: 'row-reverse',
+    '&:hover': {
+        backgroundColor: '#f0f0f0',
+        borderRadius: '8px'
+    },
     '& .MuiAccordionSummary-expandIconWrapper.Mui-expanded': {
         transform: 'rotate(90deg)'
     },
