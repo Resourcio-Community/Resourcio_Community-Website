@@ -28,6 +28,7 @@ const Profile = ({ handleOverflow }) => {
               src={userLogo}
               width={35}
               style={{ borderRadius: "50%", marginRight: '5px' }}
+              alt=" User logo"
             />
             <span id="username">{user.name}</span>
           </div>
@@ -38,6 +39,7 @@ const Profile = ({ handleOverflow }) => {
                   src={userLogo}
                   width={34}
                   style={{ borderRadius: "50%", marginRight: '5px' }}
+                  alt="dropdown-options"
                 />
                 View Account
               </li>
@@ -47,6 +49,7 @@ const Profile = ({ handleOverflow }) => {
                   src={logoutLogo}
                   width={26}
                   style={{ marginRight: '10px', paddingLeft: '10px' }}
+                  alt="logout logo"
                 />
                 Logout
               </li>
