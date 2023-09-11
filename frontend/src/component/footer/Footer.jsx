@@ -6,7 +6,7 @@ import './footer.css'
 
 //import x LOGO
 
-import x from '../../Images/X-white.png';
+import x from '../../Images/X-white.svg';
 
 
 const Footer = () => {
