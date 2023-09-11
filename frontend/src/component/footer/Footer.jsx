@@ -4,6 +4,9 @@ import whatsapp from '../../Images/WhatsApp.svg'
 import gmail from '../../Images/gmail.svg'
 import './footer.css'
 
+//import x LOGO
+
+import x from '../../Images/X-white.png';
 
 
 const Footer = () => {
@@ -42,7 +45,7 @@ const Footer = () => {
                                     </li>
                                     <li>
                                         <a href="https://twitter.com/ResourcioC" target="_blank" className="social-link">
-                                            <ion-icon name="logo-twitter"></ion-icon>
+                                            <img className='X-logo' src={x} />
                                         </a>
                                     </li>
                                     <li>
