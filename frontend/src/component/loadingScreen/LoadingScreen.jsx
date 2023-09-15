@@ -1,5 +1,5 @@
 import './loadingScreen.css'
-import logo from '../../Images/LOGO.webp'
+import logo from '../../Images/site_assets/LOGO.webp'
 
 const LoadingScreen = () => {
     return (

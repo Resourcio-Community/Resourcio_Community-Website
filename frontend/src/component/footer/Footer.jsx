@@ -1,12 +1,12 @@
-import footerBg from '../../Images/footer-bg.webp'
-import communityLogo from '../../Images/main_t.webp'
-import whatsapp from '../../Images/WhatsApp.svg'
-import gmail from '../../Images/gmail.svg'
+import footerBg from '../../Images/site_assets/footer-bg.webp'
+import communityLogo from '../../Images/site_assets/main_t.webp'
+import whatsapp from '../../Images/site_assets/WhatsApp.svg'
+import gmail from '../../Images/site_assets/gmail.svg'
 import './footer.css'
 
 //import x LOGO
 
-import x from '../../Images/X-white.svg';
+import x from '../../Images/site_assets/X-white.svg';
 
 
 const Footer = () => {

@@ -1,14 +1,14 @@
 import './home.css'
 /* IMAGES IMPORT */
-import category1 from '../../Images/category-1.svg'
-import category2 from '../../Images/category-2.svg'
-import category3 from '../../Images/category-3.svg'
-import category4 from '../../Images/category-4.svg'
-import shape4 from '../../Images/about-shape-4.svg'
-import heroBg from '../../Images/Background.webp'
-import videoBg from '../../Images/video-bg.webp'
-import shape2 from '../../Images/video-shape-2.webp'
-import video from '../../Images/video.mp4'
+import category1 from '../../Images/site_assets/category-1.svg'
+import category2 from '../../Images/site_assets/category-2.svg'
+import category3 from '../../Images/site_assets/category-3.svg'
+import category4 from '../../Images/site_assets/category-4.svg'
+import shape4 from '../../Images/site_assets/about-shape-4.svg'
+import heroBg from '../../Images/site_assets/Background.webp'
+import videoBg from '../../Images/site_assets/video-bg.webp'
+import shape2 from '../../Images/site_assets/video-shape-2.webp'
+import video from '../../Images/site_assets/video.mp4'
 /* ----------------------------------------------------*/
 import Navbar from "../../component/navbar/Navbar"
 import Category from '../../component/category/Category'
@@ -24,6 +24,7 @@ import { Link } from 'react-router-dom'
 import { useEffect, useRef, useState, useContext } from 'react'
 import { Helmet } from 'react-helmet'
 import { useInView } from 'react-intersection-observer'
+import { Skeleton } from '@mui/material'
 import axios from 'axios'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import "swiper/css"
@@ -42,6 +43,7 @@ const Home = () => {
   const [pastEvents, setPastEvents] = useState([])
   const [pageLoading, setPageLoading] = useState(false)
   const [loading, setLoading] = useState(false)
+  const [iframeLoading, setIframeLoading] = useState(true)
 
 
   /** API call for all the events */
@@ -106,7 +108,7 @@ const Home = () => {
     inView ? entry.target.play() : entry.target.pause()
   }
 
-
+  console.log(iframeLoading)
 
   return (
     pageLoading ? <LoadingScreen />
@@ -272,9 +274,16 @@ const Home = () => {
                   >
                     {pastEvents.map((event) => (
                       <SwiperSlide key={event?._id}>
-                        <iframe src={event?.eventLink} title='YouTube video player'
-                          allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share;'
-                          loading='eager' allowFullScreen></iframe>
+                        {
+                          <iframe
+                            className='iframe'
+                            src={event?.eventLink}
+                            title='YouTube video player'
+                            allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share;'
+                            loading='lazy' allowFullScreen
+                            onLoad={() => setIframeLoading(false)}
+                          />
+                        }
                       </SwiperSlide>
                     ))}
                   </Swiper>

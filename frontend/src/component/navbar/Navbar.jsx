@@ -1,4 +1,4 @@
-import logo from "../../Images/favicon.webp"
+import logo from "../../Images/site_assets/favicon.webp"
 import "./navbar.css"
 import { Link } from "react-router-dom"
 import { useEffect, useRef, useState } from "react"
