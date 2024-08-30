@@ -7,10 +7,12 @@ import { useContext, lazy, Suspense } from 'react'
 import { AuthContext } from './context/authContext/AuthContext'
 
 
+
 const Home = lazy(() => import('./scenes/home/Home'))
 const Resources = lazy(() => import('./scenes/resources/Resources'))
 const Proglang = lazy(() => import('./scenes/proglang/Proglang'))
 const Login = lazy(() => import('./scenes/login/Login'))
+const Team = lazy(() => import('./scenes/team/Team'))
 const NotFound = lazy(() => import('./component/404_Not Found/NotFound'))
 
 
@@ -28,6 +30,9 @@ const App = () => {
           <Route exact path='/'>
             <Home />
           </Route>
+            <Route exact path='/team'>
+            <Team/>
+          </Route>
           <Route exact path='/resources'>
             <Resources />
           </Route>
@@ -40,6 +45,7 @@ const App = () => {
           <Route path='*'>
             <NotFound />
           </Route>
+        
         </Switch>
       </Suspense>
       

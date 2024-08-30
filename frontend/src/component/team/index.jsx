@@ -66,7 +66,7 @@ const Team = () => {
         className="container"
         style={{ filter: darkMode ? "invert(1)" : "invert(0)" }}
       >
-        <p className="section-subtitle" style={{ color: "var(--gray-web)" }}>
+        <p className="font-bold text-red-900" >
           Team
         </p>
         <h2 className="h2 section-title" data-aos="fade-right">

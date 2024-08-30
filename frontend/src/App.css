@@ -279,3 +279,7 @@ button {
     height: 3px;
   }
 }
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

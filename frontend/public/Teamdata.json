@@ -1,0 +1,67 @@
+[
+    {
+      "team": "Core Team",
+      "members": [
+        {
+          "name": "Soumyajit Mondal ",
+          "role": "Sobar baba",
+          "imageUrl": "https://utfs.io/f/517a56ef-6841-438a-a332-1bd512f0b2f2-stcv3t.jpg",
+          "githubUrl": "https://github.com/alicejohnson",
+          "linkedinUrl": "https://linkedin.com/in/alicejohnson"
+        },
+        {
+            "name": "Soumyajit Mondal ",
+            "role": "Sobar baba",
+            "imageUrl": "https://utfs.io/f/517a56ef-6841-438a-a332-1bd512f0b2f2-stcv3t.jpg",
+            "githubUrl": "https://github.com/alicejohnson",
+            "linkedinUrl": "https://linkedin.com/in/alicejohnson"
+          },
+          {
+            "name": "Soumyajit Mondal ",
+            "role": "Sobar baba",
+            "imageUrl": "https://utfs.io/f/517a56ef-6841-438a-a332-1bd512f0b2f2-stcv3t.jpg",
+            "githubUrl": "https://github.com/alicejohnson",
+            "linkedinUrl": "https://linkedin.com/in/alicejohnson"
+          }
+      ]
+    },
+    {
+      "team": "Tech Team",
+      "members": [
+        {
+          "name": "Indrani Som",
+          "role": "Developer",
+          "imageUrl": "https://utfs.io/f/aa11d041-283a-4117-9839-1aad6fd734f6-1xdo6.jpg",
+          "githubUrl": "https://github.com/johndoe",
+          "linkedinUrl": "https://linkedin.com/in/johndoe"
+        },
+        {
+            "name": "Indrani Som",
+            "role": "Developer",
+            "imageUrl": "https://utfs.io/f/aa11d041-283a-4117-9839-1aad6fd734f6-1xdo6.jpg",
+            "githubUrl": "https://github.com/johndoe",
+            "linkedinUrl": "https://linkedin.com/in/johndoe"
+          },
+          {
+            "name": "Indrani Som",
+            "role": "Developer",
+            "imageUrl": "https://utfs.io/f/aa11d041-283a-4117-9839-1aad6fd734f6-1xdo6.jpg",
+            "githubUrl": "https://github.com/johndoe",
+            "linkedinUrl": "https://linkedin.com/in/johndoe"
+          }
+        
+      ]
+    },
+    {
+      "team": "PR & Design Team",
+      "members": [
+        {
+          "name": "Emily Davis",
+          "role": "Graphic Designer",
+          "imageUrl": "path/to/image.jpg",
+          "githubUrl": "https://github.com/emilydavis",
+          "linkedinUrl": "https://linkedin.com/in/emilydavis"
+        }
+      ]
+    }
+  ]

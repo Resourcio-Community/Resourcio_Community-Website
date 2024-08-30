@@ -60,7 +60,7 @@ const Navbar = () => {
             <Link to="/resources">
               <li onClick={removeOverflow}>Resources</li>
             </Link>
-            <a href="#team">
+            <a href="/team">
               <li onClick={removeOverflow}>Team</li>
             </a>
             <a href="#footer">
@@ -115,7 +115,7 @@ const Navbar = () => {
               <Link to="/resources">
                 <li onClick={removeOverflow}>Resources</li>
               </Link>
-              <a href="#team">
+              <a href="/team">
                 <li onClick={removeOverflow}>Team</li>
               </a>
               <a href="#footer">

@@ -353,7 +353,7 @@ const Home = () => {
               </div>
             </section>
 
-            <Team />
+            
             <FAQ />
 
           </article>
